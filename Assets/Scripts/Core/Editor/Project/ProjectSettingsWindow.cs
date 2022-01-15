@@ -136,7 +136,7 @@ namespace pdxpartyparrot.Core.Editor.Project
             refreshAssetDatabase |= manifest.UseNavMesh != _useNavMesh.value;
             manifest.UseNavMesh = _useNavMesh.value;
 
-            foreach(NamedBuildTarget buildTarget in Enum.GetValues(typeof(NamedBuildTarget))) {
+            foreach(NamedBuildTarget buildTarget in Project.SupportedBuildTargets) {
                 try {
                     SetScriptingDefineSymbols(buildTarget);
                 } catch(Exception e) {

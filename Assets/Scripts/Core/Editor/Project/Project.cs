@@ -15,6 +15,13 @@ namespace pdxpartyparrot.Core.Editor.Project
     {
         public const int Version = 1;
 
+        public static readonly NamedBuildTarget[] SupportedBuildTargets = {
+            NamedBuildTarget.Standalone,
+            NamedBuildTarget.WebGL,
+            NamedBuildTarget.Server,
+            NamedBuildTarget.Unknown,
+        };
+
         private const string CscFileName = "Assets/csc.rsp";
 
         #region Core Assets
