@@ -1,0 +1,17 @@
+{
+    "name": "com.pdxpartyparrot.ggj2022",
+    "rootNamespace": "",
+    "references": [
+        "GUID:07e5bd63f750ef29a96268929ec97b50",
+        "GUID:27ea4d39582179328befd3eeb7616a02"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
