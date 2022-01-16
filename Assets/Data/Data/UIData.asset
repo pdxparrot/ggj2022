@@ -16,4 +16,4 @@ MonoBehaviour:
   _defaultFont: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   _defaultButtonHoverEffectPrefab: {fileID: 5073550274423716273, guid: 2ad021fd2e18fa49fb0987e683e84469, type: 3}
   _defaultButtonSubmitEffectPrefab: {fileID: 5073550274423716273, guid: f19528170b4d1e032bb8c3367094aa30, type: 3}
-  _defaultButtonBackEffectPrefab: {fileID: 0}
+  _defaultButtonBackEffectPrefab: {fileID: 5073550274423716273, guid: deb4ef7d0be4d028d9517bc8e825b75c, type: 3}

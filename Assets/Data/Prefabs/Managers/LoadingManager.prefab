@@ -57,7 +57,7 @@ MonoBehaviour:
   _saveGameManagerPrefab: {fileID: 0}
   _uiManagerPrefab: {fileID: 0}
   _localizationManagerPrefab: {fileID: 0}
-  _audioManagerPrefab: {fileID: 9187262944988733783, guid: 4ad9774258d3ac68e88a8be851aca3a4, type: 3}
+  _audioManagerPrefab: {fileID: 0}
   _viewerManagerPrefab: {fileID: 0}
   _inputManagerPrefab: {fileID: 0}
   _networkManagerPrefab: {fileID: 0}
@@ -69,6 +69,7 @@ MonoBehaviour:
   _gameStateManagerPrefab: {fileID: 0}
   _dialogueManagerPrefab: {fileID: 0}
   _cinematicsManagerPrefab: {fileID: 0}
+  _gameManagerPrefab: {fileID: 0}
   references:
     version: 2
     RefIds:
