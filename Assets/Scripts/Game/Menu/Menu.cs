@@ -1,11 +1,6 @@
 ﻿using System.Collections.Generic;
 
-using JetBrains.Annotations;
-
 using pdxpartyparrot.Core.Util;
-using pdxpartyparrot.Game.State;
-
-using TMPro;
 
 using UnityEngine;
 
@@ -21,11 +16,6 @@ namespace pdxpartyparrot.Game.Menu
 
         public MenuPanel MainPanel => _mainPanel;
 
-        // TODO: should this go on the MainMenu rather than *every* menu?
-        [SerializeField]
-        [CanBeNull]
-        private TextMeshProUGUI _creditTitleText;
-
         [SerializeField]
         [ReadOnly]
         private MenuPanel _currentPanel;
@@ -39,10 +29,6 @@ namespace pdxpartyparrot.Game.Menu
         private void Awake()
         {
             _canvas.sortingOrder = 100;
-
-            if(null != _creditTitleText) {
-                _creditTitleText.text = GameStateManager.Instance.GameManager.CreditsData.GetContributorString();
-            }
 
             PushPanel(_mainPanel);
         }

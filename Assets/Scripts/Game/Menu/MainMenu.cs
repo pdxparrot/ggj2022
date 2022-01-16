@@ -3,6 +3,9 @@
 using pdxpartyparrot.Core.DebugMenu;
 using pdxpartyparrot.Core.UI;
 using pdxpartyparrot.Core.Util;
+using pdxpartyparrot.Game.State;
+
+using TMPro;
 
 using UnityEngine;
 
@@ -10,6 +13,10 @@ namespace pdxpartyparrot.Game.Menu
 {
     public abstract class MainMenu : MenuPanel
     {
+        [SerializeField]
+        [CanBeNull]
+        private TextMeshProUGUI _creditTitleText;
+
         #region High Scores
 
         [SerializeField]
@@ -43,6 +50,10 @@ namespace pdxpartyparrot.Game.Menu
 
             if(!HasInitialSelection) {
                 Debug.LogWarning("Main menu missing initial selection");
+            }
+
+            if(null != _creditTitleText) {
+                _creditTitleText.text = GameStateManager.Instance.GameManager.CreditsData.GetContributorString();
             }
 
             if(null != _highScoresPanel) {

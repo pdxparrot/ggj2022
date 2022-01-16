@@ -49,5 +49,5 @@ MonoBehaviour:
   _makeInitialSceneActive: 0
   _enterEffect: {fileID: 0}
   _exitEffect: {fileID: 0}
-  _menuPrefab: {fileID: 0}
+  _menuPrefab: {fileID: 807664948955273324, guid: 18cc7be05547b2cdc96ed66acac6bf41, type: 3}
   _titleScreenPrefab: {fileID: 0}
