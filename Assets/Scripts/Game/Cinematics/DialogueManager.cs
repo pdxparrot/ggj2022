@@ -9,7 +9,7 @@ using pdxpartyparrot.Game.State;
 namespace pdxpartyparrot.Game.Cinematics
 {
     // TODO: if this could pre-allocate all of the dialogues we need
-    // rather than instantiating them, that would save a lot of trash
+    // rather than instantiating them, that would save a lot of thrash
     // OR another option is a small set of dialogue prefabs
     // and more data that can be swapped in and out as needed
     // (ideally allowing for images and rich text)
@@ -91,6 +91,8 @@ namespace pdxpartyparrot.Game.Cinematics
             DebugMenuNode debugMenuNode = DebugMenuManager.Instance.AddNode(() => "Core.DialogueManager");
             debugMenuNode.RenderContentsAction = () => {
                 GUILayout.Label(IsShowingDialogue ? $"Showing dialogue ${_currentDialogue.name}" : "Not showing dialogue");
+
+                // TODO: add buttons for showing, advancing, and canceling dialogues
             };
         }
     }

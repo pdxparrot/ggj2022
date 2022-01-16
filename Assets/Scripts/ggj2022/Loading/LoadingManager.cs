@@ -6,13 +6,14 @@ namespace pdxpartyparrot.ggj2022.Loading
 {
     public sealed class LoadingManager : LoadingManager<LoadingManager>
     {
-        //[Space(10)]
+        [Space(10)]
 
         #region Manager Prefabs
 
-        //[Header("Project Manager Prefabs")]
+        [Header("Project Manager Prefabs")]
 
-        // TODO: project manager prefabs go here
+        [SerializeField]
+        private GameManager _gameManagerPrefab;
 
         #endregion
 
@@ -20,7 +21,7 @@ namespace pdxpartyparrot.ggj2022.Loading
         {
             base.CreateManagers();
 
-            // TODO: create project prefabs
+            GameManager.CreateFromPrefab(_gameManagerPrefab, ManagersContainer);
         }
     }
 }

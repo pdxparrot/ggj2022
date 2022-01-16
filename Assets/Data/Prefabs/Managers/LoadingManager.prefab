@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5523225695184755476
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5593405542343102874}
+  - component: {fileID: 6580497799031368487}
+  m_Layer: 0
+  m_Name: LoadingManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5593405542343102874
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5523225695184755476}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6580497799031368487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5523225695184755476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b6f8cbaa5def5c06a2ca8e8cbd12d4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mainCamera: {fileID: 0}
+  _loadingScreen: {fileID: 0}
+  _loadingScreenRefCount: 0
+  _transitionScreenRefCount: 0
+  _loadingTips: {fileID: 11400000, guid: d9252d39ed68c865298385cffff7c84d, type: 2}
+  _loadingTipTimer:
+    rid: -2
+  _engineManagerPrefab: {fileID: 0}
+  _debugMenuManagerPrefab: {fileID: 0}
+  _timeManagerPrefab: {fileID: 0}
+  _saveGameManagerPrefab: {fileID: 0}
+  _uiManagerPrefab: {fileID: 0}
+  _localizationManagerPrefab: {fileID: 0}
+  _audioManagerPrefab: {fileID: 9187262944988733783, guid: 4ad9774258d3ac68e88a8be851aca3a4, type: 3}
+  _viewerManagerPrefab: {fileID: 0}
+  _inputManagerPrefab: {fileID: 0}
+  _networkManagerPrefab: {fileID: 0}
+  _sceneManagerPrefab: {fileID: 0}
+  _objectPoolManagerPrefab: {fileID: 0}
+  _spawnManagerPrefab: {fileID: 0}
+  _actorManagerPrefab: {fileID: 0}
+  _effectsManagerPrefab: {fileID: 0}
+  _gameStateManagerPrefab: {fileID: 0}
+  _dialogueManagerPrefab: {fileID: 0}
+  _cinematicsManagerPrefab: {fileID: 0}
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
