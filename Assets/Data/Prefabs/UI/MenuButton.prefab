@@ -135,9 +135,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b05c64c77821166182fb73c7469cf6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hoverEffectTrigger: {fileID: 5073550274423716273, guid: 2ad021fd2e18fa49fb0987e683e84469, type: 3}
-  _submitEffectTrigger: {fileID: 5073550274423716273, guid: f19528170b4d1e032bb8c3367094aa30, type: 3}
-  _backEffectTrigger: {fileID: 5073550274423716273, guid: deb4ef7d0be4d028d9517bc8e825b75c, type: 3}
+  _hoverEffectTrigger: {fileID: 0}
+  _submitEffectTrigger: {fileID: 0}
+  _backEffectTrigger: {fileID: 0}
   _isBackButton: 0
 --- !u!1 &5688102178938103098
 GameObject:

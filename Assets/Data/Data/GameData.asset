@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GameData
   m_EditorClassIdentifier: 
   _worldLayer: World
-  _viewerPrefab: {fileID: 0}
+  _viewerPrefab: {fileID: 1851156597288993657, guid: 3e9737dd433d3522cbf25ff4a426579f, type: 3}
   _viewportSize: 10
   _fov: 60
   _maxLocalPlayers: 1
@@ -21,4 +21,4 @@ MonoBehaviour:
   _spawnPlayersOnLoad: 1
   _floatingTextPrefab: {fileID: 0}
   _floatingTextPoolSize: 10
-  _mainGameStatePrefab: {fileID: 0}
+  _mainGameStatePrefab: {fileID: 468742490265946015, guid: 03579a4e3c1e9b13aaa5400d2d42eae6, type: 3}

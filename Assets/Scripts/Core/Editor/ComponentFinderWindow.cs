@@ -54,6 +54,7 @@ namespace pdxpartyparrot.Core.Editor
             typeof(NavMeshObstacle),
 
             // ui
+            typeof(UnityEngine.UI.GraphicRaycaster),
             typeof(TextMeshProUGUI),
 
             // spine
