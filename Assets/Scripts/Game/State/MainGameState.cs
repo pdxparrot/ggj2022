@@ -34,6 +34,10 @@ namespace pdxpartyparrot.Game.State
 
         protected override IEnumerator InitSceneRoutine()
         {
+            if(null == GameStateManager.Instance.GameManager.LevelHelper) {
+                Debug.LogWarning("LevelHelper is missing! Players will not spawn without one!");
+            }
+
 #if USE_NAVMESH
             if(null != GameStateManager.Instance.GameManager && null != GameStateManager.Instance.GameManager.LevelHelper) {
                 IEnumerator runner = GameStateManager.Instance.GameManager.LevelHelper.BuildNavMesh();

@@ -127,7 +127,7 @@ namespace pdxpartyparrot.Core.World
         {
             InitActor(actor);
 
-            // players spawn and then deactivate
+            // NOTE: players spawn and then deactivate
             // so that the level can respawn them as it needs to
 
             bool ret = actor.OnSpawn(this);
