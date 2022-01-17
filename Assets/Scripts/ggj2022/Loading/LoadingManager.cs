@@ -1,6 +1,7 @@
 using UnityEngine;
 
 using pdxpartyparrot.Game.Loading;
+using pdxpartyparrot.ggj2022.Players;
 using pdxpartyparrot.ggj2022.UI;
 
 namespace pdxpartyparrot.ggj2022.Loading
@@ -19,6 +20,9 @@ namespace pdxpartyparrot.ggj2022.Loading
         [SerializeField]
         private GameUIManager _gameUiManagerPrefab;
 
+        [SerializeField]
+        private PlayerManager _playerManager;
+
         #endregion
 
         protected override void CreateManagers()
@@ -27,6 +31,7 @@ namespace pdxpartyparrot.ggj2022.Loading
 
             GameManager.CreateFromPrefab(_gameManagerPrefab, ManagersContainer);
             GameUIManager.CreateFromPrefab(_gameUiManagerPrefab, ManagersContainer);
+            PlayerManager.CreateFromPrefab(_playerManager, ManagersContainer);
         }
     }
 }

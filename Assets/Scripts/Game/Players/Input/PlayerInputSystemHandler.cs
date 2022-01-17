@@ -1,5 +1,8 @@
-﻿using pdxpartyparrot.Core.Input;
+﻿using System;
+
+using pdxpartyparrot.Core.Input;
 using pdxpartyparrot.Core.Util;
+using pdxpartyparrot.Game.State;
 
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -51,6 +54,16 @@ namespace pdxpartyparrot.Game.Players.Input
             }
 
             // TODO: get a hook to the look InvertVector2 processor so we can modify it?
+            GameStateManager.Instance.GameManager.Settings.SettingsUpdatedEvent += SettingsUpdatedEventHandler;
+        }
+
+        protected override void OnDestroy()
+        {
+            if(GameStateManager.HasInstance) {
+                GameStateManager.Instance.GameManager.Settings.SettingsUpdatedEvent -= SettingsUpdatedEventHandler;
+            }
+
+            base.OnDestroy();
         }
 
         protected override void Update()
@@ -67,6 +80,13 @@ namespace pdxpartyparrot.Game.Players.Input
         }
 
         #endregion
+
+        public override void Initialize(short playerControllerId)
+        {
+            base.Initialize(playerControllerId);
+
+            InvertLookVertical = GameStateManager.Instance.GameManager.Settings.InvertLookVertical;
+        }
 
         protected virtual void DoPollMove()
         {
@@ -151,6 +171,15 @@ namespace pdxpartyparrot.Game.Players.Input
                 PollLook = false;
                 OnLook(Vector3.zero);
             }
+        }
+
+        #endregion
+
+        #region Event Handlers
+
+        private void SettingsUpdatedEventHandler(object sender, EventArgs args)
+        {
+            InvertLookVertical = GameStateManager.Instance.GameManager.Settings.InvertLookVertical;
         }
 
         #endregion
