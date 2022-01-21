@@ -43,7 +43,7 @@ namespace pdxpartyparrot.Game.Characters
         [CanBeNull]
         public CharacterBehaviorData CharacterBehaviorData => (CharacterBehaviorData)BehaviorData;
 
-        [Header("Components")]
+        [Header("Behavior Components")]
 
         [SerializeField]
         private CharacterBehaviorComponent[] _components;
@@ -164,6 +164,11 @@ namespace pdxpartyparrot.Game.Characters
         }
 
         #region Components
+
+        public bool HasBehaviorComponent<T>() where T : CharacterBehaviorComponent
+        {
+            return null != GetBehaviorComponent<T>();
+        }
 
         [CanBeNull]
         public T GetBehaviorComponent<T>() where T : CharacterBehaviorComponent

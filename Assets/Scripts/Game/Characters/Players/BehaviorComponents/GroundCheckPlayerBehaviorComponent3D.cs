@@ -3,6 +3,7 @@
 using pdxpartyparrot.Game.Characters.BehaviorComponents;
 
 using UnityEngine;
+using UnityEngine.Assertions;
 
 namespace pdxpartyparrot.Game.Characters.Players.BehaviorComponents
 {
@@ -22,6 +23,13 @@ namespace pdxpartyparrot.Game.Characters.Players.BehaviorComponents
         }
 
         #endregion
+
+        public override void Initialize(CharacterBehavior behavior)
+        {
+            base.Initialize(behavior);
+
+            Assert.IsTrue(PlayerBehavior.HasBehaviorComponent<GroundCheckBehaviorComponent>(), "GroundCheckBehaviorComponent must be added to the behavior components!");
+        }
 
         #region Event Handlers
 

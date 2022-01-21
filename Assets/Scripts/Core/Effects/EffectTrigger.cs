@@ -63,6 +63,11 @@ namespace pdxpartyparrot.Core.Effects
 
         #region Components
 
+        public bool HasEffectTriggerComponent<T>() where T : EffectTriggerComponent
+        {
+            return null != GetEffectTriggerComponent<T>();
+        }
+
         [CanBeNull]
         public T GetEffectTriggerComponent<T>() where T : EffectTriggerComponent
         {

@@ -170,6 +170,11 @@ namespace pdxpartyparrot.Core.Actors
 
         #region Components
 
+        public bool HasActorComponent<T>() where T : ActorComponent
+        {
+            return null != GetActorComponent<T>();
+        }
+
         [CanBeNull]
         public T GetActorComponent<T>() where T : ActorComponent
         {

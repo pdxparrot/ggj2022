@@ -1,7 +1,9 @@
+using pdxpartyparrot.Game.Characters.BehaviorComponents;
 using pdxpartyparrot.Game.Players.Input;
 using pdxpartyparrot.ggj2022.Data.Players;
 
 using UnityEngine.Assertions;
+using UnityEngine.InputSystem;
 
 namespace pdxpartyparrot.ggj2022.Players
 {
@@ -17,6 +19,21 @@ namespace pdxpartyparrot.ggj2022.Players
 
             Assert.IsTrue(PlayerInputData is PlayerInputData);
             Assert.IsTrue(Player is Player);
+        }
+
+        #endregion
+
+        #region Actions
+
+        public void OnJumpAction(InputAction.CallbackContext context)
+        {
+            if(!IsInputAllowed(context)) {
+                return;
+            }
+
+            if(context.performed) {
+                Player.PlayerBehavior.ActionPerformed(JumpBehaviorComponent.JumpAction.Default);
+            }
         }
 
         #endregion
