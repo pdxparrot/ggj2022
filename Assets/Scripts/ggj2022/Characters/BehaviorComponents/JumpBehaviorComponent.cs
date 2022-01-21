@@ -6,6 +6,6 @@ namespace pdxpartyparrot.ggj2022.Characters.BehaviorComponents
     {
         private PlayerBehavior GamePlayerBehavior => (PlayerBehavior)Behavior;
 
-        public override float JumpHeight => GamePlayerBehavior.ForestSpiritBehavior.JumpHeightModifier * base.JumpHeight;
+        public override float JumpHeight => GamePlayerBehavior.JumpHeightModifier * base.JumpHeight;
     }
 }

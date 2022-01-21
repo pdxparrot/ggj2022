@@ -176,6 +176,7 @@ MonoBehaviour:
   - {fileID: 173728575211152055}
   - {fileID: 789878440214325410}
   - {fileID: 9197172581205664041}
+  - {fileID: 7993381570480662614}
   _isGrounded: 0
   _isSliding: 0
   _idleEffect: {fileID: 0}
@@ -240,9 +241,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cf22b154e28fe247a0654491fa9241d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _forestSpiritBehaviorData: {fileID: 11400000, guid: 3652f26cd2f3a8042b0a921c985eea72, type: 2}
+  _data: {fileID: 11400000, guid: 3652f26cd2f3a8042b0a921c985eea72, type: 2}
   _currentForm: 0
-  _owner: {fileID: 8552608613755089202}
+  _health: 0
   _rumbleEffects: []
 --- !u!1 &3334495655367124490
 GameObject:

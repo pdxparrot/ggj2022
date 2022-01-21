@@ -1,5 +1,7 @@
 ﻿using JetBrains.Annotations;
 
+using pdxpartyparrot.Core.World;
+
 using UnityEngine;
 
 namespace pdxpartyparrot.Game.Characters.BehaviorComponents
@@ -47,6 +49,8 @@ namespace pdxpartyparrot.Game.Characters.BehaviorComponents
             return false;
         }
 
+        #region Actions
+
         public virtual bool OnStarted(CharacterBehaviorAction action)
         {
             return false;
@@ -61,5 +65,26 @@ namespace pdxpartyparrot.Game.Characters.BehaviorComponents
         {
             return false;
         }
+
+        #endregion
+
+        #region Events
+
+        public virtual bool OnSpawn(SpawnPoint spawnpoint)
+        {
+            return false;
+        }
+
+        public virtual bool OnReSpawn(SpawnPoint spawnpoint)
+        {
+            return false;
+        }
+
+        public virtual bool OnDeSpawn()
+        {
+            return false;
+        }
+
+        #endregion
     }
 }

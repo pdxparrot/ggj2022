@@ -43,7 +43,7 @@ namespace pdxpartyparrot.ggj2022.Players
             }
 
             if(context.performed) {
-                GamePlayer.GamePlayerBehavior.ForestSpiritBehavior.SwapForms();
+                GamePlayer.PlayerBehavior.ActionPerformed(ForestSpiritBehavior.FormSwapAction.Default);
             }
         }
 

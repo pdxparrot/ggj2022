@@ -13,9 +13,9 @@ namespace pdxpartyparrot.ggj2022.Players
 
         private ForestSpiritBehavior _forestSpiritBehavior;
 
-        public ForestSpiritBehavior ForestSpiritBehavior => _forestSpiritBehavior;
+        public override float MoveSpeed => _forestSpiritBehavior.MoveSpeedModifier * base.MoveSpeed;
 
-        public override float MoveSpeed => ForestSpiritBehavior.MoveSpeedModifier * base.MoveSpeed;
+        public float JumpHeightModifier => _forestSpiritBehavior.JumpHeightModifier;
 
         #region Unity Lifecycle
 
@@ -34,6 +34,8 @@ namespace pdxpartyparrot.ggj2022.Players
             Assert.IsTrue(behaviorData is PlayerBehaviorData);
 
             base.Initialize(behaviorData);
+
+            Assert.IsTrue(HasBehaviorComponent<ForestSpiritBehavior>(), "ForestSpiritBehavior must be added to the behavior components!");
         }
     }
 }

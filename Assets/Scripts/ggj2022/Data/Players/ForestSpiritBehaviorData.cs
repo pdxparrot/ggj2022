@@ -1,12 +1,14 @@
 using System;
 
+using pdxpartyparrot.Game.Data.Characters.BehaviorComponents;
+
 using UnityEngine;
 
 namespace pdxpartyparrot.ggj2022.Data.Players
 {
     [CreateAssetMenu(fileName = "ForestSpiritBehaviorData", menuName = "pdxpartyparrot/ggj2022/Data/Players/ForestSpiritBehavior Data")]
     [Serializable]
-    public sealed class ForestSpiritBehaviorData : ScriptableObject
+    public sealed class ForestSpiritBehaviorData : CharacterBehaviorComponentData
     {
         [SerializeField]
         private float _largeSpiritMoveSpeedModifier = 0.5f;
@@ -17,5 +19,15 @@ namespace pdxpartyparrot.ggj2022.Data.Players
         private float _largeSpiritJumpHeightModifier = 0.5f;
 
         public float LargeSpiritJumpHeightModifier => _largeSpiritJumpHeightModifier;
+
+        [SerializeField]
+        private int _startingHealth = 10;
+
+        public int StartingHealth => _startingHealth;
+
+        [SerializeField]
+        private int _maxHealth = 10;
+
+        public int MaxHealth => MaxHealth;
     }
 }

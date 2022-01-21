@@ -25,6 +25,8 @@ namespace pdxpartyparrot.Game
         event EventHandler<EventArgs> GameUnReadyEvent;
         event EventHandler<EventArgs> GameOverEvent;
 
+        event EventHandler<EventArgs> RestartLevelEvent;
+
         event EventHandler<EventArgs> LevelTransitioningEvent;
 
         #endregion
@@ -66,6 +68,8 @@ namespace pdxpartyparrot.Game
 
         void GameOver();
 
+        void RestartLevel();
+
         void TransitionScene(string nextScene, Action onComplete);
     }
 
@@ -79,6 +83,8 @@ namespace pdxpartyparrot.Game
         public event EventHandler<EventArgs> GameReadyEvent;
         public event EventHandler<EventArgs> GameUnReadyEvent;
         public event EventHandler<EventArgs> GameOverEvent;
+
+        public event EventHandler<EventArgs> RestartLevelEvent;
 
         public event EventHandler<EventArgs> LevelEnterEvent;
         public event EventHandler<EventArgs> LevelTransitioningEvent;
@@ -278,6 +284,15 @@ namespace pdxpartyparrot.Game
             IsGameOver = true;
 
             GameOverEvent?.Invoke(this, EventArgs.Empty);
+        }
+
+        public virtual void RestartLevel()
+        {
+            Debug.Log("Restart Level");
+
+            IsGameReady = false;
+
+            RestartLevelEvent?.Invoke(this, EventArgs.Empty);
         }
 
         // TODO: this isn't handled by networking *at all*

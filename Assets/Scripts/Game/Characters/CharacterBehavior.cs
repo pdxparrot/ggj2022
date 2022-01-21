@@ -10,6 +10,7 @@ using pdxpartyparrot.Core.Data.Actors.Components;
 using pdxpartyparrot.Core.DebugMenu;
 using pdxpartyparrot.Core.Effects;
 using pdxpartyparrot.Core.Util;
+using pdxpartyparrot.Core.World;
 using pdxpartyparrot.Game.Characters.BehaviorComponents;
 using pdxpartyparrot.Game.Data.Characters;
 using pdxpartyparrot.Game.State;
@@ -300,6 +301,13 @@ namespace pdxpartyparrot.Game.Characters
             TriggerMoveEffect();
         }
 
+        public override bool OnSpawn(SpawnPoint spawnpoint)
+        {
+            RunOnComponents(c => c.OnSpawn(spawnpoint));
+
+            return false;
+        }
+
         protected override void OnSpawnComplete()
         {
             base.OnSpawnComplete();
@@ -307,11 +315,25 @@ namespace pdxpartyparrot.Game.Characters
             OnIdle();
         }
 
+        public override bool OnReSpawn(SpawnPoint spawnpoint)
+        {
+            RunOnComponents(c => c.OnReSpawn(spawnpoint));
+
+            return false;
+        }
+
         protected override void OnReSpawnComplete()
         {
             base.OnReSpawnComplete();
 
             OnIdle();
+        }
+
+        public override bool OnDeSpawn()
+        {
+            RunOnComponents(c => c.OnDeSpawn());
+
+            return false;
         }
 
         public override bool OnMoveStateChanged()

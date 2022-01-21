@@ -71,11 +71,13 @@ namespace pdxpartyparrot.Game.Level
             GameStateManager.Instance.GameManager.GameUnReadyEvent += GameUnReadyEventHandler;
             GameStateManager.Instance.GameManager.LevelTransitioningEvent += LevelTransitioningEventHandler;
             GameStateManager.Instance.GameManager.GameOverEvent += GameOverEventHandler;
+            GameStateManager.Instance.GameManager.RestartLevelEvent += RestartLevelEventHandler;
         }
 
         protected virtual void OnDestroy()
         {
             if(GameStateManager.HasInstance && null != GameStateManager.Instance.GameManager) {
+                GameStateManager.Instance.GameManager.RestartLevelEvent -= RestartLevelEventHandler;
                 GameStateManager.Instance.GameManager.GameOverEvent -= GameOverEventHandler;
                 GameStateManager.Instance.GameManager.LevelTransitioningEvent -= LevelTransitioningEventHandler;
                 GameStateManager.Instance.GameManager.GameUnReadyEvent -= GameUnReadyEventHandler;
@@ -196,6 +198,11 @@ namespace pdxpartyparrot.Game.Level
         protected virtual void GameOverEventHandler(object sender, EventArgs args)
         {
             Debug.Log("[Level] Game over...");
+        }
+
+        protected virtual void RestartLevelEventHandler(object sender, EventArgs args)
+        {
+            Debug.Log("[Level] Restart...");
         }
 
         #endregion
