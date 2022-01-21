@@ -15,6 +15,8 @@ namespace pdxpartyparrot.ggj2022.Players
 
         public ForestSpiritBehavior ForestSpiritBehavior => _forestSpiritBehavior;
 
+        public override float MoveSpeed => ForestSpiritBehavior.MoveSpeedModifier * base.MoveSpeed;
+
         #region Unity Lifecycle
 
         protected override void Awake()
