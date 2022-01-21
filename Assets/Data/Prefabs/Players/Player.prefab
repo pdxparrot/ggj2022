@@ -365,7 +365,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5851469879048476065}
-  - component: {fileID: 5680781510959640708}
+  - component: {fileID: 6711053804424828519}
   m_Layer: 10
   m_Name: Movement
   m_TagString: Untagged
@@ -388,7 +388,7 @@ Transform:
   m_Father: {fileID: 4304453184491432437}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5680781510959640708
+--- !u!114 &6711053804424828519
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -506,7 +506,7 @@ MonoBehaviour:
   _model: {fileID: 3022255426026366481}
   _components:
   - {fileID: 5411053710253391707}
-  - {fileID: 5680781510959640708}
+  - {fileID: 6711053804424828519}
   _behavior: {fileID: 0}
   _movement: {fileID: 0}
   _isMoving: 0

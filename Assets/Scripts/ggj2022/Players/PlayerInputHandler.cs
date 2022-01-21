@@ -5,7 +5,7 @@ using UnityEngine.Assertions;
 
 namespace pdxpartyparrot.ggj2022.Players
 {
-    public sealed class PlayerInputHandler : ThirdPersonPlayerInputHandler
+    public sealed class PlayerInputHandler : SideScollerPlayerInputHandler
     {
         private Player GamePlayer => (Player)Player;
 

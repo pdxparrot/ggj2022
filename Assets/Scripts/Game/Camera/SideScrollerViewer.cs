@@ -1,4 +1,6 @@
-﻿using Cinemachine;
+﻿using JetBrains.Annotations;
+
+using Cinemachine;
 
 using pdxpartyparrot.Core.Actors;
 using pdxpartyparrot.Core.Camera;
@@ -11,13 +13,13 @@ namespace pdxpartyparrot.Game.Camera
 {
     // this has to be set as the Body in order to work correctly
     //[RequireComponent(typeof(CinemachineFramingTransposer))]
-    [RequireComponent(typeof(CinemachineConfiner))]
     public class SideScrollerViewer : CinemachineViewer, IPlayerViewer
     {
         [Space(10)]
 
         [Header("Target")]
 
+        // NOTE: this should be added to a container GameObject
         [SerializeField]
         private CinemachineTargetGroup _targetGroup;
 
@@ -25,6 +27,7 @@ namespace pdxpartyparrot.Game.Camera
 
         private CinemachineFramingTransposer _transposer;
 
+        [CanBeNull]
         private CinemachineConfiner _confiner;
 
         #region Unity Lifecycle
@@ -37,7 +40,9 @@ namespace pdxpartyparrot.Game.Camera
             Assert.IsNotNull(_transposer);
 
             _confiner = GetComponent<CinemachineConfiner>();
-            Assert.IsNotNull(_confiner);
+
+            LookAt(_targetGroup.transform);
+            Follow(_targetGroup.transform);
         }
 
         #endregion
@@ -45,7 +50,6 @@ namespace pdxpartyparrot.Game.Camera
         public virtual void Initialize(GameData gameData)
         {
             Viewer.Set2D(gameData.ViewportSize);
-            _confiner.m_ConfineScreenEdges = true;
 
             _transposer.m_GroupFramingMode = CinemachineFramingTransposer.FramingMode.HorizontalAndVertical;
             _transposer.m_MinimumOrthoSize = gameData.ViewportSize;
@@ -56,6 +60,7 @@ namespace pdxpartyparrot.Game.Camera
         {
             Debug.Log("Setting viewer bounds");
 
+            _confiner.m_ConfineScreenEdges = true;
             _confiner.m_BoundingShape2D = bounds;
         }
 

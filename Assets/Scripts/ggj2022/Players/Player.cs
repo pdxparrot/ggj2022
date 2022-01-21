@@ -23,7 +23,7 @@ namespace pdxpartyparrot.ggj2022.Players
 
             Assert.IsTrue(PlayerInputHandler is PlayerInputHandler);
 
-            Rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
+            Rigidbody.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionZ;
         }
 
         #endregion
@@ -54,14 +54,14 @@ namespace pdxpartyparrot.ggj2022.Players
                 return false;
             }
 
-            PlayerGameViewer.FollowTarget(transform);
+            PlayerGameViewer.AddTarget(this);
 
             return true;
         }
 
         public override void OnDeSpawn()
         {
-            PlayerGameViewer.FollowTarget(null);
+            PlayerGameViewer.RemoveTarget(this);
 
             base.OnDeSpawn();
         }

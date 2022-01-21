@@ -50,4 +50,5 @@ MonoBehaviour:
   _enterEffect: {fileID: 0}
   _exitEffect: {fileID: 0}
   _gameOverState: {fileID: 0}
-  _testScenes: []
+  _testScenes:
+  - test

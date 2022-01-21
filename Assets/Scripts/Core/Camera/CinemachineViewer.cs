@@ -21,6 +21,7 @@ namespace pdxpartyparrot.Core.Camera
         private enum Mode
         {
             Mode2D,
+            Mode25D,
             Mode3D,
         }
 
@@ -65,6 +66,7 @@ namespace pdxpartyparrot.Core.Camera
             case Mode.Mode2D:
                 Set2D();
                 break;
+            case Mode.Mode25D:
             case Mode.Mode3D:
                 Set3D();
                 break;
