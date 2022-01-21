@@ -49,4 +49,4 @@ MonoBehaviour:
   _makeInitialSceneActive: 1
   _enterEffect: {fileID: 0}
   _exitEffect: {fileID: 0}
-  _gameOverState: {fileID: 0}
+  _gameOverState: {fileID: 4886723557299010940, guid: 65a26d91488792d46972a9504d1c3c07, type: 3}

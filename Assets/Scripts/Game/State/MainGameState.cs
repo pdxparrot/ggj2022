@@ -32,6 +32,24 @@ namespace pdxpartyparrot.Game.State
         // this is only used when not using "gamepads are players"
         private readonly List<short> _playerControllers = new List<short>();
 
+        private DebugMenuNode _debugMenuNode;
+
+        #region Unity Lifecycle
+
+        protected override void Awake()
+        {
+            base.Awake();
+
+            InitDebugMenu();
+        }
+
+        private void OnDestroy()
+        {
+            DestroyDebugMenu();
+        }
+
+        #endregion
+
         protected override IEnumerator InitSceneRoutine()
         {
             if(null == GameStateManager.Instance.GameManager.LevelHelper) {
@@ -292,6 +310,28 @@ namespace pdxpartyparrot.Game.State
         private void ClientDisconnectEventHandler(object sender, EventArgs args)
         {
             Debug.LogError("TODO: client disconnect");
+        }
+
+        #endregion
+
+        #region Debug Menu
+
+        private void InitDebugMenu()
+        {
+            _debugMenuNode = DebugMenuManager.Instance.AddNode(() => $"Game.MainGameState");
+            _debugMenuNode.RenderContentsAction = () => {
+                if(GUILayout.Button("Game Over")) {
+                    GameStateManager.Instance.GameManager.GameOver();
+                }
+            };
+        }
+
+        private void DestroyDebugMenu()
+        {
+            if(DebugMenuManager.HasInstance) {
+                DebugMenuManager.Instance.RemoveNode(_debugMenuNode);
+            }
+            _debugMenuNode = null;
         }
 
         #endregion

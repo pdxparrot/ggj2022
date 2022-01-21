@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace pdxpartyparrot.Game.UI
 {
-    public sealed class InitialInput : MonoBehaviour
+    public class InitialInput : MonoBehaviour
     {
         [SerializeField]
         private TextMeshProUGUI _text;

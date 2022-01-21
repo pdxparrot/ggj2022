@@ -8,6 +8,7 @@ using pdxpartyparrot.Core.UI;
 
 namespace pdxpartyparrot.Game.UI
 {
+    [RequireComponent(typeof(UIObject))]
     public class LevelSelectUI : MonoBehaviour
     {
         [Serializable]

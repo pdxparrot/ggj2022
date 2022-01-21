@@ -2,6 +2,7 @@
 
 using pdxpartyparrot.Core.Effects;
 using pdxpartyparrot.Core.Input;
+using pdxpartyparrot.Core.UI;
 
 using TMPro;
 
@@ -10,7 +11,8 @@ using UnityEngine.InputSystem;
 
 namespace pdxpartyparrot.Game.UI
 {
-    public sealed class TitleScreen : MonoBehaviour
+    [RequireComponent(typeof(UIObject))]
+    public class TitleScreen : MonoBehaviour
     {
         [SerializeField]
         [CanBeNull]

@@ -4,8 +4,8 @@ using System;
 
 using pdxpartyparrot.Core.Audio;
 using pdxpartyparrot.Core.Time;
-using pdxpartyparrot.Core.UI;
 using pdxpartyparrot.Core.Util;
+using pdxpartyparrot.Game.UI;
 
 using UnityEngine;
 
@@ -24,9 +24,9 @@ namespace pdxpartyparrot.Game.State
 
         [SerializeField]
         [CanBeNull]
-        private UIObject _overlayPrefab;
+        private GameOverUI _overlayPrefab;
 
-        private UIObject _overlay;
+        private GameOverUI _overlay;
 
         [SerializeField]
         private bool _automaticOverlayTransition = true;

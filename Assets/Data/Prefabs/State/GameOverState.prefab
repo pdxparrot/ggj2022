@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8511636889689338107
+--- !u!1 &6608251527379256780
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4649129863965834235}
-  - component: {fileID: 2702410494865999013}
+  - component: {fileID: 377211265297708541}
+  - component: {fileID: 4886723557299010940}
   m_Layer: 0
-  m_Name: SceneTester
+  m_Name: GameOverState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4649129863965834235
+--- !u!4 &377211265297708541
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8511636889689338107}
+  m_GameObject: {fileID: 6608251527379256780}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,23 +32,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2702410494865999013
+--- !u!114 &4886723557299010940
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8511636889689338107}
+  m_GameObject: {fileID: 6608251527379256780}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c6c8bc195820e79d86fcb5c0f02fe9e, type: 3}
+  m_Script: {fileID: 11500000, guid: cffdb5d3f54d1d94d87bd72115fa7c0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initialSceneName: 
-  _currentSceneName: 
-  _makeInitialSceneActive: 1
   _enterEffect: {fileID: 0}
   _exitEffect: {fileID: 0}
-  _gameOverState: {fileID: 4886723557299010940, guid: 65a26d91488792d46972a9504d1c3c07, type: 3}
-  _testScenes:
-  - test
+  _menuPrefab: {fileID: 0}
+  _overlayPrefab: {fileID: 4142865420887188533, guid: 5bb24985211913f43b3735eb777b53d8, type: 3}
+  _automaticOverlayTransition: 1
+  _completeWaitTimeSeconds: 5
+  _completeTimer:
+    rid: -2
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
