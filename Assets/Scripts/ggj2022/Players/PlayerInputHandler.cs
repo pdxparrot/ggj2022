@@ -32,7 +32,18 @@ namespace pdxpartyparrot.ggj2022.Players
             }
 
             if(context.performed) {
-                Player.PlayerBehavior.ActionPerformed(JumpBehaviorComponent.JumpAction.Default);
+                GamePlayer.PlayerBehavior.ActionPerformed(JumpBehaviorComponent.JumpAction.Default);
+            }
+        }
+
+        public void OnFormSwapAction(InputAction.CallbackContext context)
+        {
+            if(!IsInputAllowed(context)) {
+                return;
+            }
+
+            if(context.performed) {
+                GamePlayer.GamePlayerBehavior.ForestSpiritBehavior.SwapForms();
             }
         }
 

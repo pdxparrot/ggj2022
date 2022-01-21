@@ -128,6 +128,7 @@ GameObject:
   - component: {fileID: 173728575211152055}
   - component: {fileID: 789878440214325410}
   - component: {fileID: 8637405622926996512}
+  - component: {fileID: 7993381570480662614}
   m_Layer: 10
   m_Name: Behavior
   m_TagString: Untagged
@@ -227,6 +228,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data: {fileID: 11400000, guid: 5da68578dfd52c84188605cd0a54759a, type: 2}
   _jumpEffect: {fileID: 0}
+--- !u!114 &7993381570480662614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3272413087399022572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cf22b154e28fe247a0654491fa9241d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _owner: {fileID: 8552608613755089202}
+  _rumbleEffects: []
 --- !u!1 &3334495655367124490
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,7 +397,20 @@ MonoBehaviour:
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1339348718864512902}
+        m_TargetAssemblyTypeName: pdxpartyparrot.ggj2022.Players.PlayerInputHandler,
+          com.pdxpartyparrot.ggj2022
+        m_MethodName: OnFormSwapAction
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: c9156793-8cfe-4e06-ab19-5e52b6ad7d29
     m_ActionName: Player/Fire[/XInputControllerWindows/rightTrigger,/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0

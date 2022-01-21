@@ -1,3 +1,4 @@
+using UnityEngine;
 using UnityEngine.Assertions;
 
 using pdxpartyparrot.Core.Data.Actors.Components;
@@ -5,9 +6,25 @@ using pdxpartyparrot.ggj2022.Data.Players;
 
 namespace pdxpartyparrot.ggj2022.Players
 {
+    [RequireComponent(typeof(ForestSpiritBehavior))]
     public sealed class PlayerBehavior : Game.Characters.Players.PlayerBehavior
     {
         public PlayerBehaviorData GamePlayerBehaviorData => (PlayerBehaviorData)PlayerBehaviorData;
+
+        private ForestSpiritBehavior _forestSpiritBehavior;
+
+        public ForestSpiritBehavior ForestSpiritBehavior => _forestSpiritBehavior;
+
+        #region Unity Lifecycle
+
+        protected override void Awake()
+        {
+            base.Awake();
+
+            _forestSpiritBehavior = GetComponent<ForestSpiritBehavior>();
+        }
+
+        #endregion
 
         public override void Initialize(ActorBehaviorComponentData behaviorData)
         {
