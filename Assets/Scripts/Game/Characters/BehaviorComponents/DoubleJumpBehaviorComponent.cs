@@ -61,6 +61,10 @@ namespace pdxpartyparrot.Game.Characters.BehaviorComponents
                 return false;
             }
 
+            if(Core.Input.InputManager.Instance.EnableDebug) {
+                Debug.Log($"Double jump!");
+            }
+
             Behavior.CharacterMovement.Jump(_data.DoubleJumpHeight);
 
             if(null != _doubleJumpEffect) {

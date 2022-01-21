@@ -9,6 +9,7 @@ namespace pdxpartyparrot.Game.Data.Characters.BehaviorComponents
     public class GroundCheckBehaviorComponentData : CharacterBehaviorComponentData
     {
         [SerializeField]
+        [Tooltip("The layer to check for collisions against")]
         private LayerMask _raycastLayerMask;
 
         public LayerMask RaycastLayerMask => _raycastLayerMask;

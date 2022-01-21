@@ -42,7 +42,14 @@ namespace pdxpartyparrot.Game.Characters.BehaviorComponents
             }
 
             if(!Behavior.IsGrounded || Behavior.IsSliding) {
+                if(Core.Input.InputManager.Instance.EnableDebug) {
+                    Debug.LogWarning($"Jump failed, grounded: {Behavior.IsGrounded}, sliding: {Behavior.IsSliding}");
+                }
                 return false;
+            }
+
+            if(Core.Input.InputManager.Instance.EnableDebug) {
+                Debug.Log($"Jump!");
             }
 
             Behavior.CharacterMovement.Jump(_data.JumpHeight);

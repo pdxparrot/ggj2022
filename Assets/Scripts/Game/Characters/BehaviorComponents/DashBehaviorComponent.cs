@@ -108,6 +108,10 @@ namespace pdxpartyparrot.Game.Characters.BehaviorComponents
                 return false;
             }
 
+            if(Core.Input.InputManager.Instance.EnableDebug) {
+                Debug.Log($"Dash!");
+            }
+
             StartDashing();
 
             return true;
