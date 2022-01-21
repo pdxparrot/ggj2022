@@ -21,6 +21,7 @@ namespace pdxpartyparrot.Game.Camera
 
         // NOTE: this should be added to a container GameObject
         [SerializeField]
+        [CanBeNull]
         private CinemachineTargetGroup _targetGroup;
 
         public Viewer Viewer => this;
@@ -41,8 +42,10 @@ namespace pdxpartyparrot.Game.Camera
 
             _confiner = GetComponent<CinemachineConfiner>();
 
-            LookAt(_targetGroup.transform);
-            Follow(_targetGroup.transform);
+            if(_targetGroup != null) {
+                LookAt(_targetGroup.transform);
+                Follow(_targetGroup.transform);
+            }
         }
 
         #endregion
