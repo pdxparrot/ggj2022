@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 
 using JetBrains.Annotations;
 
@@ -25,6 +24,8 @@ namespace pdxpartyparrot.Game.Level
 
         public bool HasNextLevel => !string.IsNullOrWhiteSpace(_nextLevel);
 
+        #region Effects
+
         [Space(10)]
 
         [SerializeField]
@@ -32,7 +33,7 @@ namespace pdxpartyparrot.Game.Level
         private EffectTrigger _levelEnterEffect;
 
         [CanBeNull]
-        protected EffectTrigger LevelEnterEfect => _levelEnterEffect;
+        protected EffectTrigger LevelEnterEffect => _levelEnterEffect;
 
         [SerializeField]
         private bool _levelEnterIsBlocking = true;
@@ -50,6 +51,8 @@ namespace pdxpartyparrot.Game.Level
         private bool _levelExitIsBlocking = true;
 
         protected bool LevelExitIsBlocking => _levelExitIsBlocking;
+
+        #endregion
 
 #if USE_NAVMESH
         private NavMeshSurface _navMeshSurface;
@@ -98,22 +101,39 @@ namespace pdxpartyparrot.Game.Level
 
         #endregion
 
+        private void TriggerLevelEffect(EffectTrigger effectTrigger, bool isBlocking, Action action)
+        {
+            if(null != effectTrigger) {
+                if(isBlocking) {
+                    effectTrigger.Trigger(() => {
+                        action?.Invoke();
+                    });
+                } else {
+                    effectTrigger.Trigger();
+                    action?.Invoke();
+                }
+            } else {
+                action?.Invoke();
+            }
+        }
+
+        private void TriggerEnterLevelEffect(Action action)
+        {
+            TriggerLevelEffect(_levelEnterEffect, _levelEnterIsBlocking, action);
+        }
+
+        private void TriggerExitLevelEffect(Action action)
+        {
+            TriggerLevelEffect(_levelExitEffect, _levelExitIsBlocking, action);
+        }
+
         protected void TransitionLevel()
         {
             GameStateManager.Instance.GameManager.GameUnReady();
 
             // load the next level if we have one
             if(!string.IsNullOrWhiteSpace(_nextLevel)) {
-                if(null != _levelExitEffect) {
-                    if(_levelExitIsBlocking) {
-                        _levelExitEffect.Trigger(DoLevelTransition);
-                    } else {
-                        _levelExitEffect.Trigger();
-                        DoLevelTransition();
-                    }
-                } else {
-                    DoLevelTransition();
-                }
+                TriggerExitLevelEffect(DoLevelTransition);
             } else {
                 GameStateManager.Instance.GameManager.GameOver();
             }
@@ -147,6 +167,11 @@ namespace pdxpartyparrot.Game.Level
         }
 #endif
 
+        protected virtual void Reset()
+        {
+            GameStateManager.Instance.PlayerManager.DespawnPlayers();
+        }
+
         #region Event Handlers
 
         protected virtual void GameStartServerEventHandler(object sender, EventArgs args)
@@ -162,16 +187,7 @@ namespace pdxpartyparrot.Game.Level
 
             // TODO: we really should communicate our ready state to the server
             // and then have it communicate back to us when everybody is ready
-            if(null != _levelEnterEffect) {
-                if(_levelEnterIsBlocking) {
-                    _levelEnterEffect.Trigger(GameStateManager.Instance.GameManager.GameReady);
-                } else {
-                    _levelEnterEffect.Trigger();
-                    GameStateManager.Instance.GameManager.GameReady();
-                }
-            } else {
-                GameStateManager.Instance.GameManager.GameReady();
-            }
+            TriggerEnterLevelEffect(GameStateManager.Instance.GameManager.GameReady);
         }
 
         protected virtual void GameReadyEventHandler(object sender, EventArgs args)
@@ -203,6 +219,14 @@ namespace pdxpartyparrot.Game.Level
         protected virtual void RestartLevelEventHandler(object sender, EventArgs args)
         {
             Debug.Log("[Level] Restart...");
+
+            TriggerExitLevelEffect(() => {
+                Reset();
+
+                // TODO: we really should communicate our ready state to the server
+                // and then have it communicate back to us when everybody is ready
+                TriggerEnterLevelEffect(GameStateManager.Instance.GameManager.GameReady);
+            });
         }
 
         #endregion

@@ -290,7 +290,7 @@ namespace pdxpartyparrot.Game
         {
             Debug.Log("Restart Level");
 
-            IsGameReady = false;
+            GameUnReady();
 
             RestartLevelEvent?.Invoke(this, EventArgs.Empty);
         }
