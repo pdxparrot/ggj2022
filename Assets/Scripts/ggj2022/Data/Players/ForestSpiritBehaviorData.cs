@@ -12,5 +12,10 @@ namespace pdxpartyparrot.ggj2022.Data.Players
         private float _largeSpiritMoveSpeedModifier = 0.5f;
 
         public float LargeSpiritMoveSpeedModifier => _largeSpiritMoveSpeedModifier;
+
+        [SerializeField]
+        private float _largeSpiritJumpHeightModifier = 0.5f;
+
+        public float LargeSpiritJumpHeightModifier => _largeSpiritJumpHeightModifier;
     }
 }

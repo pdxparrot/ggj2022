@@ -15,7 +15,7 @@ namespace pdxpartyparrot.ggj2022.Players
         }
 
         [SerializeField]
-        protected ForestSpiritBehaviorData _forestSpiritBehaviorData;
+        private ForestSpiritBehaviorData _forestSpiritBehaviorData;
 
         [SerializeField]
         [ReadOnly]
@@ -27,6 +27,8 @@ namespace pdxpartyparrot.ggj2022.Players
         public Player Owner => _owner;
 
         public float MoveSpeedModifier => _currentForm == SpiritForm.Small ? 1.0f : _forestSpiritBehaviorData.LargeSpiritMoveSpeedModifier;
+
+        public float JumpHeightModifier => _currentForm == SpiritForm.Small ? 1.0f : _forestSpiritBehaviorData.LargeSpiritJumpHeightModifier;
 
         [SerializeField]
         private RumbleEffectTriggerComponent[] _rumbleEffects;
