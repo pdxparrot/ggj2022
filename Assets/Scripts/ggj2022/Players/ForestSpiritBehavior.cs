@@ -131,7 +131,7 @@ namespace pdxpartyparrot.ggj2022.Players
 
         #endregion
 
-        #region Events
+        #region Spawn
 
         public override bool OnSpawn(SpawnPoint spawnpoint)
         {

@@ -20,6 +20,9 @@ namespace pdxpartyparrot.ggj2022.NPCs
 
         private SlimeBehaviorData SlimeBehaviorData => (SlimeBehaviorData)BehaviorData;
 
+        [SerializeField]
+        private GameObject _seedModel;
+
         public override Vector3 MoveDirection
         {
             get
@@ -56,11 +59,14 @@ namespace pdxpartyparrot.ggj2022.NPCs
             Assert.IsTrue(behaviorData is SlimeBehaviorData);
 
             base.Initialize(behaviorData);
+
+            _seedModel.SetActive(false);
         }
 
         public void GiveSeed()
         {
             _hasSeed = true;
+            _seedModel.SetActive(true);
         }
 
         #region Events
