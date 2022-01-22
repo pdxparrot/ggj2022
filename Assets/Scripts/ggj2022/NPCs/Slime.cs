@@ -19,7 +19,6 @@ namespace pdxpartyparrot.ggj2022.NPCs
             base.Awake();
 
             Rigidbody.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionZ;
-            Collider.isTrigger = true;
         }
 
         protected override void OnDestroy()

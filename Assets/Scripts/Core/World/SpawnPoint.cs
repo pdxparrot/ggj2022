@@ -18,7 +18,13 @@ namespace pdxpartyparrot.Core.World
         public string[] Tags => _tags;
 
         [SerializeField]
-        private FloatRangeConfig _spawnRange;
+        private FloatRangeConfig _xSpawnRange;
+
+        [SerializeField]
+        private FloatRangeConfig _ySpawnRange;
+
+        [SerializeField]
+        private FloatRangeConfig _zSpawnRange;
 
         [SerializeField]
         [ReadOnly]
@@ -42,7 +48,9 @@ namespace pdxpartyparrot.Core.World
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.blue;
-            Gizmos.DrawWireSphere(transform.position, _spawnRange.Max <= 0.0f ? 1.0f : _spawnRange.Max);
+            Gizmos.DrawWireCube(transform.position, new Vector3(_xSpawnRange.Max <= 0.0f ? 1.0f : _xSpawnRange.Max,
+                                                                _ySpawnRange.Max <= 0.0f ? 1.0f : _ySpawnRange.Max,
+                                                                _zSpawnRange.Max <= 0.0f ? 1.0f : _zSpawnRange.Max));
         }
 
         #endregion
@@ -66,9 +74,9 @@ namespace pdxpartyparrot.Core.World
             Transform actorTransform = actor.transform;
             Transform thisTransform = transform;
 
-            Vector3 offset = new Vector3(_spawnRange.GetRandomValue() * PartyParrotManager.Instance.Random.NextSign(),
-                                         0.0f,
-                                         _spawnRange.GetRandomValue() * PartyParrotManager.Instance.Random.NextSign());
+            Vector3 offset = new Vector3(_xSpawnRange.GetRandomValue() * PartyParrotManager.Instance.Random.NextSign(),
+                                         _ySpawnRange.GetRandomValue() * PartyParrotManager.Instance.Random.NextSign(),
+                                         _zSpawnRange.GetRandomValue() * PartyParrotManager.Instance.Random.NextSign());
 
             actorTransform.position = thisTransform.position + offset;
             actorTransform.rotation = thisTransform.rotation;

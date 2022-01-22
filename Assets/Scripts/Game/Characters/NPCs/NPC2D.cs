@@ -43,6 +43,8 @@ namespace pdxpartyparrot.Game.Characters.NPCs
         {
             base.Awake();
 
+            Collider.isTrigger = true;
+
             _pooledObject = GetComponent<PooledObject>();
             if(null != _pooledObject) {
                 _pooledObject.RecycleEvent += RecycleEventHandler;

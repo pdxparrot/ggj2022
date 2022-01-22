@@ -102,6 +102,8 @@ namespace pdxpartyparrot.Game.Characters.NPCs
         {
             base.Awake();
 
+            Collider.isTrigger = true;
+
             _agent = GetComponent<NavMeshAgent>();
 
             _obstacle = GetComponent<NavMeshObstacle>();
