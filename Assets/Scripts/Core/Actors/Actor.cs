@@ -283,6 +283,8 @@ namespace pdxpartyparrot.Core.Actors
             OnDeSpawn();
 
             if(destroy) {
+                Debug.LogWarning($"Destroying actor {Id}");
+
                 Destroy(gameObject);
             } else {
                 gameObject.SetActive(false);

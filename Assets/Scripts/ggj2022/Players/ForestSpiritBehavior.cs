@@ -1,3 +1,5 @@
+using System;
+
 using pdxpartyparrot.Core.DebugMenu;
 using pdxpartyparrot.Core.Effects.EffectTriggerComponents;
 using pdxpartyparrot.Core.Util;
@@ -47,6 +49,12 @@ namespace pdxpartyparrot.ggj2022.Players
         public int Health => _health;
 
         [SerializeField]
+        [ReadOnly]
+        private int _seedCount;
+
+        public int SeedCount => _seedCount;
+
+        [SerializeField]
         private RumbleEffectTriggerComponent[] _rumbleEffects;
 
         private DebugMenuNode _debugMenuNode;
@@ -56,6 +64,8 @@ namespace pdxpartyparrot.ggj2022.Players
         protected override void Awake()
         {
             base.Awake();
+
+            GameManager.Instance.GameReadyEvent += GameReadyEventHandler;
 
             InitDebugMenu();
         }
@@ -83,8 +93,18 @@ namespace pdxpartyparrot.ggj2022.Players
             _health -= amount;
 
             if(_health <= 0) {
-                GameManager.Instance.RestartLevel();
+                _health = 0;
+                GameManager.Instance.PlayerDied();
+            } else {
+                GameManager.Instance.PlayerDamaged(_health);
             }
+        }
+
+        public void CollectSeed(int amount)
+        {
+            _seedCount += amount;
+
+            GameManager.Instance.SeedCollected(_seedCount);
         }
 
         #region Actions
@@ -116,15 +136,18 @@ namespace pdxpartyparrot.ggj2022.Players
         public override bool OnSpawn(SpawnPoint spawnpoint)
         {
             _health = _data.StartingHealth;
+            _seedCount = 0;
 
             return base.OnSpawn(spawnpoint);
         }
 
-        public override bool OnReSpawn(SpawnPoint spawnpoint)
-        {
-            _health = _data.StartingHealth;
+        #endregion
 
-            return base.OnReSpawn(spawnpoint);
+        #region Event Handlers
+
+        private void GameReadyEventHandler(object sender, EventArgs args)
+        {
+            GameManager.Instance.Reset(Health, SeedCount);
         }
 
         #endregion
@@ -136,9 +159,13 @@ namespace pdxpartyparrot.ggj2022.Players
             _debugMenuNode = DebugMenuManager.Instance.AddNode(() => $"ggj2022.ForestSpiritBehavior {Behavior.Owner.Id}");
             _debugMenuNode.RenderContentsAction = () => {
                 GUILayout.Label($"Health: {Health}");
-
                 if(GUILayout.Button("Damage")) {
                     Damage(1);
+                }
+
+                GUILayout.Label($"Seeds: {SeedCount}");
+                if(GUILayout.Button("Collect Seed")) {
+                    CollectSeed(1);
                 }
             };
         }

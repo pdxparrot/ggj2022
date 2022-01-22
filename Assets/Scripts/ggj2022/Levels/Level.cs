@@ -20,7 +20,10 @@ namespace pdxpartyparrot.ggj2022.Level
         {
             base.Reset();
 
-            Debug.LogWarning("TODO: reset the level!");
+            if(null != _enemyContainer) {
+                Destroy(_enemyContainer);
+                _enemyContainer = null;
+            }
         }
 
         private void SpawnEnemies()
@@ -46,17 +49,7 @@ namespace pdxpartyparrot.ggj2022.Level
 
             SpawnEnemies();
 
-            //GameManager.Instance.OnLevelEntered();
-        }
-
-        protected override void LevelTransitioningEventHandler(object sender, EventArgs args)
-        {
-            if(null != _enemyContainer) {
-                Destroy(_enemyContainer);
-                _enemyContainer = null;
-            }
-
-            base.LevelTransitioningEventHandler(sender, args);
+            GameManager.Instance.LevelEntered();
         }
 
         #endregion

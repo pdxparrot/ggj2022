@@ -2,6 +2,7 @@ using pdxpartyparrot.Core.Data.Actors.Components;
 using pdxpartyparrot.Core.DebugMenu;
 using pdxpartyparrot.Game.Characters.NPCs;
 using pdxpartyparrot.ggj2022.Data.NPCs;
+using pdxpartyparrot.ggj2022.Players;
 
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -45,6 +46,22 @@ namespace pdxpartyparrot.ggj2022.NPCs
 
             base.Initialize(behaviorData);
         }
+
+        #region Events
+
+        public override bool TriggerEnter(GameObject triggerObject)
+        {
+            Player player = triggerObject.GetComponent<Player>();
+            if(null == player) {
+                return false;
+            }
+
+            player.GamePlayerBehavior.ForestSpiritBehavior.Damage(SlimeBehaviorData.DamageAmount);
+
+            return true;
+        }
+
+        #endregion
 
         #region Debug Menu
 

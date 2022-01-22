@@ -169,6 +169,8 @@ namespace pdxpartyparrot.Game.Level
 
         protected virtual void Reset()
         {
+            GameStateManager.Instance.NPCManager.DespawnAllNPCs();
+
             GameStateManager.Instance.PlayerManager.DespawnPlayers();
         }
 

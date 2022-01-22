@@ -4,6 +4,7 @@ using pdxpartyparrot.Core.Camera;
 using pdxpartyparrot.Game;
 using pdxpartyparrot.ggj2022.Camera;
 using pdxpartyparrot.ggj2022.Data;
+using pdxpartyparrot.ggj2022.UI;
 
 namespace pdxpartyparrot.ggj2022
 {
@@ -21,6 +22,30 @@ namespace pdxpartyparrot.ggj2022
                 return;
             }
             Viewer.Initialize(GameGameData);
+        }
+
+        public void Reset(int health, int seedCount)
+        {
+            GameUIManager.Instance.GameGameUI.PlayerHUD.Reset(health, seedCount);
+        }
+
+        public void PlayerDamaged(int health)
+        {
+            GameUIManager.Instance.GameGameUI.PlayerHUD.UpdateHealth(health);
+        }
+
+        public void PlayerDied()
+        {
+            Debug.Log("Player died! Restarting level...");
+
+            GameUIManager.Instance.GameGameUI.PlayerHUD.UpdateHealth(0);
+
+            RestartLevel();
+        }
+
+        public void SeedCollected(int seedCount)
+        {
+            GameUIManager.Instance.GameGameUI.PlayerHUD.UpdateSeedCount(seedCount);
         }
     }
 }

@@ -21,6 +21,12 @@ namespace pdxpartyparrot.Game.NPCs
         float StuckCheckSeconds { get; }
 
         int StuckCheckMaxPasses { get; }
+
+        void RegisterNPC(INPC npc);
+
+        void UnregisterNPC(INPC npc);
+
+        void DespawnAllNPCs();
     }
 
     public abstract class NPCManager<T> : SingletonBehavior<T>, INPCManager where T : NPCManager<T>
@@ -111,6 +117,18 @@ namespace pdxpartyparrot.Game.NPCs
             }
 
             return spawnPoint.ReSpawn((Actor)npc);
+        }
+
+        public void DespawnAllNPCs()
+        {
+            Debug.Log($"Despawning {_npcs.Count} NPCs...");
+
+            INPC[] npcs = new INPC[_npcs.Count];
+            _npcs.CopyTo(npcs);
+
+            foreach(INPC npc in npcs) {
+                npc.DeSpawn(true);
+            }
         }
 
         private void InitDebugMenu()

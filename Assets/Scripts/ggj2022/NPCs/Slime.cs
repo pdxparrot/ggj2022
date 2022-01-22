@@ -1,6 +1,5 @@
 using System;
 
-using pdxpartyparrot.Core.World;
 using pdxpartyparrot.Game.Characters.NPCs;
 
 using UnityEngine;
@@ -19,6 +18,8 @@ namespace pdxpartyparrot.ggj2022.NPCs
             base.Awake();
 
             Rigidbody.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionZ;
+
+            SetPassive();
         }
 
         protected override void OnDestroy()
@@ -38,27 +39,5 @@ namespace pdxpartyparrot.ggj2022.NPCs
 
             Assert.IsTrue(Behavior is SlimeBehavior);
         }
-
-        #region Spawn
-
-        public override bool OnSpawn(SpawnPoint spawnpoint)
-        {
-            if(!base.OnSpawn(spawnpoint)) {
-                return false;
-            }
-
-            NPCManager.Instance.RegisterNPC(this);
-
-            return true;
-        }
-
-        public override void OnDeSpawn()
-        {
-            NPCManager.Instance.UnregisterNPC(this);
-
-            base.OnDeSpawn();
-        }
-
-        #endregion
     }
 }

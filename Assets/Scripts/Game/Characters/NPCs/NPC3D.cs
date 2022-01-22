@@ -6,6 +6,7 @@ using JetBrains.Annotations;
 using pdxpartyparrot.Core.Actors;
 using pdxpartyparrot.Core.ObjectPool;
 using pdxpartyparrot.Core.Util;
+using pdxpartyparrot.Core.World;
 using pdxpartyparrot.Game.State;
 using pdxpartyparrot.Game.UI;
 
@@ -258,6 +259,28 @@ namespace pdxpartyparrot.Game.Characters.NPCs
                 _pooledObject.Recycle();
             }
         }
+
+        #region Spawn
+
+        public override bool OnSpawn(SpawnPoint spawnpoint)
+        {
+            if(!base.OnSpawn(spawnpoint)) {
+                return false;
+            }
+
+            GameStateManager.Instance.NPCManager.RegisterNPC(this);
+
+            return true;
+        }
+
+        public override void OnDeSpawn()
+        {
+            GameStateManager.Instance.NPCManager.UnregisterNPC(this);
+
+            base.OnDeSpawn();
+        }
+
+        #endregion
 
         private IEnumerator AgentStuckCheck()
         {
