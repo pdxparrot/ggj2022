@@ -7,12 +7,12 @@ using UnityEngine;
 namespace pdxpartyparrot.Game.NPCs
 {
     [RequireComponent(typeof(Collider))]
-    public class NPCPhysics : MonoBehaviour
+    public class NPCPhysics3D : MonoBehaviour
     {
         [SerializeField]
-        private INPC _owner;
+        private NPC3D _owner;
 
-        protected INPC Owner => _owner;
+        protected NPC3D Owner => _owner;
 
         private Collider _collider;
 
