@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 60d041cf7814f5c41bb569cd3948d4fe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -244,6 +244,7 @@ MonoBehaviour:
   _data: {fileID: 11400000, guid: 3652f26cd2f3a8042b0a921c985eea72, type: 2}
   _currentForm: 0
   _health: 0
+  _seedCount: 0
   _rumbleEffects: []
 --- !u!1 &3334495655367124490
 GameObject:
