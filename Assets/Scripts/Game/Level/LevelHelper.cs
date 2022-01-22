@@ -153,7 +153,6 @@ namespace pdxpartyparrot.Game.Level
         {
             Debug.Log("[Level] Building nav mesh...");
 
-            // https://github.com/Unity-Technologies/NavMeshComponents/issues/97
             _navMeshSurface.RemoveData();
             _navMeshSurface.navMeshData = new NavMeshData(_navMeshSurface.agentTypeID) {
                 name = _navMeshSurface.gameObject.name,
