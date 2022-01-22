@@ -57,13 +57,11 @@ namespace pdxpartyparrot.Game.Players.Input
             GameStateManager.Instance.GameManager.Settings.SettingsUpdatedEvent += SettingsUpdatedEventHandler;
         }
 
-        protected override void OnDestroy()
+        protected virtual void OnDestroy()
         {
             if(GameStateManager.HasInstance) {
                 GameStateManager.Instance.GameManager.Settings.SettingsUpdatedEvent -= SettingsUpdatedEventHandler;
             }
-
-            base.OnDestroy();
         }
 
         protected override void Update()

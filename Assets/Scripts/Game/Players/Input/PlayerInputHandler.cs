@@ -102,7 +102,12 @@ namespace pdxpartyparrot.Game.Players.Input
             _lookBuffer = new CircularBuffer<Vector3>(PlayerInputData.InputBufferSize);
         }
 
-        protected virtual void OnDestroy()
+        private void OnEnable()
+        {
+            InitDebugMenu();
+        }
+
+        private void OnDisable()
         {
             DestroyDebugMenu();
         }
@@ -129,8 +134,6 @@ namespace pdxpartyparrot.Game.Players.Input
             Debug.Log($"Initializing player input {playerControllerId}...");
 
             InputHelper.Initialize(playerControllerId);
-
-            InitDebugMenu();
         }
 
         // TODO: fix the naming conflict between these

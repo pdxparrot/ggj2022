@@ -41,14 +41,18 @@ namespace pdxpartyparrot.ggj2022.NPCs
 
         #region Unity Lifecycle
 
-        protected override void Awake()
+        protected override void OnEnable()
         {
+            base.OnEnable();
+
             InitDebugMenu();
         }
 
-        protected override void OnDestroy()
+        protected override void OnDisable()
         {
             DestroyDebugMenu();
+
+            base.OnDisable();
         }
 
         #endregion
@@ -67,6 +71,8 @@ namespace pdxpartyparrot.ggj2022.NPCs
         {
             _hasSeed = true;
             _seedModel.SetActive(true);
+
+            GameManager.Instance.SeedSpawned();
         }
 
         #region Events

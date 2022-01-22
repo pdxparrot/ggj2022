@@ -131,11 +131,14 @@ namespace pdxpartyparrot.Game.Characters
 
         #region Unity Lifecycle
 
-        protected override void OnDestroy()
+        protected virtual void OnEnable()
+        {
+            InitDebugMenu();
+        }
+
+        protected virtual void OnDisable()
         {
             DestroyDebugMenu();
-
-            base.OnDestroy();
         }
 
         protected override void Update()
@@ -160,8 +163,6 @@ namespace pdxpartyparrot.Game.Characters
             foreach(CharacterBehaviorComponent component in _components) {
                 component.Initialize(this);
             }
-
-            InitDebugMenu();
         }
 
         #region Components

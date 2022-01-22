@@ -181,24 +181,19 @@ namespace pdxpartyparrot.Game.Characters.Players.BehaviorComponents
 
             _groundChecker = Behavior.GetBehaviorComponent<GroundCheckBehaviorComponent>();
             Assert.IsNotNull(_groundChecker, "ClimbingBehaviorComponent requires a ground checker");
-
-            InitDebugMenu();
-        }
-
-        protected override void OnDestroy()
-        {
-            DestroyDebugMenu();
-
-            base.OnDestroy();
         }
 
         private void OnEnable()
         {
             _raycastCoroutine = StartCoroutine(RaycastRoutine());
+
+            InitDebugMenu();
         }
 
         private void OnDisable()
         {
+            DestroyDebugMenu();
+
             if(null != _raycastCoroutine) {
                 StopCoroutine(_raycastCoroutine);
                 _raycastCoroutine = null;

@@ -66,15 +66,16 @@ namespace pdxpartyparrot.ggj2022.Players
             base.Awake();
 
             GameManager.Instance.GameReadyEvent += GameReadyEventHandler;
+        }
 
+        private void OnEnable()
+        {
             InitDebugMenu();
         }
 
-        protected override void OnDestroy()
+        private void OnDisable()
         {
             DestroyDebugMenu();
-
-            base.OnDestroy();
         }
 
         #endregion

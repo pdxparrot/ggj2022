@@ -133,10 +133,10 @@ namespace pdxpartyparrot.Core.World
 
         public List<Actor> SpawnFromPrefab(Actor prefab, ActorBehaviorComponentData behaviorData, Transform parent = null, bool activate = true)
         {
-            return SpawnFromPrefab(prefab, Guid.NewGuid(), behaviorData, parent, activate);
+            return SpawnFromPrefab(prefab, () => Guid.NewGuid(), behaviorData, parent, activate);
         }
 
-        public List<Actor> SpawnFromPrefab(Actor prefab, Guid id, ActorBehaviorComponentData behaviorData, Transform parent = null, bool activate = true)
+        public List<Actor> SpawnFromPrefab(Actor prefab, Func<Guid> idGenerator, ActorBehaviorComponentData behaviorData, Transform parent = null, bool activate = true)
         {
 #if USE_NETWORKING
             Debug.LogWarning("You probably meant to use NetworkManager.SpawnNetworkPrefab");
@@ -146,11 +146,14 @@ namespace pdxpartyparrot.Core.World
 
             List<Actor> actors = new List<Actor>();
             for(int i = 0; i < amount; ++i) {
+                Guid id = idGenerator();
+
                 Actor actor = DoSpawnFromPrefab(prefab, id, behaviorData, parent, activate);
                 if(null == actor) {
                     Debug.LogError("Failed to spawn from prefab!");
                     return actors;
                 }
+
                 actors.Add(actor);
             }
 

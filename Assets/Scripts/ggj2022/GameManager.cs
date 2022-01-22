@@ -60,7 +60,7 @@ namespace pdxpartyparrot.ggj2022
             GameUIManager.Instance.GameGameUI.PlayerHUD.UpdateSeedCount(seedCount);
 
             _seedCount--;
-            if(seedCount <= 0) {
+            if(_seedCount <= 0) {
                 GameOver();
             }
         }
