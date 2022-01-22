@@ -335,6 +335,79 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
+--- !u!1001 &746960321
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2022675156310765441, guid: afff37b409d58004582215133be21336, type: 3}
+      propertyPath: _spawnAmount._max
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022675156310765441, guid: afff37b409d58004582215133be21336, type: 3}
+      propertyPath: _spawnAmount._min
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022675156310765441, guid: afff37b409d58004582215133be21336, type: 3}
+      propertyPath: _xSpawnRange._max
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022675156310765441, guid: afff37b409d58004582215133be21336, type: 3}
+      propertyPath: _xSpawnRange._min
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686205738998722524, guid: afff37b409d58004582215133be21336, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686205738998722524, guid: afff37b409d58004582215133be21336, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686205738998722524, guid: afff37b409d58004582215133be21336, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686205738998722524, guid: afff37b409d58004582215133be21336, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686205738998722524, guid: afff37b409d58004582215133be21336, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686205738998722524, guid: afff37b409d58004582215133be21336, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686205738998722524, guid: afff37b409d58004582215133be21336, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686205738998722524, guid: afff37b409d58004582215133be21336, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686205738998722524, guid: afff37b409d58004582215133be21336, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686205738998722524, guid: afff37b409d58004582215133be21336, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686205738998722524, guid: afff37b409d58004582215133be21336, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686205738998722526, guid: afff37b409d58004582215133be21336, type: 3}
+      propertyPath: m_Name
+      value: SlimeSpawn
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: afff37b409d58004582215133be21336, type: 3}
 --- !u!1001 &1273075773
 PrefabInstance:
   m_ObjectHideFlags: 0

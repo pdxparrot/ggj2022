@@ -131,6 +131,15 @@ namespace pdxpartyparrot.Core.World
             return spawnPoints.SpawnPoints.Count;
         }
 
+        public IReadOnlyCollection<SpawnPoint> GetSpawnPoints(string tag)
+        {
+            if(!_spawnPoints.TryGetValue(tag, out var spawnPoints)) {
+                Debug.LogWarning($"No spawn points with tag '{tag}' registered on spawn, are there any in the scene?");
+                return new List<SpawnPoint>();
+            }
+            return spawnPoints.SpawnPoints;
+        }
+
         [CanBeNull]
         public SpawnPoint GetSpawnPoint(string tag)
         {

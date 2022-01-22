@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 using JetBrains.Annotations;
 
@@ -28,14 +29,13 @@ namespace pdxpartyparrot.ggj2022.Level
 
         private void SpawnEnemies()
         {
-            int spawnCount = SpawnManager.Instance.SpawnPointCount(GameManager.Instance.GameGameData.SlimeSpawnTag);
+            IReadOnlyCollection<SpawnPoint> spawnPoints = SpawnManager.Instance.GetSpawnPoints(GameManager.Instance.GameGameData.SlimeSpawnTag);
 
-            /*Debug.Log($"Spawning {slimeCount} slimes");
+            Debug.Log($"Spawning slimes from {spawnPoints.Count} spawners");
 
-            for(int i = 0; i < slimeCount; ++i) {
-                SpawnPoint spawnPoint = SpawnManager.Instance.GetSpawnPoint(GameManager.Instance.GameGameData.SlimeSpawnTag);
+            foreach(SpawnPoint spawnPoint in spawnPoints) {
                 spawnPoint.SpawnNPCPrefab(GameManager.Instance.GameGameData.SlimePrefab, GameManager.Instance.GameGameData.SlimeBehaviorData, _enemyContainer.transform);
-            }*/
+            }
         }
 
         #region Event Handlers
