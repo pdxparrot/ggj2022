@@ -11,6 +11,10 @@ using UnityEngine;
 
 namespace pdxpartyparrot.Core.World
 {
+    // TODO: this should be split into SpawnPoint for spawning a single thing at a time
+    // and MultiSpawnPoint for spawning multiple things at a time
+    // (and probably a BaseSpawnPoint for shared functionality)
+    // right now this is overcomplicated and confusing trying to handle both at once
     public class SpawnPoint : MonoBehaviour
     {
         [SerializeField]

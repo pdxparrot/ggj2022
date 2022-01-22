@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 using JetBrains.Annotations;
 
@@ -10,6 +11,7 @@ using UnityEngine;
 
 #if USE_NAVMESH
 using UnityEngine.AI;
+using Unity.AI.Navigation;
 #endif
 
 namespace pdxpartyparrot.Game.Level
