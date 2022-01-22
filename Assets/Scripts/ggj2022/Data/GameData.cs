@@ -3,6 +3,8 @@ using System;
 using UnityEngine;
 
 using pdxpartyparrot.ggj2022.Camera;
+using pdxpartyparrot.ggj2022.Data.NPCs;
+using pdxpartyparrot.ggj2022.NPCs;
 
 namespace pdxpartyparrot.ggj2022.Data
 {
@@ -12,10 +14,28 @@ namespace pdxpartyparrot.ggj2022.Data
     {
         public GameViewer GameViewerPrefab => (GameViewer)ViewerPrefab;
 
-        #region Project Game States
+        [Space(10)]
 
-        //[Header("Project Game States")]
+        [Header("NPCs")]
 
-        #endregion
+        [SerializeField]
+        private string _slimeSpawnTag = "Slime";
+
+        public string SlimeSpawnTag => _slimeSpawnTag;
+
+        [SerializeField]
+        private Slime _slimePrefab;
+
+        public Slime SlimePrefab => _slimePrefab;
+
+        [SerializeField]
+        private SlimeData _slimeData;
+
+        public SlimeData SlimeData => _slimeData;
+
+        [SerializeField]
+        private SlimeBehaviorData _slimeBehaviorData;
+
+        public SlimeBehaviorData SlimeBehaviorData => _slimeBehaviorData;
     }
 }

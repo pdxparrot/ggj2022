@@ -22,3 +22,7 @@ MonoBehaviour:
   _floatingTextPrefab: {fileID: 0}
   _floatingTextPoolSize: 10
   _mainGameStatePrefab: {fileID: 468742490265946015, guid: 03579a4e3c1e9b13aaa5400d2d42eae6, type: 3}
+  _slimeSpawnTag: Slime
+  _slimePrefab: {fileID: 7573319532028258060, guid: 0c9eeede9f63e5842ba8d2f116f743fb, type: 3}
+  _slimeData: {fileID: 11400000, guid: 923c536abbfed2a418fe0f63b4c07a14, type: 2}
+  _slimeBehaviorData: {fileID: 11400000, guid: fa5326e485934054b85c624db28476a7, type: 2}

@@ -1062,6 +1062,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 961739752}
     - target: {fileID: 6580497799031368487, guid: f67d3908ef48bced2afbf1ce062bbbf3, type: 3}
+      propertyPath: _npcManager
+      value: 
+      objectReference: {fileID: 3593911512103190603, guid: c60cc9c2a9be06c4d81e0995c7e6a560, type: 3}
+    - target: {fileID: 6580497799031368487, guid: f67d3908ef48bced2afbf1ce062bbbf3, type: 3}
       propertyPath: _loadingScreen
       value: 
       objectReference: {fileID: 79576064}
