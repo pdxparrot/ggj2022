@@ -299,7 +299,7 @@ namespace pdxpartyparrot.ggj2022.NPCs
                 return false;
             }
 
-            if(player.Movement.Velocity.y > 0.0f) {
+            if(player.Movement.Velocity.y < 0.0f) {
                 Stomp(player);
             } else {
                 player.GamePlayerBehavior.ForestSpiritBehavior.Damage(SlimeBehaviorData.DamageAmount);
