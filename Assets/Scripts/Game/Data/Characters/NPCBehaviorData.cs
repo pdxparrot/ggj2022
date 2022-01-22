@@ -21,7 +21,7 @@ namespace pdxpartyparrot.Game.Data.Characters
         [SerializeField]
         [Range(0, 200)]
         [Tooltip("Move acceleration in m/s^2")]
-        private float _moveAcceleration = 10.0f;
+        private float _moveAcceleration = 5.0f;
 
         public float MoveAcceleration => _moveAcceleration;
 

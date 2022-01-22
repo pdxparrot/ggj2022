@@ -250,6 +250,10 @@ namespace pdxpartyparrot.Game.Characters.NPCs
             }
         }
 
+        protected virtual void OnStuck()
+        {
+        }
+
         #endregion
 
         public void Recycle()
@@ -326,6 +330,8 @@ namespace pdxpartyparrot.Game.Characters.NPCs
                     }
 
                     Stop(true, true);
+
+                    OnStuck();
                 }
 
                 yield return wait;

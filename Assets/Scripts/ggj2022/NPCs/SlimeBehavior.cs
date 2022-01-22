@@ -1,10 +1,11 @@
+using System;
 using System.Linq;
-
-using JetBrains.Annotations;
 
 using pdxpartyparrot.Core.Data.Actors.Components;
 using pdxpartyparrot.Core.DebugMenu;
+using pdxpartyparrot.Core.Time;
 using pdxpartyparrot.Core.Util;
+using pdxpartyparrot.Core;
 using pdxpartyparrot.Game.Characters.NPCs;
 using pdxpartyparrot.ggj2022.Data.NPCs;
 using pdxpartyparrot.ggj2022.Players;
@@ -16,6 +17,14 @@ namespace pdxpartyparrot.ggj2022.NPCs
 {
     public sealed class SlimeBehavior : NPCBehavior
     {
+        private enum State
+        {
+            Idle,
+            Patrol,
+            //Chase,
+            //Leash,
+        }
+
         private Slime Slime => (Slime)Owner;
 
         private SlimeBehaviorData SlimeBehaviorData => (SlimeBehaviorData)BehaviorData;
@@ -31,11 +40,39 @@ namespace pdxpartyparrot.ggj2022.NPCs
             }
         }
 
+        public override float MoveSpeed => MoveSpeedModifier * base.MoveSpeed;
+
+        private float MoveSpeedModifier => _state switch {
+            //State.Chase => SlimeBehaviorData.ChaseSpeedModifier,
+            //State.Leash => SlimeBehaviorData.LeashSpeedModifier,
+            _ => 1.0f,
+        };
+
         [SerializeField]
         [ReadOnly]
         private bool _hasSeed;
 
         public bool HasSeed => _hasSeed;
+
+        [SerializeField]
+        [ReadOnly]
+        private State _state = State.Idle;
+
+        [SerializeField]
+        [ReadOnly]
+        private float _leashTarget;
+
+        [SerializeField]
+        [ReadOnly]
+        private float _patrolTarget;
+
+        [SerializeField]
+        [ReadOnly]
+        private float? _target;
+
+        private ITimer _idleTimer;
+
+        private bool IsIdling => _idleTimer.IsRunning;
 
         private DebugMenuNode _debugMenuNode;
 
@@ -45,12 +82,18 @@ namespace pdxpartyparrot.ggj2022.NPCs
         {
             base.OnEnable();
 
+            _idleTimer = TimeManager.Instance.AddTimer();
+
             InitDebugMenu();
         }
 
         protected override void OnDisable()
         {
             DestroyDebugMenu();
+
+            if(TimeManager.HasInstance) {
+                TimeManager.Instance.RemoveTimer(_idleTimer);
+            }
 
             base.OnDisable();
         }
@@ -75,7 +118,156 @@ namespace pdxpartyparrot.ggj2022.NPCs
             GameManager.Instance.SeedSpawned();
         }
 
+        public override bool OnThink(float dt)
+        {
+            switch(_state) {
+            case State.Idle:
+                HandleIdle();
+                break;
+            case State.Patrol:
+                HandlePatrol();
+                break;
+                /*case State.Chase:
+                    HandleChase();
+                    break;*/
+                /*case State.Leash:
+                    HandleLeash();
+                    break;*/
+            }
+
+            return true;
+        }
+
+        #region NPC State
+
+        private void SetState(State state)
+        {
+            if(NPCManager.Instance.DebugBehavior) {
+                Debug.Log($"Slime {Owner.Id} set state {state}");
+            }
+
+            _state = state;
+            switch(_state) {
+            case State.Idle:
+                NPCOwner.Stop(true, true);
+                Slime.SetObstacle();
+                break;
+            case State.Patrol:
+                Slime.SetAgent();
+                break;
+                /*case State.Chase:
+                    Slime.SetAgent();
+                    break;*/
+                /*case State.Leash:
+                    Slime.SetAgent();
+                    break;*/
+            }
+        }
+
+        private void HandleIdle()
+        {
+            // check for a player nearby to chase
+            /*if(ChasePlayer()) {
+                return;
+            }*/
+
+            // if we're not resting, start patrolling
+            if(!IsIdling) {
+                SetState(State.Patrol);
+                return;
+            }
+        }
+
+        private void HandlePatrol()
+        {
+            // check for a player nearby to chase
+            /*if(ChasePlayer()) {
+                return;
+            }*/
+
+            // if we don't have a target, pick a new one
+            if(null == _target) {
+                float direction = PartyParrotManager.Instance.Random.NextSign();
+                float distance = SlimeBehaviorData.PatrolRange.GetRandomValue() * direction;
+                float target = Owner.Movement.Position.x + distance;
+
+                // is the distance too far to patrol?
+                if(Mathf.Abs(target - _leashTarget) > SlimeBehaviorData.PatrolRange.Max) {
+                    // try the other direction
+                    target = Owner.Movement.Position.x - distance;
+
+                    // if we're still too far, cap it
+                    if(Mathf.Abs(target - _leashTarget) > SlimeBehaviorData.PatrolRange.Max) {
+                        if(direction < 0.0f) {
+                            target = Mathf.Max(Owner.Movement.Position.x + distance, _leashTarget - SlimeBehaviorData.PatrolRange.Max);
+                        } else {
+                            target = Mathf.Min(Owner.Movement.Position.x + distance, _leashTarget + SlimeBehaviorData.PatrolRange.Max);
+                        }
+                    }
+                }
+
+                _patrolTarget = target;
+                _target = _patrolTarget;
+            }
+
+            // have we reached our target?
+            if(Mathf.Abs(_target.Value - Owner.Movement.Position.x) <= SlimeBehaviorData.StoppingDistance) {
+                Idle();
+                return;
+            }
+
+            // update our path
+            if(!Slime.UpdatePath(new Vector3(_target.Value, 0.0f, 0.0f))) {
+                Idle();
+                return;
+            }
+        }
+
+        /*private void HandleChase()
+        {
+            // if we lost our target, idle
+            if(null == _target) {
+                SetState(State.Idle);
+                return;
+            }
+        }*/
+
+        /*private void HandleLeash()
+        {
+            // if we lost our target, idle
+            if(null == _target) {
+                SetState(State.Idle);
+                return;
+            }
+        }*/
+
+        #endregion
+
+        private void Idle()
+        {
+            _target = null;
+            SetState(State.Idle);
+
+            _idleTimer.Start(SlimeBehaviorData.IdleTimeRange.GetRandomValue());
+        }
+
+        /*private bool ChasePlayer()
+        {
+            // TODO: check for a nearby player and chase it
+            // target = player
+            // SetState(State.Chase)
+
+            return false;
+        }*/
+
         #region Events
+
+        protected override void OnSpawnComplete()
+        {
+            base.OnSpawnComplete();
+
+            _leashTarget = transform.position.x;
+        }
 
         public override bool TriggerEnter(GameObject triggerObject)
         {
@@ -94,6 +286,11 @@ namespace pdxpartyparrot.ggj2022.NPCs
         }
 
         #endregion
+
+        public void OnStuck()
+        {
+            Idle();
+        }
 
         private void Stomp(Player player)
         {

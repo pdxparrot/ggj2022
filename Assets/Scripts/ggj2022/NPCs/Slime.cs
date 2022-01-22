@@ -39,5 +39,14 @@ namespace pdxpartyparrot.ggj2022.NPCs
 
             Assert.IsTrue(Behavior is SlimeBehavior);
         }
+
+        #region Pathing
+
+        protected override void OnStuck()
+        {
+            SlimeBehavior.OnStuck();
+        }
+
+        #endregion
     }
 }
