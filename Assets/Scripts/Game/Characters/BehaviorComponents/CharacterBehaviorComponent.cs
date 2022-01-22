@@ -70,16 +70,19 @@ namespace pdxpartyparrot.Game.Characters.BehaviorComponents
 
         #region Events
 
+        // NOTE: overriding this should always return false
         public virtual bool OnSpawn(SpawnPoint spawnpoint)
         {
             return false;
         }
 
+        // NOTE: overriding this should always return false
         public virtual bool OnReSpawn(SpawnPoint spawnpoint)
         {
             return false;
         }
 
+        // NOTE: overriding this should always return false
         public virtual bool OnDeSpawn()
         {
             return false;

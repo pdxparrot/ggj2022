@@ -1,8 +1,8 @@
-using System;
 using System.Linq;
 
 using pdxpartyparrot.Core.Data.Actors.Components;
 using pdxpartyparrot.Core.DebugMenu;
+using pdxpartyparrot.Core.Effects;
 using pdxpartyparrot.Core.Time;
 using pdxpartyparrot.Core.Util;
 using pdxpartyparrot.Core;
@@ -19,6 +19,7 @@ namespace pdxpartyparrot.ggj2022.NPCs
     {
         private enum State
         {
+            Dead,
             Idle,
             Patrol,
             //Chase,
@@ -43,6 +44,7 @@ namespace pdxpartyparrot.ggj2022.NPCs
         public override float MoveSpeed => MoveSpeedModifier * base.MoveSpeed;
 
         private float MoveSpeedModifier => _state switch {
+            State.Dead => 0.0f,
             //State.Chase => SlimeBehaviorData.ChaseSpeedModifier,
             //State.Leash => SlimeBehaviorData.LeashSpeedModifier,
             _ => 1.0f,
@@ -56,7 +58,9 @@ namespace pdxpartyparrot.ggj2022.NPCs
 
         [SerializeField]
         [ReadOnly]
-        private State _state = State.Idle;
+        private State _state;
+
+        public bool IsDead => State.Dead == _state;
 
         [SerializeField]
         [ReadOnly]
@@ -73,6 +77,13 @@ namespace pdxpartyparrot.ggj2022.NPCs
         private ITimer _idleTimer;
 
         private bool IsIdling => _idleTimer.IsRunning;
+
+        #region Effects
+
+        [SerializeField]
+        private EffectTrigger _stompedEffect;
+
+        #endregion
 
         private DebugMenuNode _debugMenuNode;
 
@@ -148,9 +159,13 @@ namespace pdxpartyparrot.ggj2022.NPCs
 
             _state = state;
             switch(_state) {
+            case State.Dead:
+                NPCOwner.Stop(true, true);
+                Slime.SetPassive();
+                break;
             case State.Idle:
                 NPCOwner.Stop(true, true);
-                Slime.SetObstacle();
+                Slime.SetPassive();
                 break;
             case State.Patrol:
                 Slime.SetAgent();
@@ -253,6 +268,8 @@ namespace pdxpartyparrot.ggj2022.NPCs
 
         /*private bool ChasePlayer()
         {
+            // TODO: don't chase dead players
+
             // TODO: check for a nearby player and chase it
             // target = player
             // SetState(State.Chase)
@@ -267,12 +284,18 @@ namespace pdxpartyparrot.ggj2022.NPCs
             base.OnSpawnComplete();
 
             _leashTarget = transform.position.x;
+
+            SetState(State.Idle);
         }
 
         public override bool TriggerEnter(GameObject triggerObject)
         {
+            if(IsDead) {
+                return false;
+            }
+
             Player player = triggerObject.GetComponent<Player>();
-            if(null == player) {
+            if(null == player || player.GamePlayerBehavior.ForestSpiritBehavior.IsDead) {
                 return false;
             }
 
@@ -294,12 +317,13 @@ namespace pdxpartyparrot.ggj2022.NPCs
 
         private void Stomp(Player player)
         {
-            Debug.Log("Stomp!");
-            Owner.DeSpawn(false);
+            SetState(State.Dead);
 
-            if(HasSeed) {
-                player.GamePlayerBehavior.ForestSpiritBehavior.CollectSeed();
-            }
+            _stompedEffect.Trigger(() => {
+                Owner.DeSpawn(false);
+            });
+
+            player.GamePlayerBehavior.ForestSpiritBehavior.Stomped(this);
         }
 
         #region Debug Menu
@@ -308,6 +332,7 @@ namespace pdxpartyparrot.ggj2022.NPCs
         {
             _debugMenuNode = DebugMenuManager.Instance.AddNode(() => $"ggj2022.SlimeBehavior {Owner.Id}");
             _debugMenuNode.RenderContentsAction = () => {
+                GUILayout.Label($"State: {_state}");
                 GUILayout.Label($"Has Seed: {HasSeed}");
                 if(GUILayout.Button("Stomp")) {
                     Stomp(PlayerManager.Instance.Players.ElementAt(0) as Player);

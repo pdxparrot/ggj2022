@@ -160,6 +160,7 @@ namespace pdxpartyparrot.Core.Actors.Components
 
         #region Events
 
+        // NOTE: overriding this should always return false
         public override bool OnSpawn(SpawnPoint spawnpoint)
         {
             if(null != _spawnEffect) {
@@ -176,6 +177,7 @@ namespace pdxpartyparrot.Core.Actors.Components
             _isAlive = true;
         }
 
+        // NOTE: overriding this should always return false
         public override bool OnReSpawn(SpawnPoint spawnpoint)
         {
             if(null != _respawnEffect) {
@@ -192,6 +194,7 @@ namespace pdxpartyparrot.Core.Actors.Components
             _isAlive = true;
         }
 
+        // NOTE: overriding this should always return false
         public override bool OnDeSpawn()
         {
             _isAlive = false;
@@ -209,6 +212,7 @@ namespace pdxpartyparrot.Core.Actors.Components
         {
         }
 
+        // NOTE: overriding this should always return false
         public override bool OnSetFacing(Vector3 direction)
         {
 #if USE_SPINE

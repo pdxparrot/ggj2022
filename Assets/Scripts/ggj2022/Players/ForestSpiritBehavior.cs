@@ -1,12 +1,14 @@
 using System;
 
 using pdxpartyparrot.Core.DebugMenu;
+using pdxpartyparrot.Core.Effects;
 using pdxpartyparrot.Core.Effects.EffectTriggerComponents;
 using pdxpartyparrot.Core.Util;
 using pdxpartyparrot.Core.World;
 using pdxpartyparrot.Game.Characters;
 using pdxpartyparrot.Game.Characters.Players.BehaviorComponents;
 using pdxpartyparrot.ggj2022.Data.Players;
+using pdxpartyparrot.ggj2022.NPCs;
 
 using UnityEngine;
 
@@ -48,11 +50,32 @@ namespace pdxpartyparrot.ggj2022.Players
 
         public int Health => _health;
 
+        public bool IsDead => _health <= 0;
+
         [SerializeField]
         [ReadOnly]
         private int _seedCount;
 
         public int SeedCount => _seedCount;
+
+        #region Effects
+
+        [SerializeField]
+        private EffectTrigger _formSwapEffect;
+
+        [SerializeField]
+        private EffectTrigger _stompedEffect;
+
+        [SerializeField]
+        private EffectTrigger _seedCollectedEffect;
+
+        [SerializeField]
+        private EffectTrigger _damagedEffect;
+
+        [SerializeField]
+        private EffectTrigger _deathEffect;
+
+        #endregion
 
         [SerializeField]
         private RumbleEffectTriggerComponent[] _rumbleEffects;
@@ -95,17 +118,28 @@ namespace pdxpartyparrot.ggj2022.Players
 
             if(_health <= 0) {
                 _health = 0;
-                GameManager.Instance.PlayerDied();
+
+                _deathEffect.Trigger(() => {
+                    GameManager.Instance.PlayerDied();
+                });
             } else {
                 GameManager.Instance.PlayerDamaged(_health);
+
+                _damagedEffect.Trigger();
             }
         }
 
-        public void CollectSeed()
+        public void Stomped(SlimeBehavior enemy)
         {
-            _seedCount++;
+            _stompedEffect.Trigger();
 
-            GameManager.Instance.SeedCollected(_seedCount);
+            if(enemy.HasSeed) {
+                _seedCollectedEffect.Trigger(() => {
+                    _seedCount++;
+
+                    GameManager.Instance.SeedCollected(_seedCount);
+                });
+            }
         }
 
         #region Actions
@@ -125,7 +159,7 @@ namespace pdxpartyparrot.ggj2022.Players
                 break;
             }
 
-            Debug.Log($"Form swap: {_currentForm}");
+            _formSwapEffect.Trigger();
 
             return true;
         }

@@ -49,6 +49,9 @@ namespace pdxpartyparrot.Core.Actors.Components
 
         #region Events
 
+        // NOTE: handlers that return true will stop processing for all other components
+        // so be careful doing that with handlers that are expected to run on all objects
+
         public virtual bool OnThink(float dt)
         {
             return false;

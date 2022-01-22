@@ -297,6 +297,9 @@ namespace pdxpartyparrot.Game.Characters
 
         #region Events
 
+        // NOTE: handlers that return true will stop processing for all other components
+        // so be careful doing that with handlers that are expected to run on all objects
+
         public virtual void OnIdle()
         {
             TriggerMoveEffect();
@@ -304,6 +307,8 @@ namespace pdxpartyparrot.Game.Characters
 
         public override bool OnSpawn(SpawnPoint spawnpoint)
         {
+            base.OnSpawn(spawnpoint);
+
             RunOnComponents(c => c.OnSpawn(spawnpoint));
 
             return false;
@@ -318,6 +323,8 @@ namespace pdxpartyparrot.Game.Characters
 
         public override bool OnReSpawn(SpawnPoint spawnpoint)
         {
+            base.OnReSpawn(spawnpoint);
+
             RunOnComponents(c => c.OnReSpawn(spawnpoint));
 
             return false;
@@ -332,6 +339,8 @@ namespace pdxpartyparrot.Game.Characters
 
         public override bool OnDeSpawn()
         {
+            base.OnDeSpawn();
+
             RunOnComponents(c => c.OnDeSpawn());
 
             return false;

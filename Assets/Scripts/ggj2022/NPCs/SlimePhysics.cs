@@ -1,6 +1,5 @@
 using pdxpartyparrot.Core;
 using pdxpartyparrot.Game.NPCs;
-using pdxpartyparrot.Game.World;
 
 using UnityEngine;
 
