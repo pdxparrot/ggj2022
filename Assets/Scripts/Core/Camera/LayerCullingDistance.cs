@@ -15,7 +15,7 @@ namespace pdxpartyparrot.Core.Camera
         {
             float[] actualDistances = new float[32];
 
-            int minLength = System.Math.Min(actualDistances.Length, _distances.Length);
+            int minLength = Mathf.Min(actualDistances.Length, _distances.Length);
             for(int i = 0; i < minLength; ++i) {
                 actualDistances[i] = _distances[i];
             }

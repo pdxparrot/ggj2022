@@ -278,7 +278,7 @@ namespace pdxpartyparrot.Game.State
             // TODO: this probably isn't the right place to handle "gamepads are players"
             // instead it probably should be done in whatever initializes the main game state
             if(GameStateManager.Instance.GameManager.GameData.GamepadsArePlayers) {
-                int count = Math.Min(Math.Max(InputManager.Instance.GetGamepadCount(), 1), GameStateManager.Instance.GameManager.GameData.MaxLocalPlayers);
+                int count = Mathf.Min(Mathf.Max(InputManager.Instance.GetGamepadCount(), 1), GameStateManager.Instance.GameManager.GameData.MaxLocalPlayers);
                 if(count < 1) {
                     Debug.LogWarning("No player controllers available!");
                 } else {

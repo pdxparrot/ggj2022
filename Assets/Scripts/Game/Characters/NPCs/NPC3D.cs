@@ -273,6 +273,17 @@ namespace pdxpartyparrot.Game.Characters.NPCs
             return true;
         }
 
+        public override bool OnReSpawn(SpawnPoint spawnpoint)
+        {
+            if(!base.OnReSpawn(spawnpoint)) {
+                return false;
+            }
+
+            GameStateManager.Instance.NPCManager.RegisterNPC(this);
+
+            return true;
+        }
+
         public override void OnDeSpawn()
         {
             GameStateManager.Instance.NPCManager.UnregisterNPC(this);

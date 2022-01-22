@@ -70,9 +70,9 @@ namespace pdxpartyparrot.Core.World
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.blue;
-            Gizmos.DrawWireCube(transform.position, new Vector3(_xSpawnRange.Max == 0.0f ? 1.0f : System.Math.Abs(_xSpawnRange.Max) * 2.0f,
-                                                                _ySpawnRange.Max == 0.0f ? 1.0f : System.Math.Abs(_ySpawnRange.Max) * 2.0f,
-                                                                _zSpawnRange.Max == 0.0f ? 1.0f : System.Math.Abs(_zSpawnRange.Max) * 2.0f));
+            Gizmos.DrawWireCube(transform.position, new Vector3(_xSpawnRange.Max == 0.0f ? 1.0f : Mathf.Abs(_xSpawnRange.Max) * 2.0f,
+                                                                _ySpawnRange.Max == 0.0f ? 1.0f : Mathf.Abs(_ySpawnRange.Max) * 2.0f,
+                                                                _zSpawnRange.Max == 0.0f ? 1.0f : Mathf.Abs(_zSpawnRange.Max) * 2.0f));
         }
 
         #endregion
