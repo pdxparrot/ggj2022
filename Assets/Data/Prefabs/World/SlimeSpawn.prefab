@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6686205738998722524}
-  - component: {fileID: 6686205738998722525}
+  - component: {fileID: 2022675156310765441}
   m_Layer: 0
   m_Name: SlimeSpawn
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6686205738998722525
+--- !u!114 &2022675156310765441
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,12 +41,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 6686205738998722526}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 771f5a5238269be4e806943b11a29c52, type: 3}
+  m_Script: {fileID: 11500000, guid: c85ad283cf9436340bf7a2d803889f92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _tags:
   - Slime
-  _spawnRange:
-    _min: 1
-    _max: 5
+  _xSpawnRange:
+    _min: 0
+    _max: 0
+  _ySpawnRange:
+    _min: 0
+    _max: 0
+  _zSpawnRange:
+    _min: 0
+    _max: 0
   _owner: {fileID: 0}

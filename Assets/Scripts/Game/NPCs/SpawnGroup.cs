@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 using pdxpartyparrot.Core.Actors;
 using pdxpartyparrot.Core.ObjectPool;
@@ -91,7 +91,7 @@ namespace pdxpartyparrot.Game.NPCs
             for(int i = 0; i < amount; ++i) {
                 SpawnPoint spawnPoint = SpawnManager.Instance.GetSpawnPoint(_spawnGroupData.Tag);
                 if(null == spawnPoint) {
-                    //Debug.LogWarning($"No spawnpoints for {_spawnGroupData.Tag}!");
+                    Debug.LogWarning($"No spawnpoints for {_spawnGroupData.Tag}!");
                 } else {
                     Actor actor = null;
                     if(null != _poolContainer) {
@@ -107,7 +107,7 @@ namespace pdxpartyparrot.Game.NPCs
                             continue;
                         }
                     } else {
-                        actor = spawnPoint.SpawnNPCPrefab(_spawnGroupData.ActorPrefab, _spawnGroupData.NPCBehaviorData, _poolContainer.transform);
+                        actor = spawnPoint.SpawnSingleNPCPrefab(_spawnGroupData.ActorPrefab, _spawnGroupData.NPCBehaviorData, _poolContainer.transform);
                         if(null == actor) {
                             continue;
                         }

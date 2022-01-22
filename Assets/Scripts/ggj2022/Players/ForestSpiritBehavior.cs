@@ -100,9 +100,9 @@ namespace pdxpartyparrot.ggj2022.Players
             }
         }
 
-        public void CollectSeed(int amount)
+        public void CollectSeed()
         {
-            _seedCount += amount;
+            _seedCount++;
 
             GameManager.Instance.SeedCollected(_seedCount);
         }
@@ -161,11 +161,6 @@ namespace pdxpartyparrot.ggj2022.Players
                 GUILayout.Label($"Health: {Health}");
                 if(GUILayout.Button("Damage")) {
                     Damage(1);
-                }
-
-                GUILayout.Label($"Seeds: {SeedCount}");
-                if(GUILayout.Button("Collect Seed")) {
-                    CollectSeed(1);
                 }
             };
         }

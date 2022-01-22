@@ -25,9 +25,9 @@ namespace pdxpartyparrot.Core.Util
             _max = max;
         }
 
-        public int GetRandomValue()
+        public int GetRandomValue(int min = 0)
         {
-            return Valid ? PartyParrotManager.Instance.Random.Next(Min, Max) : 0;
+            return Valid ? PartyParrotManager.Instance.Random.Next(System.Math.Max(Min, min), Max) : min;
         }
 
         // rounds down
@@ -63,9 +63,9 @@ namespace pdxpartyparrot.Core.Util
             _max = max;
         }
 
-        public float GetRandomValue()
+        public float GetRandomValue(float min = 0.0f)
         {
-            return Valid ? PartyParrotManager.Instance.Random.NextSingle(Min, Max) : 0.0f;
+            return Valid ? PartyParrotManager.Instance.Random.NextSingle(System.Math.Max(Min, min), Max) : min;
         }
 
         public float GetPercentValue(float pct)

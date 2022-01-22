@@ -1,6 +1,7 @@
 using UnityEngine;
 
 using pdxpartyparrot.Core.Camera;
+using pdxpartyparrot.Core.Util;
 using pdxpartyparrot.Game;
 using pdxpartyparrot.ggj2022.Camera;
 using pdxpartyparrot.ggj2022.Data;
@@ -13,6 +14,10 @@ namespace pdxpartyparrot.ggj2022
         public GameData GameGameData => (GameData)GameData;
 
         public GameViewer Viewer { get; private set; }
+
+        [SerializeField]
+        [ReadOnly]
+        private int _seedCount = 0;
 
         public void InitViewer()
         {
@@ -27,6 +32,13 @@ namespace pdxpartyparrot.ggj2022
         public void Reset(int health, int seedCount)
         {
             GameUIManager.Instance.GameGameUI.PlayerHUD.Reset(health, seedCount);
+
+            _seedCount = 0;
+        }
+
+        public void SeedSpawned()
+        {
+            _seedCount++;
         }
 
         public void PlayerDamaged(int health)
@@ -46,6 +58,11 @@ namespace pdxpartyparrot.ggj2022
         public void SeedCollected(int seedCount)
         {
             GameUIManager.Instance.GameGameUI.PlayerHUD.UpdateSeedCount(seedCount);
+
+            _seedCount--;
+            if(seedCount <= 0) {
+                GameOver();
+            }
         }
     }
 }
