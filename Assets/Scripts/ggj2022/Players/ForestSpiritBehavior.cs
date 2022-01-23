@@ -154,7 +154,7 @@ namespace pdxpartyparrot.ggj2022.Players
                 _seedCollectedEffect.Trigger(() => {
                     _seedCount++;
 
-                    GameManager.Instance.SeedCollected(_seedCount);
+                    GameManager.Instance.SeedCollected();
                 });
             }
         }

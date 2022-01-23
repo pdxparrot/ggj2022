@@ -11,33 +11,32 @@ namespace pdxpartyparrot.ggj2022.UI
         [SerializeField]
         private HealthHeart _heartPrefab;
 
+        [SerializeField]
+        private Transform _heartContainer;
+
         private readonly List<HealthHeart> _hearts = new List<HealthHeart>();
 
         #region Unity Lifecycle
 
         private void Awake()
         {
-            transform.Clear();
+            _heartContainer.Clear();
         }
 
         #endregion
 
-        public void ResetHealth(int health)
+        public void Reset(int maxHealth, int startingHealth)
         {
             _hearts.Clear();
-            transform.Clear();
+            _heartContainer.Clear();
 
-            HealthHeart heart = null;
-            for(int i = 0; i < health; ++i) {
-                if(i % 2 == 0) {
-                    heart = Instantiate(_heartPrefab, transform);
-                    _hearts.Add(heart);
-
-                    heart.UpdateHealth(HealthHeart.HealthValue.Half);
-                } else {
-                    heart.UpdateHealth(HealthHeart.HealthValue.Full);
-                }
+            int heartCount = (int)Mathf.Ceil(maxHealth / 2.0f);
+            for(int i = 0; i < heartCount; ++i) {
+                HealthHeart heart = Instantiate(_heartPrefab, _heartContainer);
+                _hearts.Add(heart);
             }
+
+            UpdateHealth(startingHealth);
         }
 
         public void UpdateHealth(int health)

@@ -1,7 +1,5 @@
 using pdxpartyparrot.Game.UI;
 
-using TMPro;
-
 using UnityEngine;
 
 namespace pdxpartyparrot.ggj2022.UI
@@ -12,12 +10,12 @@ namespace pdxpartyparrot.ggj2022.UI
         private HealthBar _healthBar;
 
         [SerializeField]
-        private TextMeshProUGUI _seedCount;
+        private SeedBar _seedBar;
 
-        public void Reset(int health, int seedCount)
+        public void Reset(int maxHealth, int startingHealth)
         {
-            _healthBar.ResetHealth(health);
-            UpdateSeedCount(seedCount);
+            _healthBar.Reset(maxHealth, startingHealth);
+            _seedBar.Reset();
         }
 
         public void UpdateHealth(int health)
@@ -25,9 +23,9 @@ namespace pdxpartyparrot.ggj2022.UI
             _healthBar.UpdateHealth(health);
         }
 
-        public void UpdateSeedCount(int seedCount)
+        public void SeedCollected()
         {
-            _seedCount.text = seedCount.ToString();
+            _seedBar.SeedCollected();
         }
     }
 }

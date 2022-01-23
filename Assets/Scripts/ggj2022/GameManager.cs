@@ -55,9 +55,9 @@ namespace pdxpartyparrot.ggj2022
             RestartLevel();
         }
 
-        public void SeedCollected(int seedCount)
+        public void SeedCollected()
         {
-            GameUIManager.Instance.GameGameUI.PlayerHUD.UpdateSeedCount(seedCount);
+            GameUIManager.Instance.GameGameUI.PlayerHUD.SeedCollected();
 
             _seedCount--;
             if(_seedCount <= 0) {
