@@ -34,7 +34,7 @@ namespace pdxpartyparrot.Game.Characters.BehaviorComponents
         private EffectTrigger _jumpEffect;
 
         [CanBeNull]
-        protected EffectTrigger JumpEffect => _jumpEffect;
+        protected virtual EffectTrigger JumpEffect => _jumpEffect;
 
         #endregion
 

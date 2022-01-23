@@ -91,7 +91,7 @@ namespace pdxpartyparrot.Core.Actors.Components
         private EffectTrigger _despawnEffect;
 
         [CanBeNull]
-        protected EffectTrigger DespawnEffect => _despawnEffect;
+        protected virtual EffectTrigger DespawnEffect => _despawnEffect;
 
         #endregion
 
