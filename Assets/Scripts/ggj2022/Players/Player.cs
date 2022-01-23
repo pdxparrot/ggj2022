@@ -46,6 +46,12 @@ namespace pdxpartyparrot.ggj2022.Players
             return true;
         }
 
+        public void SetForm(ForestSpiritBehavior.SpiritForm form)
+        {
+            // TODO: we want to swap between a large and small collider here
+            // but actors are setup to really only work with a single collider
+        }
+
         #region Spawn
 
         public override bool OnSpawn(SpawnPoint spawnpoint)

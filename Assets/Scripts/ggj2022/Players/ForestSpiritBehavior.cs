@@ -25,7 +25,7 @@ namespace pdxpartyparrot.ggj2022.Players
 
         #endregion
 
-        private enum SpiritForm
+        public enum SpiritForm
         {
             Small,
             Large,
@@ -38,11 +38,16 @@ namespace pdxpartyparrot.ggj2022.Players
 
         [SerializeField]
         [ReadOnly]
-        private SpiritForm _currentForm = SpiritForm.Small;
+        private SpiritForm _currentForm;
 
-        public float MoveSpeedModifier => _currentForm == SpiritForm.Small ? 1.0f : _data.LargeSpiritMoveSpeedModifier;
+        public bool IsLarge => SpiritForm.Large == _currentForm;
 
-        public float JumpHeightModifier => _currentForm == SpiritForm.Small ? 1.0f : _data.LargeSpiritJumpHeightModifier;
+        public float MoveSpeedModifier => IsLarge ? _data.LargeSpiritMoveSpeedModifier : 1.0f;
+
+        public float JumpHeightModifier => IsLarge ? _data.LargeSpiritJumpHeightModifier : 1.0f;
+
+        [SerializeField]
+        ForestSpiritModel _forestSpiritModel;
 
         [SerializeField]
         [ReadOnly]
@@ -51,6 +56,8 @@ namespace pdxpartyparrot.ggj2022.Players
         public int Health => _health;
 
         public bool IsDead => _health <= 0;
+
+        public bool IsStomp => !IsDead && IsLarge && PlayerBehavior.Owner.Movement.Velocity.y < 0;
 
         [SerializeField]
         [ReadOnly]
@@ -112,6 +119,13 @@ namespace pdxpartyparrot.ggj2022.Players
             }
         }
 
+        void SetForm(SpiritForm form)
+        {
+            _currentForm = form;
+            _forestSpiritModel.SetForm(_currentForm);
+            GamePlayerBehavior.GamePlayer.SetForm(_currentForm);
+        }
+
         public void Damage(int amount)
         {
             _health -= amount;
@@ -152,10 +166,10 @@ namespace pdxpartyparrot.ggj2022.Players
 
             switch(_currentForm) {
             case SpiritForm.Small:
-                _currentForm = SpiritForm.Large;
+                SetForm(SpiritForm.Large);
                 break;
             case SpiritForm.Large:
-                _currentForm = SpiritForm.Small;
+                SetForm(SpiritForm.Small);
                 break;
             }
 
@@ -172,6 +186,8 @@ namespace pdxpartyparrot.ggj2022.Players
         {
             _health = _data.StartingHealth;
             _seedCount = 0;
+
+            SetForm(SpiritForm.Small);
 
             return base.OnSpawn(spawnpoint);
         }

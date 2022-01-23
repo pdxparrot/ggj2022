@@ -225,6 +225,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7546653614491977829}
+  - component: {fileID: 7737092921670130951}
   m_Layer: 10
   m_Name: Model
   m_TagString: Untagged
@@ -249,6 +250,20 @@ Transform:
   m_Father: {fileID: 4304453184491432437}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7737092921670130951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3022255426026366481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5edfacd0dfabec748ba942c1784885fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _smallModel: {fileID: 1445784405942787052}
+  _largeModel: {fileID: 4093783343091803206}
 --- !u!1 &3272413087399022572
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,6 +392,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data: {fileID: 11400000, guid: 3652f26cd2f3a8042b0a921c985eea72, type: 2}
   _currentForm: 0
+  _forestSpiritModel: {fileID: 7737092921670130951}
   _health: 0
   _seedCount: 0
   _formSwapEffect: {fileID: 3666950291002879451}
@@ -771,7 +787,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2627408102574948138
 Transform:
   m_ObjectHideFlags: 0

@@ -11,6 +11,8 @@ namespace pdxpartyparrot.ggj2022.Players
     {
         public PlayerBehaviorData GamePlayerBehaviorData => (PlayerBehaviorData)PlayerBehaviorData;
 
+        public Player GamePlayer => (Player)Owner;
+
         private ForestSpiritBehavior _forestSpiritBehavior;
 
         public ForestSpiritBehavior ForestSpiritBehavior => _forestSpiritBehavior;
