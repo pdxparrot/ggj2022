@@ -36,6 +36,17 @@ namespace pdxpartyparrot.ggj2022.Players
             }
         }
 
+        public void OnInteractAction(InputAction.CallbackContext context)
+        {
+            if(!IsInputAllowed(context)) {
+                return;
+            }
+
+            if(context.performed) {
+                GamePlayer.PlayerBehavior.ActionPerformed(ForestSpiritBehavior.InteractAction.Default);
+            }
+        }
+
         public void OnFormSwapAction(InputAction.CallbackContext context)
         {
             if(!IsInputAllowed(context)) {

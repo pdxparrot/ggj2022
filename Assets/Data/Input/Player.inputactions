@@ -33,9 +33,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Swap Form",
+                    "name": "Interact",
                     "type": "Button",
                     "id": "c9156793-8cfe-4e06-ab19-5e52b6ad7d29",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Swap Form",
+                    "type": "Button",
+                    "id": "edd6f62d-b599-492e-98b0-24ad8158e7a3",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -263,7 +272,7 @@
                 },
                 {
                     "name": "",
-                    "id": "662f50ec-fa5c-49ce-89f4-185638ae3e74",
+                    "id": "30d3825c-b375-4122-a807-843f926946c1",
                     "path": "<Gamepad>/buttonNorth",
                     "interactions": "",
                     "processors": "",
@@ -274,12 +283,34 @@
                 },
                 {
                     "name": "",
-                    "id": "52e6bfe5-3cfa-46fc-8219-061772b110b5",
+                    "id": "89d6cd0c-7826-4632-8c99-31fe3a2e1fcd",
                     "path": "<Keyboard>/shift",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Swap Form",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e4af9151-735f-4da8-85c4-1932df31c3ce",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5b08fa1b-a0aa-4f34-a2a0-8b1b7546cea2",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -581,7 +581,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1339348718864512902}
         m_TargetAssemblyTypeName: pdxpartyparrot.ggj2022.Players.PlayerInputHandler,
           com.pdxpartyparrot.ggj2022
-        m_MethodName: OnFormSwapAction
+        m_MethodName: OnInteractAction
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -593,6 +593,23 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: c9156793-8cfe-4e06-ab19-5e52b6ad7d29
     m_ActionName: Player/Fire[/XInputControllerWindows/rightTrigger,/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1339348718864512902}
+        m_TargetAssemblyTypeName: pdxpartyparrot.ggj2022.Players.PlayerInputHandler,
+          com.pdxpartyparrot.ggj2022
+        m_MethodName: OnFormSwapAction
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: edd6f62d-b599-492e-98b0-24ad8158e7a3
+    m_ActionName: Player/Swap Form[/XInputControllerWindows/buttonNorth,/Keyboard/shift]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

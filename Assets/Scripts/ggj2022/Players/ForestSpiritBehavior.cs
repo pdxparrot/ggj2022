@@ -23,6 +23,11 @@ namespace pdxpartyparrot.ggj2022.Players
             public static FormSwapAction Default = new FormSwapAction();
         }
 
+        public class InteractAction : CharacterBehaviorAction
+        {
+            public static InteractAction Default = new InteractAction();
+        }
+
         #endregion
 
         public enum SpiritForm
@@ -163,22 +168,24 @@ namespace pdxpartyparrot.ggj2022.Players
 
         public override bool OnPerformed(CharacterBehaviorAction action)
         {
-            if(!(action is FormSwapAction)) {
-                return false;
+            if(action is FormSwapAction) {
+                switch(_currentForm) {
+                case SpiritForm.Small:
+                    SetForm(SpiritForm.Large);
+                    _formSwapLargeEffect.Trigger();
+                    break;
+                case SpiritForm.Large:
+                    SetForm(SpiritForm.Small);
+                    _formSwapSmallEffect.Trigger();
+                    break;
+                }
+
+                return true;
+            } else if(action is InteractAction) {
+                Debug.Log("TODO: interact");
             }
 
-            switch(_currentForm) {
-            case SpiritForm.Small:
-                SetForm(SpiritForm.Large);
-                _formSwapLargeEffect.Trigger();
-                break;
-            case SpiritForm.Large:
-                SetForm(SpiritForm.Small);
-                _formSwapSmallEffect.Trigger();
-                break;
-            }
-
-            return true;
+            return false;
         }
 
         #endregion
