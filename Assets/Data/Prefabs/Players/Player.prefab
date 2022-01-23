@@ -225,6 +225,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7546653614491977829}
+  - component: {fileID: 1474390285176225874}
   - component: {fileID: 7737092921670130951}
   m_Layer: 10
   m_Name: Model
@@ -250,6 +251,19 @@ Transform:
   m_Father: {fileID: 4304453184491432437}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1474390285176225874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3022255426026366481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98ab0aa4105a34eeebff03ca037ff104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _renderers: []
 --- !u!114 &7737092921670130951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,7 +328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _owner: {fileID: 0}
   _behaviorData: {fileID: 0}
-  _spriteAnimationHelper: {fileID: 0}
+  _spriteAnimationHelper: {fileID: 1474390285176225874}
   _animator: {fileID: 0}
   _pauseAnimationOnPause: 1
   _spawnEffect: {fileID: 1350772061478118397}
