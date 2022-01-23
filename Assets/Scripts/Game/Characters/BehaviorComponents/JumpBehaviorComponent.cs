@@ -33,6 +33,9 @@ namespace pdxpartyparrot.Game.Characters.BehaviorComponents
         [CanBeNull]
         private EffectTrigger _jumpEffect;
 
+        [CanBeNull]
+        protected EffectTrigger JumpEffect => _jumpEffect;
+
         #endregion
 
         #region Actions
@@ -56,8 +59,8 @@ namespace pdxpartyparrot.Game.Characters.BehaviorComponents
 
             Behavior.CharacterMovement.Jump(JumpHeight);
 
-            if(null != _jumpEffect) {
-                _jumpEffect.Trigger();
+            if(null != JumpEffect) {
+                JumpEffect.Trigger();
             }
 
             if(null != Behavior.Animator) {

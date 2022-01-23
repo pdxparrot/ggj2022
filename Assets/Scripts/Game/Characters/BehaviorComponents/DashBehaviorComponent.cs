@@ -36,9 +36,15 @@ namespace pdxpartyparrot.Game.Characters.BehaviorComponents
         [CanBeNull]
         private EffectTrigger _dashStartEffect;
 
+        [CanBeNull]
+        protected virtual EffectTrigger DashStartEffect => _dashStartEffect;
+
         [SerializeField]
         [CanBeNull]
         private EffectTrigger _dashStopEffect;
+
+        [CanBeNull]
+        protected virtual EffectTrigger DashStopEffect => _dashStopEffect;
 
         #endregion
 
@@ -129,8 +135,8 @@ namespace pdxpartyparrot.Game.Characters.BehaviorComponents
 
             _dashTimer.Start(_data.DashTimeSeconds);
 
-            if(null != _dashStartEffect) {
-                _dashStartEffect.Trigger();
+            if(null != DashStartEffect) {
+                DashStartEffect.Trigger();
             }
 
             if(null != Behavior.Animator) {
@@ -144,8 +150,8 @@ namespace pdxpartyparrot.Game.Characters.BehaviorComponents
                 Behavior.Animator.SetTrigger(_data.DashStopParam);
             }
 
-            if(null != _dashStopEffect) {
-                _dashStopEffect.Trigger();
+            if(null != DashStopEffect) {
+                DashStopEffect.Trigger();
             }
 
             _cooldownTimer.Start(_data.DashCooldownSeconds);

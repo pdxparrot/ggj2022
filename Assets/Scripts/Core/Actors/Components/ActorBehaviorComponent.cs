@@ -74,15 +74,24 @@ namespace pdxpartyparrot.Core.Actors.Components
 
         [SerializeField]
         [CanBeNull]
-        protected EffectTrigger _spawnEffect;
+        private EffectTrigger _spawnEffect;
+
+        [CanBeNull]
+        protected virtual EffectTrigger SpawnEffect => _spawnEffect;
 
         [SerializeField]
         [CanBeNull]
-        protected EffectTrigger _respawnEffect;
+        private EffectTrigger _respawnEffect;
+
+        [CanBeNull]
+        protected virtual EffectTrigger RespawnEffect => _respawnEffect;
 
         [SerializeField]
         [CanBeNull]
-        protected EffectTrigger _despawnEffect;
+        private EffectTrigger _despawnEffect;
+
+        [CanBeNull]
+        protected EffectTrigger DespawnEffect => _despawnEffect;
 
         #endregion
 
@@ -163,8 +172,8 @@ namespace pdxpartyparrot.Core.Actors.Components
         // NOTE: overriding this should always return false
         public override bool OnSpawn(SpawnPoint spawnpoint)
         {
-            if(null != _spawnEffect) {
-                _spawnEffect.Trigger(OnSpawnComplete);
+            if(null != SpawnEffect) {
+                SpawnEffect.Trigger(OnSpawnComplete);
             } else {
                 OnSpawnComplete();
             }
@@ -180,8 +189,8 @@ namespace pdxpartyparrot.Core.Actors.Components
         // NOTE: overriding this should always return false
         public override bool OnReSpawn(SpawnPoint spawnpoint)
         {
-            if(null != _respawnEffect) {
-                _respawnEffect.Trigger(OnReSpawnComplete);
+            if(null != RespawnEffect) {
+                RespawnEffect.Trigger(OnReSpawnComplete);
             } else {
                 OnReSpawnComplete();
             }
@@ -199,8 +208,8 @@ namespace pdxpartyparrot.Core.Actors.Components
         {
             _isAlive = false;
 
-            if(null != _despawnEffect) {
-                _despawnEffect.Trigger(OnDeSpawnComplete);
+            if(null != DespawnEffect) {
+                DespawnEffect.Trigger(OnDeSpawnComplete);
             } else {
                 OnDeSpawnComplete();
             }
