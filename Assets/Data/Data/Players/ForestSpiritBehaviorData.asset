@@ -13,3 +13,6 @@ MonoBehaviour:
   m_Name: ForestSpiritBehaviorData
   m_EditorClassIdentifier: 
   _largeSpiritMoveSpeedModifier: 0.5
+  _largeSpiritJumpHeightModifier: 0.5
+  _startingHealth: 8
+  _maxHealth: 8

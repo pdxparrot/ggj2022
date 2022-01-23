@@ -9,20 +9,20 @@ namespace pdxpartyparrot.ggj2022.UI
     public sealed class PlayerHUD : HUD
     {
         [SerializeField]
-        private TextMeshProUGUI _health;
+        private HealthBar _healthBar;
 
         [SerializeField]
         private TextMeshProUGUI _seedCount;
 
         public void Reset(int health, int seedCount)
         {
-            UpdateHealth(health);
+            _healthBar.ResetHealth(health);
             UpdateSeedCount(seedCount);
         }
 
         public void UpdateHealth(int health)
         {
-            _health.text = health.ToString();
+            _healthBar.UpdateHealth(health);
         }
 
         public void UpdateSeedCount(int seedCount)

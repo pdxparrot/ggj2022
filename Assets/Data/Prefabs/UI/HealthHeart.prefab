@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 3299716097169299228}
   - component: {fileID: 4692083837709616163}
   - component: {fileID: 652991039155941088}
+  - component: {fileID: 7410083130335191493}
   m_Layer: 5
-  m_Name: Heart
+  m_Name: HealthHeart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,6 +79,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7410083130335191493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62715383161105023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b61d1537e816b99478ff7bb421c613f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _leftHalf: {fileID: 3898702719650946095}
+  _rightHalf: {fileID: 6621678091941196965}
 --- !u!1 &3898702719650946095
 GameObject:
   m_ObjectHideFlags: 0
