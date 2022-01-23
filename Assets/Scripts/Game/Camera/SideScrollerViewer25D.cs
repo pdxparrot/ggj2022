@@ -55,6 +55,7 @@ namespace pdxpartyparrot.Game.Camera
             Viewer.Set3D(gameData.FoV);
 
             _transposer.m_GroupFramingMode = CinemachineFramingTransposer.FramingMode.HorizontalAndVertical;
+            _transposer.m_CameraDistance = gameData.Distance;
         }
 
         public void SetBounds(Collider2D bounds)

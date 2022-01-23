@@ -16,6 +16,7 @@ MonoBehaviour:
   _viewerPrefab: {fileID: 1851156597288993657, guid: 3e9737dd433d3522cbf25ff4a426579f, type: 3}
   _viewportSize: 10
   _fov: 60
+  _distance: 200
   _maxLocalPlayers: 1
   _gamepadsArePlayers: 1
   _spawnPlayersOnLoad: 1

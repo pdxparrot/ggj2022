@@ -49,6 +49,15 @@ namespace pdxpartyparrot.Game.Data
 
         public float FoV => _fov;
 
+        // TODO: this probably isn't the best way to handle this or the best place to put it
+        // TODO: also, this is the *3D* distance and entirely irrelevant to 2D games
+        // and that should be made clearer in the data
+        [SerializeField]
+        [Tooltip("The Distance of the 3D camera.")]
+        private float _distance = 10;
+
+        public float Distance => _distance;
+
         #endregion
 
         [Space(10)]
