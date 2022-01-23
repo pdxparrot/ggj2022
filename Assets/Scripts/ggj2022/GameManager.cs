@@ -17,7 +17,13 @@ namespace pdxpartyparrot.ggj2022
 
         [SerializeField]
         [ReadOnly]
-        private int _seedCount = 0;
+        private int _totalSeedCount = 0;
+
+        [SerializeField]
+        [ReadOnly]
+        private int _availableSeedCount = 0;
+
+        public bool ExitAvailable => _totalSeedCount > 0 && _availableSeedCount <= 0;
 
         public void InitViewer()
         {
@@ -33,12 +39,14 @@ namespace pdxpartyparrot.ggj2022
         {
             GameUIManager.Instance.GameGameUI.PlayerHUD.Reset(health, seedCount);
 
-            _seedCount = 0;
+            _totalSeedCount = 0;
+            _availableSeedCount = 0;
         }
 
         public void SeedSpawned()
         {
-            _seedCount++;
+            _totalSeedCount++;
+            _availableSeedCount++;
         }
 
         public void PlayerDamaged(int health)
@@ -57,12 +65,19 @@ namespace pdxpartyparrot.ggj2022
 
         public void SeedCollected()
         {
+            if(_availableSeedCount <= 0) {
+                Debug.LogWarning("Collected too many seeds!");
+                return;
+            }
+
             GameUIManager.Instance.GameGameUI.PlayerHUD.SeedCollected();
 
-            _seedCount--;
-            if(_seedCount <= 0) {
-                GameOver();
-            }
+            _availableSeedCount--;
+        }
+
+        public void Exit()
+        {
+            GameOver();
         }
     }
 }

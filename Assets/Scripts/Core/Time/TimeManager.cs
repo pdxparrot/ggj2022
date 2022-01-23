@@ -227,8 +227,16 @@ namespace pdxpartyparrot.Core.Time
         private readonly HashSet<Timer> _timers = new HashSet<Timer>();
         private readonly Dictionary<string, Timer> _namedTimers = new Dictionary<string, Timer>();
 
+        [SerializeField]
+        [ReadOnly]
+        private int _timerCount;
+
         private readonly HashSet<Stopwatch> _stopwatches = new HashSet<Stopwatch>();
         private readonly Dictionary<string, Stopwatch> _namedStopwatches = new Dictionary<string, Stopwatch>();
+
+        [SerializeField]
+        [ReadOnly]
+        private int _stopwatchCount;
 
         #region Unity Lifecycle
 
@@ -258,6 +266,9 @@ namespace pdxpartyparrot.Core.Time
             float dt = UnityEngine.Time.deltaTime;
 
             DoUpdate(dt);
+
+            _timerCount = _timers.Count + _namedTimers.Count;
+            _stopwatchCount = _stopwatches.Count + _namedStopwatches.Count;
         }
 
         #endregion
@@ -410,8 +421,16 @@ namespace pdxpartyparrot.Core.Time
                 GUILayout.Label("TODO: timers");
                 GUILayout.EndVertical();
 
-                GUILayout.BeginVertical($"{_stopwatches.Count} Timers", GUI.skin.box);
+                GUILayout.BeginVertical($"{_namedTimers.Count} Named timers", GUI.skin.box);
+                GUILayout.Label("TODO: named timers");
+                GUILayout.EndVertical();
+
+                GUILayout.BeginVertical($"{_stopwatches.Count} Stopwatches", GUI.skin.box);
                 GUILayout.Label("TODO: stopwatches");
+                GUILayout.EndVertical();
+
+                GUILayout.BeginVertical($"{_namedStopwatches.Count} Named stopwatches", GUI.skin.box);
+                GUILayout.Label("TODO: named stopwatches");
                 GUILayout.EndVertical();
             };
         }

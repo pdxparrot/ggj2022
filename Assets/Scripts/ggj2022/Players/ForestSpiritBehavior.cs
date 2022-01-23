@@ -7,13 +7,16 @@ using pdxpartyparrot.Core.Util;
 using pdxpartyparrot.Core.World;
 using pdxpartyparrot.Game.Characters;
 using pdxpartyparrot.Game.Characters.Players.BehaviorComponents;
+using pdxpartyparrot.Game.Interactables;
 using pdxpartyparrot.ggj2022.Data.Players;
 using pdxpartyparrot.ggj2022.NPCs;
+using pdxpartyparrot.ggj2022.World;
 
 using UnityEngine;
 
 namespace pdxpartyparrot.ggj2022.Players
 {
+    [RequireComponent(typeof(Interactables3D))]
     public sealed class ForestSpiritBehavior : PlayerBehaviorComponent
     {
         #region Actions
@@ -70,6 +73,10 @@ namespace pdxpartyparrot.ggj2022.Players
 
         public int SeedCount => _seedCount;
 
+        public bool HasSeeds => SeedCount > 0;
+
+        public bool CanExit => GameManager.Instance.ExitAvailable;
+
         #region Effects
 
         [SerializeField]
@@ -90,10 +97,15 @@ namespace pdxpartyparrot.ggj2022.Players
         [SerializeField]
         private EffectTrigger _deathEffect;
 
+        [SerializeField]
+        private EffectTrigger _plantEffect;
+
         #endregion
 
         [SerializeField]
         private RumbleEffectTriggerComponent[] _rumbleEffects;
+
+        private Interactables _interactables;
 
         private DebugMenuNode _debugMenuNode;
 
@@ -102,6 +114,8 @@ namespace pdxpartyparrot.ggj2022.Players
         protected override void Awake()
         {
             base.Awake();
+
+            _interactables = GetComponent<Interactables>();
 
             GameManager.Instance.GameReadyEvent += GameReadyEventHandler;
         }
@@ -182,7 +196,32 @@ namespace pdxpartyparrot.ggj2022.Players
 
                 return true;
             } else if(action is InteractAction) {
-                Debug.Log("TODO: interact");
+                // first try and exit
+                if(_interactables.HasInteractables<Exit>()) {
+                    if(CanExit) {
+                        GameManager.Instance.Exit();
+                        return true;
+                    } else {
+                        Debug.Log("Exit unavailable!");
+                        return true;
+                    }
+                }
+
+                // next try to plant a seed
+                Planter planter = _interactables.GetFirstInteractable<Planter>();
+                if(null != planter && planter.CanPlantSeed) {
+                    if(HasSeeds) {
+                        planter.PlantSeed();
+
+                        _interactables.RemoveInteractable(planter);
+
+                        _plantEffect.Trigger();
+                        return true;
+                    } else {
+                        Debug.Log("No seeds available to plant!");
+                        return true;
+                    }
+                }
             }
 
             return false;
