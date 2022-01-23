@@ -1,5 +1,9 @@
+using JetBrains.Annotations;
+
 using pdxpartyparrot.Core.Effects;
 using pdxpartyparrot.ggj2022.Players;
+
+using UnityEngine;
 
 namespace pdxpartyparrot.ggj2022.Characters.BehaviorComponents
 {
@@ -9,6 +13,14 @@ namespace pdxpartyparrot.ggj2022.Characters.BehaviorComponents
 
         public override float JumpHeight => GamePlayerBehavior.JumpHeightModifier * base.JumpHeight;
 
-        protected override EffectTrigger JumpEffect => GamePlayerBehavior.ForestSpiritBehavior.IsLarge ? base.JumpEffect : base.JumpEffect;
+        [SerializeField]
+        [CanBeNull]
+        private EffectTrigger _smallJumpEffect;
+
+        [SerializeField]
+        [CanBeNull]
+        private EffectTrigger _bigJumpEffect;
+
+        protected override EffectTrigger JumpEffect => GamePlayerBehavior.ForestSpiritBehavior.IsLarge ? _bigJumpEffect : _smallJumpEffect;
     }
 }
