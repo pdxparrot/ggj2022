@@ -14,6 +14,18 @@ namespace pdxpartyparrot.Core.Effects.EffectTriggerComponents
         private CinemachineImpulseSource _impulseSource;
 
         [SerializeField]
+        private FloatRangeConfig _durationRange = new FloatRangeConfig(0.5f, 0.5f);
+
+        [SerializeField]
+        private FloatRangeConfig _forceRange = new FloatRangeConfig(1.0f, 1.0f);
+
+        [SerializeField]
+        private FloatRangeConfig _xVelocityRange = new FloatRangeConfig(-1.0f, 1.0f);
+
+        [SerializeField]
+        private FloatRangeConfig _yVelocityRange = new FloatRangeConfig(-1.0f, 1.0f);
+
+        [SerializeField]
         private bool _waitForComplete = true;
 
         public override bool WaitForComplete => _waitForComplete;
@@ -24,10 +36,26 @@ namespace pdxpartyparrot.Core.Effects.EffectTriggerComponents
 
         public override bool IsDone => !_isPlaying;
 
+        public override void Initialize(EffectTrigger owner)
+        {
+            base.Initialize(owner);
+
+            _impulseSource.m_ImpulseDefinition.m_ImpulseShape = CinemachineImpulseDefinition.ImpulseShapes.Rumble;
+        }
+
         public override void OnStart()
         {
             if(EffectsManager.Instance.EnableViewerShake) {
-                _impulseSource.GenerateImpulse();
+                Vector3 velocity = new Vector3(_xVelocityRange.GetRandomValue() * PartyParrotManager.Instance.Random.NextSign(),
+                                               _yVelocityRange.GetRandomValue() * PartyParrotManager.Instance.Random.NextSign(),
+                                               0.0f);
+                _impulseSource.m_DefaultVelocity = velocity;
+
+                float duration = _durationRange.GetRandomValue();
+                _impulseSource.m_ImpulseDefinition.m_ImpulseDuration = duration;
+
+                float force = _forceRange.GetRandomValue();
+                _impulseSource.GenerateImpulseWithForce(force);
             }
 
             Assert.IsTrue(_impulseSource.m_ImpulseDefinition.m_TimeEnvelope.Duration >= 0);
