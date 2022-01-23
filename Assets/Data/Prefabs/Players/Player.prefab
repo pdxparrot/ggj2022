@@ -549,7 +549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data: {fileID: 11400000, guid: 5da68578dfd52c84188605cd0a54759a, type: 2}
-  _jumpEffect: {fileID: 0}
+  _jumpEffect: {fileID: 2031523933873079508}
 --- !u!65 &4571564012835175004
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1013,6 +1013,7 @@ GameObject:
   - component: {fileID: 8872634376130773161}
   - component: {fileID: 8184980603500424351}
   - component: {fileID: 4693007571243064704}
+  - component: {fileID: 237521566146702819}
   m_Layer: 10
   m_Name: StompedEffect
   m_TagString: Untagged
@@ -1050,6 +1051,7 @@ MonoBehaviour:
   _triggerOnComplete: []
   _components:
   - {fileID: 4693007571243064704}
+  - {fileID: 237521566146702819}
   _isRunning: 0
   _complete: 0
 --- !u!114 &4693007571243064704
@@ -1071,6 +1073,29 @@ MonoBehaviour:
   _playerInput: {fileID: 0}
   _waitForComplete: 0
   _isPlaying: 0
+--- !u!114 &237521566146702819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3881794354749912717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aa5b3839c05786ebee7ba953b8c5e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioClip: {fileID: 8300000, guid: 501a861d31d7f064eafac6581e8dc76d, type: 3}
+  _audioSource: {fileID: 0}
+  _loop: 0
+  _waitForComplete: 0
+  _audioTimer:
+    rid: -2
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
 --- !u!1 &4673146564197188091
 GameObject:
   m_ObjectHideFlags: 0
@@ -1140,6 +1165,79 @@ MonoBehaviour:
   _playerInput: {fileID: 0}
   _waitForComplete: 0
   _isPlaying: 0
+--- !u!1 &6157565514209039615
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6756790906998304241}
+  - component: {fileID: 2031523933873079508}
+  - component: {fileID: 6176685430723478597}
+  m_Layer: 10
+  m_Name: JumpEffect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6756790906998304241
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6157565514209039615}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4304453184491432437}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2031523933873079508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6157565514209039615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daf5168a56c699f25880d5c0271b9036, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _triggerOnComplete: []
+  _components:
+  - {fileID: 6176685430723478597}
+  _isRunning: 0
+  _complete: 0
+--- !u!114 &6176685430723478597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6157565514209039615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aa5b3839c05786ebee7ba953b8c5e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioClip: {fileID: 8300000, guid: d1dfe18b982790c43bb521416695e4c3, type: 3}
+  _audioSource: {fileID: 0}
+  _loop: 0
+  _waitForComplete: 0
+  _audioTimer:
+    rid: -2
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
 --- !u!1 &6581164541508516451
 GameObject:
   m_ObjectHideFlags: 0
@@ -1306,6 +1404,7 @@ Transform:
   - {fileID: 2052016262460343157}
   - {fileID: 2938228964545104808}
   - {fileID: 3584453919185426547}
+  - {fileID: 6756790906998304241}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
