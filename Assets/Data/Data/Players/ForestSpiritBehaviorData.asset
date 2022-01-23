@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c00bfa8d0ed720b489ea82ba113c8d79, type: 3}
   m_Name: ForestSpiritBehaviorData
   m_EditorClassIdentifier: 
-  _largeSpiritMoveSpeedModifier: 0.5
+  _largeSpiritMoveSpeedModifier: 0.4
   _largeSpiritJumpHeightModifier: 0.5
   _startingHealth: 8
   _maxHealth: 8
