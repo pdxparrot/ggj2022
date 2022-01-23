@@ -25,6 +25,9 @@ namespace pdxpartyparrot.Game.Characters.BehaviorComponents
         [CanBeNull]
         private EffectTrigger _longJumpEffect;
 
+        [CanBeNull]
+        protected virtual EffectTrigger LongJumpEffect => _longJumpEffect;
+
         #endregion
 
         [SerializeField]
@@ -57,8 +60,8 @@ namespace pdxpartyparrot.Game.Characters.BehaviorComponents
                 if(CanLongJump) {
                     Behavior.CharacterMovement.Jump(_data.LongJumpHeight);
 
-                    if(null != _longJumpEffect) {
-                        _longJumpEffect.Trigger();
+                    if(null != LongJumpEffect) {
+                        LongJumpEffect.Trigger();
                     }
 
                     if(null != Behavior.Animator) {

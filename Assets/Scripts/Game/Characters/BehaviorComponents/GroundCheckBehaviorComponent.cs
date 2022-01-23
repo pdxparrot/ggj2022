@@ -29,6 +29,9 @@ namespace pdxpartyparrot.Game.Characters.BehaviorComponents
         [CanBeNull]
         private EffectTrigger _groundedEffect;
 
+        [CanBeNull]
+        protected virtual EffectTrigger GroundedEffect => _groundedEffect;
+
         [Space(10)]
 
         [SerializeField]
@@ -168,8 +171,8 @@ namespace pdxpartyparrot.Game.Characters.BehaviorComponents
                     Behavior.OnIdle();
 
                     GroundedEvent?.Invoke(this, EventArgs.Empty);
-                    if(null != _groundedEffect) {
-                        _groundedEffect.Trigger();
+                    if(null != GroundedEffect) {
+                        GroundedEffect.Trigger();
                     }
                 }
             } finally {

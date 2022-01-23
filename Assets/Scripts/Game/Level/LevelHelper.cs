@@ -35,7 +35,7 @@ namespace pdxpartyparrot.Game.Level
         private EffectTrigger _levelEnterEffect;
 
         [CanBeNull]
-        protected EffectTrigger LevelEnterEffect => _levelEnterEffect;
+        protected virtual EffectTrigger LevelEnterEffect => _levelEnterEffect;
 
         [SerializeField]
         private bool _levelEnterIsBlocking = true;
@@ -47,7 +47,7 @@ namespace pdxpartyparrot.Game.Level
         private EffectTrigger _levelExitEffect;
 
         [CanBeNull]
-        protected EffectTrigger LevelExitEffect => _levelExitEffect;
+        protected virtual EffectTrigger LevelExitEffect => _levelExitEffect;
 
         [SerializeField]
         private bool _levelExitIsBlocking = true;
