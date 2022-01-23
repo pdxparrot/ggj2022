@@ -12,9 +12,9 @@ namespace pdxpartyparrot.ggj2022.UI
         [SerializeField]
         private SeedBar _seedBar;
 
-        public void Reset(int maxHealth, int startingHealth)
+        public void Reset(int maxHealth, int health)
         {
-            _healthBar.Reset(maxHealth, startingHealth);
+            _healthBar.Reset(maxHealth, health);
             _seedBar.Reset();
         }
 

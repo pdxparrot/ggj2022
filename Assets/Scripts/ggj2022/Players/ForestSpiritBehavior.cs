@@ -247,7 +247,7 @@ namespace pdxpartyparrot.ggj2022.Players
 
         private void GameReadyEventHandler(object sender, EventArgs args)
         {
-            GameManager.Instance.Reset(Health, SeedCount);
+            GameManager.Instance.Reset(_data.MaxHealth, Health);
         }
 
         #endregion

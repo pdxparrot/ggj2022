@@ -35,9 +35,9 @@ namespace pdxpartyparrot.ggj2022
             Viewer.Initialize(GameGameData);
         }
 
-        public void Reset(int health, int seedCount)
+        public void Reset(int maxHealth, int health)
         {
-            GameUIManager.Instance.GameGameUI.PlayerHUD.Reset(health, seedCount);
+            GameUIManager.Instance.GameGameUI.PlayerHUD.Reset(maxHealth, health);
 
             _totalSeedCount = 0;
             _availableSeedCount = 0;

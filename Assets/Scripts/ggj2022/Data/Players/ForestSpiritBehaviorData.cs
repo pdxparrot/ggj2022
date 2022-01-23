@@ -28,6 +28,6 @@ namespace pdxpartyparrot.ggj2022.Data.Players
         [SerializeField]
         private int _maxHealth = 10;
 
-        public int MaxHealth => MaxHealth;
+        public int MaxHealth => _maxHealth;
     }
 }

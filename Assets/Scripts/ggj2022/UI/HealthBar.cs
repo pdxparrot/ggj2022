@@ -25,7 +25,7 @@ namespace pdxpartyparrot.ggj2022.UI
 
         #endregion
 
-        public void Reset(int maxHealth, int startingHealth)
+        public void Reset(int maxHealth, int health)
         {
             _hearts.Clear();
             _heartContainer.Clear();
@@ -36,7 +36,7 @@ namespace pdxpartyparrot.ggj2022.UI
                 _hearts.Add(heart);
             }
 
-            UpdateHealth(startingHealth);
+            UpdateHealth(health);
         }
 
         public void UpdateHealth(int health)
