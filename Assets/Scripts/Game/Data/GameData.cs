@@ -31,6 +31,9 @@ namespace pdxpartyparrot.Game.Data
 
         public Viewer ViewerPrefab => _viewerPrefab;
 
+        // TODO: for this crap that can be set on the camera we should just set it there
+        // and document in the README what to set for each thing
+
         // TODO: this probably isn't the best way to handle this or the best place to put it
         // TODO: also, this is the *2D* viewport size and entirely irrelevant to 3D games
         // and that should be made clearer in the data
