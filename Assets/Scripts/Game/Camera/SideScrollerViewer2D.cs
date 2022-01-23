@@ -13,7 +13,7 @@ namespace pdxpartyparrot.Game.Camera
 {
     // this has to be set as the Body in order to work correctly
     //[RequireComponent(typeof(CinemachineFramingTransposer))]
-    public class SideScrollerViewer : CinemachineViewer, IPlayerViewer
+    public class SideScrollerViewer2D : CinemachineViewer, IPlayerViewer
     {
         [Space(10)]
 
