@@ -116,8 +116,6 @@ namespace pdxpartyparrot.ggj2022.Players
             base.Awake();
 
             _interactables = GetComponent<Interactables>();
-
-            GameManager.Instance.GameReadyEvent += GameReadyEventHandler;
         }
 
         private void OnEnable()
@@ -139,6 +137,16 @@ namespace pdxpartyparrot.ggj2022.Players
             foreach(RumbleEffectTriggerComponent rumble in _rumbleEffects) {
                 rumble.PlayerInput = GamePlayerBehavior.Player.PlayerInputHandler.InputHelper;
             }
+        }
+
+        private void Reset()
+        {
+            _health = _data.StartingHealth;
+            _seedCount = 0;
+
+            SetForm(SpiritForm.Small);
+
+            GameManager.Instance.Reset(_data.MaxHealth, Health);
         }
 
         void SetForm(SpiritForm form)
@@ -234,21 +242,16 @@ namespace pdxpartyparrot.ggj2022.Players
 
         public override bool OnSpawn(SpawnPoint spawnpoint)
         {
-            _health = _data.StartingHealth;
-            _seedCount = 0;
-
-            SetForm(SpiritForm.Small);
+            Reset();
 
             return base.OnSpawn(spawnpoint);
         }
 
-        #endregion
-
-        #region Event Handlers
-
-        private void GameReadyEventHandler(object sender, EventArgs args)
+        public override bool OnReSpawn(SpawnPoint spawnpoint)
         {
-            GameManager.Instance.Reset(_data.MaxHealth, Health);
+            Reset();
+
+            return base.OnSpawn(spawnpoint);
         }
 
         #endregion
