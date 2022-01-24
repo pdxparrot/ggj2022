@@ -50,10 +50,11 @@ MonoBehaviour:
   _nextLevel: 
   _levelEnterEffect: {fileID: 766785260752267802}
   _levelEnterIsBlocking: 0
-  _levelEnterFade: {fileID: 4375335227868974435}
   _levelExitEffect: {fileID: 8042035650032249304}
   _levelExitIsBlocking: 1
-  _levelExitFade: {fileID: 3431392847391335724}
+  _fadeEffects:
+  - {fileID: 4375335227868974435}
+  - {fileID: 3431392847391335724}
 --- !u!114 &3632928943382716360
 MonoBehaviour:
   m_ObjectHideFlags: 0

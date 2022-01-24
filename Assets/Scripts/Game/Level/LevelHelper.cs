@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using System.Collections;
+using System.Collections.Generic;
 
 using JetBrains.Annotations;
 
@@ -7,7 +8,6 @@ using pdxpartyparrot.Core.Effects;
 using pdxpartyparrot.Core.Effects.EffectTriggerComponents;
 using pdxpartyparrot.Core.World;
 using pdxpartyparrot.Game.State;
-using pdxpartyparrot.Game.UI;
 
 using UnityEngine;
 
@@ -44,12 +44,7 @@ namespace pdxpartyparrot.Game.Level
 
         protected bool LevelEnterIsBlocking => _levelEnterIsBlocking;
 
-        [SerializeField]
-        [CanBeNull]
-        private FadeEffectTriggerComponent _levelEnterFade;
-
         [Space(10)]
-
 
         [SerializeField]
         [CanBeNull]
@@ -63,11 +58,10 @@ namespace pdxpartyparrot.Game.Level
 
         protected bool LevelExitIsBlocking => _levelExitIsBlocking;
 
-        [SerializeField]
-        [CanBeNull]
-        private FadeEffectTriggerComponent _levelExitFade;
-
         #endregion
+
+        [SerializeField]
+        private List<FadeEffectTriggerComponent> _fadeEffects;
 
 #if USE_NAVMESH
         private NavMeshSurface _navMeshSurface;
@@ -201,12 +195,8 @@ namespace pdxpartyparrot.Game.Level
         {
             Debug.Log("[Level] Client start...");
 
-            if(null != _levelEnterFade) {
-                _levelEnterFade.Image = GameStateManager.Instance.GameUIManager.GameUI.FadeOverlay;
-            }
-
-            if(null != _levelExitFade) {
-                _levelExitFade.Image = GameStateManager.Instance.GameUIManager.GameUI.FadeOverlay;
+            foreach(FadeEffectTriggerComponent fadeEffect in _fadeEffects) {
+                fadeEffect.Image = GameStateManager.Instance.GameUIManager.GameUI.FadeOverlay;
             }
 
             // TODO: we really should communicate our ready state to the server

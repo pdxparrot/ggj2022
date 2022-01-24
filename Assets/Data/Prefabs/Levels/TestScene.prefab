@@ -50,10 +50,11 @@ MonoBehaviour:
   _nextLevel: 
   _levelEnterEffect: {fileID: 3269328410191798526}
   _levelEnterIsBlocking: 0
-  _levelEnterFade: {fileID: 3477380392864679742}
   _levelExitEffect: {fileID: 6655141606630219102}
   _levelExitIsBlocking: 1
-  _levelExitFade: {fileID: 800023616086874239}
+  _fadeEffects:
+  - {fileID: 3477380392864679742}
+  - {fileID: 800023616086874239}
   _spawnEnemiesKey: 26
 --- !u!114 &6601617024714658635
 MonoBehaviour:
