@@ -13,6 +13,8 @@ namespace pdxpartyparrot.Game.UI
 {
     public interface IGameUIManager
     {
+        GameUI GameUI { get; }
+
         string DefaultFloatingTextPoolName { get; }
 
         void Initialize();

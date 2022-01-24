@@ -4,8 +4,10 @@ using System.Collections;
 using JetBrains.Annotations;
 
 using pdxpartyparrot.Core.Effects;
+using pdxpartyparrot.Core.Effects.EffectTriggerComponents;
 using pdxpartyparrot.Core.World;
 using pdxpartyparrot.Game.State;
+using pdxpartyparrot.Game.UI;
 
 using UnityEngine;
 
@@ -44,6 +46,13 @@ namespace pdxpartyparrot.Game.Level
 
         [SerializeField]
         [CanBeNull]
+        private FadeEffectTriggerComponent _levelEnterFade;
+
+        [Space(10)]
+
+
+        [SerializeField]
+        [CanBeNull]
         private EffectTrigger _levelExitEffect;
 
         [CanBeNull]
@@ -53,6 +62,10 @@ namespace pdxpartyparrot.Game.Level
         private bool _levelExitIsBlocking = true;
 
         protected bool LevelExitIsBlocking => _levelExitIsBlocking;
+
+        [SerializeField]
+        [CanBeNull]
+        private FadeEffectTriggerComponent _levelExitFade;
 
         #endregion
 
@@ -187,6 +200,14 @@ namespace pdxpartyparrot.Game.Level
         protected virtual void GameStartClientEventHandler(object sender, EventArgs args)
         {
             Debug.Log("[Level] Client start...");
+
+            if(null != _levelEnterFade) {
+                _levelEnterFade.Image = GameStateManager.Instance.GameUIManager.GameUI.FadeOverlay;
+            }
+
+            if(null != _levelExitFade) {
+                _levelExitFade.Image = GameStateManager.Instance.GameUIManager.GameUI.FadeOverlay;
+            }
 
             // TODO: we really should communicate our ready state to the server
             // and then have it communicate back to us when everybody is ready
