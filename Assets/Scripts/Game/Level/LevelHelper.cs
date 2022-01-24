@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -58,7 +58,38 @@ namespace pdxpartyparrot.Game.Level
 
         protected bool LevelExitIsBlocking => _levelExitIsBlocking;
 
+        [Space(10)]
+
+        [SerializeField]
+        [CanBeNull]
+        private EffectTrigger _levelRestartEnterEffect;
+
+        [CanBeNull]
+        protected virtual EffectTrigger LevelRestartEnterEffect => _levelRestartEnterEffect;
+
+        [SerializeField]
+        private bool _levelRestartEnterIsBlocking = true;
+
+        protected bool LevelRestartEnterIsBlocking => _levelRestartEnterIsBlocking;
+
+        [Space(10)]
+
+        [SerializeField]
+        [CanBeNull]
+        private EffectTrigger _levelRestartExitEffect;
+
+        [CanBeNull]
+        protected virtual EffectTrigger LevelRestartExitEffect => _levelRestartExitEffect;
+
+        [SerializeField]
+        private bool _levelRestartExitIsBlocking = true;
+
+        protected bool LevelRestartExitIsBlocking => _levelRestartExitIsBlocking;
+
         #endregion
+
+        [SerializeField]
+        private List<SetImageColorEffectTriggerComponent> _setImageColorEffects;
 
         [SerializeField]
         private List<FadeEffectTriggerComponent> _fadeEffects;
@@ -136,6 +167,16 @@ namespace pdxpartyparrot.Game.Level
             TriggerLevelEffect(_levelExitEffect, _levelExitIsBlocking, action);
         }
 
+        private void TriggerRestartEnterLevelEffect(Action action)
+        {
+            TriggerLevelEffect(_levelRestartEnterEffect, _levelRestartEnterIsBlocking, action);
+        }
+
+        private void TriggerRestartExitLevelEffect(Action action)
+        {
+            TriggerLevelEffect(_levelRestartExitEffect, _levelRestartExitIsBlocking, action);
+        }
+
         protected void TransitionLevel()
         {
             GameStateManager.Instance.GameManager.GameUnReady();
@@ -195,6 +236,10 @@ namespace pdxpartyparrot.Game.Level
         {
             Debug.Log("[Level] Client start...");
 
+            foreach(SetImageColorEffectTriggerComponent setColorEffect in _setImageColorEffects) {
+                setColorEffect.Image = GameStateManager.Instance.GameUIManager.GameUI.FadeOverlay;
+            }
+
             foreach(FadeEffectTriggerComponent fadeEffect in _fadeEffects) {
                 fadeEffect.Image = GameStateManager.Instance.GameUIManager.GameUI.FadeOverlay;
             }
@@ -234,12 +279,12 @@ namespace pdxpartyparrot.Game.Level
         {
             Debug.Log("[Level] Restart...");
 
-            TriggerExitLevelEffect(() => {
+            TriggerRestartExitLevelEffect(() => {
                 Reset();
 
                 // TODO: we really should communicate our ready state to the server
                 // and then have it communicate back to us when everybody is ready
-                TriggerEnterLevelEffect(GameStateManager.Instance.GameManager.GameReady);
+                TriggerRestartEnterLevelEffect(GameStateManager.Instance.GameManager.GameReady);
             });
         }
 
