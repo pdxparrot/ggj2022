@@ -75,6 +75,11 @@ namespace pdxpartyparrot.ggj2022
             _availableSeedCount--;
         }
 
+        public void SeedPlanted()
+        {
+            GameUIManager.Instance.GameGameUI.PlayerHUD.SeedPlanted();
+        }
+
         public void Exit()
         {
             GameOver();

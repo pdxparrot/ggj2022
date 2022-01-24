@@ -14,6 +14,8 @@ namespace pdxpartyparrot.ggj2022.UI
         [SerializeField]
         private Transform _seedContainer;
 
+        private readonly List<Seed> _seeds = new List<Seed>();
+
         #region Unity Lifecycle
 
         private void Awake()
@@ -26,11 +28,25 @@ namespace pdxpartyparrot.ggj2022.UI
         public void Reset()
         {
             _seedContainer.Clear();
+            _seeds.Clear();
         }
 
         public void SeedCollected()
         {
-            Instantiate(_seedPrefab, _seedContainer);
+            Seed seed = Instantiate(_seedPrefab, _seedContainer);
+            _seeds.Add(seed);
+        }
+
+        public void SeedPlanted()
+        {
+            foreach(Seed seed in _seeds) {
+                if(!seed.IsPlanted) {
+                    seed.SetPlanted();
+                    return;
+                }
+            }
+
+            Debug.LogWarning("No seed found to update as planted!");
         }
     }
 }

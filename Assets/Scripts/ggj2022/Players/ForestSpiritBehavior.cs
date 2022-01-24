@@ -212,10 +212,11 @@ namespace pdxpartyparrot.ggj2022.Players
                 if(null != planter && planter.CanPlantSeed) {
                     if(HasSeeds) {
                         planter.PlantSeed();
-
                         _interactables.RemoveInteractable(planter);
 
-                        _plantEffect.Trigger();
+                        _plantEffect.Trigger(() => {
+                            GameManager.Instance.SeedPlanted();
+                        });
                         return true;
                     } else {
                         Debug.Log("No seeds available to plant!");

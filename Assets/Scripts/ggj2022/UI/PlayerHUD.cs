@@ -27,5 +27,10 @@ namespace pdxpartyparrot.ggj2022.UI
         {
             _seedBar.SeedCollected();
         }
+
+        public void SeedPlanted()
+        {
+            _seedBar.SeedPlanted();
+        }
     }
 }
