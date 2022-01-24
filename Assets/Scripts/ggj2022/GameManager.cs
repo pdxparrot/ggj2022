@@ -17,13 +17,23 @@ namespace pdxpartyparrot.ggj2022
 
         [SerializeField]
         [ReadOnly]
-        private int _totalSeedCount = 0;
+        private int _totalEnemyCount;
 
         [SerializeField]
         [ReadOnly]
-        private int _availableSeedCount = 0;
+        private int _stompedEnemyCount;
 
-        public bool ExitAvailable => _totalSeedCount > 0 && _availableSeedCount <= 0;
+        [SerializeField]
+        [ReadOnly]
+        private int _totalSeedCount;
+
+        [SerializeField]
+        [ReadOnly]
+        private int _collectedSeedCount;
+
+        public bool ExitAvailable => _totalSeedCount > 0 && _collectedSeedCount >= _totalSeedCount;
+
+        public bool PlantingAllowed => _totalEnemyCount > 0 && _stompedEnemyCount >= _totalEnemyCount;
 
         public void InitViewer()
         {
@@ -39,15 +49,19 @@ namespace pdxpartyparrot.ggj2022
         {
             GameUIManager.Instance.GameGameUI.PlayerHUD.Reset(maxHealth, health);
 
+            _totalEnemyCount = 0;
+            _stompedEnemyCount = 0;
+
             _totalSeedCount = 0;
-            _availableSeedCount = 0;
+            _collectedSeedCount = 0;
         }
 
-        public void SeedSpawned()
+        public void Exit()
         {
-            _totalSeedCount++;
-            _availableSeedCount++;
+            GameOver();
         }
+
+        #region Player
 
         public void PlayerDamaged(int health)
         {
@@ -63,16 +77,34 @@ namespace pdxpartyparrot.ggj2022
             RestartLevel();
         }
 
+        #endregion
+
+        #region Enemies
+
+        public void EnemySpawned()
+        {
+            _totalEnemyCount++;
+        }
+
+        public void EnemyStomped()
+        {
+            _stompedEnemyCount++;
+        }
+
+        #endregion
+
+        #region Seeds
+
+        public void SeedSpawned()
+        {
+            _totalSeedCount++;
+        }
+
         public void SeedCollected()
         {
-            if(_availableSeedCount <= 0) {
-                Debug.LogWarning("Collected too many seeds!");
-                return;
-            }
+            _collectedSeedCount++;
 
             GameUIManager.Instance.GameGameUI.PlayerHUD.SeedCollected();
-
-            _availableSeedCount--;
         }
 
         public void SeedPlanted()
@@ -80,9 +112,6 @@ namespace pdxpartyparrot.ggj2022
             GameUIManager.Instance.GameGameUI.PlayerHUD.SeedPlanted();
         }
 
-        public void Exit()
-        {
-            GameOver();
-        }
+        #endregion
     }
 }

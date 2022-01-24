@@ -6,6 +6,7 @@ using pdxpartyparrot.Core.Effects;
 using pdxpartyparrot.Core.Time;
 using pdxpartyparrot.Core.Util;
 using pdxpartyparrot.Core;
+using pdxpartyparrot.Core.World;
 using pdxpartyparrot.Game.Characters.NPCs;
 using pdxpartyparrot.ggj2022.Data.NPCs;
 using pdxpartyparrot.ggj2022.Players;
@@ -279,13 +280,17 @@ namespace pdxpartyparrot.ggj2022.NPCs
 
         #region Events
 
-        protected override void OnSpawnComplete()
+        public override bool OnSpawn(SpawnPoint spawnpoint)
         {
-            base.OnSpawnComplete();
+            base.OnSpawn(spawnpoint);
+
+            GameManager.Instance.EnemySpawned();
 
             _leashTarget = transform.position.x;
 
             SetState(State.Idle);
+
+            return false;
         }
 
         public override bool TriggerEnter(GameObject triggerObject)
@@ -324,6 +329,8 @@ namespace pdxpartyparrot.ggj2022.NPCs
             });
 
             player.GamePlayerBehavior.ForestSpiritBehavior.Stomped(this);
+
+            GameManager.Instance.EnemyStomped();
         }
 
         #region Debug Menu

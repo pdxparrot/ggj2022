@@ -75,8 +75,6 @@ namespace pdxpartyparrot.ggj2022.Players
 
         public bool HasSeeds => SeedCount > 0;
 
-        public bool CanExit => GameManager.Instance.ExitAvailable;
-
         #region Effects
 
         [SerializeField]
@@ -206,19 +204,26 @@ namespace pdxpartyparrot.ggj2022.Players
             } else if(action is InteractAction) {
                 // first try and exit
                 if(_interactables.HasInteractables<Exit>()) {
-                    if(CanExit) {
+                    if(GameManager.Instance.ExitAvailable) {
                         GameManager.Instance.Exit();
                         return true;
                     } else {
-                        Debug.Log("Exit unavailable!");
+                        // TODO: show a dialogue saying there are still seeds to collect
+                        Debug.Log("There are still seeds to collect!");
                         return true;
                     }
                 }
 
                 // next try to plant a seed
                 Planter planter = _interactables.GetFirstInteractable<Planter>();
-                if(null != planter && planter.CanPlantSeed) {
-                    if(HasSeeds) {
+                if(null != planter) {
+                    if(!GameManager.Instance.PlantingAllowed) {
+                        // TODO: show a dialogue saying there are still enemies to kill
+                        Debug.Log("There are still enemies around!");
+                    } else if(planter.IsPlanted) {
+                        // TODO: show a dialogue saying the planter is full
+                        Debug.Log("This planter is full!");
+                    } else if(HasSeeds) {
                         planter.PlantSeed();
                         _interactables.RemoveInteractable(planter);
 
@@ -227,8 +232,9 @@ namespace pdxpartyparrot.ggj2022.Players
                         });
                         return true;
                     } else {
-                        Debug.Log("No seeds available to plant!");
+                        Debug.LogWarning("No seeds available to plant!");
                         return true;
+
                     }
                 }
             }

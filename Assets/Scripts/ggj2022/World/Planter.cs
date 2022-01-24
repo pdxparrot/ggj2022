@@ -19,8 +19,7 @@ namespace pdxpartyparrot.ggj2022.World
         [ReadOnly]
         private bool _planted;
 
-        public bool CanPlantSeed => !_planted;
-
+        public bool IsPlanted => _planted;
 
         #region Effects
 
@@ -40,7 +39,7 @@ namespace pdxpartyparrot.ggj2022.World
 
         public void PlantSeed()
         {
-            if(!CanPlantSeed) {
+            if(!GameManager.Instance.PlantingAllowed || IsPlanted) {
                 return;
             }
 
