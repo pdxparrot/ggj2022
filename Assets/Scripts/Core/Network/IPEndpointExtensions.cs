@@ -26,7 +26,7 @@ namespace pdxpartyparrot.Core.Network
                 }
             }
 
-            if(!int.TryParse(tokens[tokens.Length - 1], out int port)) {
+            if(!int.TryParse(tokens[^1], out int port)) {
                 return false;
             }
 

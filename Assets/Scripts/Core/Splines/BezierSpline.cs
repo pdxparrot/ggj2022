@@ -37,7 +37,7 @@ namespace pdxpartyparrot.Core.Splines
             {
                 _loop = value;
                 if(_loop) {
-                    _modes[_modes.Length - 1] = _modes[0];
+                    _modes[^1] = _modes[0];
                     SetControlPoint(0, _points[0]);
                 }
             }
@@ -57,8 +57,8 @@ namespace pdxpartyparrot.Core.Splines
                 if(Loop) {
                     if(index == 0) {
                         _points[1] += delta;
-                        _points[_points.Length - 2] += delta;
-                        _points[_points.Length - 1] = point;
+                        _points[^2] += delta;
+                        _points[^1] = point;
                     } else if(index == _points.Length - 1) {
                         _points[0] = point;
                         _points[1] += delta;
@@ -98,7 +98,7 @@ namespace pdxpartyparrot.Core.Splines
 
             if(Loop) {
                 if(modeIndex == 0) {
-                    _modes[_modes.Length - 1] = mode;
+                    _modes[^1] = mode;
                 } else if(modeIndex == _modes.Length - 1) {
                     _modes[0] = mode;
                 }
@@ -187,22 +187,22 @@ namespace pdxpartyparrot.Core.Splines
 
         public void AddCurve()
         {
-            Vector3 point = _points[_points.Length - 1];
+            Vector3 point = _points[^1];
             Array.Resize(ref _points, _points.Length + 3);
             point.x += 1.0f;
-            _points[_points.Length - 3] = point;
+            _points[^3] = point;
             point.x += 1.0f;
-            _points[_points.Length - 2] = point;
+            _points[^2] = point;
             point.x += 1.0f;
-            _points[_points.Length - 1] = point;
+            _points[^1] = point;
 
             Array.Resize(ref _modes, _modes.Length + 1);
-            _modes[_modes.Length - 1] = _modes[_modes.Length - 2];
+            _modes[^1] = _modes[^2];
             EnforceMode(_points.Length - 4);
 
             if(Loop) {
-                _points[_points.Length - 1] = _points[0];
-                _modes[_modes.Length - 1] = _modes[0];
+                _points[^1] = _points[0];
+                _modes[^1] = _modes[0];
                 EnforceMode(0);
             }
         }

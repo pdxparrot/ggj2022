@@ -74,13 +74,14 @@ namespace pdxpartyparrot.Game.World
 
         private GameObject RandomBlock()
         {
-            var rnd = _random.NextDouble(0.0f, _maxFrequency - 1.0f);
+            double rnd = _random.NextDouble(0.0f, _maxFrequency - 1.0f);
             int i = 0;
 
             for(; i < _blockPrefabs.Count; ++i) {
                 rnd -= _blockPrefabs[i].frequency;
-                if(rnd < 0.0f)
+                if(rnd < 0.0f) {
                     break;
+                }
             }
 
             return _blockPrefabs[i].prefab;

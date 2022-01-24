@@ -45,7 +45,7 @@ namespace pdxpartyparrot.Game.KungFuCircle
             _innerGridSlotsRadians = new float[_maxGridSlots];
 
             // TODO: do this smarter
-            _radiansBetweenSlots = (360.0f / _maxGridSlots) * Mathf.Deg2Rad;
+            _radiansBetweenSlots = 360.0f / _maxGridSlots * Mathf.Deg2Rad;
 
             float currentRadians = _radiansBetweenSlots;
             for(int i = 0; i < _maxGridSlots; ++i) {
