@@ -75,6 +75,8 @@ namespace pdxpartyparrot.ggj2022.Players
 
         public bool HasSeeds => SeedCount > 0;
 
+        [Space(10)]
+
         #region Effects
 
         [SerializeField]
@@ -184,6 +186,44 @@ namespace pdxpartyparrot.ggj2022.Players
             }
         }
 
+        private void AttemptExit()
+        {
+            if(GameManager.Instance.ExitAvailable) {
+                GameManager.Instance.Exit();
+                return;
+            }
+
+            // TODO: show a dialogue saying there are still seeds to collect
+            Debug.Log("There are still seeds to collect!");
+        }
+
+        private void AttemptPlantSeed(Planter planter)
+        {
+            if(!GameManager.Instance.PlantingAllowed) {
+                // TODO: show a dialogue saying there are still enemies to kill
+                Debug.Log("There are still enemies around!");
+                return;
+            }
+
+            if(planter.IsPlanted) {
+                // TODO: show a dialogue saying the planter is full
+                Debug.Log("This planter is full!");
+                return;
+            }
+
+            if(!HasSeeds) {
+                Debug.LogWarning("No seeds available to plant!");
+                return;
+            }
+
+            planter.PlantSeed();
+            _interactables.RemoveInteractable(planter);
+
+            _plantEffect.Trigger(() => {
+                GameManager.Instance.SeedPlanted();
+            });
+        }
+
         #region Actions
 
         public override bool OnPerformed(CharacterBehaviorAction action)
@@ -201,42 +241,23 @@ namespace pdxpartyparrot.ggj2022.Players
                 }
 
                 return true;
-            } else if(action is InteractAction) {
+            }
+
+            if(action is InteractAction) {
                 // first try and exit
                 if(_interactables.HasInteractables<Exit>()) {
-                    if(GameManager.Instance.ExitAvailable) {
-                        GameManager.Instance.Exit();
-                        return true;
-                    } else {
-                        // TODO: show a dialogue saying there are still seeds to collect
-                        Debug.Log("There are still seeds to collect!");
-                        return true;
-                    }
+                    AttemptExit();
+                    return true;
                 }
 
                 // next try to plant a seed
                 Planter planter = _interactables.GetFirstInteractable<Planter>();
                 if(null != planter) {
-                    if(!GameManager.Instance.PlantingAllowed) {
-                        // TODO: show a dialogue saying there are still enemies to kill
-                        Debug.Log("There are still enemies around!");
-                    } else if(planter.IsPlanted) {
-                        // TODO: show a dialogue saying the planter is full
-                        Debug.Log("This planter is full!");
-                    } else if(HasSeeds) {
-                        planter.PlantSeed();
-                        _interactables.RemoveInteractable(planter);
-
-                        _plantEffect.Trigger(() => {
-                            GameManager.Instance.SeedPlanted();
-                        });
-                        return true;
-                    } else {
-                        Debug.LogWarning("No seeds available to plant!");
-                        return true;
-
-                    }
+                    AttemptPlantSeed(planter);
+                    return true;
                 }
+
+                return false;
             }
 
             return false;
