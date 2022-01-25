@@ -7,6 +7,7 @@ using pdxpartyparrot.Core.Util;
 using pdxpartyparrot.Core.World;
 using pdxpartyparrot.Game.Characters;
 using pdxpartyparrot.Game.Characters.Players.BehaviorComponents;
+using pdxpartyparrot.Game.Cinematics;
 using pdxpartyparrot.Game.Interactables;
 using pdxpartyparrot.ggj2022.Data.Players;
 using pdxpartyparrot.ggj2022.NPCs;
@@ -74,6 +75,21 @@ namespace pdxpartyparrot.ggj2022.Players
         public int SeedCount => _seedCount;
 
         public bool HasSeeds => SeedCount > 0;
+
+        [Space(10)]
+
+        #region Dialogues
+
+        [SerializeField]
+        private Dialogue _seedsRemainDialoguePrefab;
+
+        [SerializeField]
+        private Dialogue _enemiesRemainDialoguePrefab;
+
+        [SerializeField]
+        private Dialogue _planterFullDialoguePrefab;
+
+        #endregion
 
         [Space(10)]
 
@@ -193,20 +209,20 @@ namespace pdxpartyparrot.ggj2022.Players
                 return;
             }
 
-            // TODO: show a dialogue saying there are still seeds to collect
+            //TODO: DialogueManager.Instance.ShowDialogue(_seedsRemainDialoguePrefab);
             Debug.Log("There are still seeds to collect!");
         }
 
         private void AttemptPlantSeed(Planter planter)
         {
             if(!GameManager.Instance.PlantingAllowed) {
-                // TODO: show a dialogue saying there are still enemies to kill
+                //TODO: DialogueManager.Instance.ShowDialogue(_enemiesRemainDialoguePrefab);
                 Debug.Log("There are still enemies around!");
                 return;
             }
 
             if(planter.IsPlanted) {
-                // TODO: show a dialogue saying the planter is full
+                //TODO: DialogueManager.Instance.ShowDialogue(_planterFullDialoguePrefab);
                 Debug.Log("This planter is full!");
                 return;
             }
