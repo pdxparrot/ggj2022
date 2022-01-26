@@ -345,7 +345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _nextDialogue: {fileID: 0}
-  _allowCancel: 0
+  _allowCancel: 1
   _enableEffect: {fileID: 0}
   _disableEffect: {fileID: 0}
   _continueEffect: {fileID: 2213908185685333785}
