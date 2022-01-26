@@ -4,6 +4,7 @@ using UnityEngine;
 
 using pdxpartyparrot.Core.DebugMenu;
 using pdxpartyparrot.Core.Util;
+using pdxpartyparrot.Game.Data;
 using pdxpartyparrot.Game.State;
 
 namespace pdxpartyparrot.Game.Cinematics
@@ -16,10 +17,14 @@ namespace pdxpartyparrot.Game.Cinematics
     public sealed class DialogueManager : SingletonBehavior<DialogueManager>
     {
         [SerializeField]
-        [Tooltip("How long should new dialogues be open before listening for input")]
-        private float _inputDelay = 0.5f;
+        private DialogueData _dialogueData;
 
-        public float InputDelay => _inputDelay;
+        public DialogueData DialogueData => _dialogueData;
+
+        public T GetDialogueData<T>() where T : DialogueData
+        {
+            return (T)DialogueData;
+        }
 
         [SerializeField]
         [ReadOnly]

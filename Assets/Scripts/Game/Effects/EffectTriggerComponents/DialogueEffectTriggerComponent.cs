@@ -8,6 +8,8 @@ namespace pdxpartyparrot.Game.Effects.EffectTriggerComponents
 {
     public class DialogueEffectTriggerComponent : EffectTriggerComponent
     {
+        // TODO: this should use a dialogue prefab hooked to the DialogueData
+        // (or a dialogue registered with the manager if we start pre-loading them)
         [SerializeField]
         private Dialogue _dialoguePrefab;
 

@@ -62,7 +62,7 @@ namespace pdxpartyparrot.Game.Cinematics
                 _enableEffect.Trigger();
             }
 
-            _showTimer.Start(DialogueManager.Instance.InputDelay);
+            _showTimer.Start(DialogueManager.Instance.DialogueData.InputDelay);
         }
 
         private void OnDisable()

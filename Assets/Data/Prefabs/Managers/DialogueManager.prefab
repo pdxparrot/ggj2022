@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 385fdd2ddfb323545a3a94770703900d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inputDelay: 0.5
+  _dialogueData: {fileID: 11400000, guid: 061bcefc568f7a4f19fdf174f2b93966, type: 2}
   _currentDialogue: {fileID: 0}
