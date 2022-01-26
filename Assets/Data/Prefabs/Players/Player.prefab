@@ -1086,17 +1086,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _impulseSource: {fileID: 8053720819387186133}
   _durationRange:
-    _min: 0.5
+    _min: 0.25
     _max: 0.5
   _forceRange:
-    _min: 3
-    _max: 5
+    _min: 1
+    _max: 3
   _xVelocityRange:
     _min: 0.25
-    _max: 2
+    _max: 0.75
   _yVelocityRange:
     _min: 0.25
-    _max: 2
+    _max: 0.75
   _waitForComplete: 1
   _isPlaying: 0
 --- !u!114 &8053720819387186133
