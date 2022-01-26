@@ -1,5 +1,6 @@
 using System;
 
+using pdxpartyparrot.Core.Effects;
 using pdxpartyparrot.Game.Interactables;
 
 using UnityEngine;
@@ -13,6 +14,16 @@ namespace pdxpartyparrot.ggj2022.World
 
         public Type InteractableType => typeof(Exit);
 
+        #region Effects
+
+        [SerializeField]
+        private EffectTrigger _seedsRemainEffect;
+
+        [SerializeField]
+        private EffectTrigger _exitLevelEffect;
+
+        #endregion
+
         #region Unity Lifecycle
 
         private void Awake()
@@ -21,5 +32,15 @@ namespace pdxpartyparrot.ggj2022.World
         }
 
         #endregion
+
+        public void ExitLevel()
+        {
+            if(GameManager.Instance.ExitAvailable) {
+                _exitLevelEffect.Trigger();
+                return;
+            }
+
+            _seedsRemainEffect.Trigger();
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 using UnityEngine;
 
@@ -36,14 +37,31 @@ namespace pdxpartyparrot.Game.Cinematics
 
         public bool IsShowingDialogue => null != _currentDialogue;
 
+        private readonly Dictionary<string, Dialogue> _dialoguePrefabs = new Dictionary<string, Dialogue>();
+
         #region Unity Lifecycle
 
         private void Awake()
         {
             InitDebugMenu();
+
+            foreach(Dialogue dialoguePrefab in _dialogueData.DialoguePrefabs) {
+                _dialoguePrefabs.Add(dialoguePrefab.GetId(), dialoguePrefab);
+            }
         }
 
         #endregion
+
+        public void ShowDialogue(string id, Action onComplete = null, Action onCancel = null)
+        {
+            Dialogue dialoguePrefab = _dialoguePrefabs.GetValueOrDefault(id);
+            if(null == dialoguePrefab) {
+                Debug.LogWarning($"Missing dialogue prefab {id}!");
+                return;
+            }
+
+            ShowDialogue(dialoguePrefab, onComplete, onCancel);
+        }
 
         public void ShowDialogue(Dialogue dialoguePrefab, Action onComplete = null, Action onCancel = null)
         {
@@ -96,6 +114,12 @@ namespace pdxpartyparrot.Game.Cinematics
             DebugMenuNode debugMenuNode = DebugMenuManager.Instance.AddNode(() => "Core.DialogueManager");
             debugMenuNode.RenderContentsAction = () => {
                 GUILayout.Label(IsShowingDialogue ? $"Showing dialogue ${_currentDialogue.name}" : "Not showing dialogue");
+
+                GUILayout.BeginVertical("Registered dialogues:", GUI.skin.box);
+                foreach(string dialogueId in _dialoguePrefabs.Keys) {
+                    GUILayout.Label(dialogueId);
+                }
+                GUILayout.EndVertical();
 
                 // TODO: add buttons for showing, advancing, and canceling dialogues
             };

@@ -26,6 +26,12 @@ namespace pdxpartyparrot.ggj2022.World
         [SerializeField]
         private EffectTrigger _plantEffect;
 
+        [SerializeField]
+        private EffectTrigger _enemiesRemainLevelEffect;
+
+        [SerializeField]
+        private EffectTrigger _planterFullLevelEffect;
+
         #endregion
 
         #region Unity Lifecycle
@@ -39,7 +45,13 @@ namespace pdxpartyparrot.ggj2022.World
 
         public void PlantSeed()
         {
-            if(!GameManager.Instance.PlantingAllowed || IsPlanted) {
+            if(!GameManager.Instance.PlantingAllowed) {
+                _enemiesRemainLevelEffect.Trigger();
+                return;
+            }
+
+            if(IsPlanted) {
+                _planterFullLevelEffect.Trigger();
                 return;
             }
 
