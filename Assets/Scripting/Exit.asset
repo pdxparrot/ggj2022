@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e66c6366d904e98bc83428217d4fd7, type: 3}
+  m_Name: Exit
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"graph":{"variables":{"collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":null,"summary":null,"pan":{"x":0.0,"y":0.0},"zoom":1.0,"elements":[{"coroutine":false,"defaultValues":{},"position":{"x":-204.0,"y":-144.0},"guid":"c8a233d1-28e0-45b2-a70a-2d8bd3fd7023","$version":"A","$type":"Unity.VisualScripting.Start"},{"coroutine":false,"defaultValues":{},"position":{"x":-204.0,"y":60.0},"guid":"488c8aa4-a9ce-426d-8f46-1975a0a4c7b5","$version":"A","$type":"Unity.VisualScripting.Update"},{"argumentCount":0,"coroutine":false,"defaultValues":{"target":null,"name":{"$content":"SeedsRemain","$type":"System.String"}},"position":{"x":-29.0,"y":-292.0},"guid":"819c92c8-a74c-427e-a351-6cf61cf4ce34","$version":"A","$type":"Unity.VisualScripting.CustomEvent","$id":"13"},{"defaultValues":{"Dialogue
+      ID":{"$content":"dialogue_seeds_remain","$type":"System.String"}},"position":{"x":234.0,"y":-287.0},"guid":"34cd3ab5-eb4b-41a5-9618-f4518eef539b","$version":"A","$type":"pdxpartyparrot.Game.Scripting.Nodes.ShowDialogueScriptNode","$id":"15"},{"argumentCount":0,"coroutine":false,"defaultValues":{"target":null,"name":{"$content":"ExitLevel","$type":"System.String"}},"position":{"x":3.0,"y":43.0},"guid":"52a38f19-b1ee-4873-8b2a-2a24a93a73aa","$version":"A","$type":"Unity.VisualScripting.CustomEvent","$id":"17"},{"defaultValues":{"Dialogue
+      ID":{"$content":"dialogue_exit","$type":"System.String"}},"position":{"x":266.0,"y":48.0},"guid":"ce4763b2-e7af-49c4-a333-fc1eface8014","$version":"A","$type":"pdxpartyparrot.Game.Scripting.Nodes.ShowDialogueScriptNode","$id":"19"},{"sourceUnit":{"$ref":"13"},"sourceKey":"trigger","destinationUnit":{"$ref":"15"},"destinationKey":"","guid":"3b0aa690-1fba-4f4c-a494-7c3b0c55a5fa","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"17"},"sourceKey":"trigger","destinationUnit":{"$ref":"19"},"destinationKey":"","guid":"328ae5f7-37c9-4e93-82a6-95df5d7b2a0b","$type":"Unity.VisualScripting.ControlConnection"}],"$version":"A"}}'
+    _objectReferences: []

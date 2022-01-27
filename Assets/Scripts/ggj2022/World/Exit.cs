@@ -1,28 +1,19 @@
 using System;
 
-using pdxpartyparrot.Core.Effects;
 using pdxpartyparrot.Game.Interactables;
 
 using UnityEngine;
+using Unity.VisualScripting;
 
 namespace pdxpartyparrot.ggj2022.World
 {
     [RequireComponent(typeof(Collider))]
+    [RequireComponent(typeof(ScriptMachine))]
     public sealed class Exit : MonoBehaviour, IInteractable
     {
         public bool CanInteract => true;
 
         public Type InteractableType => typeof(Exit);
-
-        #region Effects
-
-        [SerializeField]
-        private EffectTrigger _seedsRemainEffect;
-
-        [SerializeField]
-        private EffectTrigger _exitLevelEffect;
-
-        #endregion
 
         #region Unity Lifecycle
 
@@ -36,11 +27,11 @@ namespace pdxpartyparrot.ggj2022.World
         public void ExitLevel()
         {
             if(GameManager.Instance.ExitAvailable) {
-                _exitLevelEffect.Trigger();
+                CustomEvent.Trigger(gameObject, "ExitLevel");
                 return;
             }
 
-            _seedsRemainEffect.Trigger();
+            CustomEvent.Trigger(gameObject, "SeedsRemain");
         }
     }
 }
