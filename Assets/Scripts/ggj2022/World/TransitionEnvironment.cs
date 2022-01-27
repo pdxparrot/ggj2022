@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 
 namespace pdxpartyparrot
@@ -41,7 +42,7 @@ namespace pdxpartyparrot
 
 
 
-        
+
 
         // Update is called once per frame
         void Update()
@@ -63,7 +64,7 @@ namespace pdxpartyparrot
 
                 if(timeElapsed < transitionTime) {
                     valueToLerp = Mathf.Lerp(startValue, endValue, timeElapsed / transitionTime);
-                    Debug.Log(valueToLerp);
+                    //Debug.Log(valueToLerp);
                     spriteMaterial.SetFloat("_Fire_Ash_Blend", valueToLerp);
                     timeElapsed += Time.deltaTime;
                 }
@@ -79,7 +80,7 @@ namespace pdxpartyparrot
 
 
             }
-           
+
 
         }
     }
