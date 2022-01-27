@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 using UnityEngine;
 using UnityEditor;
@@ -37,7 +38,7 @@ namespace pdxpartyparrot.Core.Util.Editor
                 string propertyString = property.stringValue;
 
                 int index = -1;
-                if(propertyString == "") {
+                if(!propertyString.Any()) {
                     // the tag is empty
                     index = 0; // first index is the special <notag> entry
                 } else {
@@ -56,11 +57,11 @@ namespace pdxpartyparrot.Core.Util.Editor
 
                 // adjust the actual string value of the property based on the selection
                 if(index == 0) {
-                    property.stringValue = "";
+                    property.stringValue = string.Empty;
                 } else if(index >= 1) {
                     property.stringValue = tagList[index];
                 } else {
-                    property.stringValue = "";
+                    property.stringValue = string.Empty;
                 }
             } finally {
                 EditorGUI.EndProperty();

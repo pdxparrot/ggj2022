@@ -402,8 +402,8 @@ namespace pdxpartyparrot.Game.State
         {
             DebugMenuNode debugMenuNode = DebugMenuManager.Instance.AddNode(() => "Game.GameStateManager");
             debugMenuNode.RenderContentsAction = () => {
-                GUILayout.Label($"Current Game State: {(null == CurrentState ? "" : CurrentState.Name)}");
-                GUILayout.Label($"Current Sub Game State: {(null == CurrentSubState ? "" : CurrentSubState.Name)}");
+                GUILayout.Label($"Current Game State: {(null == CurrentState ? string.Empty : CurrentState.Name)}");
+                GUILayout.Label($"Current Sub Game State: {(null == CurrentSubState ? string.Empty : CurrentSubState.Name)}");
 
                 if(GUIUtils.LayoutButton("Reset")) {
                     TransitionToInitialStateAsync();

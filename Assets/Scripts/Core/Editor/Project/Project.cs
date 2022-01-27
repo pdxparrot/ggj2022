@@ -267,6 +267,7 @@ namespace pdxpartyparrot.Core.Editor.Project
             Util.AddPackage("com.unity.timeline");
             Util.AddPackage("com.unity.ugui");
             Util.AddPackage("com.unity.visualeffectgraph");
+            Util.AddPackage("com.unity.visualscripting");
         }
 
         private static void InitializePackages(int version)

@@ -47,7 +47,7 @@ namespace pdxpartyparrot.Core.UI
                 public static int IntField(int currentValue)
                 {
                     string text = GUILayout.TextField($"{currentValue}");
-                    text = Regex.Replace(text, @"[^0-9]" ,"");
+                    text = Regex.Replace(text, @"[^0-9]", string.Empty);
 
                     int value;
                     return int.TryParse(text, out value) ? value : currentValue;
@@ -56,7 +56,7 @@ namespace pdxpartyparrot.Core.UI
                 public static float FloatField(float currentValue)
                 {
                     string text = GUILayout.TextField($"{currentValue}");
-                    text = Regex.Replace(text, @"[^0-9\.]" ,"");
+                    text = Regex.Replace(text, @"[^0-9\.]", string.Empty);
 
                     if(text[text.Length - 1] == '.') {
                         text += '0';
