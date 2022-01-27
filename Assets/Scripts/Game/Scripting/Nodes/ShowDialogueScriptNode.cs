@@ -4,12 +4,16 @@ using Unity.VisualScripting;
 
 namespace pdxpartyparrot.Game.Scripting.Nodes
 {
+    [UnitCategory("pdxpartyparrot/Game")]
+    [UnitTitle("Show Dialogue")]
     public class ShowDialogueScriptNode : Unit
     {
         [DoNotSerialize]
+        [PortLabelHidden]
         private ControlInput _inputTrigger;
 
         [DoNotSerialize]
+        [PortLabelHidden]
         private ControlOutput _outputTrigger;
 
         [DoNotSerialize]
@@ -18,11 +22,11 @@ namespace pdxpartyparrot.Game.Scripting.Nodes
         protected override void Definition()
         {
             // flow control
-            _inputTrigger = ControlInput(string.Empty, (flow) => {
-                DialogueManager.Instance.ShowDialogue(flow.GetValue<string>(_dialogueId));
+            _inputTrigger = ControlInput("Invoke", (flow) => {
+                Invoke(flow);
                 return _outputTrigger;
             });
-            _outputTrigger = ControlOutput(string.Empty);
+            _outputTrigger = ControlOutput("Exit");
 
             Succession(_inputTrigger, _outputTrigger);
 
@@ -30,6 +34,11 @@ namespace pdxpartyparrot.Game.Scripting.Nodes
             _dialogueId = ValueInput<string>("Dialogue ID", string.Empty);
 
             Requirement(_dialogueId, _inputTrigger);
+        }
+
+        private void Invoke(Flow flow)
+        {
+            DialogueManager.Instance.ShowDialogue(flow.GetValue<string>(_dialogueId));
         }
     }
 }
