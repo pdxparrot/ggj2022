@@ -220,6 +220,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7047132602554705061}
   - component: {fileID: 8735102418785700709}
+  - component: {fileID: 4425591262082847887}
   m_Layer: 10
   m_Name: Small Form - Sprite
   m_TagString: Untagged
@@ -294,6 +295,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &4425591262082847887
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096078113873603334}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eb24f86ac939358b18554cf58944bf3e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1493513476203736540
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,6 +620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5edfacd0dfabec748ba942c1784885fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _behavior: {fileID: 5411053710253391707}
   _smallModel: {fileID: 1096078113873603334}
   _largeModel: {fileID: 1493513476203736540}
 --- !u!1 &3272413087399022572
