@@ -57,7 +57,11 @@ namespace pdxpartyparrot.Core.Actors.Components
         private Animator _animator;
 
         [CanBeNull]
-        public Animator Animator => _animator;
+        public Animator Animator
+        {
+            get => _animator;
+            set => _animator = value;
+        }
 
         [SerializeField]
         private bool _pauseAnimationOnPause = true;

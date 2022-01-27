@@ -1,6 +1,3 @@
-using pdxpartyparrot.Core.Data.Scripting;
-using pdxpartyparrot.Core.Editor.Scripting;
-
 using UnityEditor;
 
 namespace pdxpartyparrot.Core.Editor
@@ -12,22 +9,9 @@ namespace pdxpartyparrot.Core.Editor
         {
             string assetPath = AssetDatabase.GetAssetPath(instanceID);
 
-            if(OpenScriptData(assetPath)) {
-                return true;
-            }
+            // TODO:
 
             return false;
-        }
-
-        private static bool OpenScriptData(string assetPath)
-        {
-            ScriptData scriptData = AssetDatabase.LoadAssetAtPath<ScriptData>(assetPath);
-            if(null == scriptData) {
-                return false;
-            }
-
-            ScriptEditorWindow.OpenAsset(scriptData);
-            return true;
         }
     }
 }

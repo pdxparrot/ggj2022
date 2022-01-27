@@ -1,0 +1,362 @@
+fileFormatVersion: 2
+guid: dbd971baa0a067742abd280682b94c44
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BigSpirit_0001
+      rect:
+        serializedVersion: 2
+        x: 1581
+        y: 895
+        width: 450
+        height: 642
+      alignment: 9
+      pivot: {x: 0.4911111, y: 0.6713396}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b3ac994c0eec504eab14519fc545d8f
+      internalID: 1827635765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigSpirit_0002
+      rect:
+        serializedVersion: 2
+        x: 1581
+        y: 1539
+        width: 453
+        height: 508
+      alignment: 9
+      pivot: {x: 0.51655626, y: 0.8307087}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fdcb56cbe6f85a45a74e98e08cbe652
+      internalID: 1943406263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigSpirit_0003
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1339
+        width: 445
+        height: 708
+      alignment: 9
+      pivot: {x: 0.43146068, y: 0.55225986}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 405dce6bf1f16e448ad42fd52fa78cf1
+      internalID: -1928036567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigSpirit_0004
+      rect:
+        serializedVersion: 2
+        x: 1581
+        y: 406
+        width: 400
+        height: 487
+      alignment: 9
+      pivot: {x: 0.5875, y: 0.3429158}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1f43ce8f0bd4ed469f74cca7ea21f2c
+      internalID: -1000281980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigSpirit_0005
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 639
+        width: 377
+        height: 698
+      alignment: 9
+      pivot: {x: 0.55172414, y: 0.38395417}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0da3efca0061dcb4d86b9576d8791963
+      internalID: -1692160460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigSpirit_0006
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 1603
+        width: 495
+        height: 444
+      alignment: 9
+      pivot: {x: 0.5151515, y: 0.9301802}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 708c3b434e968eb44a8b7059868f121d
+      internalID: 562693059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigSpirit_0007
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 36
+        width: 478
+        height: 368
+      alignment: 9
+      pivot: {x: 0.49790794, y: 1.1222826}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b2686c647333e54fbefddba67f6a7d3
+      internalID: -1305811469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigSpirit_0008
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 71
+        width: 446
+        height: 566
+      alignment: 9
+      pivot: {x: 0.4955157, y: 0.7491166}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9d430804e1fb4741a257160ee5bcd04
+      internalID: 131240701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigSpirit_0010
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 4
+        width: 572
+        height: 658
+      alignment: 9
+      pivot: {x: 0.43006992, y: 0.6458967}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79e6961a756457e40b4cfdefd1638afe
+      internalID: 838352593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigSpirit_0011
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 664
+        width: 622
+        height: 673
+      alignment: 9
+      pivot: {x: 0.4807074, y: 0.6136701}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa431f366d8fa54d936b4649994d28e
+      internalID: -533021088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigSpirit_0012
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 716
+        width: 575
+        height: 656
+      alignment: 9
+      pivot: {x: 0.43304348, y: 0.64329267}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b57976a634672284f99341036b35ce34
+      internalID: 1909308321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigSpirit_0013
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1374
+        width: 622
+        height: 673
+      alignment: 9
+      pivot: {x: 0.4807074, y: 0.6136701}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b7b59a3009002c48bbc7178267d9931
+      internalID: -1779531225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      BigSpirit_0007: -1305811469
+      BigSpirit_0013: -1779531225
+      BigSpirit_0011: -533021088
+      BigSpirit_0005: -1692160460
+      BigSpirit_0010: 838352593
+      BigSpirit_0001: 1827635765
+      BigSpirit_0004: -1000281980
+      BigSpirit_0003: -1928036567
+      BigSpirit_0008: 131240701
+      BigSpirit_0006: 562693059
+      BigSpirit_0012: 1909308321
+      BigSpirit_0002: 1943406263
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

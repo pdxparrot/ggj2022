@@ -186,7 +186,7 @@ namespace pdxpartyparrot.Core.Editor
         // TODO: this should move to the core filesystem utils
         public static void CreateEmptyFile(string path)
         {
-            File.WriteAllText(path, "");
+            File.WriteAllText(path, string.Empty);
         }
     }
 }

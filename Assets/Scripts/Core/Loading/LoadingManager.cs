@@ -14,7 +14,6 @@ using pdxpartyparrot.Core.Input;
 using pdxpartyparrot.Core.Network;
 using pdxpartyparrot.Core.ObjectPool;
 using pdxpartyparrot.Core.Scenes;
-using pdxpartyparrot.Core.Scripting;
 using pdxpartyparrot.Core.Terrain;
 using pdxpartyparrot.Core.Time;
 using pdxpartyparrot.Core.UI;
@@ -220,7 +219,6 @@ namespace pdxpartyparrot.Core.Loading
             InputManager.CreateFromPrefab(_inputManagerPrefab, ManagersContainer);
             SceneManager.CreateFromPrefab(_sceneManagerPrefab, ManagersContainer);
             TerrainManager.Create(ManagersContainer);
-            ScriptingManager.Create(ManagersContainer);
             SpawnManager.CreateFromPrefab(_spawnManagerPrefab, ManagersContainer);
         }
 
@@ -276,7 +274,7 @@ namespace pdxpartyparrot.Core.Loading
                 SetLoadingScreenPercent(0.0f);
                 SetLoadingScreenText("Loading...");
             }
-            _loadingScreen.ShowLoadingTip("");
+            _loadingScreen.ShowLoadingTip(string.Empty);
 
             if(!transition) {
                 ShowNextLoadingTip();

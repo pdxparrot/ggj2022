@@ -1,14 +1,15 @@
 using System;
 
 using UnityEngine;
+using Unity.VisualScripting;
 
-using pdxpartyparrot.Core.Effects;
 using pdxpartyparrot.Core.Util;
 using pdxpartyparrot.Game.Interactables;
 
 namespace pdxpartyparrot.ggj2022.World
 {
     [RequireComponent(typeof(Collider))]
+    [RequireComponent(typeof(ScriptMachine))]
     public sealed class Planter : MonoBehaviour, IInteractable
     {
         public bool CanInteract => true;
@@ -21,13 +22,6 @@ namespace pdxpartyparrot.ggj2022.World
 
         public bool IsPlanted => _planted;
 
-        #region Effects
-
-        [SerializeField]
-        private EffectTrigger _plantEffect;
-
-        #endregion
-
         #region Unity Lifecycle
 
         private void Awake()
@@ -39,13 +33,19 @@ namespace pdxpartyparrot.ggj2022.World
 
         public void PlantSeed()
         {
-            if(!GameManager.Instance.PlantingAllowed || IsPlanted) {
+            if(!GameManager.Instance.PlantingAllowed) {
+                CustomEvent.Trigger(gameObject, "EnemiesRemain");
+                return;
+            }
+
+            if(IsPlanted) {
+                CustomEvent.Trigger(gameObject, "PlanterFull");
                 return;
             }
 
             _planted = true;
 
-            _plantEffect.Trigger();
+            CustomEvent.Trigger(gameObject, "SeedPlanted");
         }
     }
 }

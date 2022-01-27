@@ -188,28 +188,13 @@ namespace pdxpartyparrot.ggj2022.Players
             }
         }
 
-        private void AttemptExit()
+        private void AttemptExit(Exit exit)
         {
-            if(GameManager.Instance.ExitAvailable) {
-                GameManager.Instance.Exit();
-                return;
-            }
-
-            DialogueManager.Instance.ShowDialogue(DialogueManager.Instance.GetDialogueData<DialogueData>().SeedsRemainDialoguePrefab);
+            exit.ExitLevel();
         }
 
         private void AttemptPlantSeed(Planter planter)
         {
-            if(!GameManager.Instance.PlantingAllowed) {
-                DialogueManager.Instance.ShowDialogue(DialogueManager.Instance.GetDialogueData<DialogueData>().EnemiesRemainDialoguePrefab);
-                return;
-            }
-
-            if(planter.IsPlanted) {
-                DialogueManager.Instance.ShowDialogue(DialogueManager.Instance.GetDialogueData<DialogueData>().PlanterFullDialoguePrefab);
-                return;
-            }
-
             if(!HasSeeds) {
                 Debug.LogWarning("No seeds available to plant!");
                 return;
@@ -244,8 +229,9 @@ namespace pdxpartyparrot.ggj2022.Players
 
             if(action is InteractAction) {
                 // first try and exit
-                if(_interactables.HasInteractables<Exit>()) {
-                    AttemptExit();
+                Exit exit = _interactables.GetFirstInteractable<Exit>();
+                if(null != exit) {
+                    AttemptExit(exit);
                     return true;
                 }
 

@@ -33,6 +33,14 @@ namespace pdxpartyparrot.Game.Cinematics
         private EffectTrigger _disableEffect;
 
         [SerializeField]
+        [CanBeNull]
+        private EffectTrigger _continueEffect;
+
+        [SerializeField]
+        [CanBeNull]
+        private EffectTrigger _cancelEffect;
+
+        [SerializeField]
         [ReadOnly]
         private ITimer _showTimer;
 
@@ -79,6 +87,13 @@ namespace pdxpartyparrot.Game.Cinematics
 
         #endregion
 
+        // this is called on the prefab so it must use GetComponent()
+        // rather than relying on a cached UIObject
+        public string GetId()
+        {
+            return GetComponent<UIObject>().Id;
+        }
+
         #region Event Handlers
 
         private void OnSubmit(InputAction.CallbackContext context)
@@ -87,7 +102,13 @@ namespace pdxpartyparrot.Game.Cinematics
                 return;
             }
 
-            DialogueManager.Instance.AdvanceDialogue();
+            if(null != _continueEffect) {
+                _continueEffect.Trigger(() => {
+                    DialogueManager.Instance.AdvanceDialogue();
+                });
+            } else {
+                DialogueManager.Instance.AdvanceDialogue();
+            }
         }
 
         private void OnCancel(InputAction.CallbackContext context)
@@ -100,7 +121,13 @@ namespace pdxpartyparrot.Game.Cinematics
                 return;
             }
 
-            DialogueManager.Instance.CancelDialogue();
+            if(null != _cancelEffect) {
+                _cancelEffect.Trigger(() => {
+                    DialogueManager.Instance.CancelDialogue();
+                });
+            } else {
+                DialogueManager.Instance.CancelDialogue();
+            }
         }
 
         #endregion
