@@ -1710,8 +1710,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"collection":{"$content":[],"$version":"A"},"$version":"A"}}'
-    _objectReferences: []
+    _json: '{"declarations":{"collection":{"$content":[{"name":"InputHelper","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"pdxpartyparrot.Core.Input.PlayerInputHelper,
+      com.pdxpartyparrot.Core, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _objectReferences:
+    - {fileID: 7414385388788936615}
 --- !u!114 &7576270204081794552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1725,8 +1727,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"nest":{"source":"Macro","macro":null,"embed":null}}'
-    _objectReferences: []
+    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
+    _objectReferences:
+    - {fileID: 11400000, guid: 9e6a9ef33d096dfaf9c3218388ac054e, type: 2}
 --- !u!114 &8552608613755089202
 MonoBehaviour:
   m_ObjectHideFlags: 0

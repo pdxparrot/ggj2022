@@ -50,8 +50,8 @@ namespace pdxpartyparrot.Core.Scripting.Nodes
                 return;
             }
 
-            float transitionSeconds = flow.GetValue<float>(_transitionSeconds);
             AudioClip audioClip = flow.GetValue<AudioClip>(_audioClip);
+            float transitionSeconds = flow.GetValue<float>(_transitionSeconds);
 
             if(transitionSeconds > 0.0f) {
                 AudioManager.Instance.TransitionMusicAsync(audioClip, transitionSeconds);
