@@ -9,9 +9,11 @@ using pdxpartyparrot.Core.World;
 
 using UnityEngine;
 using UnityEngine.Assertions;
+using Unity.VisualScripting;
 
 namespace pdxpartyparrot.Core.Actors
 {
+    [RequireComponent(typeof(ScriptMachine))]
     public abstract class Actor : MonoBehaviour
     {
         [SerializeField]
@@ -166,6 +168,11 @@ namespace pdxpartyparrot.Core.Actors
                     break;
                 }
             }
+        }
+
+        public void TriggerScriptEvent(string name, params object[] args)
+        {
+            CustomEvent.Trigger(gameObject, name, args);
         }
 
         #region Components
