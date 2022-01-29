@@ -2,7 +2,6 @@ using System.Linq;
 
 using pdxpartyparrot.Core.Data.Actors.Components;
 using pdxpartyparrot.Core.DebugMenu;
-using pdxpartyparrot.Core.Effects;
 using pdxpartyparrot.Core.Time;
 using pdxpartyparrot.Core.Util;
 using pdxpartyparrot.Core;
@@ -83,13 +82,6 @@ namespace pdxpartyparrot.ggj2022.NPCs
         private ITimer _idleTimer;
 
         private bool IsIdling => _idleTimer.IsRunning;
-
-        #region Effects
-
-        [SerializeField]
-        private EffectTrigger _stompedEffect;
-
-        #endregion
 
         private DebugMenuNode _debugMenuNode;
 
@@ -332,9 +324,9 @@ namespace pdxpartyparrot.ggj2022.NPCs
         {
             SetState(State.Dead);
 
-            _stompedEffect.Trigger(() => {
-                Owner.DeSpawn(false);
-            });
+            Slime.TriggerScriptEvent("Stomped");
+
+            Owner.DeSpawn(false);
 
             player.GamePlayerBehavior.ForestSpiritBehavior.Stomped(this);
 
