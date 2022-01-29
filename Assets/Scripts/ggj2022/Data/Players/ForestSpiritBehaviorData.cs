@@ -30,6 +30,10 @@ namespace pdxpartyparrot.ggj2022.Data.Players
 
         public int MaxHealth => _maxHealth;
 
+        [Space(10)]
+
+        #region Animation Parameters
+
         [SerializeField]
         private string _damagedParam = "OnHurt";
 
@@ -39,5 +43,7 @@ namespace pdxpartyparrot.ggj2022.Data.Players
         private string _deathParam = "OnDeath";
 
         public string DeathParam => _deathParam;
+
+        #endregion
     }
 }
