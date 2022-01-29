@@ -3,13 +3,16 @@ tpsheetFileNames:
 - Assets/Art/Animations/bigSpirit/bigSpirit.tpsheet
 - Assets/Art/Animations/bigSpirit/bigSpirit_hitDeath.tpsheet
 - Assets/Art/Animations/bigSpirit/bigSpiritv1.tpsheet
+- Assets/Art/Animations/smallSpirit/smallSpirit.tpsheet
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
 textureFileNames:
 - Assets/Art/Animations/bigSpirit/bigSpirit.png
 - Assets/Art/Animations/bigSpirit/bigSpirit_hitDeath.png
 - Assets/Art/Animations/bigSpirit/bigSpiritv1.png
+- Assets/Art/Animations/smallSpirit/smallSpirit.png
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
 normalmapFileNames:
+- 
 - 
 - 
 - 
