@@ -22,14 +22,14 @@ namespace pdxpartyparrot.Core.Effects
 
         #region Unity Lifecycle
 
-        private void Awake()
+        protected virtual void Awake()
         {
             if(null == _renderer) {
                 _renderer = GetComponent<Renderer>();
             }
         }
 
-        private void Update()
+        protected virtual void Update()
         {
             if(_dirty) {
                 foreach(Material material in _renderer.materials) {
