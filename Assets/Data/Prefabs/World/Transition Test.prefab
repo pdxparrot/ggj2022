@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2243286230869124778}
-  - component: {fileID: 154198318459411781}
   m_Layer: 0
   m_Name: Transition Test
   m_TagString: Untagged
@@ -37,30 +36,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &154198318459411781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 299315843538336987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d73c97055ef95f5458441a01c757cea0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _parameter: Fire > Ash Blend
-  _renderers:
-  - {fileID: 3222125043544302739}
-  - {fileID: 3759453083483797706}
-  - {fileID: 7504724743166405872}
-  - {fileID: 1464611242146359406}
-  - {fileID: 9117917627064342514}
-  _lastPercent: 0
-  _dirty: 0
-  _areaId: 
-  _seedsPlantedParameter: Growth Override
-  _lastSeedsPlantedPercent: 0
 --- !u!1 &438151357574356536
 GameObject:
   m_ObjectHideFlags: 0
