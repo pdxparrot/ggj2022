@@ -82,9 +82,6 @@ namespace pdxpartyparrot.ggj2022.Players
         #region Effects
 
         [SerializeField]
-        private EffectTrigger _stompedEffect;
-
-        [SerializeField]
         private EffectTrigger _seedCollectedEffect;
 
         [SerializeField]
@@ -178,7 +175,7 @@ namespace pdxpartyparrot.ggj2022.Players
 
         public void Stomped(SlimeBehavior enemy)
         {
-            _stompedEffect.Trigger();
+            GamePlayerBehavior.GamePlayer.TriggerScriptEvent("Stomp");
 
             if(enemy.HasSeed) {
                 _seedCollectedEffect.Trigger(() => {
