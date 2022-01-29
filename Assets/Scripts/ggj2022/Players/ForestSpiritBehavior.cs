@@ -82,9 +82,6 @@ namespace pdxpartyparrot.ggj2022.Players
         #region Effects
 
         [SerializeField]
-        private EffectTrigger _formSwapLargeEffect;
-
-        [SerializeField]
         private EffectTrigger _formSwapSmallEffect;
 
         [SerializeField]
@@ -216,7 +213,7 @@ namespace pdxpartyparrot.ggj2022.Players
                 switch(_currentForm) {
                 case SpiritForm.Small:
                     SetForm(SpiritForm.Large);
-                    _formSwapLargeEffect.Trigger();
+                    GamePlayerBehavior.GamePlayer.TriggerScriptEvent("FormSwapLarge");
                     break;
                 case SpiritForm.Large:
                     SetForm(SpiritForm.Small);

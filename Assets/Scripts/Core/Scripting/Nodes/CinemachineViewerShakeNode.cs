@@ -56,8 +56,8 @@ namespace pdxpartyparrot.Core.Scripting.Nodes
 
             impulseSource.m_ImpulseDefinition.m_ImpulseShape = CinemachineImpulseDefinition.ImpulseShapes.Rumble;
 
-            Vector3 velocity = new Vector3(viewerShakeConfig.XVelocityRange.GetRandomValue() * PartyParrotManager.Instance.Random.NextSign(),
-                                           viewerShakeConfig.YVelocityRange.GetRandomValue() * PartyParrotManager.Instance.Random.NextSign(),
+            Vector3 velocity = new Vector3(viewerShakeConfig.VelocityXRange.GetRandomValue() * PartyParrotManager.Instance.Random.NextSign(),
+                                           viewerShakeConfig.VelocityYRange.GetRandomValue() * PartyParrotManager.Instance.Random.NextSign(),
                                            0.0f);
             impulseSource.m_DefaultVelocity = velocity;
 
