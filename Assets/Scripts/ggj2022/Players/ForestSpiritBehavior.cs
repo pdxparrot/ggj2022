@@ -200,9 +200,7 @@ namespace pdxpartyparrot.ggj2022.Players
             planter.PlantSeed();
             _interactables.RemoveInteractable(planter);
 
-            _plantEffect.Trigger(() => {
-                GameManager.Instance.SeedPlanted();
-            });
+            _plantEffect.Trigger();
         }
 
         #region Actions

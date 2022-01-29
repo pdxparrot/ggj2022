@@ -293,7 +293,7 @@ namespace pdxpartyparrot.ggj2022.NPCs
         {
             base.OnSpawn(spawnpoint);
 
-            GameManager.Instance.EnemySpawned();
+            GameManager.Instance.EnemySpawned(_areaId);
 
             _leashTarget = transform.position.x;
 
@@ -339,7 +339,7 @@ namespace pdxpartyparrot.ggj2022.NPCs
 
             player.GamePlayerBehavior.ForestSpiritBehavior.Stomped(this);
 
-            GameManager.Instance.EnemyStomped();
+            GameManager.Instance.EnemyStomped(_areaId);
         }
 
         #region Debug Menu

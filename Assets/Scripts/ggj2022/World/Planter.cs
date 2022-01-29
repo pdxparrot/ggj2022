@@ -17,6 +17,9 @@ namespace pdxpartyparrot.ggj2022.World
         public Type InteractableType => typeof(Planter);
 
         [SerializeField]
+        private string _areaId;
+
+        [SerializeField]
         [ReadOnly]
         private bool _planted;
 
@@ -46,6 +49,8 @@ namespace pdxpartyparrot.ggj2022.World
             _planted = true;
 
             CustomEvent.Trigger(gameObject, "SeedPlanted");
+
+            GameManager.Instance.SeedPlanted(_areaId);
         }
     }
 }
