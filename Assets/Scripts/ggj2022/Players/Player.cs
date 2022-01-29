@@ -4,6 +4,7 @@ using Cinemachine;
 
 using pdxpartyparrot.Core.World;
 using pdxpartyparrot.Game.Characters.Players;
+using pdxpartyparrot.Game.World;
 using pdxpartyparrot.ggj2022.Camera;
 
 using UnityEngine;
@@ -12,7 +13,7 @@ using UnityEngine.Assertions;
 namespace pdxpartyparrot.ggj2022.Players
 {
     [RequireComponent(typeof(CinemachineImpulseSource))]
-    public sealed class Player : Player25D
+    public sealed class Player : Player25D, IWorldBoundaryCollisionListener
     {
         public PlayerBehavior GamePlayerBehavior => (PlayerBehavior)PlayerBehavior;
 
@@ -73,6 +74,19 @@ namespace pdxpartyparrot.ggj2022.Players
             PlayerGameViewer.RemoveTarget(this);
 
             base.OnDeSpawn();
+        }
+
+        #endregion
+
+        #region IWorldBoundaryCollisionListener
+
+        public void OnWorldBoundaryCollisionEnter(WorldBoundary boundary)
+        {
+            GamePlayerBehavior.ForestSpiritBehavior.Kill();
+        }
+
+        public void OnWorldBoundaryCollisionExit(WorldBoundary boundary)
+        {
         }
 
         #endregion

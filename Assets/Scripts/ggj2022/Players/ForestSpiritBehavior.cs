@@ -155,6 +155,11 @@ namespace pdxpartyparrot.ggj2022.Players
             GamePlayerBehavior.GamePlayer.SetForm(_currentForm);
         }
 
+        public void Kill()
+        {
+            Damage(_health);
+        }
+
         public void Damage(int amount)
         {
             _health -= amount;
