@@ -76,11 +76,18 @@ namespace pdxpartyparrot.ggj2022
 
             _plantedSeedCount = 0;
             _areaPlantedSeedCount.Clear();
+
+            UpdateAreaTransitions();
         }
 
         public void Exit()
         {
             GameOver();
+        }
+
+        private void UpdateAreaTransitions()
+        {
+            // TODO: trigger event for transition effect
         }
 
         #region Player
@@ -107,12 +114,16 @@ namespace pdxpartyparrot.ggj2022
         {
             _totalEnemyCount++;
             _areaEnemyCount[areaId] = _areaEnemyCount.GetValueOrDefault(areaId) + 1;
+
+            UpdateAreaTransitions();
         }
 
         public void EnemyStomped(string areaId)
         {
             _stompedEnemyCount++;
             _areaStompedEnemyCount[areaId] = _areaStompedEnemyCount.GetValueOrDefault(areaId) + 1;
+
+            UpdateAreaTransitions();
         }
 
         #endregion
@@ -135,6 +146,8 @@ namespace pdxpartyparrot.ggj2022
         {
             _plantedSeedCount++;
             _areaPlantedSeedCount[areaId] = _areaPlantedSeedCount.GetValueOrDefault(areaId) + 1;
+
+            UpdateAreaTransitions();
 
             GameUIManager.Instance.GameGameUI.PlayerHUD.SeedPlanted();
         }
