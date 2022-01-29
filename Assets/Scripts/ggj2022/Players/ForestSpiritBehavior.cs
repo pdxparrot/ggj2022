@@ -162,12 +162,14 @@ namespace pdxpartyparrot.ggj2022.Players
             if(_health <= 0) {
                 _health = 0;
 
+                GamePlayerBehavior.Animator.SetTrigger(_data.DeathParam);
                 _deathEffect.Trigger(() => {
                     GameManager.Instance.PlayerDied();
                 });
             } else {
                 GameManager.Instance.PlayerDamaged(_health);
 
+                GamePlayerBehavior.Animator.SetTrigger(_data.DamagedParam);
                 _damagedEffect.Trigger();
             }
         }

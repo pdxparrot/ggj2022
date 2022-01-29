@@ -29,5 +29,15 @@ namespace pdxpartyparrot.ggj2022.Data.Players
         private int _maxHealth = 10;
 
         public int MaxHealth => _maxHealth;
+
+        [SerializeField]
+        private string _damagedParam = "OnHurt";
+
+        public string DamagedParam => _damagedParam;
+
+        [SerializeField]
+        private string _deathParam = "OnDeath";
+
+        public string DeathParam => _deathParam;
     }
 }
