@@ -44,10 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d73c97055ef95f5458441a01c757cea0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _parameter: Fire > Ash Blend
+  _parameter: _Fire_Ash_Blend
   _renderers: []
   _lastPercent: 0
   _dirty: 0
   _areaId: 
-  _seedsPlantedParameter: Growth Override
+  _seedsPlantedParameter: _Growth_Override
   _lastSeedsPlantedPercent: 0

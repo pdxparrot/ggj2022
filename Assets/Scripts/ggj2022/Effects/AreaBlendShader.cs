@@ -10,7 +10,9 @@ namespace pdxpartyparrot.ggj2022.Effects
         [SerializeField]
         private string _areaId;
 
+        // NOTE: this is the shader property Reference value, not the Name value
         [SerializeField]
+        [Tooltip("The shader property Reference value")]
         private string _seedsPlantedParameter = "Growth Override";
 
         [SerializeField]

@@ -9,7 +9,9 @@ namespace pdxpartyparrot.Core.Effects
 {
     public class BlendShader : MonoBehaviour
     {
+        // NOTE: this is the shader property Reference value, not the Name value
         [SerializeField]
+        [Tooltip("The shader property Reference value")]
         private string _parameter = "BlendPct";
 
         public string Parameter => _parameter;
