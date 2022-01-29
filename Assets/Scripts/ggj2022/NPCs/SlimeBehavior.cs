@@ -53,6 +53,10 @@ namespace pdxpartyparrot.ggj2022.NPCs
 
         [SerializeField]
         [ReadOnly]
+        private string _areaId;
+
+        [SerializeField]
+        [ReadOnly]
         private bool _hasSeed;
 
         public bool HasSeed => _hasSeed;
@@ -120,6 +124,11 @@ namespace pdxpartyparrot.ggj2022.NPCs
             base.Initialize(behaviorData);
 
             _seedModel.SetActive(false);
+        }
+
+        public void SetAreaId(string areaId)
+        {
+            _areaId = areaId;
         }
 
         public void GiveSeed()

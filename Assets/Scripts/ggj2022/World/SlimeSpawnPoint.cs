@@ -14,13 +14,14 @@ namespace pdxpartyparrot.ggj2022.World
         [SerializeField]
         private int _seedCount = 1;
 
-        public int SeedCount => _seedCount;
+        [SerializeField]
+        private string _areaId;
 
         #region Unity Lifecycle
 
         private void Awake()
         {
-            Assert.IsTrue(SpawnAmount.Min >= SeedCount);
+            Assert.IsTrue(SpawnAmount.Min >= _seedCount);
         }
 
         #endregion
@@ -31,12 +32,14 @@ namespace pdxpartyparrot.ggj2022.World
 
             int seedCount = 0;
             foreach(Actor actor in actors) {
-                if(seedCount >= SeedCount) {
-                    break;
+                Slime slime = actor as Slime;
+                if(null == slime) {
+                    continue;
                 }
 
-                Slime slime = actor as Slime;
-                if(null != slime) {
+                slime.SlimeBehavior.SetAreaId(_areaId);
+
+                if(seedCount < _seedCount) {
                     slime.SlimeBehavior.GiveSeed();
                     seedCount++;
                 }
