@@ -1,5 +1,7 @@
 using System;
 
+using Cinemachine;
+
 using pdxpartyparrot.Core.World;
 using pdxpartyparrot.Game.Characters.Players;
 using pdxpartyparrot.ggj2022.Camera;
@@ -9,6 +11,7 @@ using UnityEngine.Assertions;
 
 namespace pdxpartyparrot.ggj2022.Players
 {
+    [RequireComponent(typeof(CinemachineImpulseSource))]
     public sealed class Player : Player25D
     {
         public PlayerBehavior GamePlayerBehavior => (PlayerBehavior)PlayerBehavior;

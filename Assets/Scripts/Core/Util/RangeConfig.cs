@@ -1,20 +1,24 @@
 using System;
 
 using UnityEngine;
+using Unity.VisualScripting;
 
 namespace pdxpartyparrot.Core.Util
 {
+    [Inspectable]
     [Serializable]
     public struct IntRangeConfig
     {
         [SerializeField]
         private int _min;
 
+        [Inspectable]
         public int Min => _min;
 
         [SerializeField]
         private int _max;
 
+        [Inspectable]
         public int Max => _max;
 
         public bool Valid => Min <= Max;
@@ -42,18 +46,30 @@ namespace pdxpartyparrot.Core.Util
         }
     }
 
+    [Inspectable]
     [Serializable]
     public struct FloatRangeConfig
     {
         [SerializeField]
         private float _min;
 
-        public float Min => _min;
+        [Inspectable]
+        public float Min
+        {
+            get => _min;
+            set => _min = value;
+        }
 
         [SerializeField]
         private float _max;
 
-        public float Max => _max;
+
+        [Inspectable]
+        public float Max
+        {
+            get => _max;
+            set => _max = value;
+        }
 
         public bool Valid => Min <= Max;
 
