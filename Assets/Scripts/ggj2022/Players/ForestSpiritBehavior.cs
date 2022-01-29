@@ -1,15 +1,10 @@
-using System;
-
 using pdxpartyparrot.Core.DebugMenu;
-using pdxpartyparrot.Core.Effects;
 using pdxpartyparrot.Core.Effects.EffectTriggerComponents;
 using pdxpartyparrot.Core.Util;
 using pdxpartyparrot.Core.World;
 using pdxpartyparrot.Game.Characters;
 using pdxpartyparrot.Game.Characters.Players.BehaviorComponents;
-using pdxpartyparrot.Game.Cinematics;
 using pdxpartyparrot.Game.Interactables;
-using pdxpartyparrot.ggj2022.Data;
 using pdxpartyparrot.ggj2022.Data.Players;
 using pdxpartyparrot.ggj2022.NPCs;
 using pdxpartyparrot.ggj2022.World;
@@ -77,18 +72,6 @@ namespace pdxpartyparrot.ggj2022.Players
 
         public bool HasSeeds => SeedCount > 0;
 
-        [Space(10)]
-
-        #region Effects
-
-        [SerializeField]
-        private EffectTrigger _plantEffect;
-
-        #endregion
-
-        [SerializeField]
-        private RumbleEffectTriggerComponent[] _rumbleEffects;
-
         private Interactables _interactables;
 
         private DebugMenuNode _debugMenuNode;
@@ -113,15 +96,6 @@ namespace pdxpartyparrot.ggj2022.Players
         }
 
         #endregion
-
-        public override void Initialize(CharacterBehavior behavior)
-        {
-            base.Initialize(behavior);
-
-            foreach(RumbleEffectTriggerComponent rumble in _rumbleEffects) {
-                rumble.PlayerInput = GamePlayerBehavior.Player.PlayerInputHandler.InputHelper;
-            }
-        }
 
         private void Reset()
         {
@@ -192,7 +166,7 @@ namespace pdxpartyparrot.ggj2022.Players
             planter.PlantSeed();
             _interactables.RemoveInteractable(planter);
 
-            _plantEffect.Trigger();
+            GamePlayerBehavior.GamePlayer.TriggerScriptEvent("Plant");
         }
 
         #region Actions
