@@ -222,9 +222,6 @@ MonoBehaviour:
   _spriteAnimationHelper: {fileID: 206218932779279504}
   _animator: {fileID: 0}
   _pauseAnimationOnPause: 1
-  _spawnEffect: {fileID: 0}
-  _respawnEffect: {fileID: 0}
-  _despawnEffect: {fileID: 0}
   _isAlive: 0
   _components: []
   _isGrounded: 0
@@ -530,8 +527,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"nest":{"source":"Macro","macro":null,"embed":null}}'
-    _objectReferences: []
+    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
+    _objectReferences:
+    - {fileID: 11400000, guid: 8d2adcc2d07553b4c9ae8da3eacba0f2, type: 2}
 --- !u!114 &7573319532028258060
 MonoBehaviour:
   m_ObjectHideFlags: 0

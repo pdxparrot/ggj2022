@@ -311,14 +311,9 @@ namespace pdxpartyparrot.Game.Characters
 
             RunOnComponents(c => c.OnSpawn(spawnpoint));
 
-            return false;
-        }
-
-        protected override void OnSpawnComplete()
-        {
-            base.OnSpawnComplete();
-
             OnIdle();
+
+            return false;
         }
 
         public override bool OnReSpawn(SpawnPoint spawnpoint)
@@ -327,14 +322,9 @@ namespace pdxpartyparrot.Game.Characters
 
             RunOnComponents(c => c.OnReSpawn(spawnpoint));
 
-            return false;
-        }
-
-        protected override void OnReSpawnComplete()
-        {
-            base.OnReSpawnComplete();
-
             OnIdle();
+
+            return false;
         }
 
         public override bool OnDeSpawn()

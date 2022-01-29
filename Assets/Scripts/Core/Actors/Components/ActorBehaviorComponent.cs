@@ -4,7 +4,6 @@ using JetBrains.Annotations;
 
 using pdxpartyparrot.Core.Animation;
 using pdxpartyparrot.Core.Data.Actors.Components;
-using pdxpartyparrot.Core.Effects;
 using pdxpartyparrot.Core.Util;
 using pdxpartyparrot.Core.World;
 
@@ -67,35 +66,6 @@ namespace pdxpartyparrot.Core.Actors.Components
         private bool _pauseAnimationOnPause = true;
 
         protected bool PauseAnimationOnPause => _pauseAnimationOnPause;
-
-        #endregion
-
-        [Space(10)]
-
-        #region Effects
-
-        [Header("Actor Effects")]
-
-        [SerializeField]
-        [CanBeNull]
-        private EffectTrigger _spawnEffect;
-
-        [CanBeNull]
-        protected virtual EffectTrigger SpawnEffect => _spawnEffect;
-
-        [SerializeField]
-        [CanBeNull]
-        private EffectTrigger _respawnEffect;
-
-        [CanBeNull]
-        protected virtual EffectTrigger RespawnEffect => _respawnEffect;
-
-        [SerializeField]
-        [CanBeNull]
-        private EffectTrigger _despawnEffect;
-
-        [CanBeNull]
-        protected virtual EffectTrigger DespawnEffect => _despawnEffect;
 
         #endregion
 
@@ -176,35 +146,21 @@ namespace pdxpartyparrot.Core.Actors.Components
         // NOTE: overriding this should always return false
         public override bool OnSpawn(SpawnPoint spawnpoint)
         {
-            if(null != SpawnEffect) {
-                SpawnEffect.Trigger(OnSpawnComplete);
-            } else {
-                OnSpawnComplete();
-            }
+            Owner.TriggerScriptEvent("OnSpawn");
+
+            _isAlive = true;
 
             return false;
-        }
-
-        protected virtual void OnSpawnComplete()
-        {
-            _isAlive = true;
         }
 
         // NOTE: overriding this should always return false
         public override bool OnReSpawn(SpawnPoint spawnpoint)
         {
-            if(null != RespawnEffect) {
-                RespawnEffect.Trigger(OnReSpawnComplete);
-            } else {
-                OnReSpawnComplete();
-            }
+            Owner.TriggerScriptEvent("OnReSpawn");
+
+            _isAlive = true;
 
             return false;
-        }
-
-        protected virtual void OnReSpawnComplete()
-        {
-            _isAlive = true;
         }
 
         // NOTE: overriding this should always return false
@@ -212,17 +168,9 @@ namespace pdxpartyparrot.Core.Actors.Components
         {
             _isAlive = false;
 
-            if(null != DespawnEffect) {
-                DespawnEffect.Trigger(OnDeSpawnComplete);
-            } else {
-                OnDeSpawnComplete();
-            }
+            Owner.TriggerScriptEvent("OnDeSpawn");
 
             return false;
-        }
-
-        protected virtual void OnDeSpawnComplete()
-        {
         }
 
         // NOTE: overriding this should always return false
