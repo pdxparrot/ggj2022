@@ -10,6 +10,7 @@ using pdxpartyparrot.Core.World;
 using pdxpartyparrot.Game.Characters.NPCs;
 using pdxpartyparrot.ggj2022.Data.NPCs;
 using pdxpartyparrot.ggj2022.Players;
+using pdxpartyparrot.ggj2022.World;
 
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -124,11 +125,6 @@ namespace pdxpartyparrot.ggj2022.NPCs
             base.Initialize(behaviorData);
 
             _seedModel.SetActive(false);
-        }
-
-        public void SetAreaId(string areaId)
-        {
-            _areaId = areaId;
         }
 
         public void GiveSeed()
@@ -292,6 +288,9 @@ namespace pdxpartyparrot.ggj2022.NPCs
         public override bool OnSpawn(SpawnPoint spawnpoint)
         {
             base.OnSpawn(spawnpoint);
+
+            SlimeSpawnPoint slimeSpawnPoint = (SlimeSpawnPoint)spawnpoint;
+            _areaId = slimeSpawnPoint.AreaId;
 
             GameManager.Instance.EnemySpawned(_areaId);
 

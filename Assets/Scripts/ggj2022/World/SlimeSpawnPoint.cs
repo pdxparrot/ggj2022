@@ -17,6 +17,8 @@ namespace pdxpartyparrot.ggj2022.World
         [SerializeField]
         private string _areaId;
 
+        public string AreaId => _areaId;
+
         #region Unity Lifecycle
 
         private void Awake()
@@ -36,8 +38,6 @@ namespace pdxpartyparrot.ggj2022.World
                 if(null == slime) {
                     continue;
                 }
-
-                slime.SlimeBehavior.SetAreaId(_areaId);
 
                 if(seedCount < _seedCount) {
                     slime.SlimeBehavior.GiveSeed();

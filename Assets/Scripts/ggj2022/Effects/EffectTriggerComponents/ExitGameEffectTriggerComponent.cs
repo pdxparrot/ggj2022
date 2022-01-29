@@ -1,7 +1,4 @@
 using pdxpartyparrot.Core.Effects.EffectTriggerComponents;
-using pdxpartyparrot.ggj2022;
-
-using UnityEngine;
 
 namespace pdxpartyparrot.ggj2022.Effects.EffectTriggerComponents
 {

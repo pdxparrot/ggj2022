@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 using UnityEngine;
@@ -13,6 +14,12 @@ namespace pdxpartyparrot.ggj2022
 {
     public sealed class GameManager : GameManager<GameManager>
     {
+        #region Events
+
+        public event EventHandler<TransitionUpdateEventArgs> TransitionUpdateEvent;
+
+        #endregion
+
         public GameData GameGameData => (GameData)GameData;
 
         public GameViewer Viewer { get; private set; }
@@ -30,6 +37,8 @@ namespace pdxpartyparrot.ggj2022
         private int _stompedEnemyCount;
 
         private readonly Dictionary<string, int> _areaStompedEnemyCount = new Dictionary<string, int>();
+
+        private readonly Dictionary<string, int> _areaPlantersCount = new Dictionary<string, int>();
 
         [SerializeField]
         [ReadOnly]
@@ -71,13 +80,13 @@ namespace pdxpartyparrot.ggj2022
             _stompedEnemyCount = 0;
             _areaStompedEnemyCount.Clear();
 
+            // don't reset the number of planters, those are static
+
             _totalSeedCount = 0;
             _collectedSeedCount = 0;
 
             _plantedSeedCount = 0;
             _areaPlantedSeedCount.Clear();
-
-            UpdateAreaTransitions();
         }
 
         public void Exit()
@@ -85,9 +94,15 @@ namespace pdxpartyparrot.ggj2022
             GameOver();
         }
 
-        private void UpdateAreaTransitions()
+        private void UpdateAreaTransitions(string areaId)
         {
-            // TODO: trigger event for transition effect
+            TransitionUpdateEvent?.Invoke(this, new TransitionUpdateEventArgs(
+                areaId,
+                _areaEnemyCount.GetValueOrDefault(areaId),
+                _areaStompedEnemyCount.GetValueOrDefault(areaId),
+                _areaPlantedSeedCount.GetValueOrDefault(areaId),
+                _areaPlantersCount.GetValueOrDefault(areaId)
+            ));
         }
 
         #region Player
@@ -112,23 +127,37 @@ namespace pdxpartyparrot.ggj2022
 
         public void EnemySpawned(string areaId)
         {
+            Debug.Log($"Enemy spawned in area {areaId}");
+
             _totalEnemyCount++;
             _areaEnemyCount[areaId] = _areaEnemyCount.GetValueOrDefault(areaId) + 1;
 
-            UpdateAreaTransitions();
+            UpdateAreaTransitions(areaId);
         }
 
         public void EnemyStomped(string areaId)
         {
+            Debug.Log($"Enemy stomped in area {areaId}");
+
             _stompedEnemyCount++;
             _areaStompedEnemyCount[areaId] = _areaStompedEnemyCount.GetValueOrDefault(areaId) + 1;
 
-            UpdateAreaTransitions();
+            UpdateAreaTransitions(areaId);
         }
 
         #endregion
 
         #region Seeds
+
+        public void RegisterPlanter(string areaId)
+        {
+            _areaPlantersCount[areaId] = _areaPlantersCount.GetValueOrDefault(areaId) + 1;
+        }
+
+        public void UnRegisterPlanter(string areaId)
+        {
+            _areaPlantersCount[areaId] = _areaPlantersCount.GetValueOrDefault(areaId) - 1;
+        }
 
         public void SeedSpawned()
         {
@@ -144,10 +173,12 @@ namespace pdxpartyparrot.ggj2022
 
         public void SeedPlanted(string areaId)
         {
+            Debug.Log($"Seed planted in area {areaId}");
+
             _plantedSeedCount++;
             _areaPlantedSeedCount[areaId] = _areaPlantedSeedCount.GetValueOrDefault(areaId) + 1;
 
-            UpdateAreaTransitions();
+            UpdateAreaTransitions(areaId);
 
             GameUIManager.Instance.GameGameUI.PlayerHUD.SeedPlanted();
         }

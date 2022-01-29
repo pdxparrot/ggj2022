@@ -30,6 +30,15 @@ namespace pdxpartyparrot.ggj2022.World
         private void Awake()
         {
             GetComponent<Collider>().isTrigger = true;
+
+            GameManager.Instance.RegisterPlanter(_areaId);
+        }
+
+        private void OnDestroy()
+        {
+            if(GameManager.HasInstance) {
+                GameManager.Instance.UnRegisterPlanter(_areaId);
+            }
         }
 
         #endregion
