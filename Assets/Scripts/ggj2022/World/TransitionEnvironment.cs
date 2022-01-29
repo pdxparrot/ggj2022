@@ -45,7 +45,7 @@ namespace pdxpartyparrot
 
 
         // Update is called once per frame
-        void Update()
+        /*void Update()
         {
             //slimes = GameObject.FindGameObjectsWithTag("Slime");
             slime_container = GameObject.Find("Enemies");
@@ -71,17 +71,17 @@ namespace pdxpartyparrot
 
 
 
-                /*                foreach(GameObject sprite in env_sprites) {
-                                    Renderer sprite_renderer = sprite.GetComponent<Renderer>();
-                                    sprite_renderer.GetPropertyBlock(_prop_block);
-                                    _prop_block.SetFloat("_Fire_Ash_Blend", 1f);
-                                    sprite_renderer.SetPropertyBlock(_prop_block);
-                                }*/
+                //                                foreach(GameObject sprite in env_sprites) {
+                //                                    Renderer sprite_renderer = sprite.GetComponent<Renderer>();
+                //                                    sprite_renderer.GetPropertyBlock(_prop_block);
+                //                                    _prop_block.SetFloat("_Fire_Ash_Blend", 1f);
+                //                                    sprite_renderer.SetPropertyBlock(_prop_block);
+                //                                }
 
 
             }
 
 
-        }
+        }*/
     }
 }
