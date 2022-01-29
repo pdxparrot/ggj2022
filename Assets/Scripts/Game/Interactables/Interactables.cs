@@ -117,13 +117,13 @@ namespace pdxpartyparrot.Game.Interactables
 
         public bool HasInteractables<T>() where T : IInteractable
         {
-            var interactables = _interactables.GetOrDefault(typeof(T));
+            var interactables = _interactables.GetValueOrDefault(typeof(T));
             return null != interactables && interactables.Count > 0;
         }
 
         public bool HasInteractable<T>(T interactable) where T : IInteractable
         {
-            var interactables = _interactables.GetOrDefault(typeof(T));
+            var interactables = _interactables.GetValueOrDefault(typeof(T));
             if(null == interactables) {
                 return false;
             }

@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-using pdxpartyparrot.Core.Collections;
 using pdxpartyparrot.Core.Data.NodeEditor;
 
 using UnityEditor.Experimental.GraphView;
@@ -73,13 +72,13 @@ namespace pdxpartyparrot.Core.Editor.NodeEditor
         {
             Debug.LogWarning($"TODO: add edge from 0x{(int)outputNodeId:X}:{outputPortId} to 0x{(int)inputNodeId:X}:{inputPortId}");
 
-            NodeData outputNode = _nodes.GetOrDefault(outputNodeId);
+            NodeData outputNode = _nodes.GetValueOrDefault(outputNodeId);
             if(null == outputNode) {
                 Debug.LogWarning($"Invalid edge output node {outputNodeId:X}");
                 return;
             }
 
-            NodeData inputNode = _nodes.GetOrDefault(inputNodeId);
+            NodeData inputNode = _nodes.GetValueOrDefault(inputNodeId);
             if(null == inputNode) {
                 Debug.LogWarning($"Invalid edge input node {inputNodeId:X}");
                 return;
@@ -90,13 +89,13 @@ namespace pdxpartyparrot.Core.Editor.NodeEditor
         {
             Debug.LogWarning($"TODO: create edge from 0x{(int)outputNodeId:X}:{outputPortId} to 0x{(int)inputNodeId:X}:{inputPortId}");
 
-            NodeData outputNode = _nodes.GetOrDefault(outputNodeId);
+            NodeData outputNode = _nodes.GetValueOrDefault(outputNodeId);
             if(null == outputNode) {
                 Debug.LogWarning($"Invalid edge output node {outputNodeId:X}");
                 return;
             }
 
-            NodeData inputNode = _nodes.GetOrDefault(inputNodeId);
+            NodeData inputNode = _nodes.GetValueOrDefault(inputNodeId);
             if(null == inputNode) {
                 Debug.LogWarning($"Invalid edge input node {inputNodeId:X}");
                 return;

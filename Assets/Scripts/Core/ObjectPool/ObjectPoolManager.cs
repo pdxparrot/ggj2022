@@ -225,7 +225,7 @@ namespace pdxpartyparrot.Core.ObjectPool
 
             Debug.Log($"Initializing {(isNetwork ? "network" : "local")} object pool of size {size} for {poolTag} (allowExpand={allowExpand})");
 
-            ObjectPool objectPool = _objectPools.GetOrDefault(poolTag);
+            ObjectPool objectPool = _objectPools.GetValueOrDefault(poolTag);
             if(null != objectPool) {
                 return;
             }
@@ -240,7 +240,7 @@ namespace pdxpartyparrot.Core.ObjectPool
 
         public void DestroyPool(string poolTag)
         {
-            ObjectPool objectPool = _objectPools.GetOrDefault(poolTag);
+            ObjectPool objectPool = _objectPools.GetValueOrDefault(poolTag);
             if(null == objectPool) {
                 return;
             }
@@ -259,7 +259,7 @@ namespace pdxpartyparrot.Core.ObjectPool
 
         public void ExpandPool(string poolTag, int amount)
         {
-            ObjectPool pool = _objectPools.GetOrDefault(poolTag);
+            ObjectPool pool = _objectPools.GetValueOrDefault(poolTag);
             if(null == pool) {
                 Debug.LogWarning($"No pool for tag {poolTag}!");
                 return;
@@ -269,7 +269,7 @@ namespace pdxpartyparrot.Core.ObjectPool
 
         public void EnsurePoolSize(string poolTag, int size)
         {
-            ObjectPool pool = _objectPools.GetOrDefault(poolTag);
+            ObjectPool pool = _objectPools.GetValueOrDefault(poolTag);
             if(null == pool) {
                 Debug.LogWarning($"No pool for tag {poolTag}!");
                 return;
@@ -280,7 +280,7 @@ namespace pdxpartyparrot.Core.ObjectPool
         [CanBeNull]
         public PooledObject GetPooledObject(string poolTag, Transform parent = null, bool activate = true)
         {
-            ObjectPool pool = _objectPools.GetOrDefault(poolTag);
+            ObjectPool pool = _objectPools.GetValueOrDefault(poolTag);
             if(null == pool) {
                 Debug.LogWarning($"No pool for tag {poolTag}!");
                 return null;
@@ -300,7 +300,7 @@ namespace pdxpartyparrot.Core.ObjectPool
 
         public void Recycle(PooledObject pooledObject)
         {
-            ObjectPool pool = _objectPools.GetOrDefault(pooledObject.Tag);
+            ObjectPool pool = _objectPools.GetValueOrDefault(pooledObject.Tag);
             if(null == pool) {
                 Debug.LogWarning($"No pool for recycled object {pooledObject.name}, destroying...");
                 Destroy(pooledObject.gameObject);

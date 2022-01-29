@@ -334,7 +334,7 @@ namespace pdxpartyparrot.Core.Time
 
         public bool RemoveNamedTimer(string timerName)
         {
-            Timer timer = _namedTimers.GetOrDefault(timerName);
+            Timer timer = _namedTimers.GetValueOrDefault(timerName);
             if(null == timer) {
                 return false;
             }
@@ -382,7 +382,7 @@ namespace pdxpartyparrot.Core.Time
 
         public bool RemoveNamedStopwatch(string stopwatchName)
         {
-            Stopwatch stopwatch = _namedStopwatches.GetOrDefault(stopwatchName);
+            Stopwatch stopwatch = _namedStopwatches.GetValueOrDefault(stopwatchName);
             if(null == stopwatch) {
                 return false;
             }

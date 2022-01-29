@@ -26,7 +26,7 @@ namespace pdxpartyparrot.Core.UI
 
         public string GetText(string key)
         {
-            return _stringTable.GetOrDefault(key, $"MISSING TEXT '{key}'");
+            return _stringTable.GetValueOrDefault(key, $"MISSING TEXT '{key}'");
         }
     }
 }

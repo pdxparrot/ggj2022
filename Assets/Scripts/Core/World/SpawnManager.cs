@@ -148,7 +148,7 @@ namespace pdxpartyparrot.Core.World
                 return null;
             }
 
-            var spawnPointType = _spawnTypes.GetOrDefault(tag);
+            var spawnPointType = _spawnTypes.GetValueOrDefault(tag);
             return spawnPoints.GetSpawnPoint(spawnPointType.SpawnMethod);
         }
 

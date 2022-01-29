@@ -177,7 +177,7 @@ namespace pdxpartyparrot.Game
 
                 foreach(string extra in _extras) {
                     StringBuilder extraVal = columns.GetOrAdd(extra);
-                    extraVal.AppendLine($"{highScore.extra.GetOrDefault(extra)}\t");
+                    extraVal.AppendLine($"{highScore.extra.GetValueOrDefault(extra)}\t");
                 }
 
                 i++;
@@ -205,7 +205,7 @@ namespace pdxpartyparrot.Game
                     builder.Append($"{highScore.playerCount}");
 
                     foreach(string extra in _extras) {
-                        builder.Append($"\t{highScore.extra.GetOrDefault(extra)}");
+                        builder.Append($"\t{highScore.extra.GetValueOrDefault(extra)}");
                     }
 
                     GUILayout.Label(builder.ToString());

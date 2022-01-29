@@ -70,7 +70,7 @@ namespace pdxpartyparrot.Core.Actors
 
         public IReadOnlyCollection<Actor> GetActors<T>() where T : Actor
         {
-            return _actors.GetOrDefault(typeof(T));
+            return _actors.GetValueOrDefault(typeof(T));
         }
 
         private IEnumerator ThinkRoutine()

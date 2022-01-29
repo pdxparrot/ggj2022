@@ -4,7 +4,6 @@ using System.Collections.Generic;
 
 using JetBrains.Annotations;
 
-using pdxpartyparrot.Core.Collections;
 using pdxpartyparrot.Core.Effects.EffectTriggerComponents;
 using pdxpartyparrot.Core.Util;
 
@@ -104,7 +103,7 @@ namespace pdxpartyparrot.Core.Effects
 
         public int GetInt(string name)
         {
-            return Convert.ToInt32(_context.GetOrDefault(name));
+            return Convert.ToInt32(_context.GetValueOrDefault(name));
         }
 
         public void SetInt(string name, int value)
@@ -114,7 +113,7 @@ namespace pdxpartyparrot.Core.Effects
 
         public float GetFloat(string name)
         {
-            return Convert.ToSingle(_context.GetOrDefault(name));
+            return Convert.ToSingle(_context.GetValueOrDefault(name));
         }
 
         public void SetFloat(string name, float value)
@@ -124,7 +123,7 @@ namespace pdxpartyparrot.Core.Effects
 
         public string GetString(string name)
         {
-            return _context.GetOrDefault(name)?.ToString() ?? string.Empty;
+            return _context.GetValueOrDefault(name)?.ToString() ?? string.Empty;
         }
 
         public void SetString(string name, string value)

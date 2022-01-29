@@ -43,14 +43,14 @@ namespace pdxpartyparrot.Core
         [CanBeNull]
         public object GetValue(string key)
         {
-            return _data.GetOrDefault(key);
+            return _data.GetValueOrDefault(key);
         }
 
         // NOTE: this isn't type checked, so it can crash if an invalid typecast is done
         [CanBeNull]
         public T GetValue<T>(string key)
         {
-            return (T)_data.GetOrDefault(key);
+            return (T)_data.GetValueOrDefault(key);
         }
 
         #endregion
