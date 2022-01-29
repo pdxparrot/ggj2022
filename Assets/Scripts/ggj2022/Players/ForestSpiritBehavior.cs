@@ -82,9 +82,6 @@ namespace pdxpartyparrot.ggj2022.Players
         #region Effects
 
         [SerializeField]
-        private EffectTrigger _damagedEffect;
-
-        [SerializeField]
         private EffectTrigger _deathEffect;
 
         [SerializeField]
@@ -166,7 +163,7 @@ namespace pdxpartyparrot.ggj2022.Players
                 GameManager.Instance.PlayerDamaged(_health);
 
                 GamePlayerBehavior.Animator.SetTrigger(_data.DamagedParam);
-                _damagedEffect.Trigger();
+                GamePlayerBehavior.GamePlayer.TriggerScriptEvent("Damaged");
             }
         }
 
