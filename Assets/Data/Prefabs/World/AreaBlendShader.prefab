@@ -46,8 +46,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _parameter: _Fire_Ash_Blend
   _renderers: []
-  _lastPercent: 0
-  _dirty: 0
+  _lerpSpeed: 0.75
+  _currentPercent: 0
+  _targetPercent: 0
   _areaId: 
   _seedsPlantedParameter: _Growth_Override
-  _lastSeedsPlantedPercent: 0
+  _currentSeedsPlantedPercent: 0
+  _targetSeedsPlantedPercent: 0

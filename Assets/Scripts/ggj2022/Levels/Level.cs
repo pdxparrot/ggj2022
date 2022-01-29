@@ -1,10 +1,9 @@
 using System;
-using System.Collections.Generic;
 
 using JetBrains.Annotations;
 
-using pdxpartyparrot.Core.World;
 using pdxpartyparrot.Game.Level;
+using pdxpartyparrot.ggj2022.NPCs;
 
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -27,17 +26,6 @@ namespace pdxpartyparrot.ggj2022.Level
             }
         }
 
-        private void SpawnEnemies()
-        {
-            IReadOnlyCollection<SpawnPoint> spawnPoints = SpawnManager.Instance.GetSpawnPoints(GameManager.Instance.GameGameData.SlimeSpawnTag);
-
-            Debug.Log($"Spawning slimes from {spawnPoints.Count} spawners");
-
-            foreach(SpawnPoint spawnPoint in spawnPoints) {
-                spawnPoint.SpawnNPCPrefab(GameManager.Instance.GameGameData.SlimePrefab, GameManager.Instance.GameGameData.SlimeBehaviorData, _enemyContainer.transform);
-            }
-        }
-
         #region Event Handlers
 
         protected override void GameReadyEventHandler(object sender, EventArgs args)
@@ -47,7 +35,7 @@ namespace pdxpartyparrot.ggj2022.Level
             Assert.IsNull(_enemyContainer);
             _enemyContainer = new GameObject("Enemies");
 
-            SpawnEnemies();
+            NPCManager.Instance.SpawnEnemies(_enemyContainer.transform);
 
             GameManager.Instance.LevelEntered();
         }

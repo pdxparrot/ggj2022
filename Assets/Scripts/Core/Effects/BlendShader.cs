@@ -12,7 +12,7 @@ namespace pdxpartyparrot.Core.Effects
         // NOTE: this is the shader property Reference value, not the Name value
         [SerializeField]
         [Tooltip("The shader property Reference value")]
-        private string _parameter = "BlendPct";
+        private string _parameter = "_BlendPct";
 
         public string Parameter => _parameter;
 
@@ -22,20 +22,19 @@ namespace pdxpartyparrot.Core.Effects
         protected IReadOnlyCollection<Renderer> Renderers => _renderers;
 
         [SerializeField]
-        [ReadOnly]
-        private float _lastPercent;
+        private float _lerpSpeed;
 
-        public float LastPercent => _lastPercent;
+        protected float LerpSpeed => _lerpSpeed;
+
+        protected bool IsLerpParameter => _lerpSpeed > 0.0f;
 
         [SerializeField]
         [ReadOnly]
-        private bool _dirty;
+        private float _currentPercent;
 
-        public bool IsDirty
-        {
-            get => _dirty;
-            protected set => _dirty = value;
-        }
+        [SerializeField]
+        [ReadOnly]
+        private float _targetPercent;
 
         #region Unity Lifecycle
 
@@ -51,22 +50,30 @@ namespace pdxpartyparrot.Core.Effects
 
         protected virtual void Update()
         {
-            if(IsDirty) {
-                foreach(Renderer renderer in _renderers) {
-                    foreach(Material material in renderer.materials) {
-                        material.SetFloat(_parameter, _lastPercent);
-                    }
-                }
-                IsDirty = false;
+            if(_currentPercent != _targetPercent) {
+                float dt = UnityEngine.Time.deltaTime;
+                _currentPercent = LerpParameter(_parameter, _currentPercent, _targetPercent, LerpSpeed * dt);
             }
         }
 
         #endregion
 
-        public void SetPercent(float percent)
+        public void SetTargetPercent(float percent)
         {
-            _lastPercent = percent;
-            IsDirty = true;
+            _targetPercent = percent;
+        }
+
+        protected float LerpParameter(string parameter, float current, float target, float distance)
+        {
+            float value = IsLerpParameter ? Mathf.MoveTowards(current, target, distance) : target;
+
+            foreach(Renderer renderer in _renderers) {
+                foreach(Material material in renderer.materials) {
+                    material.SetFloat(parameter, value);
+                }
+            }
+
+            return value;
         }
     }
 }

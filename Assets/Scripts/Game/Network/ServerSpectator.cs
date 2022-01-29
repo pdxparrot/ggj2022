@@ -34,6 +34,12 @@ namespace pdxpartyparrot.Game.Network
         private float _mouseSensitivity = 0.5f;
 
         [SerializeField]
+        private float _moveSpeed = 20.0f;
+
+        [SerializeField]
+        private float _lookSpeed = 20.0f;
+
+        [SerializeField]
         [ReadOnly]
         private Vector3 _lastControllerMove;
 
@@ -46,7 +52,7 @@ namespace pdxpartyparrot.Game.Network
         [CanBeNull]
         private ServerSpectatorViewer _viewer;
 
-        #region Unity Lifecycle
+#region Unity Lifecycle
 
         private void Awake()
         {
@@ -70,13 +76,13 @@ namespace pdxpartyparrot.Game.Network
         {
             float dt = Time.deltaTime;
 
-            //FollowTarget.LastLookAxes = Vector3.Lerp(FollowTarget.LastLookAxes, _lastControllerLook, dt * 20.0f);
+            //FollowTarget.LastLookAxes = Vector3.MoveTowards(FollowTarget.LastLookAxes, _lastControllerLook, dt * _lookSpeed);
 
             Quaternion rotation = null != _viewer ? Quaternion.AngleAxis(_viewer.transform.localEulerAngles.y, Vector3.up) : transform.rotation;
-            transform.position = Vector3.Lerp(transform.position, transform.position + (rotation * _lastControllerMove), dt * 20.0f);
+            transform.position = Vector3.MoveTowards(transform.position, transform.position + (rotation * _lastControllerMove), dt * _moveSpeed);
         }
 
-        #endregion
+#endregion
 
         private bool IsInputAllowed(InputAction.CallbackContext ctx)
         {
@@ -89,7 +95,7 @@ namespace pdxpartyparrot.Game.Network
             return true;
         }
 
-        #region IServerSpectatorActions
+#region IServerSpectatorActions
 
         public void OnMoveForward(InputAction.CallbackContext context)
         {
@@ -168,7 +174,7 @@ namespace pdxpartyparrot.Game.Network
             }
         }
 
-        #endregion
+#endregion
     }
 }
 #endif

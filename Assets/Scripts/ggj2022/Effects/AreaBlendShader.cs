@@ -13,11 +13,15 @@ namespace pdxpartyparrot.ggj2022.Effects
         // NOTE: this is the shader property Reference value, not the Name value
         [SerializeField]
         [Tooltip("The shader property Reference value")]
-        private string _seedsPlantedParameter = "Growth Override";
+        private string _seedsPlantedParameter = "_Growth_Override";
 
         [SerializeField]
         [ReadOnly]
-        private float _lastSeedsPlantedPercent;
+        private float _currentSeedsPlantedPercent;
+
+        [SerializeField]
+        [ReadOnly]
+        private float _targetSeedsPlantedPercent;
 
         #region Unity Lifecycle
 
@@ -35,14 +39,11 @@ namespace pdxpartyparrot.ggj2022.Effects
 
         protected override void Update()
         {
-            if(IsDirty) {
+            if(_currentSeedsPlantedPercent != _targetSeedsPlantedPercent) {
                 //Debug.Log($"Updating area {_areaId} blend ('{Parameter}' => {LastPercent}, '{_seedsPlantedParameter}' => {_lastSeedsPlantedPercent})");
 
-                foreach(Renderer renderer in Renderers) {
-                    foreach(Material material in renderer.materials) {
-                        material.SetFloat(_seedsPlantedParameter, _lastSeedsPlantedPercent);
-                    }
-                }
+                float dt = Time.deltaTime;
+                _currentSeedsPlantedPercent = LerpParameter(_seedsPlantedParameter, _currentSeedsPlantedPercent, _targetSeedsPlantedPercent, LerpSpeed * dt);
             }
 
             base.Update();
@@ -58,8 +59,8 @@ namespace pdxpartyparrot.ggj2022.Effects
                 return;
             }
 
-            _lastSeedsPlantedPercent = args.SeedsPlantedTransitionPercent;
-            SetPercent(args.EnemiesStompedTransitionPercent);
+            _targetSeedsPlantedPercent = args.SeedsPlantedTransitionPercent;
+            SetTargetPercent(args.EnemiesStompedTransitionPercent);
         }
 
         #endregion

@@ -328,7 +328,7 @@ namespace pdxpartyparrot.ggj2022.NPCs
             Idle();
         }
 
-        private void Stomp(Player player)
+        public void Stomp(Player player)
         {
             SetState(State.Dead);
 

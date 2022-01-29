@@ -2,8 +2,8 @@ using System;
 
 using JetBrains.Annotations;
 
-using pdxpartyparrot.Core.World;
 using pdxpartyparrot.Game.Level;
+using pdxpartyparrot.ggj2022.NPCs;
 
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -25,7 +25,7 @@ namespace pdxpartyparrot.ggj2022.Level
         private void FixedUpdate()
         {
             if(Keyboard.current[_spawnEnemiesKey].wasPressedThisFrame) {
-                SpawnEnemies();
+                NPCManager.Instance.SpawnEnemies(_enemyContainer.transform);
             }
         }
 
@@ -39,12 +39,6 @@ namespace pdxpartyparrot.ggj2022.Level
                 Destroy(_enemyContainer);
                 _enemyContainer = null;
             }
-        }
-
-        private void SpawnEnemies()
-        {
-            SpawnPoint spawnPoint = SpawnManager.Instance.GetSpawnPoint(GameManager.Instance.GameGameData.SlimeSpawnTag);
-            spawnPoint.SpawnNPCPrefab(GameManager.Instance.GameGameData.SlimePrefab, GameManager.Instance.GameGameData.SlimeBehaviorData, _enemyContainer.transform);
         }
 
         #region Event Handlers
