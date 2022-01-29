@@ -82,9 +82,6 @@ namespace pdxpartyparrot.ggj2022.Players
         #region Effects
 
         [SerializeField]
-        private EffectTrigger _seedCollectedEffect;
-
-        [SerializeField]
         private EffectTrigger _damagedEffect;
 
         [SerializeField]
@@ -178,11 +175,11 @@ namespace pdxpartyparrot.ggj2022.Players
             GamePlayerBehavior.GamePlayer.TriggerScriptEvent("Stomp");
 
             if(enemy.HasSeed) {
-                _seedCollectedEffect.Trigger(() => {
-                    _seedCount++;
+                _seedCount++;
 
-                    GameManager.Instance.SeedCollected();
-                });
+                GameManager.Instance.SeedCollected();
+
+                GamePlayerBehavior.GamePlayer.TriggerScriptEvent("SeedCollected");
             }
         }
 
