@@ -16,6 +16,10 @@ namespace pdxpartyparrot.Core.Effects
         [ReadOnly]
         private float _lastPercent;
 
+        [SerializeField]
+        [ReadOnly]
+        private bool _dirty;
+
         #region Unity Lifecycle
 
         private void Awake()
@@ -27,8 +31,11 @@ namespace pdxpartyparrot.Core.Effects
 
         private void Update()
         {
-            foreach(Material material in _renderer.materials) {
-                material.SetFloat(_parameter, _lastPercent);
+            if(_dirty) {
+                foreach(Material material in _renderer.materials) {
+                    material.SetFloat(_parameter, _lastPercent);
+                }
+                _dirty = false;
             }
         }
 
@@ -37,6 +44,7 @@ namespace pdxpartyparrot.Core.Effects
         public void SetPercent(float percent)
         {
             _lastPercent = percent;
+            _dirty = true;
         }
     }
 }
