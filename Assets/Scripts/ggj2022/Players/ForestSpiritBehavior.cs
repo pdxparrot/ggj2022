@@ -82,9 +82,6 @@ namespace pdxpartyparrot.ggj2022.Players
         #region Effects
 
         [SerializeField]
-        private EffectTrigger _deathEffect;
-
-        [SerializeField]
         private EffectTrigger _plantEffect;
 
         #endregion
@@ -156,9 +153,9 @@ namespace pdxpartyparrot.ggj2022.Players
                 _health = 0;
 
                 GamePlayerBehavior.Animator.SetTrigger(_data.DeathParam);
-                _deathEffect.Trigger(() => {
-                    GameManager.Instance.PlayerDied();
-                });
+                GamePlayerBehavior.GamePlayer.TriggerScriptEvent("Death");
+
+                GameManager.Instance.PlayerDied();
             } else {
                 GameManager.Instance.PlayerDamaged(_health);
 

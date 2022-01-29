@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4304453184491432437}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4196986233960977908
 MonoBehaviour:
@@ -387,7 +387,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4304453184491432437}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2962178946570348762
 MonoBehaviour:
@@ -649,10 +649,8 @@ MonoBehaviour:
   _forestSpiritModel: {fileID: 7737092921670130951}
   _health: 0
   _seedCount: 0
-  _deathEffect: {fileID: 8393672271463279453}
   _plantEffect: {fileID: 2962178946570348762}
   _rumbleEffects:
-  - {fileID: 629102640669125616}
   - {fileID: 8845859859233808327}
 --- !u!1 &3334495655367124490
 GameObject:
@@ -985,7 +983,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4304453184491432437}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2031523933873079508
 MonoBehaviour:
@@ -1080,75 +1078,6 @@ MonoBehaviour:
     Velocity: {x: 0, y: 0, z: 0}
     AngularVelocity: {x: 0, y: 0, z: 0}
   _isComponentControlling: 0
---- !u!1 &7062294012126602642
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2938228964545104808}
-  - component: {fileID: 8393672271463279453}
-  - component: {fileID: 629102640669125616}
-  m_Layer: 10
-  m_Name: DeathEffect
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2938228964545104808
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7062294012126602642}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4304453184491432437}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8393672271463279453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7062294012126602642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: daf5168a56c699f25880d5c0271b9036, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _triggerOnComplete: []
-  _components:
-  - {fileID: 629102640669125616}
-  _isRunning: 0
-  _complete: 0
---- !u!114 &629102640669125616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7062294012126602642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6825c19d28d6046dca1f1c9f86c3869b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _rumbleConfig:
-    _seconds: 0.5
-    _lowFrequency: 0.5
-    _highFrequency: 0.5
-  _playerInput: {fileID: 0}
-  _waitForComplete: 0
-  _isPlaying: 0
 --- !u!1 &7230786802196544603
 GameObject:
   m_ObjectHideFlags: 0
@@ -1190,7 +1119,6 @@ Transform:
   - {fileID: 5180477152955345753}
   - {fileID: 1117771089735703445}
   - {fileID: 6573288779714759166}
-  - {fileID: 2938228964545104808}
   - {fileID: 3584453919185426547}
   - {fileID: 6756790906998304241}
   - {fileID: 7591720896372682287}
