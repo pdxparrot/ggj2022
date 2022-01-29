@@ -87,6 +87,8 @@ namespace pdxpartyparrot.ggj2022
 
             _plantedSeedCount = 0;
             _areaPlantedSeedCount.Clear();
+
+            UpdateAreaTransitions(string.Empty);
         }
 
         public void Exit()
@@ -98,8 +100,8 @@ namespace pdxpartyparrot.ggj2022
         {
             TransitionUpdateEvent?.Invoke(this, new TransitionUpdateEventArgs(
                 areaId,
-                _areaEnemyCount.GetValueOrDefault(areaId),
                 _areaStompedEnemyCount.GetValueOrDefault(areaId),
+                _areaEnemyCount.GetValueOrDefault(areaId),
                 _areaPlantedSeedCount.GetValueOrDefault(areaId),
                 _areaPlantersCount.GetValueOrDefault(areaId)
             ));

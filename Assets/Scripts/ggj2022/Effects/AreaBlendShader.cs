@@ -54,7 +54,7 @@ namespace pdxpartyparrot.ggj2022.Effects
 
         private void TransitionUpdateEventHandler(object sender, TransitionUpdateEventArgs args)
         {
-            if(args.AreaId != _areaId) {
+            if(args.AreaId != string.Empty && args.AreaId != _areaId) {
                 return;
             }
 
