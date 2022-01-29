@@ -20,8 +20,8 @@ namespace pdxpartyparrot.ggj2022
         {
             _areaId = areaId;
 
-            _enemiesStompedTransitionPercent = totalEnemies == 0 ? 0 : enemiesStomped / (float)totalEnemies;
-            _seedsPlantedTransitionPercent = totalPlanters == 0 ? 0 : seedsPlanted / (float)totalPlanters;
+            _enemiesStompedTransitionPercent = totalEnemies == 0 ? 1.0f : enemiesStomped / (float)totalEnemies;
+            _seedsPlantedTransitionPercent = totalPlanters == 0 ? 1.0f : seedsPlanted / (float)totalPlanters;
 
             //UnityEngine.Debug.LogWarning($"enemies: {enemiesStomped} / {totalEnemies} = {_enemiesStompedTransitionPercent}, planted: {seedsPlanted} / {totalPlanters} = {_seedsPlantedTransitionPercent}");
         }
