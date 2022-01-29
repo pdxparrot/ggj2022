@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Sprites_Env
+  m_Name: Env_Transition
   m_Shader: {fileID: -6465566751694194690, guid: 18d6a03131886a842a7b5c09c7f339cb, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -76,7 +76,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture_Ash:
-        m_Texture: {fileID: 2800000, guid: 850c5d99bfc52054b9938e91cca89dbe, type: 3}
+        m_Texture: {fileID: 2800000, guid: d0470f775d40c504b8b1ef6b306e69a5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture_Fire:
@@ -112,11 +112,11 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _Fire_Ash_Blend: 0
+    - _Fire_Ash_Blend: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _Growth_Override: 0
+    - _Growth_Override: 1
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005

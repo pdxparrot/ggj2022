@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5503369714220b9408f636e8b26e1cff
+guid: d0470f775d40c504b8b1ef6b306e69a5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Env_Leaves_03_Fire
+      name: Env_Leaves_03_Ash
       rect:
         serializedVersion: 2
         x: 19
@@ -142,14 +142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cdd76b090abef1c4e9cf36f8650b0b1f
-      internalID: 1141999564
+      spriteID: 8b2d9840293efad438d7274c0d4445b8
+      internalID: -312107107
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Env_Tree_MD_01_Fire
+      name: Env_Tree_MD_01_Ash
       rect:
         serializedVersion: 2
         x: 899
@@ -163,14 +163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6036473990c546d4cac3cdc4915eeace
-      internalID: -963019566
+      spriteID: 7ef18df9d22661841a4e8924152b7886
+      internalID: 1373829986
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Env_Tree_MD_Fire
+      name: Env_Tree_MD_02_Ash
       rect:
         serializedVersion: 2
         x: 1569
@@ -184,14 +184,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf9f0afd46b733a47a6934038abdbc2a
-      internalID: -251464976
+      spriteID: 132077e4bdca87c48b40bb18638fbd69
+      internalID: 720964712
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_3
+      name: Environment 01C Spirtesheet_3
       rect:
         serializedVersion: 2
         x: 2171
@@ -205,14 +205,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2367a03a2f08109449057a1c84a57a26
-      internalID: -908983212
+      spriteID: 9407897fc27230e44887a9990a59413a
+      internalID: 563582317
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_4
+      name: Environment 01C Spirtesheet_4
       rect:
         serializedVersion: 2
         x: 2669
@@ -226,14 +226,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04c7afdf76f4a3e45a26ad65735516e9
-      internalID: -428774543
+      spriteID: cc7779c9800c97c4ea0847846bb18375
+      internalID: 1236285524
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_5
+      name: Environment 01C Spirtesheet_5
       rect:
         serializedVersion: 2
         x: 3265
@@ -247,14 +247,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c81722fff8332b4f80e6e8e225d195b
-      internalID: 377453736
+      spriteID: 1878e22cd1487074fa3732d130476950
+      internalID: 947966192
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_6
+      name: Environment 01C Spirtesheet_6
       rect:
         serializedVersion: 2
         x: 3493
@@ -268,14 +268,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3e4b6b3761c49b499d389271e4ddb38
-      internalID: -375325736
+      spriteID: dc88dcfbb92bb42409b5dc012ac3bc9f
+      internalID: -1201457360
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_7
+      name: Environment 01C Spirtesheet_7
       rect:
         serializedVersion: 2
         x: 757
@@ -289,14 +289,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cd2f4fb524bbab47a98e18bdb37c97c
-      internalID: 1625362404
+      spriteID: afe55b066f9b59a46a4525f420cb7fa8
+      internalID: -1403940184
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_8
+      name: Environment 01C Spirtesheet_8
       rect:
         serializedVersion: 2
         x: 2563
@@ -310,14 +310,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a04a0fd6181ae34db66058f00453346
-      internalID: -19877806
+      spriteID: 7b1145084f834b14bb9b0e8cd27ec790
+      internalID: -1512856763
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_9
+      name: Environment 01C Spirtesheet_9
       rect:
         serializedVersion: 2
         x: 2913
@@ -331,14 +331,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f58de4191c37544eb3b66721713fa84
-      internalID: 1604025433
+      spriteID: 6ee42a45f4eb7534bb7dbf0fb9b68ed2
+      internalID: 911174597
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Env_Tree_BG_02_Fire
+      name: Env_Tree_BG_02_Ash
       rect:
         serializedVersion: 2
         x: 2089
@@ -352,14 +352,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9943cd79a135e9e479e587cee01e1295
-      internalID: -1408391174
+      spriteID: e4eb8e58ca4acba408b483c36611cc75
+      internalID: -1066317684
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_11
+      name: Environment 01C Spirtesheet_11
       rect:
         serializedVersion: 2
         x: 19
@@ -373,14 +373,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd539cb8740a9e04e9d636b97f359f21
-      internalID: -1373583670
+      spriteID: 324e7e39d330ce647943fc89bc6f00a5
+      internalID: -118981846
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_12
+      name: Environment 01C Spirtesheet_12
       rect:
         serializedVersion: 2
         x: 673
@@ -394,14 +394,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d956236d8f9a124eba6acc08343bc3c
-      internalID: -2049382354
+      spriteID: 83991557175a3f34ea5d00b915ee3eea
+      internalID: -1087199058
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_13
+      name: Environment 01C Spirtesheet_13
       rect:
         serializedVersion: 2
         x: 845
@@ -415,14 +415,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63361c5b27d53fb4d8abe72f5b04479b
-      internalID: 1781812648
+      spriteID: b86bc5f15656ddf43abaf309c0aa6a1e
+      internalID: -90289215
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_14
+      name: Environment 01C Spirtesheet_14
       rect:
         serializedVersion: 2
         x: 2091
@@ -436,14 +436,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c34b86da032441b4b87374b610f43a1d
-      internalID: -1865881766
+      spriteID: ca710ed4024f45146b73c5b8c818ce1b
+      internalID: -553221858
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_15
+      name: Environment 01C Spirtesheet_15
       rect:
         serializedVersion: 2
         x: 3439
@@ -457,14 +457,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79f625eda62974149ba8a20c425e86fc
-      internalID: 592865728
+      spriteID: 8ba1f60b8c9f6954382fe74ced427122
+      internalID: 1681338089
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_16
+      name: Environment 01C Spirtesheet_16
       rect:
         serializedVersion: 2
         x: 43
@@ -478,14 +478,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ab3c04520f299048b929fbe877b9603
-      internalID: 1477983719
+      spriteID: af3705b30caaa2648af335d05352f3e0
+      internalID: -1130573873
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_17
+      name: Environment 01C Spirtesheet_17
       rect:
         serializedVersion: 2
         x: 518
@@ -499,14 +499,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: befc562bfda15744d99e65ef8bb58eec
-      internalID: 2001971889
+      spriteID: cb0a026975e7ff54d8ae130df925dc7b
+      internalID: -1588053131
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_18
+      name: Environment 01C Spirtesheet_18
       rect:
         serializedVersion: 2
         x: 3067
@@ -520,14 +520,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11462db4237db044aadaba40482eee96
-      internalID: 1461109489
+      spriteID: 810d521ca658eeb4eb38812867e8ba7b
+      internalID: 293400562
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_19
+      name: Environment 01C Spirtesheet_19
       rect:
         serializedVersion: 2
         x: 97
@@ -541,14 +541,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a3b4bb0e1e7baa44a0360a623e165db
-      internalID: -706212067
+      spriteID: 07f76a4ad474b37478f9176732edb8e6
+      internalID: -37889435
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_20
+      name: Environment 01C Spirtesheet_20
       rect:
         serializedVersion: 2
         x: 517
@@ -562,14 +562,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9095a17664528d4489bb2543f5e6d90d
-      internalID: 1373034524
+      spriteID: a01f5395bdd70524d92a1d60c36a8b2f
+      internalID: -1325897084
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Env_Bush_03_Fire
+      name: Env_Bush_03_Ash
       rect:
         serializedVersion: 2
         x: 1163
@@ -583,14 +583,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90b7a4299912b864fa87f80d5fc152d0
-      internalID: 746976194
+      spriteID: 06e45162dafb43840ad40bad80fa9e0a
+      internalID: 1147533245
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_22
+      name: Environment 01C Spirtesheet_22
       rect:
         serializedVersion: 2
         x: 2067
@@ -604,14 +604,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 676b2c624e45a4f42a06ab31b546de4a
-      internalID: -184674197
+      spriteID: 455adf5bfc1dcd24bb756eb047502db2
+      internalID: 962825168
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_23
+      name: Environment 01C Spirtesheet_23
       rect:
         serializedVersion: 2
         x: 67
@@ -625,14 +625,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c306f378f67306e46ac04e088125e9fb
-      internalID: 678530101
+      spriteID: 0c54879006ecc714ab43098e9ecb263e
+      internalID: 2078472763
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_28
+      name: Environment 01C Spirtesheet_28
       rect:
         serializedVersion: 2
         x: 67
@@ -646,14 +646,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbeb192644951a048a0d74d9aef376d4
-      internalID: 1150369079
+      spriteID: b998af50192d2294e870c91f6de1fae6
+      internalID: -811550898
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_29
+      name: Environment 01C Spirtesheet_29
       rect:
         serializedVersion: 2
         x: 557
@@ -667,14 +667,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8984577affbed394a90509047267fa59
-      internalID: 1072025642
+      spriteID: 851b7983931edaf4f89772bc7b907f23
+      internalID: 894204653
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_30
+      name: Environment 01C Spirtesheet_30
       rect:
         serializedVersion: 2
         x: 1343
@@ -688,14 +688,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38cfe96635d3cb441beaf1ed8efeb09f
-      internalID: -103011015
+      spriteID: 303c62b75741f2a45b7a11c36e7341b4
+      internalID: 642184437
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_31
+      name: Environment 01C Spirtesheet_31
       rect:
         serializedVersion: 2
         x: 2091
@@ -709,8 +709,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0312acd3d8c0e814ca5d36b80e3b8771
-      internalID: -357083631
+      spriteID: d4055cea8d8b2a9488bd6f8e49548c51
+      internalID: -1059109787
       vertices: []
       indices: 
       edges: []
@@ -726,38 +726,38 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Environment 01B Spirtesheet_23: 678530101
-      Environment 01B Spirtesheet_20: 1373034524
-      Environment 01B Spirtesheet_5: 377453736
-      Environment 01B Spirtesheet_17: 2001971889
-      Environment 01B Spirtesheet_31: -357083631
-      Environment 01B Spirtesheet_16: 1477983719
-      Environment 01B Spirtesheet_24: -443596623
-      Env_Tree_MD_Fire: -251464976
-      Environment 01B Spirtesheet_25: 371357733
-      Env_Leaves_03_Fire: 1141999564
-      Environment 01B Spirtesheet_29: 1072025642
-      Environment 01B Spirtesheet_7: 1625362404
-      Environment 01B Spirtesheet_15: 592865728
-      Env_Tree_BG_02_Fire: -1408391174
-      Environment 01B Spirtesheet_13: 1781812648
-      Environment 01B Spirtesheet_30: -103011015
-      Environment 01B Spirtesheet_4: -428774543
-      Environment 01B Spirtesheet_26: 915121225
-      Environment 01B Spirtesheet_11: -1373583670
-      Environment 01B Spirtesheet_3: -908983212
-      Environment 01B Spirtesheet_27: 993909061
-      Environment 01B Spirtesheet_28: 1150369079
-      Environment 01B Spirtesheet_22: -184674197
-      Environment 01B Spirtesheet_19: -706212067
-      Environment 01B Spirtesheet_9: 1604025433
-      Environment 01B Spirtesheet_6: -375325736
-      Env_Bush_03_Fire: 746976194
-      Env_Tree_MD_01_Fire: -963019566
-      Environment 01B Spirtesheet_12: -2049382354
-      Environment 01B Spirtesheet_8: -19877806
-      Environment 01B Spirtesheet_14: -1865881766
-      Environment 01B Spirtesheet_18: 1461109489
+      Environment 01C Spirtesheet_18: 293400562
+      Environment 01C Spirtesheet_27: 907320684
+      Environment 01C Spirtesheet_9: 911174597
+      Environment 01C Spirtesheet_7: -1403940184
+      Environment 01C Spirtesheet_13: -90289215
+      Environment 01C Spirtesheet_15: 1681338089
+      Environment 01C Spirtesheet_23: 2078472763
+      Env_Tree_MD_01_Ash: 1373829986
+      Env_Leaves_03_Ash: -312107107
+      Environment 01C Spirtesheet_14: -553221858
+      Environment 01C Spirtesheet_30: 642184437
+      Environment 01C Spirtesheet_11: -118981846
+      Environment 01C Spirtesheet_12: -1087199058
+      Environment 01C Spirtesheet_16: -1130573873
+      Environment 01C Spirtesheet_24: 1935161671
+      Environment 01C Spirtesheet_6: -1201457360
+      Environment 01C Spirtesheet_20: -1325897084
+      Environment 01C Spirtesheet_4: 1236285524
+      Environment 01C Spirtesheet_25: -103476649
+      Environment 01C Spirtesheet_5: 947966192
+      Environment 01C Spirtesheet_3: 563582317
+      Environment 01C Spirtesheet_26: -1615981201
+      Environment 01C Spirtesheet_22: 962825168
+      Environment 01C Spirtesheet_17: -1588053131
+      Environment 01C Spirtesheet_29: 894204653
+      Environment 01C Spirtesheet_8: -1512856763
+      Env_Tree_MD_02_Ash: 720964712
+      Env_Tree_BG_02_Ash: -1066317684
+      Env_Bush_03_Ash: 1147533245
+      Environment 01C Spirtesheet_28: -811550898
+      Environment 01C Spirtesheet_31: -1059109787
+      Environment 01C Spirtesheet_19: -37889435
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
