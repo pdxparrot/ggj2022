@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 3196477023319115585}
   - component: {fileID: 4541508871922302268}
   - component: {fileID: 8345330432467204726}
+  - component: {fileID: 5181117803165780990}
   m_Layer: 15
   m_Name: StompedEffect
   m_TagString: Untagged
@@ -132,6 +133,7 @@ MonoBehaviour:
   _triggerOnComplete: []
   _components:
   - {fileID: 8345330432467204726}
+  - {fileID: 5181117803165780990}
   _isRunning: 0
   _complete: 0
 --- !u!114 &8345330432467204726
@@ -148,6 +150,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _logMessage: Stomped!
   _level: 0
+--- !u!114 &5181117803165780990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750978708104746587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7aa5b3839c05786ebee7ba953b8c5e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioClip: {fileID: 8300000, guid: b858f1060288f5d40ba4fa9e0c035d33, type: 3}
+  _audioSource: {fileID: 0}
+  _loop: 0
+  _waitForComplete: 0
+  _audioTimer:
+    rid: -2
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
 --- !u!1 &4655350197695556347
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,6 +232,7 @@ MonoBehaviour:
   _idleEffect: {fileID: 0}
   _movingEffectTrigger: {fileID: 0}
   _seedModel: {fileID: 5737375366872346975}
+  _areaId: 
   _hasSeed: 0
   _state: 0
   _leashTarget: 0

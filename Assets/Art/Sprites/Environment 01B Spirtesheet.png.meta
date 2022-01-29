@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Env_Leaves_03_Fire
+      name: Env_Tree_LG_01_Fire
       rect:
         serializedVersion: 2
         x: 19
@@ -170,7 +170,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Env_Tree_MD_Fire
+      name: Env_Tree_MD_02_Fire
       rect:
         serializedVersion: 2
         x: 1569
@@ -275,7 +275,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_7
+      name: Env_Hill_01_Fire
       rect:
         serializedVersion: 2
         x: 757
@@ -296,7 +296,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_8
+      name: Env_Hill_02_Fire
       rect:
         serializedVersion: 2
         x: 2563
@@ -359,7 +359,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_11
+      name: Env_Rock_LG_01_Fire
       rect:
         serializedVersion: 2
         x: 19
@@ -422,7 +422,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_14
+      name: Env_Leaves_02_Fire
       rect:
         serializedVersion: 2
         x: 2091
@@ -443,7 +443,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_15
+      name: Env_Bush_04_Fire
       rect:
         serializedVersion: 2
         x: 3439
@@ -464,7 +464,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_16
+      name: Env_Rock_MD_01_Fire
       rect:
         serializedVersion: 2
         x: 43
@@ -485,7 +485,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_17
+      name: Env_Rock_MD_02_Fire
       rect:
         serializedVersion: 2
         x: 518
@@ -506,7 +506,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_18
+      name: Env_Leaves_04_Fire
       rect:
         serializedVersion: 2
         x: 3067
@@ -548,7 +548,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_20
+      name: Env_Rock_MD_03_Fire
       rect:
         serializedVersion: 2
         x: 517
@@ -590,7 +590,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_22
+      name: Env_Leaves_03_Fire
       rect:
         serializedVersion: 2
         x: 2067
@@ -611,7 +611,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_23
+      name: Env_Bush_01_Fire
       rect:
         serializedVersion: 2
         x: 67
@@ -653,7 +653,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_29
+      name: Env_Rock_LG_02_Fire
       rect:
         serializedVersion: 2
         x: 557
@@ -674,7 +674,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_30
+      name: Env_Bush_02_Fire
       rect:
         serializedVersion: 2
         x: 1343
@@ -726,38 +726,38 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Environment 01B Spirtesheet_23: 678530101
-      Environment 01B Spirtesheet_20: 1373034524
+      Env_Rock_MD_03_Fire: 1373034524
       Environment 01B Spirtesheet_5: 377453736
-      Environment 01B Spirtesheet_17: 2001971889
       Environment 01B Spirtesheet_31: -357083631
-      Environment 01B Spirtesheet_16: 1477983719
+      Env_Hill_01_Fire: 1625362404
       Environment 01B Spirtesheet_24: -443596623
-      Env_Tree_MD_Fire: -251464976
+      Env_Rock_LG_01_Fire: -1373583670
       Environment 01B Spirtesheet_25: 371357733
-      Env_Leaves_03_Fire: 1141999564
-      Environment 01B Spirtesheet_29: 1072025642
-      Environment 01B Spirtesheet_7: 1625362404
-      Environment 01B Spirtesheet_15: 592865728
+      Env_Leaves_02_Fire: -1865881766
+      Env_Leaves_03_Fire: -184674197
+      Env_Hill_02_Fire: -19877806
+      Env_Bush_02_Fire: -103011015
+      Env_Bush_04_Fire: 592865728
+      Env_Leaves_04_Fire: 1461109489
       Env_Tree_BG_02_Fire: -1408391174
       Environment 01B Spirtesheet_13: 1781812648
-      Environment 01B Spirtesheet_30: -103011015
       Environment 01B Spirtesheet_4: -428774543
       Environment 01B Spirtesheet_26: 915121225
-      Environment 01B Spirtesheet_11: -1373583670
+      Env_Rock_LG_02_Fire: 1072025642
       Environment 01B Spirtesheet_3: -908983212
       Environment 01B Spirtesheet_27: 993909061
       Environment 01B Spirtesheet_28: 1150369079
-      Environment 01B Spirtesheet_22: -184674197
+      Env_Rock_MD_02_Fire: 2001971889
       Environment 01B Spirtesheet_19: -706212067
       Environment 01B Spirtesheet_9: 1604025433
       Environment 01B Spirtesheet_6: -375325736
       Env_Bush_03_Fire: 746976194
+      Env_Rock_MD_01_Fire: 1477983719
+      Env_Tree_LG_01_Fire: 1141999564
+      Env_Bush_01_Fire: 678530101
       Env_Tree_MD_01_Fire: -963019566
+      Env_Tree_MD_02_Fire: -251464976
       Environment 01B Spirtesheet_12: -2049382354
-      Environment 01B Spirtesheet_8: -19877806
-      Environment 01B Spirtesheet_14: -1865881766
-      Environment 01B Spirtesheet_18: 1461109489
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

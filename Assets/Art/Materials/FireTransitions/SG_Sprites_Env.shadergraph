@@ -17,9 +17,6 @@
         },
         {
             "m_Id": "01f0e5c7660349a9a4b91cd587a04981"
-        },
-        {
-            "m_Id": "a65d15189a134d9ca1fb7ef1202b6b74"
         }
     ],
     "m_Keywords": [],
@@ -928,7 +925,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Texture2DMaterialSlot",
     "m_ObjectId": "4a4cdb8c05ec43bc9e4063c0222c1552",
     "m_Id": 0,
-    "m_DisplayName": "Texture - Fire",
+    "m_DisplayName": "MainTex",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -1212,11 +1209,11 @@
     "m_Guid": {
         "m_GuidSerialized": "0a52d056-cb3b-4e8a-86b9-74b1d9b75fe9"
     },
-    "m_Name": "Texture - Fire",
+    "m_Name": "MainTex",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Texture - Fire",
-    "m_DefaultReferenceName": "_Texture_Fire",
-    "m_OverrideReferenceName": "",
+    "m_RefNameGeneratedByDisplayName": "MainTex",
+    "m_DefaultReferenceName": "_MainTex_1",
+    "m_OverrideReferenceName": "_MainTex",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
     "m_CustomSlotLabel": "",
@@ -1496,35 +1493,6 @@
     "m_TextureType": 0,
     "m_NormalMapSpace": 0,
     "m_EnableGlobalMipBias": true
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Internal.Texture2DShaderProperty",
-    "m_ObjectId": "a65d15189a134d9ca1fb7ef1202b6b74",
-    "m_Guid": {
-        "m_GuidSerialized": "3a43700c-650b-4770-a897-89f10f51c99e"
-    },
-    "m_Name": "_MainTex",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "_MainTex",
-    "m_DefaultReferenceName": "_MainTex",
-    "m_OverrideReferenceName": "",
-    "m_GeneratePropertyBlock": false,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
-    "m_Precision": 0,
-    "overrideHLSLDeclaration": false,
-    "hlslDeclarationOverride": 0,
-    "m_Hidden": false,
-    "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}",
-        "m_Guid": ""
-    },
-    "isMainTexture": false,
-    "useTilingAndOffset": false,
-    "m_Modifiable": true,
-    "m_DefaultType": 0
 }
 
 {
@@ -1993,9 +1961,6 @@
         },
         {
             "m_Id": "01f0e5c7660349a9a4b91cd587a04981"
-        },
-        {
-            "m_Id": "a65d15189a134d9ca1fb7ef1202b6b74"
         }
     ]
 }
