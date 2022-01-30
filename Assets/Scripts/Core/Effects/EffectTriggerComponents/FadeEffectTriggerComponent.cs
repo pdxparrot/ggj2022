@@ -30,7 +30,12 @@ namespace pdxpartyparrot.Core.Effects.EffectTriggerComponents
         [ReadOnly]
         private float _timeRemaining;
 
-        public override bool WaitForComplete => true;
+        // always wait for this to complete
+        [SerializeField]
+        [ReadOnly]
+        private bool _waitForComplete = true;
+
+        public override bool WaitForComplete => _waitForComplete;
 
         public override bool IsDone => _timeRemaining <= 0.0f;
 

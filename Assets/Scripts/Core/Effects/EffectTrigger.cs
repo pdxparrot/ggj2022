@@ -226,11 +226,6 @@ namespace pdxpartyparrot.Core.Effects
                 yield return wait;
             }
 
-            // invoke our callback
-            // (don't wait for further effects)
-            _effectWaiter = null;
-            callback?.Invoke();
-
             if(EffectsManager.Instance.EnableDebug) {
                 Debug.Log($"Trigger {_triggerOnComplete.Length} more effects from {name}");
             }
@@ -262,6 +257,10 @@ namespace pdxpartyparrot.Core.Effects
 
                 yield return wait;
             }
+
+            // invoke our callback
+            _effectWaiter = null;
+            callback?.Invoke();
 
             _isRunning = false;
         }
