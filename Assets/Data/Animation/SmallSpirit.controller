@@ -32,7 +32,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: bigSpirit_hit
+  m_Name: smallSpirit_hit
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -81,7 +81,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: bigSpirit_slam_end
+  m_Name: smallSpirit_slam_end
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -108,7 +108,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: bigSpirit_idle
+  m_Name: smallSpirit_idle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -186,7 +186,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: bigSpirit_run
+  m_Name: smallSpirit_run
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -386,7 +386,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: bigSpirit_slam_start
+  m_Name: smallSpirit_slam_start
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -413,7 +413,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: bigSpirit_death
+  m_Name: smallSpirit_death
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -449,16 +449,16 @@ AnimatorStateMachine:
     m_Position: {x: 290, y: 0, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6157730321059727731}
-    m_Position: {x: 660, y: -10, z: 0}
+    m_Position: {x: 690, y: 0, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4240594606617477972}
-    m_Position: {x: 830, y: 70, z: 0}
+    m_Position: {x: 710, y: 80, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8226907267784065963}
-    m_Position: {x: 450, y: -90, z: 0}
+    m_Position: {x: 430, y: -110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6180194026195278473}
-    m_Position: {x: 720, y: -110, z: 0}
+    m_Position: {x: 680, y: -90, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
