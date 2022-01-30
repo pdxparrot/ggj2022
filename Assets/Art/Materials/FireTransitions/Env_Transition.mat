@@ -44,7 +44,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 5503369714220b9408f636e8b26e1cff, type: 3}
+        m_Texture: {fileID: 2800000, guid: ba7eca0217a868645bdd488f18938398, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -76,7 +76,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture_Ash:
-        m_Texture: {fileID: 2800000, guid: d0470f775d40c504b8b1ef6b306e69a5, type: 3}
+        m_Texture: {fileID: 2800000, guid: fa9eebb406ef5a84a9444b3c85d4a5d4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture_Fire:
@@ -84,7 +84,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture_Growth:
-        m_Texture: {fileID: 2800000, guid: 850c5d99bfc52054b9938e91cca89dbe, type: 3}
+        m_Texture: {fileID: 2800000, guid: b0aff071c1d444247b5a42acee1ee8a8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:

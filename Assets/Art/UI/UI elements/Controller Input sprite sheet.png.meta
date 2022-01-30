@@ -1,0 +1,951 @@
+fileFormatVersion: 2
+guid: 54b1b6a8b2277ca4eaeb74fe3e553217
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Controller Input sprite sheet_0
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 915
+        width: 89
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 409e84fa8a6a0dc488d1ac4d3f0f18a6
+      internalID: -244156697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controller Input sprite sheet_1
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 528
+        width: 94
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 498f041aba54f154ca77a1b42fc03731
+      internalID: 798058865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controller Input sprite sheet_2
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 913
+        width: 94
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7902de87d172cf2429568d1bfc423688
+      internalID: -778678797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controller Input sprite sheet_3
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 913
+        width: 94
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85b90790b9441e946b10876b0df34a97
+      internalID: -1418248275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controller Input sprite sheet_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 926
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f55da68b91d0f3b4db201bdcc6bea9c1
+      internalID: 1205186207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controller Input sprite sheet_5
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 926
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d66680c85b9a4e4a89e48634afc13a0
+      internalID: 1293731940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controller Input sprite sheet_6
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 932
+        width: 93
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b08b8e12c35094bbf240c2da83e32f
+      internalID: 193276531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controller Input sprite sheet_7
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 932
+        width: 93
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d40716dafcf45049884ec42f540ae31
+      internalID: -2116123088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controller Input sprite sheet_8
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 657
+        width: 94
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f50e777319554cf429410d4426bff6df
+      internalID: -1791533366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controller Input sprite sheet_12
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 784
+        width: 94
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f3b841ad3834ef458ee244d56be9552
+      internalID: -108964386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controller Input sprite sheet_14
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 784
+        width: 94
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d32c9533042b4fb45966543505fd4a1a
+      internalID: 919888768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controller Input sprite sheet_15
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 798
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8256b17ab660f874a8624ac14334842f
+      internalID: 503033629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controller Input sprite sheet_16
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 798
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6593b872115a7424b852a61dc83dc979
+      internalID: -1377576988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controller Input sprite sheet_17
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 805
+        width: 93
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ff4ebf614d3fd44eb7a6075675e026c
+      internalID: 1072733449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controller Input sprite sheet_18
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 805
+        width: 93
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bc6474230e58de4899f49286226187c
+      internalID: 628303692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controller Input sprite sheet_22
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 799
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3de42d2fca8227a4c917a9ededb9b09f
+      internalID: 1620952505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controller Input sprite sheet_24
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 671
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90183693b7a8c404abfa9412f8cbe915
+      internalID: 1423752339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controller Input sprite sheet_25
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 671
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e627240054c20e64990142ffdf575751
+      internalID: -1857485525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controller Input sprite sheet_26
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 658
+        width: 74
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56cca4c494716804aa98ddef38eed107
+      internalID: 242569337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controller Input sprite sheet_27
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 658
+        width: 74
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e67290303c18964e8b8cd2361056517
+      internalID: -2113401055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controller Input sprite sheet_29
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 657
+        width: 94
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eed1544a0d02c704a834aabe51073557
+      internalID: -1345815903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controller Input sprite sheet_30
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 671
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b518c684040b5bd4cbd0f9b60d9c9030
+      internalID: 1535247219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controller Input sprite sheet_33
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 543
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71cc448386985384bac3949d33584a1a
+      internalID: -939914897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controller Input sprite sheet_34
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 543
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcd3dc89c8f89574886e794bfcd0c609
+      internalID: 1845629312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controller Input sprite sheet_35
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 529
+        width: 74
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cad6635ba31da540b525a09aa939fa5
+      internalID: 312757524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controller Input sprite sheet_36
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 530
+        width: 74
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74270e2947363b549a6feb99bc3087b5
+      internalID: -528716599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controller Input sprite sheet_38
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 528
+        width: 94
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bfee07c8695f1e4892adf81b461d772
+      internalID: 2060985987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controller Input sprite sheet_39
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 532
+        width: 89
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fad04b77b9c1587428dd06079369ccbc
+      internalID: 1870203755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controller Input sprite sheet_43
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 418
+        width: 60
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff932865dc751fd4a8f104bd5870f584
+      internalID: -478581319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controller Input sprite sheet_44
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 419
+        width: 60
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c67de39f9318e9346be9174e3c27fee5
+      internalID: -608332536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controller Input sprite sheet_51
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 300
+        width: 243
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d7eb2765442e7b48b2b37f6cf5da6c0
+      internalID: 1625456717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controller Input sprite sheet_53
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 291
+        width: 60
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ecf4f054258e3a42ab5f52e4929b27d
+      internalID: 353923402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controller Input sprite sheet_54
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 292
+        width: 60
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f16e8c0c66526784d9840614f4bfba9a
+      internalID: 77857459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controller Input sprite sheet_9
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 528
+        width: 94
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32ed48345f8bde5499c513c96aae1140
+      internalID: -1512928527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Controller Input sprite sheet_6: 193276531
+      Controller Input sprite sheet_51: 1625456717
+      Controller Input sprite sheet_69: 1675224497
+      Controller Input sprite sheet_63: 2133498587
+      Controller Input sprite sheet_13: -495456781
+      Controller Input sprite sheet_53: 353923402
+      Controller Input sprite sheet_32: -1430221252
+      Controller Input sprite sheet_4: 1205186207
+      Controller Input sprite sheet_47: -1114269941
+      Controller Input sprite sheet_18: 628303692
+      Controller Input sprite sheet_46: -1006049701
+      Controller Input sprite sheet_74: -796178763
+      Controller Input sprite sheet_33: -939914897
+      Controller Input sprite sheet_72: -1725218843
+      Controller Input sprite sheet_29: -1345815903
+      Controller Input sprite sheet_78: 56670674
+      Controller Input sprite sheet_90: -1372960702
+      Controller Input sprite sheet_22: 1620952505
+      Controller Input sprite sheet_43: -478581319
+      Controller Input sprite sheet_62: -203934288
+      Controller Input sprite sheet_19: 54168955
+      Controller Input sprite sheet_5: 1293731940
+      Controller Input sprite sheet_34: 1845629312
+      Controller Input sprite sheet_71: -977160069
+      Controller Input sprite sheet_44: -608332536
+      Controller Input sprite sheet_60: -1789223835
+      Controller Input sprite sheet_61: -1819515946
+      Controller Input sprite sheet_82: -552146070
+      Controller Input sprite sheet_23: 1258436884
+      Controller Input sprite sheet_21: -959076753
+      Controller Input sprite sheet_38: 2060985987
+      Controller Input sprite sheet_12: -108964386
+      Controller Input sprite sheet_1: 798058865
+      Controller Input sprite sheet_17: 1072733449
+      Controller Input sprite sheet_73: 1018495329
+      Controller Input sprite sheet_77: -566690537
+      Controller Input sprite sheet_89: -1606461751
+      Controller Input sprite sheet_49: -1805917571
+      Controller Input sprite sheet_85: -1580492650
+      Controller Input sprite sheet_80: 626838125
+      Controller Input sprite sheet_59: 299869290
+      Controller Input sprite sheet_8: -1791533366
+      Controller Input sprite sheet_20: -1457603734
+      Controller Input sprite sheet_31: -1441579204
+      Controller Input sprite sheet_39: 1870203755
+      Controller Input sprite sheet_28: -2078924413
+      Controller Input sprite sheet_76: 790246776
+      Controller Input sprite sheet_2: -778678797
+      Controller Input sprite sheet_42: 152428977
+      Controller Input sprite sheet_45: 574310586
+      Controller Input sprite sheet_0: -244156697
+      Controller Input sprite sheet_54: 77857459
+      Controller Input sprite sheet_27: -2113401055
+      Controller Input sprite sheet_58: 37994058
+      Controller Input sprite sheet_67: 614516616
+      Controller Input sprite sheet_37: 1783764987
+      Controller Input sprite sheet_14: 919888768
+      Controller Input sprite sheet_35: 312757524
+      Controller Input sprite sheet_52: 577713149
+      Controller Input sprite sheet_79: -429397669
+      Controller Input sprite sheet_75: -930149291
+      Controller Input sprite sheet_7: -2116123088
+      Controller Input sprite sheet_40: 2017813057
+      Controller Input sprite sheet_55: 1219774190
+      Controller Input sprite sheet_36: -528716599
+      Controller Input sprite sheet_16: -1377576988
+      Controller Input sprite sheet_56: 2016934599
+      Controller Input sprite sheet_65: 994348234
+      Controller Input sprite sheet_24: 1423752339
+      Controller Input sprite sheet_66: -1260245143
+      Controller Input sprite sheet_10: 2102555868
+      Controller Input sprite sheet_50: -1580478570
+      Controller Input sprite sheet_41: -1623940565
+      Controller Input sprite sheet_48: -515620023
+      Controller Input sprite sheet_30: 1535247219
+      Controller Input sprite sheet_70: 2082545530
+      Controller Input sprite sheet_57: 2135439763
+      Controller Input sprite sheet_68: 170941188
+      Controller Input sprite sheet_26: 242569337
+      Controller Input sprite sheet_87: -583706126
+      Controller Input sprite sheet_81: -1196812190
+      Controller Input sprite sheet_3: -1418248275
+      Controller Input sprite sheet_25: -1857485525
+      Controller Input sprite sheet_64: 1936726928
+      Controller Input sprite sheet_11: -420812076
+      Controller Input sprite sheet_83: -1021324858
+      Controller Input sprite sheet_86: -1558389165
+      Controller Input sprite sheet_88: 1435676293
+      Controller Input sprite sheet_9: -1512928527
+      Controller Input sprite sheet_84: 1805597343
+      Controller Input sprite sheet_15: 503033629
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
