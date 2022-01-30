@@ -306,7 +306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _renderers:
-  - {fileID: 0}
+  - {fileID: 715793773776676499}
   - {fileID: 543871144009411697}
 --- !u!114 &8073071851902807292
 MonoBehaviour:

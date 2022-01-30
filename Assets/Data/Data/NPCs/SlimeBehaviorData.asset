@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adc1a42b1129f77438a293f6aadb49fc, type: 3}
   m_Name: SlimeBehaviorData
   m_EditorClassIdentifier: 
-  _actorLayer: 
+  _actorLayer: NPC
   _mass: 45
   _drag: 0
   _angularDrag: 0
@@ -35,6 +35,8 @@ MonoBehaviour:
   _idleTimeRange:
     _min: 1
     _max: 3
-  _maxPatrolRange: 5
+  _patrolRange:
+    _min: 5
+    _max: 10
   _chaseSpeedModifier: 2
   _leashSpeedModifier: 2

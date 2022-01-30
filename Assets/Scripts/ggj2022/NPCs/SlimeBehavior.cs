@@ -38,7 +38,8 @@ namespace pdxpartyparrot.ggj2022.NPCs
         {
             get
             {
-                return Vector3.zero;
+                Vector3 nextPosition = Slime.NextPosition;
+                return (nextPosition - Owner.Movement.Position).normalized;
             }
         }
 
