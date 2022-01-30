@@ -129,6 +129,11 @@ namespace pdxpartyparrot.Core.Actors.Components
             UseGravity = !behaviorData.IsKinematic;
         }
 
+        public void Stop()
+        {
+            Velocity = Vector3.zero;
+        }
+
         public virtual void ResetAngularVelocity()
         {
             // TODO:

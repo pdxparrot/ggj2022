@@ -1,8 +1,6 @@
 using pdxpartyparrot.Core.DebugMenu;
-using pdxpartyparrot.Core.Effects.EffectTriggerComponents;
 using pdxpartyparrot.Core.Util;
 using pdxpartyparrot.Core.World;
-using pdxpartyparrot.Game.Characters;
 using pdxpartyparrot.Game.Characters.Players.BehaviorComponents;
 using pdxpartyparrot.Game.Interactables;
 using pdxpartyparrot.ggj2022.Data.Players;
@@ -61,6 +59,8 @@ namespace pdxpartyparrot.ggj2022.Players
         public int Health => _health;
 
         public bool IsDead => _health <= 0;
+
+        public bool IsImmune => PlayerManager.Instance.PlayersImmune || false;
 
         public bool IsStomp => !IsDead && IsLarge && PlayerBehavior.Owner.Movement.Velocity.y < 0;
 
@@ -121,10 +121,16 @@ namespace pdxpartyparrot.ggj2022.Players
 
         public void Damage(int amount)
         {
+            if(IsDead || IsImmune) {
+                return;
+            }
+
             _health -= amount;
 
-            if(_health <= 0) {
+            if(IsDead) {
                 _health = 0;
+
+                GamePlayerBehavior.GamePlayer.Movement.Stop();
 
                 GamePlayerBehavior.Animator.SetTrigger(_data.DeathParam);
                 GamePlayerBehavior.GamePlayer.TriggerScriptEvent("Death");

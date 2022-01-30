@@ -17,7 +17,9 @@ namespace pdxpartyparrot.ggj2022.Players
 
         public ForestSpiritBehavior ForestSpiritBehavior => _forestSpiritBehavior;
 
-        public override float MoveSpeed => _forestSpiritBehavior.MoveSpeedModifier * base.MoveSpeed;
+        public override bool CanMove => base.CanMove && !ForestSpiritBehavior.IsDead;
+
+        public override float MoveSpeed => ForestSpiritBehavior.IsDead ? 0 : _forestSpiritBehavior.MoveSpeedModifier * base.MoveSpeed;
 
         public float JumpHeightModifier => _forestSpiritBehavior.JumpHeightModifier;
 
