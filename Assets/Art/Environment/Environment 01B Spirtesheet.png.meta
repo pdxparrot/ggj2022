@@ -632,7 +632,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01B Spirtesheet_25
+      name: Env01_Bush01_Fire
       rect:
         serializedVersion: 2
         x: 63
@@ -775,7 +775,6 @@ TextureImporter:
       Environment 01B Spirtesheet_31: 1028306938
       Environment 01B Spirtesheet_16: 1822092652
       Environment 01B Spirtesheet_24: -1952938007
-      Environment 01B Spirtesheet_25: 992809431
       Environment 01B Spirtesheet_29: 308027999
       Environment 01B Spirtesheet_7: -107845371
       Environment 01B Spirtesheet_15: -1963470689
@@ -795,6 +794,7 @@ TextureImporter:
       Environment 01B Spirtesheet_9: 363384148
       Environment 01B Spirtesheet_6: -1076199269
       Environment 01B Spirtesheet_21: 1626935568
+      Env01_Bush01_Fire: 992809431
       Environment 01B Spirtesheet_12: 1479568054
       Environment 01B Spirtesheet_8: -1446226289
       Environment 01B Spirtesheet_18: -596358959

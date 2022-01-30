@@ -632,7 +632,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01 Spirtesheet_31
+      name: Env01_Bush01
       rect:
         serializedVersion: 2
         x: 65
@@ -789,7 +789,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Environment 01 Spirtesheet_37: -1424255264
+      Environment 01 Spirtesheet_12: -726814706
+      Env01_Bush01: -1217745585
       Environment 01 Spirtesheet_15: 637643106
       Environment 01 Spirtesheet_14: -1208484795
       Environment 01 Spirtesheet_10: -1242373479
@@ -815,7 +816,6 @@ TextureImporter:
       Environment 01 Spirtesheet_26: -420206142
       Environment 01 Spirtesheet_34: 654505337
       Environment 01 Spirtesheet_33: -191545922
-      Environment 01 Spirtesheet_31: -1217745585
       Environment 01 Spirtesheet_4: -486225577
       Env01_Tree01: 2108941950
       Environment 01 Spirtesheet_29: 41832454
@@ -827,7 +827,7 @@ TextureImporter:
       Environment 01 Spirtesheet_5: -1667778956
       Environment 01 Spirtesheet_22: 2042406565
       Environment 01 Spirtesheet_20: -1510651146
-      Environment 01 Spirtesheet_12: -726814706
+      Environment 01 Spirtesheet_37: -1424255264
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

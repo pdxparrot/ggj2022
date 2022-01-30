@@ -464,7 +464,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01C Spirtesheet_16
+      name: Env01_Bush01_Ash
       rect:
         serializedVersion: 2
         x: 63
@@ -561,13 +561,13 @@ TextureImporter:
       Environment 01C Spirtesheet_18: 1543768088
       Environment 01C Spirtesheet_9: -2056904339
       Environment 01C Spirtesheet_7: 56576110
+      Env01_Bush01_Ash: -724649324
       Environment 01C Spirtesheet_13: -944392740
       Environment 01C Spirtesheet_1: 606716890
       Environment 01C Spirtesheet_15: -1716128960
       Environment 01C Spirtesheet_14: 284965454
       Environment 01C Spirtesheet_11: -1337903314
       Environment 01C Spirtesheet_12: -1752679421
-      Environment 01C Spirtesheet_16: -724649324
       Environment 01C Spirtesheet_6: 512921348
       Environment 01C Spirtesheet_4: 872239959
       Environment 01C Spirtesheet_5: -1324940659
