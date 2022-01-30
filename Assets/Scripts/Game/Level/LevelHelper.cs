@@ -10,6 +10,7 @@ using pdxpartyparrot.Core.World;
 using pdxpartyparrot.Game.State;
 
 using UnityEngine;
+using Unity.VisualScripting;
 
 #if USE_NAVMESH
 using UnityEngine.AI;
@@ -21,6 +22,7 @@ namespace pdxpartyparrot.Game.Level
 #if USE_NAVMESH
     [RequireComponent(typeof(NavMeshSurface))]
 #endif
+    [RequireComponent(typeof(ScriptMachine))]
     public abstract class LevelHelper : MonoBehaviour
     {
         [SerializeField]

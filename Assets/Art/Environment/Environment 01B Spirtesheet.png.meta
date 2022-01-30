@@ -1,0 +1,808 @@
+fileFormatVersion: 2
+guid: ba7eca0217a868645bdd488f18938398
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Env01_Tree01_Fire
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 2069
+        width: 759
+        height: 2008
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12ce091cb30985f429de3007d6c4d03e
+      internalID: -849183375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment 01B Spirtesheet_1
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 2665
+        width: 548
+        height: 1376
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fffb1c33b6caac41973c0fd38620717
+      internalID: 1939216716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment 01B Spirtesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1569
+        y: 2691
+        width: 436
+        height: 1350
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bbbc63ca6cb3ae49b36576cfc73d504
+      internalID: 127427787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment 01B Spirtesheet_3
+      rect:
+        serializedVersion: 2
+        x: 2171
+        y: 2507
+        width: 290
+        height: 1560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61837c60ede2ddc4195f992e4bf02e8a
+      internalID: -1737246167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment 01B Spirtesheet_4
+      rect:
+        serializedVersion: 2
+        x: 2669
+        y: 2783
+        width: 400
+        height: 1284
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f76171de5f0cc4d48b7c08a711b66dd6
+      internalID: 1132649071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment 01B Spirtesheet_5
+      rect:
+        serializedVersion: 2
+        x: 3265
+        y: 2885
+        width: 150
+        height: 1182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fee14b0390a031489b365a286dd9bd8
+      internalID: -1076282479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment 01B Spirtesheet_6
+      rect:
+        serializedVersion: 2
+        x: 3493
+        y: 2891
+        width: 532
+        height: 1176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c9a9dcfa8167664bb062d4b3fe47fce
+      internalID: -1076199269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment 01B Spirtesheet_7
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 2159
+        width: 1316
+        height: 418
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a53bc8ec7b74f0e4cb5ace9bcb029d40
+      internalID: -107845371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment 01B Spirtesheet_8
+      rect:
+        serializedVersion: 2
+        x: 2488
+        y: 2417
+        width: 1557
+        height: 316
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32b007cec3ac86740960ece1c65f6a0d
+      internalID: -1446226289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment 01B Spirtesheet_9
+      rect:
+        serializedVersion: 2
+        x: 2089
+        y: 2085
+        width: 1438
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92c15396985cfcf42be91fa02166c0f7
+      internalID: 363384148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment 01B Spirtesheet_10
+      rect:
+        serializedVersion: 2
+        x: 2918
+        y: 2243
+        width: 1178
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d65eaca5f0fa504a930c4aff1573712
+      internalID: -1444275798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment 01B Spirtesheet_11
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1576
+        width: 671
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29c713c8ca8954d4098828e797d966b3
+      internalID: -1373796481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment 01B Spirtesheet_12
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 889
+        width: 340
+        height: 1101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfeac45b6ac1b364cbaaa80e396dd516
+      internalID: 1479568054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Env01_Canopy01_Fire
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 817
+        width: 1513
+        height: 1178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c43c39fd76f7f74e913208e7ce90131
+      internalID: 1956871324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment 01B Spirtesheet_14
+      rect:
+        serializedVersion: 2
+        x: 3051
+        y: 1299
+        width: 986
+        height: 700
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe645b819ce36684c8eec417304f93ba
+      internalID: 173519125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment 01B Spirtesheet_15
+      rect:
+        serializedVersion: 2
+        x: 4046
+        y: 1624
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8fb2ebfe527b5348b6613b3fa03ce9b
+      internalID: -1963470689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment 01B Spirtesheet_16
+      rect:
+        serializedVersion: 2
+        x: 4052
+        y: 1596
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76d4d2477b6bb594eaf543f86e568d64
+      internalID: 1822092652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment 01B Spirtesheet_17
+      rect:
+        serializedVersion: 2
+        x: 4045
+        y: 1584
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4b16c2589da4fa40833173c03d452c6
+      internalID: -71687841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment 01B Spirtesheet_18
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 1321
+        width: 434
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef808cd379cf26349807e2b15f7d656f
+      internalID: -596358959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment 01B Spirtesheet_19
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 1355
+        width: 312
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 428544a47b3249d45b75a17f9653d0cc
+      internalID: 466678499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment 01B Spirtesheet_20
+      rect:
+        serializedVersion: 2
+        x: 1499
+        y: 1436
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71718fe2148d3384ba7b7124e048adc5
+      internalID: -703291333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment 01B Spirtesheet_21
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 1157
+        width: 166
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc39957d01c86d14c8a0c8eb007aaaa4
+      internalID: 1626935568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment 01B Spirtesheet_22
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 1161
+        width: 308
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1666e1dd8247172458cfb8aa21d7a21c
+      internalID: 2129836710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment 01B Spirtesheet_24
+      rect:
+        serializedVersion: 2
+        x: 3191
+        y: 19
+        width: 866
+        height: 1200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b27857c580adfe4bb9986eeea0859af
+      internalID: -1952938007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment 01B Spirtesheet_25
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 363
+        width: 1002
+        height: 666
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b2ef28320ee11b46b5237c05a3dec6a
+      internalID: 992809431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment 01B Spirtesheet_26
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 437
+        width: 505
+        height: 398
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca8f0b10e4e71ca4495315b33fdfdf1b
+      internalID: 761858997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment 01B Spirtesheet_27
+      rect:
+        serializedVersion: 2
+        x: 2348
+        y: 19
+        width: 734
+        height: 496
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc4c4e31a8deb96438355a370f8aaaea
+      internalID: 1563218889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment 01B Spirtesheet_28
+      rect:
+        serializedVersion: 2
+        x: 1323
+        y: 37
+        width: 848
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bdc885a5b158f94887a4232a67199e3
+      internalID: 1230668475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment 01B Spirtesheet_30
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 54
+        width: 380
+        height: 259
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fab9878f6312ebe49b67aa454c1cfe42
+      internalID: 524652684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment 01B Spirtesheet_31
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 37
+        width: 785
+        height: 232
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6db17fc576fadb46a275a0b81f35fee
+      internalID: 1028306938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Environment 01B Spirtesheet_23: -1441471857
+      Environment 01B Spirtesheet_20: -703291333
+      Environment 01B Spirtesheet_5: -1076282479
+      Environment 01B Spirtesheet_17: -71687841
+      Environment 01B Spirtesheet_31: 1028306938
+      Environment 01B Spirtesheet_16: 1822092652
+      Environment 01B Spirtesheet_24: -1952938007
+      Environment 01B Spirtesheet_25: 992809431
+      Environment 01B Spirtesheet_29: 308027999
+      Environment 01B Spirtesheet_7: -107845371
+      Environment 01B Spirtesheet_15: -1963470689
+      Environment 01B Spirtesheet_2: 127427787
+      Environment 01B Spirtesheet_10: -1444275798
+      Environment 01B Spirtesheet_30: 524652684
+      Environment 01B Spirtesheet_4: 1132649071
+      Environment 01B Spirtesheet_26: 761858997
+      Env01_Tree01_Fire: -849183375
+      Environment 01B Spirtesheet_11: -1373796481
+      Environment 01B Spirtesheet_3: -1737246167
+      Environment 01B Spirtesheet_27: 1563218889
+      Environment 01B Spirtesheet_28: 1230668475
+      Env01_Canopy01_Fire: 1956871324
+      Environment 01B Spirtesheet_22: 2129836710
+      Environment 01B Spirtesheet_19: 466678499
+      Environment 01B Spirtesheet_9: 363384148
+      Environment 01B Spirtesheet_6: -1076199269
+      Environment 01B Spirtesheet_21: 1626935568
+      Environment 01B Spirtesheet_12: 1479568054
+      Environment 01B Spirtesheet_8: -1446226289
+      Environment 01B Spirtesheet_18: -596358959
+      Environment 01B Spirtesheet_1: 1939216716
+      Environment 01B Spirtesheet_14: 173519125
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
