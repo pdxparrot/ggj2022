@@ -34,6 +34,19 @@ namespace pdxpartyparrot.Game.Characters.NPCs
 
         public Vector3 NextPosition => Vector3.zero;
 
+        public Vector3 MoveDirection
+        {
+            get
+            {
+                if(!HasPath) {
+                    return Vector3.zero;
+                }
+
+                Vector3 nextPosition = NextPosition;
+                return (nextPosition - Movement.Position).normalized;
+            }
+        }
+
         #endregion
 
         [CanBeNull]

@@ -34,14 +34,7 @@ namespace pdxpartyparrot.ggj2022.NPCs
         [SerializeField]
         private GameObject _seedModel;
 
-        public override Vector3 MoveDirection
-        {
-            get
-            {
-                Vector3 nextPosition = Slime.NextPosition;
-                return (nextPosition - Owner.Movement.Position).normalized;
-            }
-        }
+        public override Vector3 MoveDirection => Slime.MoveDirection;
 
         public override float MoveSpeed => MoveSpeedModifier * base.MoveSpeed;
 

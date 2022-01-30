@@ -34,6 +34,8 @@ namespace pdxpartyparrot.Game.Characters.NPCs
 
         Vector3 NextPosition { get; }
 
+        Vector3 MoveDirection { get; }
+
         bool UpdatePath(Vector3 target);
 
         void ResetPath(bool idle);
