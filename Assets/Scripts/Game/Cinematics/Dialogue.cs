@@ -2,6 +2,7 @@
 
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Unity.VisualScripting;
 
 using pdxpartyparrot.Core.Effects;
 using pdxpartyparrot.Core.Input;
@@ -12,6 +13,7 @@ using pdxpartyparrot.Core.Util;
 namespace pdxpartyparrot.Game.Cinematics
 {
     [RequireComponent(typeof(UIObject))]
+    [RequireComponent(typeof(ScriptMachine))]
     public class Dialogue : MonoBehaviour
     {
         [SerializeField]
