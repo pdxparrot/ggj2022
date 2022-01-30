@@ -1,7 +1,10 @@
+using System.Collections.Generic;
+
 using pdxpartyparrot.Core.Effects;
 using pdxpartyparrot.Core.Util;
 
 using UnityEngine;
+using UnityEngine.VFX;
 
 namespace pdxpartyparrot.ggj2022.Effects
 {
@@ -23,6 +26,14 @@ namespace pdxpartyparrot.ggj2022.Effects
         [ReadOnly]
         private float _targetSeedsPlantedPercent;
 
+        [Space(10)]
+
+        [SerializeField]
+        private string _vfxMultiplier = "spawnRateMultiplier";
+
+        [SerializeField]
+        private List<VisualEffect> _vfx = new List<VisualEffect>();
+
         #region Unity Lifecycle
 
         protected override void Awake()
@@ -39,14 +50,23 @@ namespace pdxpartyparrot.ggj2022.Effects
 
         protected override void Update()
         {
-            if(_currentSeedsPlantedPercent != _targetSeedsPlantedPercent) {
-                //Debug.Log($"Updating area {_areaId} blend ('{Parameter}' => {LastPercent}, '{_seedsPlantedParameter}' => {_lastSeedsPlantedPercent})");
+            float dt = Time.deltaTime;
 
-                float dt = Time.deltaTime;
+            if(_currentSeedsPlantedPercent != _targetSeedsPlantedPercent) {
+                //Debug.Log($"Updating area {_areaId} blend ('{Parameter}': {CurrentPercent} => {TargetPercent}, '{_seedsPlantedParameter}': {_currentSeedsPlantedPercent} => {_targetSeedsPlantedPercent})");
+
                 _currentSeedsPlantedPercent = LerpParameter(_seedsPlantedParameter, _currentSeedsPlantedPercent, _targetSeedsPlantedPercent, LerpSpeed * dt);
             }
 
+            float before = CurrentPercent;
             base.Update();
+
+            // lerp vfx based on enemy count
+            if(before != TargetPercent) {
+                foreach(VisualEffect vfx in _vfx) {
+                    vfx.SetFloat(_vfxMultiplier, 1.0f - CurrentPercent);
+                }
+            }
         }
 
         #endregion

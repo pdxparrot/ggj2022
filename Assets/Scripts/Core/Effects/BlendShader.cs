@@ -32,9 +32,13 @@ namespace pdxpartyparrot.Core.Effects
         [ReadOnly]
         private float _currentPercent;
 
+        protected float CurrentPercent => _currentPercent;
+
         [SerializeField]
         [ReadOnly]
         private float _targetPercent;
+
+        protected float TargetPercent => _targetPercent;
 
         #region Unity Lifecycle
 
@@ -50,8 +54,9 @@ namespace pdxpartyparrot.Core.Effects
 
         protected virtual void Update()
         {
+            float dt = UnityEngine.Time.deltaTime;
+
             if(_currentPercent != _targetPercent) {
-                float dt = UnityEngine.Time.deltaTime;
                 _currentPercent = LerpParameter(_parameter, _currentPercent, _targetPercent, LerpSpeed * dt);
             }
         }

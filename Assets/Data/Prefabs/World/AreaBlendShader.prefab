@@ -53,3 +53,5 @@ MonoBehaviour:
   _seedsPlantedParameter: _Growth_Override
   _currentSeedsPlantedPercent: 0
   _targetSeedsPlantedPercent: 0
+  _vfxMultiplier: spawnRateMutiplier
+  _vfx: []
