@@ -13,6 +13,41 @@ MonoBehaviour:
   m_Name: CreditsData
   m_EditorClassIdentifier: 
   _preAmble: 
-  _credits: []
+  _credits:
+  - _title: Team
+    _allowInContributorString: 0
+    _contributors:
+    - PDX Party Parrot
+  - _title: Animation
+    _allowInContributorString: 1
+    _contributors:
+    - Allyson Willsey
+    - Cydoni Lane
+  - _title: Art
+    _allowInContributorString: 1
+    _contributors:
+    - Heather Nesheim
+    - Egil Thompson
+    - MacKenzie Peterson
+  - _title: Audio Design
+    _allowInContributorString: 1
+    _contributors:
+    - Seth Gordon
+  - _title: Game Design/ Implementation/ Unity Generalist
+    _allowInContributorString: 1
+    _contributors:
+    - Tien Tam
+  - _title: Programming
+    _allowInContributorString: 1
+    _contributors:
+    - Shane Lillie
+  - _title: Tech Art
+    _allowInContributorString: 1
+    _contributors:
+    - Sean Parkin
+  - _title: Special Thanks
+    _allowInContributorString: 0
+    _contributors:
+    - PIGSquad
   _postAmble: 
   _contributorString: A {credit} Game
