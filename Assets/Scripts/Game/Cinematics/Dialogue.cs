@@ -1,10 +1,7 @@
-﻿using JetBrains.Annotations;
-
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 using Unity.VisualScripting;
 
-using pdxpartyparrot.Core.Effects;
 using pdxpartyparrot.Core.Input;
 using pdxpartyparrot.Core.Time;
 using pdxpartyparrot.Core.UI;
@@ -24,29 +21,9 @@ namespace pdxpartyparrot.Game.Cinematics
         [SerializeField]
         private bool _allowCancel;
 
-        #region Effects
-
-        [SerializeField]
-        [CanBeNull]
-        private EffectTrigger _enableEffect;
-
-        [SerializeField]
-        [CanBeNull]
-        private EffectTrigger _disableEffect;
-
-        [SerializeField]
-        [CanBeNull]
-        private EffectTrigger _continueEffect;
-
-        [SerializeField]
-        [CanBeNull]
-        private EffectTrigger _cancelEffect;
-
         [SerializeField]
         [ReadOnly]
         private ITimer _showTimer;
-
-        #endregion
 
         #region Unity Lifecycle
 
@@ -68,18 +45,14 @@ namespace pdxpartyparrot.Game.Cinematics
             InputManager.Instance.EventSystem.UIModule.submit.action.performed += OnSubmit;
             InputManager.Instance.EventSystem.UIModule.cancel.action.performed += OnCancel;
 
-            if(null != _enableEffect) {
-                _enableEffect.Trigger();
-            }
+            TriggerScriptEvent("OnEnable");
 
             _showTimer.Start(DialogueManager.Instance.DialogueData.InputDelay);
         }
 
         private void OnDisable()
         {
-            if(null != _disableEffect) {
-                _disableEffect.Trigger();
-            }
+            TriggerScriptEvent("OnDisable");
 
             if(InputManager.HasInstance) {
                 InputManager.Instance.EventSystem.UIModule.submit.action.performed -= OnSubmit;
@@ -96,6 +69,11 @@ namespace pdxpartyparrot.Game.Cinematics
             return GetComponent<UIObject>().Id;
         }
 
+        private void TriggerScriptEvent(string name, params object[] args)
+        {
+            CustomEvent.Trigger(gameObject, name, args);
+        }
+
         #region Event Handlers
 
         private void OnSubmit(InputAction.CallbackContext context)
@@ -104,13 +82,9 @@ namespace pdxpartyparrot.Game.Cinematics
                 return;
             }
 
-            if(null != _continueEffect) {
-                _continueEffect.Trigger(() => {
-                    DialogueManager.Instance.AdvanceDialogue();
-                });
-            } else {
-                DialogueManager.Instance.AdvanceDialogue();
-            }
+            TriggerScriptEvent("OnContinue");
+
+            DialogueManager.Instance.AdvanceDialogue();
         }
 
         private void OnCancel(InputAction.CallbackContext context)
@@ -123,13 +97,9 @@ namespace pdxpartyparrot.Game.Cinematics
                 return;
             }
 
-            if(null != _cancelEffect) {
-                _cancelEffect.Trigger(() => {
-                    DialogueManager.Instance.CancelDialogue();
-                });
-            } else {
-                DialogueManager.Instance.CancelDialogue();
-            }
+            TriggerScriptEvent("OnCancel");
+
+            DialogueManager.Instance.CancelDialogue();
         }
 
         #endregion

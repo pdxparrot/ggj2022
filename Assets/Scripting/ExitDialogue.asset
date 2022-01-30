@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e66c6366d904e98bc83428217d4fd7, type: 3}
+  m_Name: ExitDialogue
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"graph":{"variables":{"collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":null,"summary":null,"pan":{"x":0.0,"y":0.0},"zoom":1.0,"elements":[{"coroutine":false,"defaultValues":{},"position":{"x":-204.0,"y":-144.0},"guid":"18219ce8-1835-491c-82d0-0d5fe6d5d625","$version":"A","$type":"Unity.VisualScripting.Start"},{"coroutine":false,"defaultValues":{},"position":{"x":-204.0,"y":60.0},"guid":"0e117047-2094-4e8d-b056-af9ca8b171d5","$version":"A","$type":"Unity.VisualScripting.Update"},{"defaultValues":{},"position":{"x":288.0,"y":-146.0},"guid":"7279c839-723d-4e05-8c7c-10f0d1dd888e","$version":"A","$type":"pdxpartyparrot.ggj2022.Scripting.Nodes.ExitGameScriptNode","$id":"13"},{"argumentCount":0,"coroutine":false,"defaultValues":{"target":null,"name":{"$content":"OnContinue","$type":"System.String"}},"position":{"x":48.0,"y":-156.0},"guid":"c9f24217-2c48-4bd5-ac2c-7d2a15572ff4","$version":"A","$type":"Unity.VisualScripting.CustomEvent","$id":"15"},{"sourceUnit":{"$ref":"15"},"sourceKey":"trigger","destinationUnit":{"$ref":"13"},"destinationKey":"Invoke","guid":"a18b14f2-c924-469d-bea1-82ed3b7066b4","$type":"Unity.VisualScripting.ControlConnection"}],"$version":"A"}}'
+    _objectReferences: []
