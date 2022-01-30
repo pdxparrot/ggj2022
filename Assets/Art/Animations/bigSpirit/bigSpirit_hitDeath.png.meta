@@ -44,7 +44,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -83,10 +83,10 @@ TextureImporter:
       name: BigSpirit_0014
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1364
-        width: 726
-        height: 683
+        x: 0
+        y: 1186
+        width: 862
+        height: 862
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -104,10 +104,10 @@ TextureImporter:
       name: BigSpirit_0015
       rect:
         serializedVersion: 2
-        x: 1
-        y: 650
-        width: 546
-        height: 712
+        x: 862
+        y: 1186
+        width: 862
+        height: 862
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,10 +125,10 @@ TextureImporter:
       name: BigSpirit_0016
       rect:
         serializedVersion: 2
-        x: 549
-        y: 647
-        width: 419
-        height: 715
+        x: 0
+        y: 324
+        width: 862
+        height: 862
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,10 +146,10 @@ TextureImporter:
       name: BigSpirit_0017
       rect:
         serializedVersion: 2
-        x: 1
-        y: 316
-        width: 537
-        height: 332
+        x: 862
+        y: 324
+        width: 862
+        height: 862
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
