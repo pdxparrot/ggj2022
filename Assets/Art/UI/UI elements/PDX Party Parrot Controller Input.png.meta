@@ -1,0 +1,2065 @@
+fileFormatVersion: 2
+guid: 8f61c77615e287944af1aabebd9f80e1
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: A button 01
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 941
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2522324f0bd62d14e9d3696cb4ece9fc
+      internalID: -8096105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A button 02
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 941
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6509e8f34e7e6b43bc9716ab48ea9f3
+      internalID: 741142347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_2
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 946
+        width: 93
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da58f95bcd25b0047b83aa296cdb08ee
+      internalID: -619682136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_3
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 946
+        width: 93
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7fda1db5bcceb543ae94975cd475e07
+      internalID: -535825596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_4
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 915
+        width: 89
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72edd911c04a63540a4495fa2673858f
+      internalID: 857312205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_6
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 913
+        width: 94
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5738d83399039d47b61e054e1e66331
+      internalID: -1543360726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_7
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 913
+        width: 94
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1163f5b20c690d0408c67f8f7c27864f
+      internalID: -1473793566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: X button 01
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 840
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07014c245c3d6e14bafb677c3c6b3f22
+      internalID: 1922253009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: X button 02
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 840
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5d03d62398cc8f4fbc60e61e574b1a0
+      internalID: 164474306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_14
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 847
+        width: 93
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cb21774c11dbc14d85b53d4bc584f59
+      internalID: 1811122526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_15
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 847
+        width: 93
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7febc599a5245f34d896e0cb320a232b
+      internalID: 450237939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_16
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 787
+        width: 89
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d98b98f231cc64b47a8a28acd4a2e528
+      internalID: 1123432140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_17
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 871
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a5b2fec3cea03a4e907ecdf1a0373e3
+      internalID: -1849330719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_18
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 784
+        width: 94
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 815f85da91fed30459879a49bfdd0f88
+      internalID: -926392157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_19
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 728
+        width: 74
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be290b4cbab14734494220c94bb9a591
+      internalID: 342834004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_20
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 728
+        width: 74
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 919e9caaeea95e04eaa24241e05fbb32
+      internalID: -102484093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_21
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 817
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb26019167e71e744aaef7ba006ba1bc
+      internalID: 1435008164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_22
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 799
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7ae5dfa6f58a1a40a1a4f413fbe28ed
+      internalID: 1310675395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_23
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 817
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54c6aa1ad30012c41a29d0764d98b00c
+      internalID: -589559907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_24
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 799
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4074136a40ec1aa4ea6d926784d8b0d3
+      internalID: 1658739214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Y button 01
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 741
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54f47c9af8003ee4fa480dff89e0da0b
+      internalID: 2076698077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Y button 02
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 741
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15349cee0dd630b4a84fc6a2d843cb74
+      internalID: 1161374858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_27
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 778
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c063406231f6cc84186eb11d20d1afb5
+      internalID: 1895758168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_28
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 734
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51cbf98327c187c408ab72dfa6c85410
+      internalID: -477413583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_29
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 657
+        width: 94
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e89c0f0e4394b049bfcc50533958a83
+      internalID: 727078113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_30
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 671
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd4de1006e011e8409864589a750cdc8
+      internalID: -1343603381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B button 01
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 641
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d18927a846699054d8b98b24be4b5f71
+      internalID: 965270671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B button 02
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 641
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d7a6077f8d76ff4789da5a183743d05
+      internalID: -1359360406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_33
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 627
+        width: 74
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde842d6996568241a5c901ee7ea3517
+      internalID: 587227635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_34
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 627
+        width: 74
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de92eb6fb6464064e9f46dfb5e1fca09
+      internalID: -2058129551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_35
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 664
+        width: 91
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f23f9c0e6d020948977d47d0b0cef40
+      internalID: 375753691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_36
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 664
+        width: 91
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e9853e7887517f4d8362da9a9d68c0c
+      internalID: -411732581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_37
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 606
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eadb609014ecd4b43b72091a509c0c71
+      internalID: -1428146755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_38
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 528
+        width: 94
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c960c8e970f41e40b825b7b19884e57
+      internalID: -1724063533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_39
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 532
+        width: 89
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f21c7e3c1db18b4588ad8a8d36a9a8e
+      internalID: 713357262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_40
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 545
+        width: 60
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8723bed0d00a98d45b6de1182bb420bc
+      internalID: 846559846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_41
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 545
+        width: 60
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd65f6975fac03745b0498be74a00f7f
+      internalID: -502227412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_42
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 536
+        width: 91
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f2d4be85edaee44d8fa158eda9b6399
+      internalID: 1923263836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_43
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 536
+        width: 91
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a71628f92c594824486b632348418ef9
+      internalID: 1811898528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_44
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 445
+        width: 60
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bc89adc33ba898488c3ab5ae3135c45
+      internalID: -624801901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_45
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 445
+        width: 60
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 427abdac0954a664a89aa73bf9bf2313
+      internalID: 1364277625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_46
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 488
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a89b1ef9a293314aa52d19bd4b204d2
+      internalID: -1176806079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_47
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 415
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e0d97cd776b2a9459fea9125ab0e52d
+      internalID: 1612470475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_48
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 467
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f7b5402aaffe224e83bfceb4e8eda00
+      internalID: -675166919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_49
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 415
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c032f35403043347b9d1c7fee20cb21
+      internalID: -391701602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_50
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 415
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 729e6e4c4abc9f8468f5f4b2d649f845
+      internalID: 1949250492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_51
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 415
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2ab389f213d9ac41aecc0df91cedeab
+      internalID: 185565458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_52
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 465
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fa28cbfbf654a64dbad2de1263c74cb
+      internalID: 1726214050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xbox Controller
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 300
+        width: 243
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eceadc8369132b4cb319888a921565b
+      internalID: 2132736365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_54
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 434
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 677498328757af14f91e987c36e58a94
+      internalID: -1757541890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_55
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 287
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ce390c61da5abf4aa49db4a89146641
+      internalID: 1252726812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_56
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 287
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e82cc18bbad492c43aafd4c2b06dc3ea
+      internalID: -729109479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_57
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 287
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1277e74df94db9849807c0d9b0901300
+      internalID: -505606100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_58
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 287
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64c7b34b6e5379848b5c8e54e65f1dc5
+      internalID: 2092941918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_59
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 306
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8425ce30bc30f1d4887b183e61085b69
+      internalID: 1130021717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_60
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 281
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ab69c1b58b04364689678de0ff5c5b1
+      internalID: 1131014108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_61
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 280
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 847fcb1420a34c24dacad255c388acd5
+      internalID: -706474369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_62
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 267
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff60bc16da6e4bf41b1e0446cc77db2c
+      internalID: 336926407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_63
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 232
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cf726b505d459744acc15807a7bcc11
+      internalID: -636494844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_64
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 231
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52823a1c3b1b87341b2fcd47f4f775fd
+      internalID: -529728624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_65
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 160
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e07de405cbf73bf4098adcec6556d0f2
+      internalID: -1607313220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_66
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 160
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f53b2a3494bb464ba9266b69e25a7f9
+      internalID: -1671074505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_67
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 160
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a55f7b0631db8c4aaee5a35aa7f9e30
+      internalID: -1699114751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_68
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 211
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 045ffdee04799ef42a4242c17cfd784d
+      internalID: 356990461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_69
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 159
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 621dc7f8e3abd064f9626f378ad142bd
+      internalID: -1851343381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_70
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 159
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d577b896cd1da84abfc1974710b68e5
+      internalID: 1546802368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_71
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 160
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71bccae08b4faf4449516074fc5c1d89
+      internalID: -1722154040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_72
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 210
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6618a0c19da79b744bad43e5d40af4d5
+      internalID: 1681528446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_73
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 178
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caff1663b676f194c9a3281b3e278c86
+      internalID: -1726344472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_74
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 178
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbac108a1b1b8354b8b14bc3a961d04a
+      internalID: 228343613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_75
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 178
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c0836975a59cde4cbfe7ecab0f2f2c8
+      internalID: -550801545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_76
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 139
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 750c2a7789cdebc4eba781ad3386e73d
+      internalID: 321791846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_77
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 104
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b456882bf38f7044eb068083af144c42
+      internalID: 794505804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_78
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 31
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 582341c014793fc4c8feb1b0e3bb0970
+      internalID: 886009378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_79
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 50
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dae653ec874b5054bbfeb83174a959fc
+      internalID: -392585015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_80
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 31
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9ad4990f0b3fcc439f5ed35ceb8ac07
+      internalID: 1687378917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_81
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 50
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf7757db0d7a5be41a73dd5bd8ae10a8
+      internalID: 1290660196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_82
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 31
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f17da4f9161d12408d0143c5c7840ba
+      internalID: -1658383449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_83
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 32
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a191460a2cba0045a5c92cb025b111a
+      internalID: -1469464751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_84
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 31
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72ffb64e0b3a26647920204c7e25002d
+      internalID: -1233248609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_85
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 32
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e66ab9543b71424b9266cf9651b4080
+      internalID: 634320553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_86
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 50
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79729105f2f14304c934dffce8d4d5ba
+      internalID: 198217222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_87
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 26
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfe352f0f9b62bf408b369c0469fe478
+      internalID: -292788654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_88
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 25
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6178f52e76eea64884a0c787d6de544
+      internalID: -1354609341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_89
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 11
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b72133fb8f9924459039addc7916fe8
+      internalID: -1361621485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PDX Party Parrot Controller Input_90
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 11
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e924b8508b968b4b9c8439e036ddb67
+      internalID: -535323485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lstick Movement
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 901
+        width: 125
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd6ccc18869b10244986f0bbe5510d72
+      internalID: 1052176427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: fcb4b5325f700b448ab4f1b1b1802f05
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PDX Party Parrot Controller Input_57: -505606100
+      PDX Party Parrot Controller Input_79: -392585015
+      PDX Party Parrot Controller Input_41: -502227412
+      PDX Party Parrot Controller Input_36: -411732581
+      PDX Party Parrot Controller Input_37: -1428146755
+      PDX Party Parrot Controller Input_62: 336926407
+      PDX Party Parrot Controller Input_86: 198217222
+      PDX Party Parrot Controller Input_68: 356990461
+      PDX Party Parrot Controller Input_21: 1435008164
+      PDX Party Parrot Controller Input_11: 1858987984
+      PDX Party Parrot Controller Input_29: 727078113
+      PDX Party Parrot Controller Input_69: -1851343381
+      PDX Party Parrot Controller Input_70: 1546802368
+      Xbox Controller: 2132736365
+      PDX Party Parrot Controller Input_9: 874164185
+      PDX Party Parrot Controller Input_14: 1811122526
+      PDX Party Parrot Controller Input_39: 713357262
+      PDX Party Parrot Controller Input_83: -1469464751
+      Lstick Movement: 1052176427
+      PDX Party Parrot Controller Input_3: -535825596
+      PDX Party Parrot Controller Input_72: 1681528446
+      PDX Party Parrot Controller Input_48: -675166919
+      Y button 02: 1161374858
+      PDX Party Parrot Controller Input_75: -550801545
+      PDX Party Parrot Controller Input_73: -1726344472
+      PDX Party Parrot Controller Input_7: -1473793566
+      PDX Party Parrot Controller Input_89: -1361621485
+      X button 01: 1922253009
+      PDX Party Parrot Controller Input_49: -391701602
+      PDX Party Parrot Controller Input_63: -636494844
+      PDX Party Parrot Controller Input_85: 634320553
+      PDX Party Parrot Controller Input_51: 185565458
+      PDX Party Parrot Controller Input_4: 857312205
+      PDX Party Parrot Controller Input_55: 1252726812
+      PDX Party Parrot Controller Input_66: -1671074505
+      PDX Party Parrot Controller Input_43: 1811898528
+      PDX Party Parrot Controller Input_58: 2092941918
+      B button 02: -1359360406
+      PDX Party Parrot Controller Input_60: 1131014108
+      PDX Party Parrot Controller Input_64: -529728624
+      PDX Party Parrot Controller Input_8: -696936199
+      PDX Party Parrot Controller Input_28: -477413583
+      PDX Party Parrot Controller Input_17: -1849330719
+      PDX Party Parrot Controller Input_35: 375753691
+      PDX Party Parrot Controller Input_40: 846559846
+      PDX Party Parrot Controller Input_77: 794505804
+      PDX Party Parrot Controller Input_23: -589559907
+      PDX Party Parrot Controller Input_20: -102484093
+      PDX Party Parrot Controller Input_24: 1658739214
+      PDX Party Parrot Controller Input_44: -624801901
+      PDX Party Parrot Controller Input_74: 228343613
+      PDX Party Parrot Controller Input_52: 1726214050
+      PDX Party Parrot Controller Input_78: 886009378
+      PDX Party Parrot Controller Input_87: -292788654
+      PDX Party Parrot Controller Input_54: -1757541890
+      PDX Party Parrot Controller Input_10: 1135388040
+      PDX Party Parrot Controller Input_71: -1722154040
+      B button 01: 965270671
+      PDX Party Parrot Controller Input_2: -619682136
+      A button 01: -8096105
+      PDX Party Parrot Controller Input_56: -729109479
+      PDX Party Parrot Controller Input_33: 587227635
+      PDX Party Parrot Controller Input_88: -1354609341
+      PDX Party Parrot Controller Input_80: 1687378917
+      PDX Party Parrot Controller Input_90: -535323485
+      X button 02: 164474306
+      PDX Party Parrot Controller Input_46: -1176806079
+      PDX Party Parrot Controller Input_47: 1612470475
+      PDX Party Parrot Controller Input_59: 1130021717
+      Y button 01: 2076698077
+      PDX Party Parrot Controller Input_18: -926392157
+      PDX Party Parrot Controller Input_50: 1949250492
+      PDX Party Parrot Controller Input_76: 321791846
+      PDX Party Parrot Controller Input_6: -1543360726
+      PDX Party Parrot Controller Input_67: -1699114751
+      PDX Party Parrot Controller Input_19: 342834004
+      PDX Party Parrot Controller Input_5: 1142061507
+      PDX Party Parrot Controller Input_16: 1123432140
+      PDX Party Parrot Controller Input_84: -1233248609
+      PDX Party Parrot Controller Input_81: 1290660196
+      A button 02: 741142347
+      PDX Party Parrot Controller Input_30: -1343603381
+      PDX Party Parrot Controller Input_45: 1364277625
+      PDX Party Parrot Controller Input_38: -1724063533
+      PDX Party Parrot Controller Input_42: 1923263836
+      PDX Party Parrot Controller Input_27: 1895758168
+      PDX Party Parrot Controller Input_61: -706474369
+      PDX Party Parrot Controller Input_65: -1607313220
+      PDX Party Parrot Controller Input_22: 1310675395
+      PDX Party Parrot Controller Input_34: -2058129551
+      PDX Party Parrot Controller Input_15: 450237939
+      PDX Party Parrot Controller Input_82: -1658383449
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
