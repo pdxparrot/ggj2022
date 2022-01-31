@@ -5,30 +5,16 @@ using UnityEngine.UI;
 
 namespace pdxpartyparrot.Core.UI
 {
-    /*
-    Tips on making this work:
-
-    TODO: these two things seem to be the source of the initial scrolling issues
-    Add a LayoutGroup to Content
-        Set Child Controls Size Width / Height
-        Set Child Force Expand Width / Height
-    Add a ContentSizeFitter to Content
-        Set Horizontal Fit to Unconstrained
-        Set Vertical Fit to Preferred Size
-
-    Delete the ScrollBars completely to get them to not show up
-    */
-
     [RequireComponent(typeof(ScrollRect))]
     public class ScrollRectAutoScroll : MonoBehaviour
     {
         [SerializeField]
         [Tooltip("Delay before starting to scroll")]
-        private float _delay = 3.0f;
+        private float _delay = 2.0f;
 
         [SerializeField]
         [Tooltip("Units per-second to scroll")]
-        private float _scrollRate = 48.0f;
+        private float _scrollRate = 125.0f;
 
         [SerializeField]
         private bool _resetOnEnable = true;
