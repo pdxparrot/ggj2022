@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
+using Unity.AI.Navigation;
 
 namespace pdxpartyparrot.Game.World
 {
+    [RequireComponent(typeof(NavMeshModifier))]
     public abstract class WorldBoundary : MonoBehaviour
     {
         protected void HandleCollisionEnter(GameObject go)
