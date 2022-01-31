@@ -19,6 +19,8 @@ namespace pdxpartyparrot.ggj2022.Players
 
         private GameViewer PlayerGameViewer => (GameViewer)Viewer;
 
+        public ForestSpiritBehavior.SpiritForm CurrentForm => GamePlayerBehavior.ForestSpiritBehavior.CurrentForm;
+
         #region Unity Lifecycle
 
         protected override void Awake()
