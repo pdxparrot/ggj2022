@@ -42,6 +42,10 @@ namespace pdxpartyparrot.Game.Characters.NPCs
 
         [SerializeField]
         [ReadOnly]
+        private Vector3 _destination;
+
+        [SerializeField]
+        [ReadOnly]
         private bool _pathPending;
 
         [SerializeField]
@@ -212,12 +216,18 @@ namespace pdxpartyparrot.Game.Characters.NPCs
 
         #region Pathing
 
-        public bool UpdatePath(Vector3 target)
+        public bool UpdatePath(Vector3 target, float range = 10.0f)
         {
+            // update the target to be on the navmesh if possible
+            if(NavMesh.SamplePosition(target, out NavMeshHit hit, range, NavMesh.AllAreas)) {
+                target = hit.position;
+            }
+
             if(!_agent.SetDestination(target)) {
                 Debug.LogWarning($"Failed to set NPC {Id} destination: {target}");
                 return false;
             }
+            _destination = target;
 
             if(GameStateManager.Instance.NPCManager.DebugBehavior) {
                 DisplayDebugText($"Pathing to {target}", Color.green);

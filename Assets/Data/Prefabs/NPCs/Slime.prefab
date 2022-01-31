@@ -395,7 +395,7 @@ NavMeshAgent:
   m_AutoRepath: 1
   m_Height: 1
   m_BaseOffset: 0.5
-  m_WalkableMask: 4294967295
+  m_WalkableMask: 1
   m_ObstacleAvoidanceType: 4
 --- !u!208 &6746816180974674082
 NavMeshObstacle:
@@ -481,6 +481,7 @@ MonoBehaviour:
   _isMoving: 0
   _facingDirection: {x: 1, y: 0, z: 0}
   _manualAnimator: {fileID: 0}
+  _destination: {x: 0, y: 0, z: 0}
   _pathPending: 0
   _hasPath: 0
   _pathStatus: 0

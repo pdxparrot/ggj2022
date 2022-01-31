@@ -85,7 +85,7 @@ namespace pdxpartyparrot.Game.Characters.NPCs
                                   0.0f,
                                   _fidgetRange.GetRandomValue() * PartyParrotManager.Instance.Random.NextSign());
 
-            _owner.UpdatePath(Origin + _offset);
+            _owner.UpdatePath(Origin + _offset, 10.0f);
 
             // TODO: really we want to start this when the NPC reaches their destination
             _cooldown.Start(_cooldownSeconds);

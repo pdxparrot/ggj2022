@@ -92,7 +92,7 @@ namespace pdxpartyparrot.Game.Characters.NPCs
 
         #region Pathing
 
-        public bool UpdatePath(Vector3 target)
+        public bool UpdatePath(Vector3 target, float range = 10.0f)
         {
             Debug.LogWarning("TODO: NPC2D.UpdatePath()");
 
