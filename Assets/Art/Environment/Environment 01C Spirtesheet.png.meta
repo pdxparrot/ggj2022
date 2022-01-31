@@ -135,8 +135,8 @@ TextureImporter:
         y: 2069
         width: 759
         height: 2008
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -149,15 +149,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01C Spirtesheet_1
+      name: Env01_Tree02_Ash
       rect:
         serializedVersion: 2
-        x: 891
-        y: 2679
-        width: 490
-        height: 1106
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 899
+        y: 2665
+        width: 548
+        height: 1376
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -170,15 +170,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01C Spirtesheet_2
+      name: Env01_Tree03_Ash
       rect:
         serializedVersion: 2
-        x: 1657
-        y: 2751
-        width: 296
-        height: 1318
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1569
+        y: 2691
+        width: 436
+        height: 1394
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -191,15 +191,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01C Spirtesheet_3
+      name: Env01_Tree04_Ash
       rect:
         serializedVersion: 2
-        x: 2169
-        y: 2497
-        width: 242
-        height: 1004
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 2171
+        y: 2507
+        width: 290
+        height: 1560
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -212,15 +212,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01C Spirtesheet_4
+      name: Env01_Tree05_Ash
       rect:
         serializedVersion: 2
-        x: 2707
-        y: 2791
-        width: 258
-        height: 1264
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 2669
+        y: 2783
+        width: 400
+        height: 1284
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -233,15 +233,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01C Spirtesheet_5
+      name: Env01_Tree06_Ash
       rect:
         serializedVersion: 2
-        x: 3269
-        y: 2915
-        width: 120
-        height: 1128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 3265
+        y: 2885
+        width: 150
+        height: 1183
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -254,15 +254,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01C Spirtesheet_6
+      name: Env01_Tree07_Ash
       rect:
         serializedVersion: 2
-        x: 3521
-        y: 2887
-        width: 552
-        height: 1209
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 3493
+        y: 2891
+        width: 532
+        height: 1176
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -275,13 +275,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01C Spirtesheet_7
+      name: Env01_Hill01_Ash
       rect:
         serializedVersion: 2
         x: 751
-        y: 2159
+        y: 2154
         width: 1316
-        height: 441
+        height: 418
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -296,13 +296,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01C Spirtesheet_8
+      name: Env01_Hill02_Ash
       rect:
         serializedVersion: 2
-        x: 2619
+        x: 2488
         y: 2417
-        width: 1424
-        height: 284
+        width: 1557
+        height: 316
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -317,7 +317,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01C Spirtesheet_9
+      name: Env01_Tree09_Ash
       rect:
         serializedVersion: 2
         x: 2089
@@ -338,7 +338,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01C Spirtesheet_10
+      name: Env01_Tree08_Ash
       rect:
         serializedVersion: 2
         x: 2918
@@ -359,7 +359,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01C Spirtesheet_11
+      name: Env01_LG_Rock01_Ash
       rect:
         serializedVersion: 2
         x: 20
@@ -380,11 +380,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01C Spirtesheet_12
+      name: Env01_MD_Rock01_Ash
       rect:
         serializedVersion: 2
         x: 37
-        y: 1321
+        y: 1316
         width: 434
         height: 166
       alignment: 0
@@ -401,10 +401,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01C Spirtesheet_13
+      name: Env01_SM_Rock01_Ash
       rect:
         serializedVersion: 2
-        x: 533
+        x: 538
         y: 1355
         width: 312
         height: 146
@@ -422,7 +422,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01C Spirtesheet_14
+      name: Env01_SM_Rock03_Ash
       rect:
         serializedVersion: 2
         x: 97
@@ -443,7 +443,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01C Spirtesheet_15
+      name: Env01_SM_Rock02_Ash
       rect:
         serializedVersion: 2
         x: 515
@@ -485,11 +485,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01C Spirtesheet_17
+      name: Env01_Bush02_Ash
       rect:
         serializedVersion: 2
         x: 1323
-        y: 37
+        y: 42
         width: 848
         height: 390
       alignment: 0
@@ -506,11 +506,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01C Spirtesheet_18
+      name: Env01_Fern01_Ash
       rect:
         serializedVersion: 2
         x: 107
-        y: 47
+        y: 52
         width: 360
         height: 132
       alignment: 0
@@ -527,11 +527,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01C Spirtesheet_19
+      name: Env01_SM_Hill01_Ash
       rect:
         serializedVersion: 2
-        x: 467
-        y: 37
+        x: 472
+        y: 42
         width: 785
         height: 232
       alignment: 0
@@ -547,6 +547,132 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Env01_Platform_Canopy05_Ash
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 889
+        width: 340
+        height: 1101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b79c88888e66b54c939a47a7c433122
+      internalID: 1011112452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Env01_Canopy01_Ash
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 817
+        width: 1513
+        height: 1178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 892f616241cc9634dbfcc2fc71b9ca41
+      internalID: -322831718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Env01_Canopy03_Ash
+      rect:
+        serializedVersion: 2
+        x: 3051
+        y: 1299
+        width: 986
+        height: 700
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 491c365b477f6fe4dbccc7112e79407e
+      internalID: 1641588811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Env01_Canopy02_Ash
+      rect:
+        serializedVersion: 2
+        x: 3191
+        y: 19
+        width: 866
+        height: 1200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9adea948ae4a7d4dbf0e5a6a782568d
+      internalID: -1016932145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Env01_Canopy04_Ash
+      rect:
+        serializedVersion: 2
+        x: 2348
+        y: 19
+        width: 734
+        height: 496
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 476cb30b7c2d2c24cabecde00ad1a04c
+      internalID: -406788145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Env01_SM_Canopy01_Ash
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 437
+        width: 505
+        height: 389
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a6d1164c47df57469651951c0baa7b6
+      internalID: -1159385143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -558,26 +684,32 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Environment 01C Spirtesheet_18: 1543768088
-      Environment 01C Spirtesheet_9: -2056904339
-      Environment 01C Spirtesheet_7: 56576110
+      Env01_SM_Rock02_Ash: -1716128960
+      Env01_Hill01_Ash: 56576110
+      Env01_Tree08_Ash: 193674640
       Env01_Bush01_Ash: -724649324
-      Environment 01C Spirtesheet_13: -944392740
-      Environment 01C Spirtesheet_1: 606716890
-      Environment 01C Spirtesheet_15: -1716128960
-      Environment 01C Spirtesheet_14: 284965454
-      Environment 01C Spirtesheet_11: -1337903314
-      Environment 01C Spirtesheet_12: -1752679421
-      Environment 01C Spirtesheet_6: 512921348
-      Environment 01C Spirtesheet_4: 872239959
-      Environment 01C Spirtesheet_5: -1324940659
-      Environment 01C Spirtesheet_3: -857813868
-      Environment 01C Spirtesheet_2: -324411815
-      Environment 01C Spirtesheet_17: -270226074
-      Environment 01C Spirtesheet_8: 346140368
-      Environment 01C Spirtesheet_10: 193674640
+      Env01_Platform_Canopy05_Ash: 1011112452
+      Env01_SM_Hill01_Ash: -215655981
+      Env01_LG_Rock01_Ash: -1337903314
+      Env01_Tree06_Ash: -1324940659
+      Env01_SM_Rock03_Ash: 284965454
+      Env01_Tree05_Ash: 872239959
+      Env01_MD_Rock01_Ash: -1752679421
+      Env01_Hill02_Ash: 346140368
+      Env01_Tree03_Ash: -324411815
+      Env01_Canopy02_Ash: -1016932145
+      Env01_Tree09_Ash: -2056904339
+      Env01_Canopy03_Ash: 1641588811
+      Env01_SM_Rock01_Ash: -944392740
+      Env01_Fern01_Ash: 1543768088
+      Env01_Canopy04_Ash: -406788145
+      Env01_Tree07_Ash: 512921348
+      Env01_Tree02_Ash: 606716890
+      Env01_Bush02_Ash: -270226074
+      Env01_Tree04_Ash: -857813868
+      Env01_Canopy01_Ash: -322831718
       Env01_Tree01_Ash: -435980033
-      Environment 01C Spirtesheet_19: -215655981
+      Env01_SM_Canopy01_Ash: -1159385143
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

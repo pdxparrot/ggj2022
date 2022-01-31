@@ -135,8 +135,8 @@ TextureImporter:
         y: 2069
         width: 759
         height: 2008
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -149,15 +149,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01 Spirtesheet_1
+      name: Env01_Tree02
       rect:
         serializedVersion: 2
         x: 899
         y: 2665
         width: 548
         height: 1376
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -170,15 +170,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01 Spirtesheet_2
+      name: Env01_Tree03
       rect:
         serializedVersion: 2
         x: 1569
         y: 2691
         width: 436
         height: 1350
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -191,15 +191,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01 Spirtesheet_3
+      name: Env01_Tree04
       rect:
         serializedVersion: 2
         x: 2171
         y: 2507
         width: 290
         height: 1560
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -212,15 +212,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01 Spirtesheet_4
+      name: Env01_Tree05
       rect:
         serializedVersion: 2
         x: 2669
         y: 2783
         width: 400
         height: 1284
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -233,15 +233,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01 Spirtesheet_5
+      name: Env01_Tree06
       rect:
         serializedVersion: 2
         x: 3265
         y: 2885
         width: 150
         height: 1182
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -254,15 +254,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01 Spirtesheet_6
+      name: Env01_Tree07
       rect:
         serializedVersion: 2
         x: 3493
         y: 2891
         width: 532
         height: 1176
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -275,7 +275,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01 Spirtesheet_7
+      name: Env01_Hill01
       rect:
         serializedVersion: 2
         x: 751
@@ -296,7 +296,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01 Spirtesheet_8
+      name: Env01_Hill02
       rect:
         serializedVersion: 2
         x: 2488
@@ -317,7 +317,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01 Spirtesheet_9
+      name: Env01_Tree08
       rect:
         serializedVersion: 2
         x: 2918
@@ -338,7 +338,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01 Spirtesheet_10
+      name: Env01_Tree09
       rect:
         serializedVersion: 2
         x: 2089
@@ -359,7 +359,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01 Spirtesheet_11
+      name: Env01_LG_Rock01
       rect:
         serializedVersion: 2
         x: 20
@@ -380,7 +380,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01 Spirtesheet_12
+      name: Env01_Platform_Canopy05
       rect:
         serializedVersion: 2
         x: 1059
@@ -422,7 +422,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01 Spirtesheet_14
+      name: Env01_Canopy03
       rect:
         serializedVersion: 2
         x: 3051
@@ -527,7 +527,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01 Spirtesheet_21
+      name: Env01_MD_Rock01
       rect:
         serializedVersion: 2
         x: 37
@@ -548,11 +548,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01 Spirtesheet_22
+      name: Env01_SM_Rock01
       rect:
         serializedVersion: 2
         x: 533
-        y: 1355
+        y: 1360
         width: 312
         height: 149
       alignment: 0
@@ -569,7 +569,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01 Spirtesheet_24
+      name: Env01_SM_Rock03
       rect:
         serializedVersion: 2
         x: 97
@@ -590,7 +590,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01 Spirtesheet_25
+      name: Env01_SM_Rock02
       rect:
         serializedVersion: 2
         x: 515
@@ -611,7 +611,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01 Spirtesheet_29
+      name: Env01_Canopy02
       rect:
         serializedVersion: 2
         x: 3191
@@ -635,7 +635,7 @@ TextureImporter:
       name: Env01_Bush01
       rect:
         serializedVersion: 2
-        x: 65
+        x: 70
         y: 359
         width: 1002
         height: 666
@@ -653,7 +653,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01 Spirtesheet_32
+      name: Env01_SM_Canopy01
       rect:
         serializedVersion: 2
         x: 1140
@@ -674,7 +674,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01 Spirtesheet_33
+      name: Env01_Canopy04
       rect:
         serializedVersion: 2
         x: 2348
@@ -695,7 +695,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01 Spirtesheet_34
+      name: Env01_Bush02
       rect:
         serializedVersion: 2
         x: 1323
@@ -716,7 +716,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01 Spirtesheet_37
+      name: Env01_Fern01
       rect:
         serializedVersion: 2
         x: 67
@@ -737,7 +737,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 01 Spirtesheet_38
+      name: Env01_SM_Hill01
       rect:
         serializedVersion: 2
         x: 467
@@ -757,27 +757,6 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Environment 01 Spirtesheet_18
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 4096
-        height: 4096
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 547f9cdcc89212244a660914da04e5fb
-      internalID: -886967466
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -789,45 +768,45 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Environment 01 Spirtesheet_12: -726814706
+      Env01_Tree04: -2111198698
       Env01_Bush01: -1217745585
       Environment 01 Spirtesheet_15: 637643106
-      Environment 01 Spirtesheet_14: -1208484795
-      Environment 01 Spirtesheet_10: -1242373479
-      Environment 01 Spirtesheet_32: -77303598
-      Environment 01 Spirtesheet_16: 945540881
       Environment 01 Spirtesheet_35: -693461791
+      Environment 01 Spirtesheet_16: 945540881
+      Env01_SM_Rock02: -1591557760
       Environment 01 Spirtesheet_23: -947104709
       Environment 01 Spirtesheet_30: 1770568011
-      Environment 01 Spirtesheet_9: -654404223
-      Environment 01 Spirtesheet_38: 94964942
+      Env01_Canopy02: 41832454
+      Env01_Fern01: -1424255264
+      Env01_MD_Rock01: -393209541
+      Env01_Tree07: 1034765090
+      Env01_Canopy04: -191545922
       Env01_Canopy01: 126022200
-      Environment 01 Spirtesheet_7: -1196729174
-      Environment 01 Spirtesheet_1: -2041110905
-      Environment 01 Spirtesheet_2: 2001230779
-      Environment 01 Spirtesheet_8: -1636827336
-      Environment 01 Spirtesheet_6: 1034765090
-      Environment 01 Spirtesheet_25: -1591557760
+      Env01_SM_Rock01: 2042406565
+      Env01_Tree05: -486225577
+      Env01_SM_Hill01: 94964942
+      Env01_Canopy03: -1208484795
+      Env01_Platform_Canopy05: -726814706
       Environment 01 Spirtesheet_28: -1275389084
       Environment 01 Spirtesheet_18: -886967466
       Environment 01 Spirtesheet_17: 1290426233
-      Environment 01 Spirtesheet_21: -393209541
-      Environment 01 Spirtesheet_24: 1592191457
+      Env01_Tree03: 2001230779
       Environment 01 Spirtesheet_26: -420206142
-      Environment 01 Spirtesheet_34: 654505337
-      Environment 01 Spirtesheet_33: -191545922
-      Environment 01 Spirtesheet_4: -486225577
+      Env01_Tree08: -654404223
+      Env01_SM_Rock03: 1592191457
+      Env01_Hill02: -1636827336
+      Env01_Bush02: 654505337
+      Env01_Tree06: -1667778956
+      Env01_LG_Rock01: -1518724390
       Env01_Tree01: 2108941950
-      Environment 01 Spirtesheet_29: 41832454
+      Env01_SM_Canopy01: -77303598
       Environment 01 Spirtesheet_36: 1512479172
-      Environment 01 Spirtesheet_11: -1518724390
       Environment 01 Spirtesheet_27: -320501639
-      Environment 01 Spirtesheet_3: -2111198698
       Environment 01 Spirtesheet_19: -997895638
-      Environment 01 Spirtesheet_5: -1667778956
-      Environment 01 Spirtesheet_22: 2042406565
+      Env01_Tree09: -1242373479
       Environment 01 Spirtesheet_20: -1510651146
-      Environment 01 Spirtesheet_37: -1424255264
+      Env01_Tree02: -2041110905
+      Env01_Hill01: -1196729174
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
