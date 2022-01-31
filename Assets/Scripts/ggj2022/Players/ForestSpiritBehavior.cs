@@ -43,6 +43,8 @@ namespace pdxpartyparrot.ggj2022.Players
         [ReadOnly]
         private SpiritForm _currentForm;
 
+        public SpiritForm CurrentForm => _currentForm;
+
         public bool IsLarge => SpiritForm.Large == _currentForm;
 
         public float MoveSpeedModifier => IsLarge ? _data.LargeSpiritMoveSpeedModifier : 1.0f;
