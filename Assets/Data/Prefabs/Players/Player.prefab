@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7aa5b3839c05786ebee7ba953b8c5e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioClip: {fileID: 8300000, guid: d1dfe18b982790c43bb521416695e4c3, type: 3}
+  _audioClip: {fileID: 8300000, guid: 8d7233a510004f04d9acdfa6370a66c1, type: 3}
   _audioSource: {fileID: 0}
   _loop: 0
   _waitForComplete: 0
@@ -869,7 +869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7aa5b3839c05786ebee7ba953b8c5e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioClip: {fileID: 8300000, guid: 501a861d31d7f064eafac6581e8dc76d, type: 3}
+  _audioClip: {fileID: 8300000, guid: f94d0d8941d1c6a4f8c8cdc77acda44f, type: 3}
   _audioSource: {fileID: 0}
   _loop: 0
   _waitForComplete: 0
@@ -942,7 +942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7aa5b3839c05786ebee7ba953b8c5e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioClip: {fileID: 8300000, guid: d1dfe18b982790c43bb521416695e4c3, type: 3}
+  _audioClip: {fileID: 8300000, guid: e793e97e3884b6b418dc294867fa0619, type: 3}
   _audioSource: {fileID: 0}
   _loop: 0
   _waitForComplete: 0
