@@ -185,13 +185,12 @@ namespace pdxpartyparrot.ggj2022.Players
                 switch(_currentForm) {
                 case SpiritForm.Small:
                     SetForm(SpiritForm.Large);
-                    GamePlayerBehavior.GamePlayer.TriggerScriptEvent("FormSwapLarge");
                     break;
                 case SpiritForm.Large:
                     SetForm(SpiritForm.Small);
-                    GamePlayerBehavior.GamePlayer.TriggerScriptEvent("FormSwapSmall");
                     break;
                 }
+                GamePlayerBehavior.GamePlayer.TriggerScriptEvent("FormSwap");
 
                 return true;
             }
