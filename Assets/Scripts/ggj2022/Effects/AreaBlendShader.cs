@@ -6,6 +6,7 @@ using pdxpartyparrot.Core.Util;
 
 using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.Serialization;
 using UnityEngine.VFX;
 
 namespace pdxpartyparrot.ggj2022.Effects
@@ -34,10 +35,18 @@ namespace pdxpartyparrot.ggj2022.Effects
         [Space(10)]
 
         [SerializeField]
-        private string _vfxMultiplier = "spawnRateMultiplier";
+        [FormerlySerializedAs("_vfxMultiplier")]
+        private string _enemiesStompedVfxMultiplier = "spawnRateMultiplier";
 
         [SerializeField]
-        private List<VisualEffect> _vfx = new List<VisualEffect>();
+        [FormerlySerializedAs("_vfx")]
+        private List<VisualEffect> _enemiesStompedVfx = new List<VisualEffect>();
+
+        [SerializeField]
+        private string _seedsPlantedVfxMultiplier = "spawnRateMultiplier_Seeds";
+
+        [SerializeField]
+        private List<VisualEffect> _seedsPlantedVfx = new List<VisualEffect>();
 
         #region Unity Lifecycle
 
@@ -61,17 +70,24 @@ namespace pdxpartyparrot.ggj2022.Effects
         {
             float dt = Time.deltaTime;
 
+            float enemiesBefore = CurrentPercent;
+            float seedsBefore = _currentSeedsPlantedPercent;
+
             if(_currentSeedsPlantedPercent != _targetSeedsPlantedPercent) {
                 _currentSeedsPlantedPercent = LerpParameter(_seedsPlantedParameter, _currentSeedsPlantedPercent, _targetSeedsPlantedPercent, LerpSpeed * dt);
             }
 
-            float before = CurrentPercent;
             base.Update();
 
-            // lerp vfx based on enemy count
-            if(before != TargetPercent) {
-                foreach(VisualEffect vfx in _vfx) {
-                    vfx.SetFloat(_vfxMultiplier, 1.0f - CurrentPercent);
+            if(enemiesBefore != TargetPercent) {
+                foreach(VisualEffect vfx in _enemiesStompedVfx) {
+                    vfx.SetFloat(_enemiesStompedVfxMultiplier, 1.0f - CurrentPercent);
+                }
+            }
+
+            if(seedsBefore != _targetSeedsPlantedPercent) {
+                foreach(VisualEffect vfx in _seedsPlantedVfx) {
+                    vfx.SetFloat(_seedsPlantedVfxMultiplier, 1.0f - _currentSeedsPlantedPercent);
                 }
             }
         }
