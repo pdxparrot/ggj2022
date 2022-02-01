@@ -38,6 +38,10 @@ namespace pdxpartyparrot.ggj2022
 
         private readonly Dictionary<string, int> _areaStompedEnemyCount = new Dictionary<string, int>();
 
+        [SerializeField]
+        [ReadOnly]
+        private int _planterCount;
+
         private readonly Dictionary<string, int> _areaPlantersCount = new Dictionary<string, int>();
 
         [SerializeField]
@@ -98,12 +102,21 @@ namespace pdxpartyparrot.ggj2022
 
         private void UpdateAreaTransitions(string areaId)
         {
+            // update for the area
             TransitionUpdateEvent?.Invoke(this, new TransitionUpdateEventArgs(
                 areaId,
                 _areaStompedEnemyCount.GetValueOrDefault(areaId),
                 _areaEnemyCount.GetValueOrDefault(areaId),
                 _areaPlantedSeedCount.GetValueOrDefault(areaId),
                 _areaPlantersCount.GetValueOrDefault(areaId)
+            ));
+
+            // update for global
+            TransitionUpdateEvent?.Invoke(this, new TransitionUpdateEventArgs(
+                _stompedEnemyCount,
+                _totalEnemyCount,
+                _plantedSeedCount,
+                _planterCount
             ));
         }
 
@@ -153,11 +166,13 @@ namespace pdxpartyparrot.ggj2022
 
         public void RegisterPlanter(string areaId)
         {
+            _planterCount++;
             _areaPlantersCount[areaId] = _areaPlantersCount.GetValueOrDefault(areaId) + 1;
         }
 
         public void UnRegisterPlanter(string areaId)
         {
+            _planterCount--;
             _areaPlantersCount[areaId] = _areaPlantersCount.GetValueOrDefault(areaId) - 1;
         }
 

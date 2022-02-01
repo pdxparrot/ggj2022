@@ -1,9 +1,11 @@
 using System.Collections.Generic;
+using System.Linq;
 
 using pdxpartyparrot.Core.Effects;
 using pdxpartyparrot.Core.Util;
 
 using UnityEngine;
+using UnityEngine.Assertions;
 using UnityEngine.VFX;
 
 namespace pdxpartyparrot.ggj2022.Effects
@@ -12,6 +14,9 @@ namespace pdxpartyparrot.ggj2022.Effects
     {
         [SerializeField]
         private string _areaId;
+
+        [SerializeField]
+        private bool _global;
 
         // NOTE: this is the shader property Reference value, not the Name value
         [SerializeField]
@@ -39,6 +44,10 @@ namespace pdxpartyparrot.ggj2022.Effects
         protected override void Awake()
         {
             GameManager.Instance.TransitionUpdateEvent += TransitionUpdateEventHandler;
+
+            if(_global) {
+                Assert.IsFalse(_areaId.Any());
+            }
         }
 
         private void OnDestroy()
@@ -53,8 +62,6 @@ namespace pdxpartyparrot.ggj2022.Effects
             float dt = Time.deltaTime;
 
             if(_currentSeedsPlantedPercent != _targetSeedsPlantedPercent) {
-                //Debug.Log($"Updating area {_areaId} blend ('{Parameter}': {CurrentPercent} => {TargetPercent}, '{_seedsPlantedParameter}': {_currentSeedsPlantedPercent} => {_targetSeedsPlantedPercent})");
-
                 _currentSeedsPlantedPercent = LerpParameter(_seedsPlantedParameter, _currentSeedsPlantedPercent, _targetSeedsPlantedPercent, LerpSpeed * dt);
             }
 
@@ -75,7 +82,9 @@ namespace pdxpartyparrot.ggj2022.Effects
 
         private void TransitionUpdateEventHandler(object sender, TransitionUpdateEventArgs args)
         {
-            if(args.AreaId != string.Empty && args.AreaId != _areaId) {
+            // global areas only listen to global updates
+            // areas only listen to their own area
+            if(_global && args.AreaId.Any() || args.AreaId != _areaId) {
                 return;
             }
 
