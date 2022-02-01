@@ -320,6 +320,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestScene
       objectReference: {fileID: 0}
+    - target: {fileID: 3590487421537565107, guid: 9a0963dcd828ea249a987ebcaf6c0c77, type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 06c93a3bce85c4041a5e9382f6939793, type: 3}
     - target: {fileID: 8071178930818413218, guid: 9a0963dcd828ea249a987ebcaf6c0c77, type: 3}
       propertyPath: m_RootOrder
       value: 3

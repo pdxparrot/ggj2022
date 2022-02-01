@@ -10,10 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7088027671178689556}
   - component: {fileID: 7952062013085298468}
-  - component: {fileID: 1862905969653332314}
-  - component: {fileID: 1741494401037395342}
+  - component: {fileID: 3442913685121342546}
   m_Layer: 0
-  m_Name: EnterEffect
+  m_Name: ExitEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,11 +47,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _triggerOnComplete: []
   _components:
-  - {fileID: 1862905969653332314}
-  - {fileID: 1741494401037395342}
+  - {fileID: 3442913685121342546}
   _isRunning: 0
   _complete: 0
---- !u!114 &1862905969653332314
+--- !u!114 &3442913685121342546
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -61,22 +59,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 5213586782364796518}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 289d3917ce0ff86458fd89678fd5b945, type: 3}
+  m_Script: {fileID: 11500000, guid: 53932498a18128955affac1d5b959bc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _image: {fileID: 0}
-  _color: {r: 0, g: 0, b: 0, a: 0}
---- !u!114 &1741494401037395342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5213586782364796518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7113ad342285f005caf41f78cf8bdc8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _music: {fileID: 0}
-  _transitionSeconds: 0
