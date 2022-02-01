@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 using UnityEngine;
 
@@ -8,6 +9,7 @@ using pdxpartyparrot.Core.Util;
 using pdxpartyparrot.Game;
 using pdxpartyparrot.ggj2022.Camera;
 using pdxpartyparrot.ggj2022.Data;
+using pdxpartyparrot.ggj2022.Level;
 using pdxpartyparrot.ggj2022.UI;
 
 namespace pdxpartyparrot.ggj2022
@@ -58,6 +60,12 @@ namespace pdxpartyparrot.ggj2022
 
         private readonly Dictionary<string, int> _areaPlantedSeedCount = new Dictionary<string, int>();
 
+        [SerializeField]
+        [ReadOnly]
+        private ILevel.State _worldState = ILevel.State.Alive;
+
+        public ILevel.State WorldState => _worldState;
+
         public bool ExitAvailable => _totalSeedCount > 0 && _collectedSeedCount >= _totalSeedCount;
 
         public bool PlantingAllowed => _totalEnemyCount > 0 && _stompedEnemyCount >= _totalEnemyCount;
@@ -100,24 +108,33 @@ namespace pdxpartyparrot.ggj2022
             GameOver();
         }
 
-        private void UpdateAreaTransitions(string areaId)
+        private void UpdateWorldState()
         {
-            // update for the area
-            TransitionUpdateEvent?.Invoke(this, new TransitionUpdateEventArgs(
-                areaId,
-                _areaStompedEnemyCount.GetValueOrDefault(areaId),
-                _areaEnemyCount.GetValueOrDefault(areaId),
-                _areaPlantedSeedCount.GetValueOrDefault(areaId),
-                _areaPlantersCount.GetValueOrDefault(areaId)
-            ));
+            _worldState = _planterCount == 0 || _plantedSeedCount >= _planterCount ? ILevel.State.Alive : ILevel.State.Ash;
+            _worldState = _totalEnemyCount == 0 || _stompedEnemyCount >= _totalEnemyCount ? ILevel.State.Ash : ILevel.State.OnFire;
 
-            // update for global
             TransitionUpdateEvent?.Invoke(this, new TransitionUpdateEventArgs(
                 _stompedEnemyCount,
                 _totalEnemyCount,
                 _plantedSeedCount,
                 _planterCount
+
             ));
+        }
+
+        private void UpdateAreaTransitions(string areaId)
+        {
+            if(areaId.Any()) {
+                TransitionUpdateEvent?.Invoke(this, new TransitionUpdateEventArgs(
+                    areaId,
+                    _areaStompedEnemyCount.GetValueOrDefault(areaId),
+                    _areaEnemyCount.GetValueOrDefault(areaId),
+                    _areaPlantedSeedCount.GetValueOrDefault(areaId),
+                    _areaPlantersCount.GetValueOrDefault(areaId)
+                ));
+            }
+
+            UpdateWorldState();
         }
 
         #region Player

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e66c6366d904e98bc83428217d4fd7, type: 3}
+  m_Name: TestScene
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"graph":{"variables":{"collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":null,"summary":null,"pan":{"x":825.0,"y":46.59502},"zoom":1.0,"elements":[{"coroutine":false,"defaultValues":{},"position":{"x":-204.0,"y":-144.0},"guid":"096a6cdc-709c-4de2-a7dd-52cfe6351f16","$version":"A","$type":"Unity.VisualScripting.Start"},{"coroutine":false,"defaultValues":{},"position":{"x":-204.0,"y":60.0},"guid":"90ca2109-824c-45d8-9dba-3abb67384c36","$version":"A","$type":"Unity.VisualScripting.Update"},{"argumentCount":0,"coroutine":false,"defaultValues":{"target":null,"name":{"$content":"TransitionUpdate","$type":"System.String"}},"position":{"x":130.0,"y":-38.0},"guid":"460483e0-9c08-4e72-9271-38e0bc05c8d8","$version":"A","$type":"Unity.VisualScripting.CustomEvent","$id":"13"},{"enumType":"pdxpartyparrot.ggj2022.Level.ILevel+State","defaultValues":{},"position":{"x":446.0,"y":-56.0},"guid":"7aa3e2a3-9b3d-4db3-b944-c1ef8ec28fe4","$version":"A","$type":"Unity.VisualScripting.SwitchOnEnum","$id":"15"},{"member":{"name":"WorldState","parameterTypes":null,"targetType":"pdxpartyparrot.ggj2022.Level.TestScene","targetTypeName":"pdxpartyparrot.ggj2022.Level.TestScene","$version":"A"},"defaultValues":{"target":null},"position":{"x":183.0,"y":150.0},"guid":"306b1cf3-15ae-4ca9-83ea-d08374a8a34f","$version":"A","$type":"Unity.VisualScripting.GetMember","$id":"17"},{"defaultValues":{"Audio
+      Clip":{"$content":0,"$type":"UnityEngine.Object"},"Transition Seconds":{"$content":3.0,"$type":"System.Single"}},"position":{"x":847.0,"y":168.0},"guid":"3c9d3bfc-bc7d-4a1a-bc4b-936711ad347b","$version":"A","$type":"pdxpartyparrot.Core.Scripting.Nodes.PlayMusicScriptNode","$id":"20"},{"defaultValues":{"Audio
+      Clip":{"$content":1,"$type":"UnityEngine.Object"},"Transition Seconds":{"$content":3.0,"$type":"System.Single"}},"position":{"x":848.0,"y":-6.0},"guid":"3128686e-6253-42b5-b2f6-8e85b51f0bfe","$version":"A","$type":"pdxpartyparrot.Core.Scripting.Nodes.PlayMusicScriptNode","$id":"22"},{"defaultValues":{"Audio
+      Clip":{"$content":2,"$type":"UnityEngine.Object"},"Transition Seconds":{"$content":3.0,"$type":"System.Single"}},"position":{"x":859.0,"y":-177.0},"guid":"2a15be69-a4e9-4b6e-82ff-34a1966be373","$version":"A","$type":"pdxpartyparrot.Core.Scripting.Nodes.PlayMusicScriptNode","$id":"24"},{"sourceUnit":{"$ref":"15"},"sourceKey":"%Alive","destinationUnit":{"$ref":"20"},"destinationKey":"Invoke","guid":"a710c815-8992-4215-9668-5f6a4fca69ad","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"15"},"sourceKey":"%Ash","destinationUnit":{"$ref":"22"},"destinationKey":"Invoke","guid":"6a7a8aea-ead3-42a9-856a-706a7cb51fcd","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"15"},"sourceKey":"%OnFire","destinationUnit":{"$ref":"24"},"destinationKey":"Invoke","guid":"955be347-97ab-44e5-a5ac-504fda184f5b","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"13"},"sourceKey":"trigger","destinationUnit":{"$ref":"15"},"destinationKey":"enter","guid":"51c6a6e0-8e2a-4bbc-a4e9-b098d7e96535","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"17"},"sourceKey":"value","destinationUnit":{"$ref":"15"},"destinationKey":"enum","guid":"3378400a-fb7f-40eb-ac1e-d4c10eb7f658","$type":"Unity.VisualScripting.ValueConnection"}],"$version":"A"}}'
+    _objectReferences:
+    - {fileID: 8300000, guid: 93ad596634a77384baf7a5332725dbf5, type: 3}
+    - {fileID: 8300000, guid: c9a7d943f4d2aa94fb8fc622454b18ab, type: 3}
+    - {fileID: 8300000, guid: 06c93a3bce85c4041a5e9382f6939793, type: 3}

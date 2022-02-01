@@ -100,7 +100,7 @@ namespace pdxpartyparrot.ggj2022.Effects
         {
             // global areas only listen to global updates
             // areas only listen to their own area
-            if(_global && args.AreaId.Any() || args.AreaId != _areaId) {
+            if(_global && !args.IsGlobal || args.AreaId != _areaId) {
                 return;
             }
 

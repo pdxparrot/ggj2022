@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 
 namespace pdxpartyparrot.ggj2022
 {
@@ -7,6 +8,8 @@ namespace pdxpartyparrot.ggj2022
         private string _areaId;
 
         public string AreaId => _areaId;
+
+        public bool IsGlobal => !AreaId.Any();
 
         private float _enemiesStompedTransitionPercent;
 

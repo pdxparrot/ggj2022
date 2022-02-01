@@ -97,8 +97,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"nest":{"source":"Macro","macro":null,"embed":null}}'
-    _objectReferences: []
+    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
+    _objectReferences:
+    - {fileID: 11400000, guid: d99b50f18c9560c768bc1cfefcfa0308, type: 2}
 --- !u!114 &-6074652668901814787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,6 +127,7 @@ MonoBehaviour:
   - {fileID: 7964064944159950156}
   - {fileID: 6574986964927093034}
   _spawnEnemiesKey: 26
+  _previousWorldState: 2
 --- !u!1001 &3024447143854955581
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -181,7 +183,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7952062013085298468, guid: cdd9afa3667a2804f86705a11c3637bc, type: 3}
+      propertyPath: _components.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1741494401037395342, guid: cdd9afa3667a2804f86705a11c3637bc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cdd9afa3667a2804f86705a11c3637bc, type: 3}
 --- !u!114 &3468512495215273319 stripped
 MonoBehaviour:

@@ -143,6 +143,11 @@ namespace pdxpartyparrot.Game.Level
 
         #endregion
 
+        public void TriggerScriptEvent(string name, params object[] args)
+        {
+            CustomEvent.Trigger(gameObject, name, args);
+        }
+
         private void TriggerLevelEffect(EffectTrigger effectTrigger, bool isBlocking, Action action)
         {
             if(null != effectTrigger) {
