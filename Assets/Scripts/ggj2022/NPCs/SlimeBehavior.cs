@@ -217,14 +217,16 @@ namespace pdxpartyparrot.ggj2022.NPCs
                 _target = _patrolTarget;
             }
 
+            float distanceToTarget = Mathf.Abs(_target.Value - Owner.Movement.Position.x);
+
             // have we reached our target?
-            if(Mathf.Abs(_target.Value - Owner.Movement.Position.x) <= SlimeBehaviorData.StoppingDistance) {
+            if(distanceToTarget <= SlimeBehaviorData.StoppingDistance) {
                 Idle();
                 return;
             }
 
             // update our path
-            if(!Slime.UpdatePath(new Vector3(_target.Value, 0.0f, 0.0f))) {
+            if(!Slime.UpdatePath(new Vector3(_target.Value, Owner.Movement.Position.y, Owner.Movement.Position.z))) {
                 Idle();
                 return;
             }
@@ -234,7 +236,7 @@ namespace pdxpartyparrot.ggj2022.NPCs
         {
             // if we lost our target, idle
             if(null == _target) {
-                SetState(State.Idle);
+                Idle();
                 return;
             }
         }*/
@@ -243,7 +245,7 @@ namespace pdxpartyparrot.ggj2022.NPCs
         {
             // if we lost our target, idle
             if(null == _target) {
-                SetState(State.Idle);
+                Idle();
                 return;
             }
         }*/

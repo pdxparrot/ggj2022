@@ -168,6 +168,16 @@ namespace pdxpartyparrot.Game.Characters.NPCs
             }
         }
 
+        protected virtual void OnDrawGizmos()
+        {
+            if(!Application.isPlaying || !HasPath) {
+                return;
+            }
+
+            Gizmos.color = Color.black;
+            Gizmos.DrawWireCube(_destination, Vector3.one);
+        }
+
         #endregion
 
         public override void Initialize(Guid id)
@@ -221,6 +231,8 @@ namespace pdxpartyparrot.Game.Characters.NPCs
             // update the target to be on the navmesh if possible
             if(NavMesh.SamplePosition(target, out NavMeshHit hit, range, NavMesh.AllAreas)) {
                 target = hit.position;
+            } else {
+                Debug.LogWarning($"Failed to sample NavMesh point from {target}:{range}");
             }
 
             if(!_agent.SetDestination(target)) {
@@ -265,6 +277,8 @@ namespace pdxpartyparrot.Game.Characters.NPCs
         public void Stop(bool resetPath, bool idle)
         {
             _agent.velocity = Vector3.zero;
+            _agent.acceleration = 0.0f;
+            _agent.angularSpeed = 0.0f;
 
             if(resetPath) {
                 ResetPath(idle);

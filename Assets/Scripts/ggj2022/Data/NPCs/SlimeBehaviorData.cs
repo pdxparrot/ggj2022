@@ -10,6 +10,8 @@ namespace pdxpartyparrot.ggj2022.Data.NPCs
     [Serializable]
     public sealed class SlimeBehaviorData : Game.Data.Characters.NPCBehaviorData
     {
+        [Space(10)]
+
         [SerializeField]
         private int _damageAmount = 1;
 
