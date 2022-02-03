@@ -21,8 +21,8 @@ namespace pdxpartyparrot.Core.Scripting.Nodes
         [DoNotSerialize]
         private ValueInput _audioClip;
 
-        [DoNotSerialize]
         //Immediately plays the music track if <= 0
+        [DoNotSerialize]
         private ValueInput _transitionSeconds;
 
         protected override void Definition()
