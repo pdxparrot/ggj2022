@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Environment 02 Spirtesheet_0
+      name: Env_Hill_M
       rect:
         serializedVersion: 2
         x: 51
@@ -136,7 +136,7 @@ TextureImporter:
         width: 1644
         height: 338
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -157,7 +157,7 @@ TextureImporter:
         width: 2156
         height: 788
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -170,7 +170,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02 Spirtesheet_2
+      name: Env_Hill_L
       rect:
         serializedVersion: 2
         x: 51
@@ -178,7 +178,7 @@ TextureImporter:
         width: 3714
         height: 378
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -191,7 +191,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02 Spirtesheet_3
+      name: Env_Road_Bush_02
       rect:
         serializedVersion: 2
         x: 51
@@ -199,7 +199,7 @@ TextureImporter:
         width: 578
         height: 396
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -212,7 +212,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02 Spirtesheet_4
+      name: Env_Road_Bush_01
       rect:
         serializedVersion: 2
         x: 703
@@ -220,7 +220,7 @@ TextureImporter:
         width: 1154
         height: 496
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -233,7 +233,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02 Spirtesheet_5
+      name: Env_Road_Hill_03
       rect:
         serializedVersion: 2
         x: 2349
@@ -241,7 +241,7 @@ TextureImporter:
         width: 1690
         height: 242
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -254,7 +254,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02 Spirtesheet_6
+      name: Env_Road_Hill_01
       rect:
         serializedVersion: 2
         x: 43
@@ -262,7 +262,7 @@ TextureImporter:
         width: 1626
         height: 432
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -275,7 +275,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02 Spirtesheet_7
+      name: Env_Road_Hill_02
       rect:
         serializedVersion: 2
         x: 2253
@@ -283,7 +283,7 @@ TextureImporter:
         width: 1800
         height: 380
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -296,7 +296,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02 Spirtesheet_8
+      name: Env_Road_M
       rect:
         serializedVersion: 2
         x: 43
@@ -304,7 +304,7 @@ TextureImporter:
         width: 2008
         height: 384
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -317,7 +317,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02 Spirtesheet_9
+      name: Env_Road_S
       rect:
         serializedVersion: 2
         x: 3069
@@ -325,7 +325,7 @@ TextureImporter:
         width: 970
         height: 384
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -338,7 +338,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02 Spirtesheet_10
+      name: Env_Grass_M
       rect:
         serializedVersion: 2
         x: 43
@@ -346,7 +346,7 @@ TextureImporter:
         width: 2008
         height: 398
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -359,7 +359,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02 Spirtesheet_11
+      name: Env_Grass_S
       rect:
         serializedVersion: 2
         x: 3069
@@ -367,7 +367,7 @@ TextureImporter:
         width: 984
         height: 298
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -380,7 +380,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02 Spirtesheet_12
+      name: Env_Road_L
       rect:
         serializedVersion: 2
         x: 43
@@ -388,7 +388,7 @@ TextureImporter:
         width: 3996
         height: 384
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -401,7 +401,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02 Spirtesheet_13
+      name: Env_Grass_L
       rect:
         serializedVersion: 2
         x: 43
@@ -409,7 +409,7 @@ TextureImporter:
         width: 4010
         height: 398
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -433,19 +433,19 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Environment 02 Spirtesheet_1: -1061593439
-      Environment 02 Spirtesheet_9: -744343527
-      Environment 02 Spirtesheet_2: -43461706
-      Environment 02 Spirtesheet_13: 1590492109
-      Environment 02 Spirtesheet_8: 265253418
-      Environment 02 Spirtesheet_3: 122309824
-      Environment 02 Spirtesheet_10: -875129412
-      Environment 02 Spirtesheet_6: -21364169
-      Environment 02 Spirtesheet_11: -1187346484
-      Environment 02 Spirtesheet_7: 2092343747
-      Environment 02 Spirtesheet_12: 604770044
-      Environment 02 Spirtesheet_5: -862284701
-      Environment 02 Spirtesheet_4: -2141472739
-      Environment 02 Spirtesheet_0: -296344474
+      Env_Road_M: 265253418
+      Env_Road_Bush_02: 122309824
+      Env_Road_Hill_03: -862284701
+      Env_Grass_L: 1590492109
+      Env_Road_L: 604770044
+      Env_Road_Hill_02: 2092343747
+      Env_Grass_S: -1187346484
+      Env_Grass_M: -875129412
+      Env_Hill_M: -296344474
+      Env_Road_S: -744343527
+      Env_Hill_L: -43461706
+      Env_Road_Hill_01: -21364169
+      Env_Road_Bush_01: -2141472739
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

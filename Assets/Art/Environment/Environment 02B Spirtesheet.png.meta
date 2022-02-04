@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Environment 02B Spirtesheet_0
+      name: Env_Hill_M_Fire
       rect:
         serializedVersion: 2
         x: 51
@@ -170,7 +170,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02B Spirtesheet_2
+      name: Env_Hill_L_Fire
       rect:
         serializedVersion: 2
         x: 51
@@ -191,7 +191,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02B Spirtesheet_3
+      name: Env_Road_Bush_02_Fire
       rect:
         serializedVersion: 2
         x: 51
@@ -212,7 +212,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02B Spirtesheet_4
+      name: Env_Road_Bush_01_Fire
       rect:
         serializedVersion: 2
         x: 703
@@ -233,7 +233,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02B Spirtesheet_5
+      name: Env_Road_Hill_03_Fire
       rect:
         serializedVersion: 2
         x: 2349
@@ -254,7 +254,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02B Spirtesheet_6
+      name: Env_Road_Hill_01_Fire
       rect:
         serializedVersion: 2
         x: 43
@@ -275,7 +275,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02B Spirtesheet_7
+      name: Env_Road_Hill_02_Fire
       rect:
         serializedVersion: 2
         x: 2253
@@ -296,10 +296,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02B Spirtesheet_8
+      name: Env_Road_M_Fire
       rect:
         serializedVersion: 2
-        x: 43
+        x: 48
         y: 1409
         width: 2008
         height: 384
@@ -317,7 +317,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02B Spirtesheet_9
+      name: Env_Road_S_Fire
       rect:
         serializedVersion: 2
         x: 3069
@@ -338,7 +338,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02B Spirtesheet_10
+      name: Env_Grass_M_Fire
       rect:
         serializedVersion: 2
         x: 43
@@ -359,7 +359,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02B Spirtesheet_11
+      name: Env_Grass_S_Fire
       rect:
         serializedVersion: 2
         x: 3069
@@ -380,7 +380,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02B Spirtesheet_12
+      name: Env_Road_L_Fire
       rect:
         serializedVersion: 2
         x: 43
@@ -401,7 +401,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02B Spirtesheet_13
+      name: Env_Grass_L_Fire
       rect:
         serializedVersion: 2
         x: 51
@@ -432,20 +432,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Environment 02B Spirtesheet_0: 861484497
-      Environment 02B Spirtesheet_7: -1370120562
-      Environment 02B Spirtesheet_9: 1055439787
+      Env_Road_Bush_01_Fire: -285965986
       Env2_BG_Fire: 2111560466
-      Environment 02B Spirtesheet_11: 1631493872
-      Environment 02B Spirtesheet_10: -314818330
-      Environment 02B Spirtesheet_6: -529960867
-      Environment 02B Spirtesheet_2: -134334757
-      Environment 02B Spirtesheet_12: 1163573544
-      Environment 02B Spirtesheet_3: 513812263
-      Environment 02B Spirtesheet_13: -934143715
-      Environment 02B Spirtesheet_5: -1600490307
-      Environment 02B Spirtesheet_8: -575683313
-      Environment 02B Spirtesheet_4: -285965986
+      Env_Road_Hill_02_Fire: -1370120562
+      Env_Road_Hill_03_Fire: -1600490307
+      Env_Grass_L_Fire: -934143715
+      Env_Road_Hill_01_Fire: -529960867
+      Env_Road_Bush_02_Fire: 513812263
+      Env_Road_L_Fire: 1163573544
+      Env_Hill_L_Fire: -134334757
+      Env_Hill_M_Fire: 861484497
+      Env_Road_M_Fire: -575683313
+      Env_Grass_S_Fire: 1631493872
+      Env_Grass_M_Fire: -314818330
+      Env_Road_S_Fire: 1055439787
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

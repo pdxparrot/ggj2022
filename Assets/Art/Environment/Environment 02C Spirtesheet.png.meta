@@ -191,7 +191,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02C Spirtesheet_3
+      name: Env_Road_Bush_02_Ash
       rect:
         serializedVersion: 2
         x: 51
@@ -212,7 +212,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02C Spirtesheet_4
+      name: Env_Road_Bush_01_Ash
       rect:
         serializedVersion: 2
         x: 703
@@ -296,7 +296,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02C Spirtesheet_8
+      name: Env_Road_M_Ash
       rect:
         serializedVersion: 2
         x: 43
@@ -317,7 +317,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02C Spirtesheet_9
+      name: Env_Road_S_Ash
       rect:
         serializedVersion: 2
         x: 3069
@@ -338,7 +338,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02C Spirtesheet_10
+      name: Env_Grass_M_Ash
       rect:
         serializedVersion: 2
         x: 43
@@ -359,7 +359,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02C Spirtesheet_11
+      name: Env_Grass_S_Ash
       rect:
         serializedVersion: 2
         x: 3069
@@ -380,7 +380,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02C Spirtesheet_12
+      name: Env_Road_L_Ash
       rect:
         serializedVersion: 2
         x: 43
@@ -401,7 +401,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02C Spirtesheet_13
+      name: Env_Grass_L_Ash
       rect:
         serializedVersion: 2
         x: 51
@@ -433,19 +433,19 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Environment 02C Spirtesheet_1: -711605942
-      Environment 02C Spirtesheet_12: -512828111
-      Environment 02C Spirtesheet_4: -198885731
+      Env_Road_Bush_02_Ash: 2111794748
+      Env_Road_L_Ash: -512828111
       Environment 02C Spirtesheet_0: 1101056848
-      Environment 02C Spirtesheet_13: -97532466
-      Environment 02C Spirtesheet_11: 1848840420
-      Environment 02C Spirtesheet_9: -474749106
       Environment 02C Spirtesheet_2: 1814595023
-      Environment 02C Spirtesheet_10: -1007170347
+      Env_Grass_M_Ash: -1007170347
       Environment 02C Spirtesheet_5: -1890071604
-      Environment 02C Spirtesheet_8: 1042059188
+      Env_Grass_S_Ash: 1848840420
+      Env_Road_Bush_01_Ash: -198885731
       Environment 02C Spirtesheet_7: 1160583995
+      Env_Road_S_Ash: -474749106
       Environment 02C Spirtesheet_6: 279901909
-      Environment 02C Spirtesheet_3: 2111794748
+      Env_Grass_L_Ash: -97532466
+      Env_Road_M_Ash: 1042059188
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
