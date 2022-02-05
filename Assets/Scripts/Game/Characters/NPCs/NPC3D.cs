@@ -277,7 +277,7 @@ namespace pdxpartyparrot.Game.Characters.NPCs
         public void Stop(bool resetPath, bool idle)
         {
             _agent.velocity = Vector3.zero;
-            _agent.acceleration = 0.0f;
+            Movement.Velocity = Vector3.zero;
             _agent.angularSpeed = 0.0f;
 
             if(resetPath) {
