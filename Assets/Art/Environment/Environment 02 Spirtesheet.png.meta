@@ -149,7 +149,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02 Spirtesheet_1
+      name: Env2_BG
       rect:
         serializedVersion: 2
         x: 1897
@@ -432,7 +432,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Environment 02 Spirtesheet_1: -1061593439
       Env_Road_M: 265253418
       Env_Road_Bush_02: 122309824
       Env_Road_Hill_03: -862284701
@@ -442,6 +441,7 @@ TextureImporter:
       Env_Grass_S: -1187346484
       Env_Grass_M: -875129412
       Env_Hill_M: -296344474
+      Env2_BG: -1061593439
       Env_Road_S: -744343527
       Env_Hill_L: -43461706
       Env_Road_Hill_01: -21364169

@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Environment 02C Spirtesheet_0
+      name: Env_Hill_M_Ash
       rect:
         serializedVersion: 2
         x: 51
@@ -149,7 +149,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02C Spirtesheet_1
+      name: Env2_BG_Ash
       rect:
         serializedVersion: 2
         x: 1897
@@ -170,7 +170,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02C Spirtesheet_2
+      name: Env_Hill_L_Ash
       rect:
         serializedVersion: 2
         x: 51
@@ -233,7 +233,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02C Spirtesheet_5
+      name: Env_Road_Hill_03_Ash
       rect:
         serializedVersion: 2
         x: 2349
@@ -254,7 +254,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02C Spirtesheet_6
+      name: Env_Road_Hill_01_Ash
       rect:
         serializedVersion: 2
         x: 43
@@ -275,7 +275,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 02C Spirtesheet_7
+      name: Env_Road_Hill_02_Ash
       rect:
         serializedVersion: 2
         x: 2253
@@ -432,19 +432,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Environment 02C Spirtesheet_1: -711605942
       Env_Road_Bush_02_Ash: 2111794748
       Env_Road_L_Ash: -512828111
-      Environment 02C Spirtesheet_0: 1101056848
-      Environment 02C Spirtesheet_2: 1814595023
+      Env_Hill_L_Ash: 1814595023
+      Env_Road_Hill_01_Ash: 279901909
+      Env_Road_Hill_02_Ash: 1160583995
+      Env_Hill_M_Ash: 1101056848
       Env_Grass_M_Ash: -1007170347
-      Environment 02C Spirtesheet_5: -1890071604
       Env_Grass_S_Ash: 1848840420
       Env_Road_Bush_01_Ash: -198885731
-      Environment 02C Spirtesheet_7: 1160583995
+      Env2_BG_Ash: -711605942
       Env_Road_S_Ash: -474749106
-      Environment 02C Spirtesheet_6: 279901909
       Env_Grass_L_Ash: -97532466
+      Env_Road_Hill_03_Ash: -1890071604
       Env_Road_M_Ash: 1042059188
   spritePackingTag: 
   pSDRemoveMatte: 0
