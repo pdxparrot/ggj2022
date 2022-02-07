@@ -189,6 +189,7 @@ namespace pdxpartyparrot.Core.Actors.Components
             // TODO: the facing of 3D actors being tied to the AnimateModel
             // flag is really confusing and awkward
             if(null != Owner && null != Owner.Model && BehaviorData.AnimateModel) {
+                // TODO: actor models should cache their transform to use here
                 Owner.Model.transform.forward = direction;
             }
 

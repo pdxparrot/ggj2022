@@ -32,11 +32,15 @@ namespace pdxpartyparrot.Game.World
 
         protected Transform ActorContainer => _actorContainer;
 
+        private Transform _transform;
+
         #region Unity Lifecycle
 
         protected virtual void Awake()
         {
             GetComponent<Collider>().isTrigger = true;
+
+            _transform = GetComponent<Transform>();
 
             _cooldown = TimeManager.Instance.AddTimer();
 
@@ -63,12 +67,12 @@ namespace pdxpartyparrot.Game.World
                 return;
             }
 
-            transform.MoveTowards(_nextWaypoint.transform.position, _speed * dt);
+            _transform.MoveTowards(_nextWaypoint.Transform.position, _speed * dt);
 
-            if(Vector3.Distance(transform.position, _nextWaypoint.transform.position) < float.Epsilon) {
+            if(Vector3.Distance(_transform.position, _nextWaypoint.Transform.position) < float.Epsilon) {
                 _cooldown.Start(_nextWaypoint.Cooldown);
 
-                transform.position = _nextWaypoint.transform.position;
+                _transform.position = _nextWaypoint.Transform.position;
                 SetWaypoint(_nextWaypoint.NextWaypoint);
             }
         }

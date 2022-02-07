@@ -22,6 +22,12 @@ namespace pdxpartyparrot.Game.Effects
         [Tooltip("Randomize the starting angle on enable")]
         private bool _randomizeOnEnable = true;
 
+        [Space(10)]
+
+        [SerializeField]
+        [ReadOnly]
+        private Vector3 _startingPosition;
+
         [SerializeField]
         [ReadOnly]
         private Vector3 _angle;
@@ -37,6 +43,7 @@ namespace pdxpartyparrot.Game.Effects
             Assert.IsNull(GetComponent<Rigidbody2D>());
 
             _transform = GetComponent<Transform>();
+            _startingPosition = _localPosition ? _transform.localPosition : _transform.position;
         }
 
         private void OnEnable()
@@ -70,9 +77,9 @@ namespace pdxpartyparrot.Game.Effects
                                             Mathf.Sin(_angle.z) * _distance.z);
 
             if(_localPosition) {
-                _transform.localPosition = oscillate;
+                _transform.localPosition = _startingPosition + oscillate;
             } else {
-                _transform.position = oscillate;
+                _transform.position = _startingPosition + oscillate;
             }
         }
     }

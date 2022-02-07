@@ -19,6 +19,8 @@ namespace pdxpartyparrot.ggj2022
         #region Events
 
         public event EventHandler<TransitionUpdateEventArgs> TransitionUpdateEvent;
+        public event EventHandler<EventArgs> ExitAvailableChangedEvent;
+        public event EventHandler<EventArgs> PlantersAvailableChangedEvent;
 
         #endregion
 
@@ -91,11 +93,13 @@ namespace pdxpartyparrot.ggj2022
 
             _stompedEnemyCount = 0;
             _areaStompedEnemyCount.Clear();
+            PlantersAvailableChangedEvent?.Invoke(this, EventArgs.Empty);
 
             // don't reset the number of planters, those are static
 
             _totalSeedCount = 0;
             _collectedSeedCount = 0;
+            ExitAvailableChangedEvent?.Invoke(this, EventArgs.Empty);
 
             _plantedSeedCount = 0;
             _areaPlantedSeedCount.Clear();
@@ -167,6 +171,8 @@ namespace pdxpartyparrot.ggj2022
             Debug.Log($"Enemy spawned in area {areaId}");
 
             _totalEnemyCount++;
+            PlantersAvailableChangedEvent?.Invoke(this, EventArgs.Empty);
+
             _areaEnemyCount[areaId] = _areaEnemyCount.GetValueOrDefault(areaId) + 1;
 
             UpdateAreaTransitions(areaId);
@@ -177,6 +183,8 @@ namespace pdxpartyparrot.ggj2022
             Debug.Log($"Enemy stomped in area {areaId}");
 
             _stompedEnemyCount++;
+            PlantersAvailableChangedEvent?.Invoke(this, EventArgs.Empty);
+
             _areaStompedEnemyCount[areaId] = _areaStompedEnemyCount.GetValueOrDefault(areaId) + 1;
 
             UpdateAreaTransitions(areaId);
@@ -201,11 +209,13 @@ namespace pdxpartyparrot.ggj2022
         public void SeedSpawned()
         {
             _totalSeedCount++;
+            ExitAvailableChangedEvent?.Invoke(this, EventArgs.Empty);
         }
 
         public void SeedCollected()
         {
             _collectedSeedCount++;
+            ExitAvailableChangedEvent?.Invoke(this, EventArgs.Empty);
 
             GameUIManager.Instance.GameGameUI.PlayerHUD.SeedCollected();
         }

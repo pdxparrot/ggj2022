@@ -1,6 +1,7 @@
 using System;
 
 using UnityEngine;
+using UnityEngine.VFX;
 using Unity.VisualScripting;
 
 using pdxpartyparrot.Core.Util;
@@ -17,6 +18,12 @@ namespace pdxpartyparrot.ggj2022.World
         public Type InteractableType => typeof(Planter);
 
         [SerializeField]
+        private GameObject _model;
+
+        [SerializeField]
+        private GameObject _vfx;
+
+        [SerializeField]
         private string _areaId;
 
         [SerializeField]
@@ -31,17 +38,29 @@ namespace pdxpartyparrot.ggj2022.World
         {
             GetComponent<Collider>().isTrigger = true;
 
+            Enable(false);
+
             GameManager.Instance.RegisterPlanter(_areaId);
+
+            GameManager.Instance.PlantersAvailableChangedEvent += PlantersAvailableChangedEventHandler;
         }
 
         private void OnDestroy()
         {
             if(GameManager.HasInstance) {
+                GameManager.Instance.PlantersAvailableChangedEvent -= PlantersAvailableChangedEventHandler;
+
                 GameManager.Instance.UnRegisterPlanter(_areaId);
             }
         }
 
         #endregion
+
+        private void Enable(bool enabled)
+        {
+            _model.SetActive(enabled);
+            _vfx.SetActive(enabled);
+        }
 
         public void PlantSeed()
         {
@@ -61,5 +80,14 @@ namespace pdxpartyparrot.ggj2022.World
 
             GameManager.Instance.SeedPlanted(_areaId);
         }
+
+        #region Event Handlers
+
+        private void PlantersAvailableChangedEventHandler(object sender, EventArgs args)
+        {
+            Enable(GameManager.Instance.PlantingAllowed);
+        }
+
+        #endregion
     }
 }

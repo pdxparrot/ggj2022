@@ -108,6 +108,7 @@ namespace pdxpartyparrot.Core.Actors
                 foreach(var kvp in _actors) {
                     GUILayout.BeginVertical($"{kvp.Key}", GUI.skin.box);
                     foreach(Actor actor in kvp.Value) {
+                        // TODO: actors should cache their transform to use here
                         GUILayout.Label($"{actor.Id} {(null != actor.Movement ? actor.Movement.Position : actor.transform.position)}");
                     }
                     GUILayout.EndVertical();

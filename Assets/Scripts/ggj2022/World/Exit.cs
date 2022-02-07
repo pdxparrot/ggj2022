@@ -15,14 +15,33 @@ namespace pdxpartyparrot.ggj2022.World
 
         public Type InteractableType => typeof(Exit);
 
+        [SerializeField]
+        private GameObject _model;
+
         #region Unity Lifecycle
 
         private void Awake()
         {
             GetComponent<Collider>().isTrigger = true;
+
+            Enable(true);
+
+            GameManager.Instance.ExitAvailableChangedEvent += ExitAvailableChangedEventHandler;
+        }
+
+        private void OnDestroy()
+        {
+            if(GameManager.HasInstance) {
+                GameManager.Instance.ExitAvailableChangedEvent -= ExitAvailableChangedEventHandler;
+            }
         }
 
         #endregion
+
+        private void Enable(bool enabled)
+        {
+            _model.SetActive(enabled);
+        }
 
         public void ExitLevel()
         {
@@ -33,5 +52,14 @@ namespace pdxpartyparrot.ggj2022.World
 
             CustomEvent.Trigger(gameObject, "SeedsRemain");
         }
+
+        #region Event Handlers
+
+        private void ExitAvailableChangedEventHandler(object sender, EventArgs args)
+        {
+            //Enable(GameManager.Instance.ExitAvailable);
+        }
+
+        #endregion
     }
 }
