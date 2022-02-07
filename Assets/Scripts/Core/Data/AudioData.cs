@@ -35,6 +35,11 @@ namespace pdxpartyparrot.Core.Data
         public string SFXMixerGroupName => _sfxMixerGroupName;
 
         [SerializeField]
+        private string _dialogueMixerGroupName = "Dialogue";
+
+        public string DialogueMixerGroupName => _dialogueMixerGroupName;
+
+        [SerializeField]
         private string _ambientMixerGroupName = "Ambient";
 
         public string AmbientMixerGroupName => _ambientMixerGroupName;
@@ -61,6 +66,11 @@ namespace pdxpartyparrot.Core.Data
         private string _sfxVolumeParameter = "SFXVolume";
 
         public string SFXVolumeParameter => _sfxVolumeParameter;
+
+        [SerializeField]
+        private string _dialogueVolumeParameter = "DialogueVolume";
+
+        public string DialogueVolumeParameter => _dialogueVolumeParameter;
 
         [SerializeField]
         private string _ambientVolumeParameter = "AmbientVolume";

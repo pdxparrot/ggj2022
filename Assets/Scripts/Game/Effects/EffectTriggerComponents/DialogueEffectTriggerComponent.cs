@@ -30,7 +30,9 @@ namespace pdxpartyparrot.Game.Effects.EffectTriggerComponents
 
         public override void OnStop()
         {
-            DialogueManager.Instance.CancelDialogue();
+            if(DialogueManager.HasInstance) {
+                DialogueManager.Instance.CancelDialogue();
+            }
         }
 
         private void OnComplete()

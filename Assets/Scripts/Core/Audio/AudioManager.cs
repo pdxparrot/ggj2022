@@ -18,6 +18,7 @@ namespace pdxpartyparrot.Core.Audio
         private const string MasterVolumeKey = "audio.volume.master";
         private const string MusicVolumeKey = "audio.volume.music";
         private const string SFXVolumeKey = "audio.volume.sfx";
+        private const string DialogueVolumeKey = "audio.volume.dialogue";
         private const string AmbientVolumeKey = "audio.volume.ambient";
 
         private struct InternalAudioMixerSnapshotConfig
@@ -50,6 +51,19 @@ namespace pdxpartyparrot.Core.Audio
         private AudioSource _stingerAudioSource;
 
         public bool IsStingerPlaying => _stingerAudioSource.isPlaying;
+
+        #endregion
+
+        [Space(10)]
+
+        #region Dialogue
+
+        [Header("Dialogue")]
+
+        [SerializeField]
+        private AudioSource _dialogueAudioSource;
+
+        public bool IsDialoguePlaying => _dialogueAudioSource.isPlaying;
 
         #endregion
 
@@ -163,6 +177,21 @@ namespace pdxpartyparrot.Core.Audio
             }
         }
 
+        public float DialogueVolume
+        {
+            get => PartyParrotManager.Instance.GetFloat(DialogueVolumeKey, _mixer.GetFloatOrDefault(_audioData.DialogueVolumeParameter));
+
+            set
+            {
+                value = Mathf.Clamp(value, -80.0f, 20.0f);
+
+                _mixer.SetFloat(_audioData.DialogueVolumeParameter, value);
+                PartyParrotManager.Instance.SetFloat(DialogueVolumeKey, value);
+
+                Mute = false;
+            }
+        }
+
         public float AmbientVolume
         {
             get => PartyParrotManager.Instance.GetFloat(AmbientVolumeKey, _mixer.GetFloatOrDefault(_audioData.AmbientVolumeParameter, -10.0f));
@@ -216,6 +245,9 @@ namespace pdxpartyparrot.Core.Audio
             InitSFXAudioMixerGroup(_stingerAudioSource);
             _stingerAudioSource.loop = false;
 
+            InitDialogueAudioMixerGroup(_dialogueAudioSource);
+            _dialogueAudioSource.loop = false;
+
             InitAudioMixerGroup(_music1AudioSource, _audioData.MusicMixerGroupName);
             _music1AudioSource.loop = true;
 
@@ -265,6 +297,11 @@ namespace pdxpartyparrot.Core.Audio
             source.outputAudioMixerGroup = mixerGroups.Length > 0 ? mixerGroups[0] : _mixer.outputAudioMixerGroup;
         }
 
+        public void InitDialogueAudioMixerGroup(AudioSource source)
+        {
+            InitAudioMixerGroup(source, _audioData.DialogueMixerGroupName);
+        }
+
         public void InitAmbientAudioMixerGroup(AudioSource source)
         {
             InitAudioMixerGroup(source, _audioData.AmbientMixerGroupName);
@@ -273,6 +310,8 @@ namespace pdxpartyparrot.Core.Audio
         public void StopAllAudio()
         {
             StopStinger();
+
+            StopDialogue();
 
             StopAllMusic();
 
@@ -299,6 +338,21 @@ namespace pdxpartyparrot.Core.Audio
         public void StopStinger()
         {
             _stingerAudioSource.Stop();
+        }
+
+        #endregion
+
+        #region Dialogue
+
+        public void PlayDialogue(AudioClip dialogueAudioClip)
+        {
+            _dialogueAudioSource.clip = dialogueAudioClip;
+            _dialogueAudioSource.Play();
+        }
+
+        public void StopDialogue()
+        {
+            _dialogueAudioSource.Stop();
         }
 
         #endregion
@@ -492,6 +546,12 @@ namespace pdxpartyparrot.Core.Audio
         private void PauseEventHandler(object sender, EventArgs args)
         {
             SetSnapshots(PartyParrotManager.Instance.IsPaused ? "paused" : "unpaused");
+
+            if(PartyParrotManager.Instance.IsPaused) {
+                _dialogueAudioSource.Pause();
+            } else {
+                _dialogueAudioSource.UnPause();
+            }
         }
 
         #endregion
@@ -504,6 +564,7 @@ namespace pdxpartyparrot.Core.Audio
                 GUILayout.Label($"Master Volume: {MasterVolume}");
                 GUILayout.Label($"Music Volume: {MusicVolume}");
                 GUILayout.Label($"SFX Volume: {SFXVolume}");
+                GUILayout.Label($"Dialogue Volume: {DialogueVolume}");
                 GUILayout.Label($"Ambient Volume: {AmbientVolume}");
                 GUILayout.Label($"Mute: {Mute}");
                 GUILayout.EndVertical();

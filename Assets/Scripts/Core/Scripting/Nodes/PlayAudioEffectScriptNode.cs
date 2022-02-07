@@ -6,6 +6,7 @@ using Unity.VisualScripting;
 
 namespace pdxpartyparrot.Core.Scripting.Nodes
 {
+    // TODO: rename this Play SFX or something so it's clear it's for the SFX channel
     [UnitCategory("pdxpartyparrot/Core")]
     [UnitTitle("Play Audio Effect")]
     public class PlayAudioEffectScriptNode : Unit
