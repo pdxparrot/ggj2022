@@ -63,7 +63,7 @@ namespace pdxpartyparrot.Game.Cinematics
             ShowDialogue(dialoguePrefab, onComplete, onCancel);
         }
 
-        public void ShowDialogue(Dialogue dialoguePrefab, Action onComplete = null, Action onCancel = null)
+        private void ShowDialogue(Dialogue dialoguePrefab, Action onComplete = null, Action onCancel = null)
         {
             if(null == dialoguePrefab) {
                 onComplete?.Invoke();

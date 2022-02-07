@@ -49,6 +49,7 @@ MonoBehaviour:
   _triggerOnComplete: []
   _components:
   - {fileID: 1862905969653332314}
+  - {fileID: -6632731842794395732}
   _isRunning: 0
   _complete: 0
 --- !u!114 &1862905969653332314
@@ -77,6 +78,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a747d3d93467bae5d9d1cc09bb5fa904, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _dialoguePrefab: {fileID: 0}
   _dialogueId: dialogue_intro
   _isShowing: 0

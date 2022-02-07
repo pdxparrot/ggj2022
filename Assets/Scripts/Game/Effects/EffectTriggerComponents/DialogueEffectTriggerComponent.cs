@@ -11,10 +11,6 @@ namespace pdxpartyparrot.Game.Effects.EffectTriggerComponents
     public class DialogueEffectTriggerComponent : EffectTriggerComponent
     {
         [SerializeField]
-        [CanBeNull]
-        private Dialogue _dialoguePrefab;
-
-        [SerializeField]
         private string _dialogueId;
 
         public override bool WaitForComplete => true;
@@ -27,11 +23,7 @@ namespace pdxpartyparrot.Game.Effects.EffectTriggerComponents
 
         public override void OnStart()
         {
-            if(null == _dialoguePrefab) {
-                DialogueManager.Instance.ShowDialogue(_dialogueId, OnComplete, OnCancel);
-            } else {
-                DialogueManager.Instance.ShowDialogue(_dialoguePrefab, OnComplete, OnCancel);
-            }
+            DialogueManager.Instance.ShowDialogue(_dialogueId, OnComplete, OnCancel);
 
             _isShowing = true;
         }
