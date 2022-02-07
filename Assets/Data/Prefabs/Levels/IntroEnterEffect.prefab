@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7088027671178689556}
   - component: {fileID: 7952062013085298468}
   - component: {fileID: 1862905969653332314}
+  - component: {fileID: 6608345524074884049}
   - component: {fileID: -6632731842794395732}
   m_Layer: 0
   m_Name: IntroEnterEffect
@@ -49,6 +50,7 @@ MonoBehaviour:
   _triggerOnComplete: []
   _components:
   - {fileID: 1862905969653332314}
+  - {fileID: 6608345524074884049}
   - {fileID: -6632731842794395732}
   _isRunning: 0
   _complete: 0
@@ -66,6 +68,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _image: {fileID: 0}
   _color: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &6608345524074884049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5213586782364796518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7113ad342285f005caf41f78cf8bdc8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _music: {fileID: 8300000, guid: dd6801dce9a38024ebec7e25e3014a98, type: 3}
+  _transitionSeconds: 0
 --- !u!114 &-6632731842794395732
 MonoBehaviour:
   m_ObjectHideFlags: 0

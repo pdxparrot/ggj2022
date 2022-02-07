@@ -82,9 +82,9 @@ namespace pdxpartyparrot.ggj2022
             Viewer.Initialize(GameGameData);
         }
 
-        public void Reset(int maxHealth, int health)
+        public override void Reset()
         {
-            GameUIManager.Instance.GameGameUI.PlayerHUD.Reset(maxHealth, health);
+            base.Reset();
 
             _totalEnemyCount = 0;
             _areaEnemyCount.Clear();
@@ -101,6 +101,11 @@ namespace pdxpartyparrot.ggj2022
             _areaPlantedSeedCount.Clear();
 
             UpdateAreaTransitions(string.Empty);
+        }
+
+        public void ResetHUD(int maxHealth, int health)
+        {
+            GameUIManager.Instance.GameGameUI.PlayerHUD.Reset(maxHealth, health);
         }
 
         public void Exit()

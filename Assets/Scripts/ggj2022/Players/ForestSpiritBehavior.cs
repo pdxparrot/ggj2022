@@ -106,7 +106,7 @@ namespace pdxpartyparrot.ggj2022.Players
 
             SetForm(SpiritForm.Small);
 
-            GameManager.Instance.Reset(_data.MaxHealth, Health);
+            GameManager.Instance.ResetHUD(_data.MaxHealth, Health);
         }
 
         void SetForm(SpiritForm form)
