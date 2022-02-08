@@ -30,7 +30,9 @@ namespace pdxpartyparrot.Core.Scripting.Nodes
 
         private void Invoke(Flow flow)
         {
-            AudioManager.Instance.StopDialogue();
+            if(AudioManager.HasInstance) {
+                AudioManager.Instance.StopDialogue();
+            }
         }
     }
 }
