@@ -42,6 +42,7 @@ namespace pdxpartyparrot.ggj2022.World
 
             GameManager.Instance.RegisterPlanter(_areaId);
 
+            GameManager.Instance.RestartLevelEvent += RestartLevelEventHandler;
             GameManager.Instance.PlantersAvailableChangedEvent += PlantersAvailableChangedEventHandler;
         }
 
@@ -49,6 +50,7 @@ namespace pdxpartyparrot.ggj2022.World
         {
             if(GameManager.HasInstance) {
                 GameManager.Instance.PlantersAvailableChangedEvent -= PlantersAvailableChangedEventHandler;
+                GameManager.Instance.RestartLevelEvent -= RestartLevelEventHandler;
 
                 GameManager.Instance.UnRegisterPlanter(_areaId);
             }
@@ -87,6 +89,11 @@ namespace pdxpartyparrot.ggj2022.World
         }
 
         #region Event Handlers
+
+        private void RestartLevelEventHandler(object sender, EventArgs args)
+        {
+            _planted = false;
+        }
 
         private void PlantersAvailableChangedEventHandler(object sender, EventArgs args)
         {
