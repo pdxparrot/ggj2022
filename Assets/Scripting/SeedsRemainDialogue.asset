@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e66c6366d904e98bc83428217d4fd7, type: 3}
+  m_Name: SeedsRemainDialogue
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"graph":{"variables":{"collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":null,"summary":null,"pan":{"x":310.0,"y":-40.0},"zoom":1.0,"elements":[{"coroutine":false,"defaultValues":{},"position":{"x":-204.0,"y":-144.0},"guid":"88a4a4f9-eb38-4801-bcbe-c43b14564c5d","$version":"A","$type":"Unity.VisualScripting.Start","$id":"9"},{"coroutine":false,"defaultValues":{},"position":{"x":-204.0,"y":60.0},"guid":"cc4752f4-811a-474a-9d5f-c1280c890317","$version":"A","$type":"Unity.VisualScripting.Update"},{"defaultValues":{"Dialogue":{"$content":0,"$type":"UnityEngine.Object"}},"position":{"x":186.0,"y":-121.0},"guid":"1f760a45-0c59-4ac2-9864-7374bd7e217b","$version":"A","$type":"pdxpartyparrot.Core.Scripting.Nodes.PlayDialogueScriptNode","$id":"13"},{"sourceUnit":{"$ref":"9"},"sourceKey":"trigger","destinationUnit":{"$ref":"13"},"destinationKey":"Invoke","guid":"fbe70553-658c-4f28-9d7e-b05ec4faac59","$type":"Unity.VisualScripting.ControlConnection"}],"$version":"A"}}'
+    _objectReferences:
+    - {fileID: 8300000, guid: 10791ff38ba29a14db6c32dbbd721e48, type: 3}
