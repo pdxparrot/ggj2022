@@ -171,10 +171,11 @@ namespace pdxpartyparrot.ggj2022.Players
                 return;
             }
 
-            planter.PlantSeed();
             _interactables.RemoveInteractable(planter);
 
-            GamePlayerBehavior.GamePlayer.TriggerScriptEvent("Plant");
+            if(planter.PlantSeed()) {
+                GamePlayerBehavior.GamePlayer.TriggerScriptEvent("Plant");
+            }
         }
 
         #region Actions

@@ -62,16 +62,16 @@ namespace pdxpartyparrot.ggj2022.World
             _vfx.SetActive(enabled);
         }
 
-        public void PlantSeed()
+        public bool PlantSeed()
         {
             if(!GameManager.Instance.PlantingAllowed) {
                 CustomEvent.Trigger(gameObject, "EnemiesRemain");
-                return;
+                return false;
             }
 
             if(IsPlanted) {
                 CustomEvent.Trigger(gameObject, "PlanterFull");
-                return;
+                return false;
             }
 
             _planted = true;
@@ -79,13 +79,20 @@ namespace pdxpartyparrot.ggj2022.World
             CustomEvent.Trigger(gameObject, "SeedPlanted");
 
             GameManager.Instance.SeedPlanted(_areaId);
+
+            // TODO: this may change to swapping VFX or something instead of disabling
+            Enable(false);
+
+            return true;
         }
 
         #region Event Handlers
 
         private void PlantersAvailableChangedEventHandler(object sender, EventArgs args)
         {
-            Enable(GameManager.Instance.PlantingAllowed);
+            if(!IsPlanted) {
+                Enable(GameManager.Instance.PlantingAllowed);
+            }
         }
 
         #endregion
