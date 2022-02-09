@@ -64,21 +64,27 @@ namespace pdxpartyparrot.ggj2022.World
             _vfx.SetActive(enabled);
         }
 
+        private void TriggerScriptEvent(string name, params object[] args)
+        {
+            CustomEvent.Trigger(gameObject, name, args);
+        }
+
+
         public bool PlantSeed()
         {
             if(!GameManager.Instance.PlantingAllowed) {
-                CustomEvent.Trigger(gameObject, "EnemiesRemain");
+                TriggerScriptEvent("EnemiesRemain");
                 return false;
             }
 
             if(IsPlanted) {
-                CustomEvent.Trigger(gameObject, "PlanterFull");
+                TriggerScriptEvent("PlanterFull");
                 return false;
             }
 
             _planted = true;
 
-            CustomEvent.Trigger(gameObject, "SeedPlanted");
+            TriggerScriptEvent("SeedPlanted");
 
             GameManager.Instance.SeedPlanted(_areaId);
 

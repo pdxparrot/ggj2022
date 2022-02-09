@@ -43,14 +43,23 @@ namespace pdxpartyparrot.ggj2022.World
             _model.SetActive(enabled);
         }
 
+        private void TriggerScriptEvent(string name, params object[] args)
+        {
+            CustomEvent.Trigger(gameObject, name, args);
+        }
+
         public void ExitLevel()
         {
             if(GameManager.Instance.ExitAvailable) {
-                CustomEvent.Trigger(gameObject, "ExitLevel");
+                if(GameManager.Instance.AllSeedsPlanted) {
+                    TriggerScriptEvent("CompleteLevel");
+                } else {
+                    TriggerScriptEvent("ExitLevel");
+                }
                 return;
             }
 
-            CustomEvent.Trigger(gameObject, "SeedsRemain");
+            TriggerScriptEvent("SeedsRemain");
         }
 
         #region Event Handlers
