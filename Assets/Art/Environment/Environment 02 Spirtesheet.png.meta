@@ -421,6 +421,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: SolidBG
+      rect:
+        serializedVersion: 2
+        x: 1926
+        y: 3297
+        width: 57
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3871ff300c266dd44a5dea44396f71c4
+      internalID: -1408770304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -445,6 +466,7 @@ TextureImporter:
       Env_Road_S: -744343527
       Env_Hill_L: -43461706
       Env_Road_Hill_01: -21364169
+      SolidBG: -1408770304
       Env_Road_Bush_01: -2141472739
   spritePackingTag: 
   pSDRemoveMatte: 0

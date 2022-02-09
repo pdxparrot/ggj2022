@@ -421,6 +421,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: SolidBG_Ash
+      rect:
+        serializedVersion: 2
+        x: 1926
+        y: 3297
+        width: 57
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 091c6883b242aaa46b6121ea126971b8
+      internalID: 77261780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -435,6 +456,7 @@ TextureImporter:
       Env_Road_Bush_02_Ash: 2111794748
       Env_Road_L_Ash: -512828111
       Env_Hill_L_Ash: 1814595023
+      SolidBG_Ash: 77261780
       Env_Road_Hill_01_Ash: 279901909
       Env_Road_Hill_02_Ash: 1160583995
       Env_Hill_M_Ash: 1101056848

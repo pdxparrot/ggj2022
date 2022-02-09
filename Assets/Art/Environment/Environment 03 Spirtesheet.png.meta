@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Environment 03 Spirtesheet_0
+      name: Env03_Canopy01
       rect:
         serializedVersion: 2
         x: 38
@@ -136,7 +136,7 @@ TextureImporter:
         width: 500
         height: 500
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -149,7 +149,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 03 Spirtesheet_1
+      name: Env03_Canopy02
       rect:
         serializedVersion: 2
         x: 589
@@ -157,7 +157,7 @@ TextureImporter:
         width: 500
         height: 500
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -170,7 +170,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 03 Spirtesheet_2
+      name: Env03_Canopy03
       rect:
         serializedVersion: 2
         x: 1168
@@ -178,7 +178,7 @@ TextureImporter:
         width: 500
         height: 500
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -191,7 +191,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 03 Spirtesheet_3
+      name: Env03_BG_Tree01
       rect:
         serializedVersion: 2
         x: 95
@@ -199,7 +199,7 @@ TextureImporter:
         width: 1107
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -220,7 +220,7 @@ TextureImporter:
         width: 27
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -233,7 +233,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 03 Spirtesheet_5
+      name: Env03_BG_Tree02
       rect:
         serializedVersion: 2
         x: 95
@@ -241,7 +241,7 @@ TextureImporter:
         width: 1173
         height: 84
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -264,12 +264,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Environment 03 Spirtesheet_0: 1997780242
-      Environment 03 Spirtesheet_2: -466779593
-      Environment 03 Spirtesheet_3: 1024236445
-      Environment 03 Spirtesheet_5: 303586570
+      Env03_BG_Tree02: 303586570
       Environment 03 Spirtesheet_4: 2088720180
-      Environment 03 Spirtesheet_1: 520174055
+      Env03_Canopy03: -466779593
+      Env03_Canopy01: 1997780242
+      Env03_BG_Tree01: 1024236445
+      Env03_Canopy02: 520174055
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

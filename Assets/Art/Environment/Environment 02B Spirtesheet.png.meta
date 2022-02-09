@@ -421,6 +421,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: SolidBG_Fire
+      rect:
+        serializedVersion: 2
+        x: 1926
+        y: 3297
+        width: 57
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e5a455d550ba4f4392c7244fa80ea6a
+      internalID: -1556217564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -439,6 +460,7 @@ TextureImporter:
       Env_Grass_L_Fire: -934143715
       Env_Road_Hill_01_Fire: -529960867
       Env_Road_Bush_02_Fire: 513812263
+      SolidBG_Fire: -1556217564
       Env_Road_L_Fire: 1163573544
       Env_Hill_L_Fire: -134334757
       Env_Hill_M_Fire: 861484497

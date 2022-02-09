@@ -128,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Environment 03B Spirtesheet_0
+      name: Env03_Canopy01_Fire
       rect:
         serializedVersion: 2
         x: 38
@@ -149,7 +149,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 03B Spirtesheet_1
+      name: Env03_Canopy02_Fire
       rect:
         serializedVersion: 2
         x: 589
@@ -170,7 +170,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 03B Spirtesheet_2
+      name: Env03_Canopy03_Fire
       rect:
         serializedVersion: 2
         x: 1168
@@ -191,11 +191,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 03B Spirtesheet_3
+      name: Env03_BG_Tree01_Fire
       rect:
         serializedVersion: 2
         x: 95
-        y: 270
+        y: 269
         width: 1107
         height: 96
       alignment: 0
@@ -212,28 +212,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Environment 03B Spirtesheet_4
-      rect:
-        serializedVersion: 2
-        x: 1175
-        y: 159
-        width: 27
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e8e3fc307cb4cd74588e35d2f64c660d
-      internalID: -422742857
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Environment 03B Spirtesheet_5
+      name: Env03_BG_Tree02_Fire
       rect:
         serializedVersion: 2
         x: 95
@@ -265,11 +244,11 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Environment 03B Spirtesheet_4: -422742857
-      Environment 03B Spirtesheet_0: 724074776
-      Environment 03B Spirtesheet_3: 1783862089
-      Environment 03B Spirtesheet_5: 1710677998
-      Environment 03B Spirtesheet_2: 1668194532
-      Environment 03B Spirtesheet_1: -1066713569
+      Env03_Canopy01_Fire: 724074776
+      Env03_BG_Tree02_Fire: 1710677998
+      Env03_Canopy02_Fire: -1066713569
+      Env03_Canopy03_Fire: 1668194532
+      Env03_BG_Tree01_Fire: 1783862089
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
