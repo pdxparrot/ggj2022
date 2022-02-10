@@ -1,0 +1,33 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:fc315ad4cf43872c74791999f338d59e:3194338e3c94c6cd15b76fbda3e7dc58:3b95f9ee06c6eea9fb51cacef442595a$
+#
+:format=40300
+:texture=fire.png
+:size=1024x2048
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+enemies00;1;1790;257;257; 0.5;0.5; 0;0;0;0
+enemies01;260;1790;257;257; 0.5;0.5; 0;0;0;0
+enemies02;519;1790;257;257; 0.5;0.5; 0;0;0;0
+enemies03;1;1531;257;257; 0.5;0.5; 0;0;0;0
+enemies04;260;1531;257;257; 0.5;0.5; 0;0;0;0
+enemies05;519;1531;257;257; 0.5;0.5; 0;0;0;0
+enemies06;1;1272;257;257; 0.5;0.5; 0;0;0;0
+enemies07;260;1272;257;257; 0.5;0.5; 0;0;0;0
+enemies08;519;1272;257;257; 0.5;0.5; 0;0;0;0
+enemies09;1;1013;257;257; 0.5;0.5; 0;0;0;0
+enemies10;260;1013;257;257; 0.5;0.5; 0;0;0;0
+enemies11;519;1013;257;257; 0.5;0.5; 0;0;0;0
+enemies12;1;754;257;257; 0.5;0.5; 0;0;0;0
+enemies13;260;754;257;257; 0.5;0.5; 0;0;0;0
+enemies14;519;754;257;257; 0.5;0.5; 0;0;0;0
+enemies15;1;495;257;257; 0.5;0.5; 0;0;0;0
+enemies16;260;495;257;257; 0.5;0.5; 0;0;0;0
+enemies17;519;495;257;257; 0.5;0.5; 0;0;0;0

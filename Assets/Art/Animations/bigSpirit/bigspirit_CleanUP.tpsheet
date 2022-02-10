@@ -1,0 +1,30 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:7b61346393120e15c5303ba160e001bf:0fa9e5d051fcffd67a86564b5d904678:ae16f63e1b605e9ffbd09a3daeb54266$
+#
+:format=40300
+:texture=bigspirit_CleanUP.png
+:size=2048x2048
+:pivotpoints=disabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+BigSpirit_0001;0;1647;401;401; 0.5;0.5; 0;0;0;0
+BigSpirit_0002;401;1647;401;401; 0.5;0.5; 0;0;0;0
+BigSpirit_0003;802;1647;401;401; 0.5;0.5; 0;0;0;0
+BigSpirit_0004;1203;1647;401;401; 0.5;0.5; 0;0;0;0
+BigSpirit_0005;1604;1647;401;401; 0.5;0.5; 0;0;0;0
+BigSpirit_0006;0;1246;401;401; 0.5;0.5; 0;0;0;0
+BigSpirit_0007;401;1246;401;401; 0.5;0.5; 0;0;0;0
+BigSpirit_0008;802;1246;401;401; 0.5;0.5; 0;0;0;0
+BigSpirit_0010;1203;1246;401;401; 0.5;0.5; 0;0;0;0
+BigSpirit_0011;1604;1246;401;401; 0.5;0.5; 0;0;0;0
+BigSpirit_0012;0;845;401;401; 0.5;0.5; 0;0;0;0
+BigSpirit_0014;401;845;401;401; 0.5;0.5; 0;0;0;0
+BigSpirit_0015;802;845;401;401; 0.5;0.5; 0;0;0;0
+BigSpirit_0016;1203;845;401;401; 0.5;0.5; 0;0;0;0
+BigSpirit_0017;1604;845;401;401; 0.5;0.5; 0;0;0;0
