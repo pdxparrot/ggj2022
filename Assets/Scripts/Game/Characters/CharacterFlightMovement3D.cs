@@ -50,7 +50,7 @@ namespace pdxpartyparrot.Game.Characters
 
         private void Update()
         {
-#if DEBUG
+#if UNITY_EDITOR
             CheckForDebug();
 #endif
         }
