@@ -8,6 +8,7 @@ tpsheetFileNames:
 - Assets/Art/Animations/fireSlime/fireSlime.tpsheet
 - Assets/Art/Animations/smallSpirit/smallSpirit.tpsheet
 - Assets/Art/Animations/smallSpirit/smallSpirit_hitdeath.tpsheet
+- Assets/Art/Animations/smallSpirit/smallSpirit_New.tpsheet
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
 textureFileNames:
 - Assets/Art/Animations/bigSpirit/bigSpirit.png
@@ -18,8 +19,10 @@ textureFileNames:
 - Assets/Art/Animations/fireSlime/fireSlime.png
 - Assets/Art/Animations/smallSpirit/smallSpirit.png
 - Assets/Art/Animations/smallSpirit/smallSpirit_hitdeath.png
+- Assets/Art/Animations/smallSpirit/smallSpirit_New.png
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
 normalmapFileNames:
+- 
 - 
 - 
 - 
