@@ -6,7 +6,6 @@ using System.Linq;
 
 using JetBrains.Annotations;
 
-using pdxpartyparrot.Core.Collections;
 using pdxpartyparrot.Core.DebugMenu;
 using pdxpartyparrot.Core.Network;
 using pdxpartyparrot.Core.Time;
@@ -14,6 +13,10 @@ using pdxpartyparrot.Core.Util;
 
 using UnityEngine;
 using UnityEngine.Assertions;
+
+#if USE_NETWORKING
+using Unity.Netcode;
+#endif
 
 namespace pdxpartyparrot.Core.ObjectPool
 {
@@ -118,7 +121,7 @@ namespace pdxpartyparrot.Core.ObjectPool
 
             private void DoExpand(int amount)
             {
-                Assert.IsTrue(!IsNetwork || NetworkManager.Instance.IsServerActive());
+                Assert.IsTrue(!IsNetwork || Network.NetworkManager.Instance.IsServerActive());
 
                 if(amount <= 0) {
                     return;
@@ -218,7 +221,7 @@ namespace pdxpartyparrot.Core.ObjectPool
                 Network.NetworkManager.Instance.RegisterNetworkPrefab(networkBehaviour);
 
                 // network pools are server-only
-                if(!NetworkManager.Instance.IsServerActive()) {
+                if(!Network.NetworkManager.Instance.IsServerActive()) {
                     return;
                 }
             }

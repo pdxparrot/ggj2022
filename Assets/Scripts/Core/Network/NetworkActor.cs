@@ -5,6 +5,7 @@ using pdxpartyparrot.Core.Actors;
 #if USE_NETWORKING
 using UnityEngine;
 using Unity.Netcode;
+using Unity.Netcode.Components;
 #endif
 
 namespace pdxpartyparrot.Core.Network
@@ -17,8 +18,6 @@ namespace pdxpartyparrot.Core.Network
     public abstract class NetworkActor : NetworkBehaviour
     {
 #if USE_NETWORKING
-        public NetworkObject NetworkObject { get; private set; }
-
         public NetworkTransform NetworkTransform { get; private set; }
 #endif
 
@@ -29,7 +28,6 @@ namespace pdxpartyparrot.Core.Network
         protected virtual void Awake()
         {
 #if USE_NETWORKING
-            NetworkObject = GetComponent<NetworkObject>();
             NetworkTransform = GetComponent<NetworkTransform>();
 #endif
 

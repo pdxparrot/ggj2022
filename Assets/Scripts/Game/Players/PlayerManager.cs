@@ -85,7 +85,7 @@ namespace pdxpartyparrot.Game.Players
             _playerContainer = new GameObject("Players");
 
             Core.Network.NetworkManager.Instance.RegisterPlayerPrefab(PlayerPrefab.NetworkPlayer);
-            Core.Network.NetworkManager.Instance.ServerAddPlayerEvent += ServerAddPlayerEventHandler;
+            Core.Network.NetworkManager.Instance.ApprovalCheckSuccessEvent += ApprovalCheckSuccessEventHandler;
 
             InitDebugMenu();
 
@@ -101,7 +101,7 @@ namespace pdxpartyparrot.Game.Players
             DestroyDebugMenu();
 
             if(Core.Network.NetworkManager.HasInstance) {
-                Core.Network.NetworkManager.Instance.ServerAddPlayerEvent -= ServerAddPlayerEventHandler;
+                Core.Network.NetworkManager.Instance.ApprovalCheckSuccessEvent -= ApprovalCheckSuccessEventHandler;
                 Core.Network.NetworkManager.Instance.UnregisterPlayerPrefab();
             }
 
@@ -113,24 +113,24 @@ namespace pdxpartyparrot.Game.Players
 
         #endregion
 
-        private void SpawnPlayer(NetworkConnection conn, short controllerId)
+        private void SpawnPlayer(ulong clientId)
         {
             Assert.IsTrue(NetworkManager.Instance.IsServerActive());
 
-            Debug.Log($"Spawning player for controller {controllerId}...");
+            Debug.Log($"Spawning player {clientId}...");
 
-            SpawnPoint spawnPoint = SpawnManager.Instance.GetPlayerSpawnPoint(controllerId);
+            SpawnPoint spawnPoint = SpawnManager.Instance.GetPlayerSpawnPoint(clientId);
             if(null == spawnPoint) {
                 Debug.LogError("Failed to get player spawnpoint!");
                 return;
             }
 
-            NetworkPlayer player = Core.Network.NetworkManager.Instance.SpawnPlayer<NetworkPlayer>(controllerId, conn, _playerContainer.transform);
+            NetworkPlayer player = Core.Network.NetworkManager.Instance.SpawnPlayer<NetworkPlayer>(clientId, _playerContainer.transform);
             if(null == player) {
                 Debug.LogError("Failed to spawn network player!");
                 return;
             }
-            player.Initialize(controllerId);
+            player.Initialize(clientId);
 
             if(!spawnPoint.SpawnPlayer((Actor)player.Player)) {
                 Debug.LogError("Failed to spawn player!");
@@ -142,17 +142,17 @@ namespace pdxpartyparrot.Game.Players
 
         public bool RespawnPlayer(IPlayer player)
         {
-            return RespawnPlayer(player, SpawnManager.Instance.GetPlayerSpawnPoint(player.NetworkPlayer.playerControllerId));
+            return RespawnPlayer(player, SpawnManager.Instance.GetPlayerSpawnPoint(player.NetworkPlayer.ClientId));
         }
 
         public bool RespawnPlayerRandom(IPlayer player)
         {
-            return RespawnPlayer(player, SpawnManager.Instance.GetRandomPlayerSpawnPoint(player.NetworkPlayer.playerControllerId));
+            return RespawnPlayer(player, SpawnManager.Instance.GetRandomPlayerSpawnPoint(player.NetworkPlayer.ClientId));
         }
 
         public bool RespawnPlayerNearest(IPlayer player)
         {
-            return RespawnPlayer(player, SpawnManager.Instance.GetNearestPlayerSpawnPoint(player.NetworkPlayer.playerControllerId, player.Movement.Position));
+            return RespawnPlayer(player, SpawnManager.Instance.GetNearestPlayerSpawnPoint(player.NetworkPlayer.ClientId, player.Movement.Position));
         }
 
         public bool RespawnPlayer(IPlayer player, string tag)
@@ -278,9 +278,9 @@ namespace pdxpartyparrot.Game.Players
 
         #region Event Handlers
 
-        private void ServerAddPlayerEventHandler(object sender, ServerAddPlayerEventArgs args)
+        private void ApprovalCheckSuccessEventHandler(object sender, ApprovalCheckSuccessEventArgs args)
         {
-            SpawnPlayer(args.NetworkConnection, args.PlayerControllerId);
+            SpawnPlayer(args.ClientId);
         }
 
         #endregion

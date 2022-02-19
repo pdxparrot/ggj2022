@@ -177,25 +177,25 @@ namespace pdxpartyparrot.Core.World
         #region Player Spawnpoints
 
         [CanBeNull]
-        public SpawnPoint GetPlayerSpawnPoint(int controllerId)
+        public SpawnPoint GetPlayerSpawnPoint(ulong clientId)
         {
-            int spawnPointIdx = Mathf.Clamp(controllerId, 0, _spawnData.PlayerSpawnPointTags.Count - 1);
+            int spawnPointIdx = Mathf.Clamp((int)clientId, 0, _spawnData.PlayerSpawnPointTags.Count - 1);
             return GetSpawnPoint(_spawnData.PlayerSpawnPointTags.ElementAt(spawnPointIdx));
         }
 
         // gets a random player spawnpoint regardless of how the spawnpoints are configured
         [CanBeNull]
-        public SpawnPoint GetRandomPlayerSpawnPoint(int controllerId)
+        public SpawnPoint GetRandomPlayerSpawnPoint(ulong clientId)
         {
-            int spawnPointIdx = Mathf.Clamp(controllerId, 0, _spawnData.PlayerSpawnPointTags.Count - 1);
+            int spawnPointIdx = Mathf.Clamp((int)clientId, 0, _spawnData.PlayerSpawnPointTags.Count - 1);
             return GetRandomSpawnPoint(_spawnData.PlayerSpawnPointTags.ElementAt(spawnPointIdx));
         }
 
         // gets the player spawnpoint nearest the given position
         [CanBeNull]
-        public SpawnPoint GetNearestPlayerSpawnPoint(int controllerId, Vector3 position)
+        public SpawnPoint GetNearestPlayerSpawnPoint(ulong clientId, Vector3 position)
         {
-            int spawnPointIdx = Mathf.Clamp(controllerId, 0, _spawnData.PlayerSpawnPointTags.Count - 1);
+            int spawnPointIdx = Mathf.Clamp((int)clientId, 0, _spawnData.PlayerSpawnPointTags.Count - 1);
             return GetNearestSpawnPoint(_spawnData.PlayerSpawnPointTags.ElementAt(spawnPointIdx), position);
         }
 

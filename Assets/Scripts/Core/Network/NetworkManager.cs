@@ -33,9 +33,9 @@ namespace pdxpartyparrot.Core.Network
         public event EventHandler<EventArgs> ServerDisconnectEvent;
 #endif
 
+        public event EventHandler<ApprovalCheckSuccessEventArgs> ApprovalCheckSuccessEvent;
         public event EventHandler<EventArgs> ServerChangeSceneEvent;
         public event EventHandler<EventArgs> ServerChangedSceneEvent;
-        public event EventHandler<ServerAddPlayerEventArgs> ServerAddPlayerEvent;
 
 #if USE_NETWORKING
         public event EventHandler<EventArgs> ClientConnectEvent;
@@ -61,21 +61,13 @@ namespace pdxpartyparrot.Core.Network
 
         #endregion
 
-        #region Singleton
-
-#if USE_NETWORKING
-        public static NetworkManager Instance => (NetworkManager)singleton;
-
-        public static bool HasInstance => null != Instance;
-#endif
-
-        #endregion
-
         [SerializeField]
         private bool _enableCallbackLogging = true;
 
 #if USE_NETWORKING
-        private NetworkManagerHUD _hud;
+        public Unity.Netcode.NetworkManager Manager { get; private set; }
+
+        //private NetworkManagerHUD _hud;
 
         public NetworkDiscovery Discovery { get; private set; }
 #else
@@ -92,17 +84,7 @@ namespace pdxpartyparrot.Core.Network
 
         #region Unity Lifecycle
 
-#if USE_NETWORKING
-        // TODO: whenever this becomes a thing...
-        /*protected override void Awake()
-        {
-            base.Awake();
-
-            Initialize();
-        }*/
-#endif
-
-        private void Start()
+        private void Awake()
         {
             Initialize();
         }
@@ -112,15 +94,16 @@ namespace pdxpartyparrot.Core.Network
         private void Initialize()
         {
 #if USE_NETWORKING
-            _hud = GetComponent<NetworkManagerHUD>();
-            _hud.showGUI = false;
+            Manager = GetComponent<Unity.Netcode.NetworkManager>();
+            Manager.ConnectionApprovalCallback += ApprovalCheckEventHandler;
+
+            /*_hud = GetComponent<NetworkManagerHUD>();
+            _hud.showGUI = false;*/
 
             Discovery = GetComponent<NetworkDiscovery>();
             Discovery.useNetworkManager = true;
             Discovery.showGUI = false;
             Discovery.enabled = PartyParrotManager.Instance.Config.Network.Discovery.Enable;
-
-            autoCreatePlayer = false;
 #endif
 
             InitDebugMenu();
@@ -199,7 +182,7 @@ namespace pdxpartyparrot.Core.Network
         public void SpawnNetworkObject<T>([NotNull] T networkObject) where T : NetworkBehaviour
         {
 #if USE_NETWORKING
-            NetworkServer.Spawn(networkObject.gameObject);
+            networkObject.NetworkObject.Spawn();
 #else
             Debug.LogWarning($"[NetworkManager]: Not spawning network object {networkObject.name}");
 #endif
@@ -260,7 +243,7 @@ namespace pdxpartyparrot.Core.Network
             playerPrefab = null;
         }
 
-        public T SpawnPlayer<T>(short controllerId, NetworkConnection conn) where T : NetworkActor
+        public T SpawnPlayer<T>(ulong clientId) where T : NetworkActor
         {
             if(!IsServerActive()) {
                 Debug.LogWarning("[NetworkManager]: Cannot spawn player prefab without an active server!");
@@ -277,7 +260,7 @@ namespace pdxpartyparrot.Core.Network
                 Debug.LogError("Failed to spawn player!");
                 return null;
             }
-            player.name = $"Player {controllerId}";
+            player.name = $"Player {clientId}";
 
             // call this instead of NetworkServer.Spawn()
 #if USE_NETWORKING
@@ -286,9 +269,9 @@ namespace pdxpartyparrot.Core.Network
             return player.GetComponent<T>();
         }
 
-        public T SpawnPlayer<T>(short controllerId, NetworkConnection conn, Transform parent) where T : NetworkActor
+        public T SpawnPlayer<T>(ulong clientId, Transform parent) where T : NetworkActor
         {
-            T player = SpawnPlayer<T>(controllerId, conn);
+            T player = SpawnPlayer<T>(clientId);
             if(null == player) {
                 return null;
             }
@@ -374,7 +357,7 @@ namespace pdxpartyparrot.Core.Network
             Debug.Log("[NetworkManager]: Starting LAN host");
 
             maxConnections = PartyParrotManager.Instance.Config.Network.Server.MaxConnections;
-            NetworkClient networkClient = base.StartHost();
+            NetworkClient networkClient = Manager.StartHost();
             if(null == networkClient) {
                 return null;
             }
@@ -397,13 +380,13 @@ namespace pdxpartyparrot.Core.Network
             }
 
             Debug.Log($"[NetworkManager]: Listening for clients on {networkAddress}:{networkPort}");
-            return base.StartServer();
+            return Manager.StartServer();
         }
 
         public new NetworkClient StartClient()
         {
             Debug.Log($"[NetworkManager]: Connecting client to {networkAddress}:{networkPort}");
-            NetworkClient networkClient = base.StartClient();
+            NetworkClient networkClient = Manager.StartClient();
             if(null == networkClient) {
                 return null;
             }
@@ -470,22 +453,18 @@ namespace pdxpartyparrot.Core.Network
 #endif
         }
 
-        public void AddLocalPlayer(short playerControllerId)
+        public void AddLocalPlayer(ulong clientId)
         {
-            Debug.Log($"[NetworkManager]: Adding local player {playerControllerId}!");
+            Debug.Log($"[NetworkManager]: Adding local player {clientId}!");
 
 #if USE_NETWORKING
-            ClientScene.AddPlayer(playerControllerId);
+            ClientScene.AddPlayer(clientId);
 #else
-            ServerAddPlayerEvent?.Invoke(this, new ServerAddPlayerEventArgs(new NetworkConnection(), playerControllerId));
+            ApprovalCheckSuccessEvent?.Invoke(this, new ApprovalCheckSuccessEventArgs(clientId));
 #endif
         }
 
-#if USE_NETWORKING
-        public override void ServerChangeScene(string sceneName)
-#else
         public void ServerChangeScene(string sceneName)
-#endif
         {
 #if USE_NETWORKING
             Debug.Log($"[NetworkManager]: Server changing to scene '{sceneName}'...");
@@ -499,6 +478,8 @@ namespace pdxpartyparrot.Core.Network
 #if USE_NETWORKING
             StringMessage msg = new StringMessage(networkSceneName);
             NetworkServer.SendToAll(CustomMsgType.SceneChange, msg);
+
+            // TDOO: call NetworkSceneManager.LoadScene() ?
 #endif
         }
 
@@ -518,27 +499,45 @@ namespace pdxpartyparrot.Core.Network
 
 #if USE_NETWORKING
 
+        #region Server Event Handlers
+
+        private void ApprovalCheckEventHandler(byte[] connectionData, ulong clientId, Unity.Netcode.NetworkManager.ConnectionApprovedDelegate callback)
+        {
+            CallbackLog($"ApprovalCheck({clientId})");
+
+            // TODO: validate the connection data
+
+            bool createPlayerObject = false;
+            bool approve = true;
+            callback(createPlayerObject, null, approve, null, null);
+
+            ApprovalCheckSuccessEvent?.Invoke(this, new ApprovalCheckSuccessEventArgs(clientId));
+        }
+
+        #endregion
+
+
         #region Server Callbacks
 
         public override void OnStartHost()
         {
             CallbackLog("OnStartHost()");
 
-            base.OnStartHost();
+            Manager.OnStartHost();
         }
 
         public override void OnStopHost()
         {
             CallbackLog("OnStopHost()");
 
-            base.OnStopHost();
+            Manager.OnStopHost();
         }
 
         public override void OnStartServer()
         {
             CallbackLog("OnStartServer()");
 
-            base.OnStartServer();
+            Manager.OnStartServer();
 
             ServerStartEvent?.Invoke(this, EventArgs.Empty);
         }
@@ -549,14 +548,14 @@ namespace pdxpartyparrot.Core.Network
 
             ServerStopEvent?.Invoke(this, EventArgs.Empty);
 
-            base.OnStopServer();
+            Manager.OnStopServer();
         }
 
         public override void OnServerConnect(NetworkConnection conn)
         {
             CallbackLog($"OnServerConnect({conn})");
 
-            base.OnServerConnect(conn);
+            Manager.OnServerConnect(conn);
 
             ServerConnectEvent?.Invoke(this, EventArgs.Empty);
         }
@@ -567,30 +566,21 @@ namespace pdxpartyparrot.Core.Network
 
             ServerDisconnectEvent?.Invoke(this, EventArgs.Empty);
 
-            base.OnServerDisconnect(conn);
-        }
-
-        public override void OnServerAddPlayer(NetworkConnection conn, short playerControllerId)
-        {
-            CallbackLog($"OnServerAddPlayer({conn}, {playerControllerId})");
-
-            ServerAddPlayerEvent?.Invoke(this, new ServerAddPlayerEventArgs(conn, playerControllerId));
-
-            // NOTE: do not call the base method
+            Manager.OnServerDisconnect(conn);
         }
 
         public override void OnServerRemovePlayer(NetworkConnection conn, PlayerController player)
         {
             CallbackLog($"OnServerRemovePlayer({conn}, {player})");
 
-            base.OnServerRemovePlayer(conn, player);
+            Manager.OnServerRemovePlayer(conn, player);
         }
 
         public override void OnServerReady(NetworkConnection conn)
         {
             CallbackLog($"OnServerReady({conn})");
 
-            base.OnServerReady(conn);
+            Manager.OnServerReady(conn);
         }
 
         public override void OnServerSceneChanged(string sceneName)
@@ -609,14 +599,14 @@ namespace pdxpartyparrot.Core.Network
         {
             CallbackLog($"OnStartClient({networkClient})");
 
-            base.OnStartClient(networkClient);
+            Manager.OnStartClient(networkClient);
         }
 
         public override void OnStopClient()
         {
             CallbackLog("OnStopClient()");
 
-            base.OnStopClient();
+            Manager.OnStopClient();
         }
 
         public override void OnClientConnect(NetworkConnection conn)
@@ -632,7 +622,7 @@ namespace pdxpartyparrot.Core.Network
         {
             CallbackLog($"OnClientDisconnect({conn})");
 
-            base.OnClientDisconnect(conn);
+            Manager.OnClientDisconnect(conn);
 
             ClientDisconnectEvent?.Invoke(this, EventArgs.Empty);
         }
@@ -641,7 +631,7 @@ namespace pdxpartyparrot.Core.Network
         {
             CallbackLog($"OnClientSceneChanged({conn})");
 
-            base.OnClientSceneChanged(conn);
+            Manager.OnClientSceneChanged(conn);
         }
 
         public void OnClientCustomSceneChange(NetworkMessage netMsg)
@@ -677,9 +667,9 @@ namespace pdxpartyparrot.Core.Network
             DebugMenuNode debugMenuNode = DebugMenuManager.Instance.AddNode(() => "Core.NetworkManager");
             debugMenuNode.RenderContentsAction = () => {
 #if USE_NETWORKING
-                if(_hud.enabled) {
+                /*if(_hud.enabled) {
                     _hud.showGUI = GUILayout.Toggle(_hud.showGUI, "Show Network HUD GUI");
-                }
+                }*/
 
                 if(Discovery.enabled) {
                     Discovery.showGUI = GUILayout.Toggle(Discovery.showGUI, "Show Network Discovery GUI");

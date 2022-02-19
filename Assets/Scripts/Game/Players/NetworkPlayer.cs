@@ -11,7 +11,8 @@ using UnityEngine;
 using UnityEngine.Assertions;
 
 #if USE_NETWORKING
-using UnityEngine.Networking;
+using Unity.Netcode;
+using Unity.Netcode.Components;
 #endif
 
 namespace pdxpartyparrot.Game.Players
@@ -25,9 +26,9 @@ namespace pdxpartyparrot.Game.Players
 
         [SerializeField]
         [ReadOnly]
-        private short _controllerId;
+        private ulong _clientId;
 
-        public short ControllerId => _controllerId;
+        public ulong ClientId => _clientId;
 
         #region Unity Lifecycle
 
@@ -40,9 +41,9 @@ namespace pdxpartyparrot.Game.Players
 
         #endregion
 
-        public void Initialize(short controllerId)
+        public void Initialize(ulong clientId)
         {
-            _controllerId = controllerId;
+            _clientId = clientId;
         }
 
         public void Init2D()
@@ -68,7 +69,7 @@ namespace pdxpartyparrot.Game.Players
 #if USE_NETWORKING
         [ClientRpc]
 #endif
-        public virtual void RpcSpawn(string id)
+        public virtual void SpawnRpc(string id)
         {
             Debug.Log($"Network player {id} spawn");
 

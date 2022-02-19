@@ -9,7 +9,7 @@ namespace pdxpartyparrot.Core.Network
 
         // TODO: find a better value for this
         // (every player should not be player 0)
-        public short playerControllerId => 0;
+        public ulong OwnerClientId => 0;
     }
 }
 #endif

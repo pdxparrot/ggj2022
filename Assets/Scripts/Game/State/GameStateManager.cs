@@ -9,10 +9,15 @@ using JetBrains.Annotations;
 using pdxpartyparrot.Core;
 using pdxpartyparrot.Core.DebugMenu;
 using pdxpartyparrot.Core.Loading;
+#if !USE_NETWORKING
 using pdxpartyparrot.Core.Network;
+#endif
 using pdxpartyparrot.Core.UI;
 using pdxpartyparrot.Core.Util;
+#if ENABLE_SERVER_SPECTATOR
 using pdxpartyparrot.Game.Camera;
+using pdxpartyparrot.Game.Network;
+#endif
 using pdxpartyparrot.Game.NPCs;
 using pdxpartyparrot.Game.Players;
 using pdxpartyparrot.Game.UI;

@@ -7,7 +7,8 @@ using UnityEngine;
 
 namespace pdxpartyparrot.Core.Network
 {
-    public sealed class NetworkDiscovery : UnityEngine.Networking.NetworkDiscovery
+    // TOOD: https://github.com/Unity-Technologies/multiplayer-community-contributions/tree/main/com.community.netcode.extensions/Runtime/NetworkDiscovery can replace this
+    public sealed class NetworkDiscovery : MonoBehaviour//Unity.Netcode.NetworkDiscovery
     {
         #region Events
 
@@ -15,7 +16,7 @@ namespace pdxpartyparrot.Core.Network
 
         #endregion
 
-        public override void OnReceivedBroadcast(string fromAddress, string data)
+        /*public override void OnReceivedBroadcast(string fromAddress, string data)
         {
             Debug.Log($"[NetworkDiscovery]: Broadcast from {fromAddress}: {data}");
 
@@ -25,7 +26,7 @@ namespace pdxpartyparrot.Core.Network
             }
 
             ReceivedBroadcastEvent?.Invoke(this, new ReceivedBroadcastEventArgs(fromAddress, data, data.Substring(idx + 1)));
-        }
+        }*/
     }
 }
 #endif

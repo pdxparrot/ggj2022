@@ -11,7 +11,7 @@ using pdxpartyparrot.Game.Camera;
 
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Networking;
+using Unity.Netcode;
 
 // TODO: need to fix the follow target bits of this
 // TODO: this is probably all kinds of broken with the switch to InputSystem PlayerInput
@@ -52,7 +52,7 @@ namespace pdxpartyparrot.Game.Network
         [CanBeNull]
         private ServerSpectatorViewer _viewer;
 
-#region Unity Lifecycle
+        #region Unity Lifecycle
 
         private void Awake()
         {
@@ -82,7 +82,7 @@ namespace pdxpartyparrot.Game.Network
             transform.position = Vector3.MoveTowards(transform.position, transform.position + (rotation * _lastControllerMove), dt * _moveSpeed);
         }
 
-#endregion
+        #endregion
 
         private bool IsInputAllowed(InputAction.CallbackContext ctx)
         {
@@ -95,7 +95,7 @@ namespace pdxpartyparrot.Game.Network
             return true;
         }
 
-#region IServerSpectatorActions
+        #region IServerSpectatorActions
 
         public void OnMoveForward(InputAction.CallbackContext context)
         {
@@ -174,7 +174,7 @@ namespace pdxpartyparrot.Game.Network
             }
         }
 
-#endregion
+        #endregion
     }
 }
 #endif

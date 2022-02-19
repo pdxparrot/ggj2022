@@ -10,10 +10,6 @@ using pdxpartyparrot.Game.UI;
 
 using UnityEngine;
 
-#if USE_NETWORKING
-using UnityEngine.Networking;
-#endif
-
 namespace pdxpartyparrot.Game.State
 {
     public sealed class NetworkConnectState : SubGameState

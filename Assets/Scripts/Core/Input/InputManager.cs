@@ -77,9 +77,9 @@ namespace pdxpartyparrot.Core.Input
 
         #endregion
 
-        public int GetGamepadCount()
+        public short GetGamepadCount()
         {
-            int count = 0;
+            short count = 0;
             foreach(InputDevice device in InputSystem.devices) {
                 if(!(device is Gamepad)) {
                     continue;
@@ -92,14 +92,14 @@ namespace pdxpartyparrot.Core.Input
         [CanBeNull]
         public Gamepad GetGamepad(short playerControllerId)
         {
-            int gamepadCount = GetGamepadCount();
+            short gamepadCount = GetGamepadCount();
             if(playerControllerId >= gamepadCount) {
                 Debug.LogError($"Player controller {playerControllerId} is greater than available gamepads ({gamepadCount})!");
                 return null;
             }
 
             // TODO: seriously?
-            int count = 0;
+            short count = 0;
             foreach(InputDevice device in InputSystem.devices) {
                 if(!(device is Gamepad gamepad)) {
                     continue;

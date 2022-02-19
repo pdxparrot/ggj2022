@@ -42,7 +42,7 @@ namespace pdxpartyparrot.Core.Input
         {
             // TODO: we shouldn't blindly assume we want gamepads here
 
-            int gamepadCount = InputManager.Instance.GetGamepadCount();
+            short gamepadCount = InputManager.Instance.GetGamepadCount();
 #if UNITY_EDITOR
             if(gamepadCount < 1) {
                 Debug.LogWarning("No gamepads found, debug pairing with keyboard / mouse");

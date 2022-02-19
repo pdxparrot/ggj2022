@@ -89,7 +89,7 @@ namespace pdxpartyparrot.Game.Characters.Players
 
             Debug.Log($"Initializing local player {id}");
 
-            _inputHandler.Initialize(NetworkPlayer.ControllerId);
+            _inputHandler.Initialize((short)NetworkPlayer.OwnerClientId);
 
             NetworkPlayer.Init2D();
 
@@ -113,15 +113,13 @@ namespace pdxpartyparrot.Game.Characters.Players
 
         public override bool OnSpawn(SpawnPoint spawnpoint)
         {
-            Debug.Log($"Spawning player (controller={NetworkPlayer.playerControllerId}, isLocalPlayer={IsLocalActor})");
+            Debug.Log($"Spawning player (clientId={NetworkPlayer.OwnerClientId}, isLocalPlayer={IsLocalActor})");
 
             // spawnpoint doesn't initialize players, so we have to do it before calling the base OnSpawn
             Initialize(Guid.NewGuid());
             Behavior.Initialize(GameStateManager.Instance.PlayerManager.PlayerBehaviorData);
 
-            if(!NetworkManager.Instance.IsClientActive()) {
-                NetworkPlayer.RpcSpawn(Id.ToString());
-            }
+            NetworkPlayer.SpawnRpc(Id.ToString());
 
             return base.OnSpawn(spawnpoint);
         }
@@ -132,7 +130,7 @@ namespace pdxpartyparrot.Game.Characters.Players
                 return false;
             }
 
-            Debug.Log($"Respawning player (controller={NetworkPlayer.playerControllerId}, isLocalPlayer={IsLocalActor})");
+            Debug.Log($"Respawning player (clientId={NetworkPlayer.OwnerClientId}, isLocalPlayer={IsLocalActor})");
 
             return true;
         }

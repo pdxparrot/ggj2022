@@ -10,12 +10,15 @@ using pdxpartyparrot.Core.Camera;
 using pdxpartyparrot.Core.DebugMenu;
 using pdxpartyparrot.Core.Input;
 using pdxpartyparrot.Core.Loading;
+#if ENABLE_SERVER_SPECTATOR
+using pdxpartyparrot.Game.Network;
+#endif
 
 using UnityEngine;
 using UnityEngine.Assertions;
 
 #if USE_NETWORKING
-using UnityEngine.Networking;
+using Unity.Netcode;
 #endif
 
 namespace pdxpartyparrot.Game.State
@@ -278,14 +281,14 @@ namespace pdxpartyparrot.Game.State
             // TODO: this probably isn't the right place to handle "gamepads are players"
             // instead it probably should be done in whatever initializes the main game state
             if(GameStateManager.Instance.GameManager.GameData.GamepadsArePlayers) {
-                int count = Mathf.Min(Mathf.Max(InputManager.Instance.GetGamepadCount(), 1), GameStateManager.Instance.GameManager.GameData.MaxLocalPlayers);
+                ulong count = (ulong)Mathf.Min(Mathf.Max(InputManager.Instance.GetGamepadCount(), 1), GameStateManager.Instance.GameManager.GameData.MaxLocalPlayers);
                 if(count < 1) {
                     Debug.LogWarning("No player controllers available!");
                 } else {
                     Debug.Log($"Will spawn a player for each controller ({count})...");
                 }
 
-                for(short i = 0; i < count; ++i) {
+                for(ulong i = 0; i < count; ++i) {
                     Core.Network.NetworkManager.Instance.AddLocalPlayer(i);
                 }
             } else {
@@ -293,9 +296,9 @@ namespace pdxpartyparrot.Game.State
                     Debug.LogWarning("No player controllers available!");
                 }
 
-                foreach(short playerControllerId in _playerControllers) {
-                    Debug.Log($"Spawning local player with controller {playerControllerId}...");
-                    Core.Network.NetworkManager.Instance.AddLocalPlayer(playerControllerId);
+                foreach(ulong clientId in _playerControllers) {
+                    Debug.Log($"Spawning local player with controller {clientId}...");
+                    Core.Network.NetworkManager.Instance.AddLocalPlayer(clientId);
                 }
             }
         }
