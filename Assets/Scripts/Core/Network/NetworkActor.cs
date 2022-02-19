@@ -4,20 +4,20 @@ using pdxpartyparrot.Core.Actors;
 
 #if USE_NETWORKING
 using UnityEngine;
-using UnityEngine.Networking;
+using Unity.Netcode;
 #endif
 
 namespace pdxpartyparrot.Core.Network
 {
     //[RequireComponent(typeof(Actor))]
 #if USE_NETWORKING
-    [RequireComponent(typeof(NetworkIdentity))]
+    [RequireComponent(typeof(NetworkObject))]
     [RequireComponent(typeof(NetworkTransform))]
 #endif
     public abstract class NetworkActor : NetworkBehaviour
     {
 #if USE_NETWORKING
-        public NetworkIdentity NetworkIdentity { get; private set; }
+        public NetworkObject NetworkObject { get; private set; }
 
         public NetworkTransform NetworkTransform { get; private set; }
 #endif
@@ -29,7 +29,7 @@ namespace pdxpartyparrot.Core.Network
         protected virtual void Awake()
         {
 #if USE_NETWORKING
-            NetworkIdentity = GetComponent<NetworkIdentity>();
+            NetworkObject = GetComponent<NetworkObject>();
             NetworkTransform = GetComponent<NetworkTransform>();
 #endif
 

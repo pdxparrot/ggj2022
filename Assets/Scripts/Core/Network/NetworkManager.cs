@@ -10,21 +10,19 @@ using pdxpartyparrot.Core.Util;
 using UnityEngine;
 
 #if USE_NETWORKING
-using UnityEngine.Networking;
-using UnityEngine.Networking.NetworkSystem;
+using Unity.Netcode;
 #endif
 
 namespace pdxpartyparrot.Core.Network
 {
 #if USE_NETWORKING
-    // TODO: HLAPI is deprecated so this needs to be replaced
-    // https://bitbucket.org/Unity-Technologies/networking
-    [RequireComponent(typeof(NetworkManagerHUD))]
+    // https://github.com/Unity-Technologies/multiplayer-community-contributions/tree/main/com.community.netcode.extensions has a replacement for this HUD
+    //[RequireComponent(typeof(NetworkManagerHUD))]
     [RequireComponent(typeof(NetworkDiscovery))]
-    public sealed class NetworkManager : UnityEngine.Networking.NetworkManager
+    [RequireComponent(typeof(Unity.Netcode.NetworkManager))]
 #else
-    public sealed class NetworkManager : SingletonBehavior<NetworkManager>
 #endif
+    public sealed class NetworkManager : SingletonBehavior<NetworkManager>
     {
         #region Events
 

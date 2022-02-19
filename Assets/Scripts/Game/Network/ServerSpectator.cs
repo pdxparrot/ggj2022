@@ -18,7 +18,7 @@ using UnityEngine.Networking;
 
 namespace pdxpartyparrot.Game.Network
 {
-    [RequireComponent(typeof(NetworkIdentity))]
+    [RequireComponent(typeof(NetworkObject))]
     //[RequireComponent(typeof(FollowCameraTarget3D))]
     public sealed class ServerSpectator : MonoBehaviour
     {
