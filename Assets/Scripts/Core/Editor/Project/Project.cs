@@ -252,6 +252,7 @@ namespace pdxpartyparrot.Core.Editor.Project
             Util.AddPackage("com.unity.inputsystem");
             Util.AddPackage("com.unity.mathematics");
             //Util.AddPackage("com.unity.multiplayer-hlapi");
+            Util.AddPackage("com.unity.netcode.gameobjects");
             Util.AddPackage("com.unity.polybrush");
             Util.AddPackage("com.unity.postprocessing");
             Util.AddPackage("com.unity.probuilder");
